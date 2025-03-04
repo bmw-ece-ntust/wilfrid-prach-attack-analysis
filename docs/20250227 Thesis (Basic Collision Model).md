@@ -24,7 +24,7 @@
       - [3.1.1. Parameters](#311-parameters)
       - [3.1.2. Code](#312-code)
       - [3.1.3. Result](#313-result)
-    + [3.2. Modify Code to Imitate ZX's Result](#32-modify-code-to-imitate-zx-s-result)
+    + [3.2. Modify Code to Imitate ZX's Result](#32-modify-code-to-imitate-zxs-result)
       - [3.2.1. Parameters](#321-parameters)
       - [3.2.2. Code](#322-code)
       - [3.2.3. Result](#323-result)
