@@ -384,6 +384,7 @@ N, & \text{if } K_i > 0 \\
 | $M$       | 2                           | Experiment uses MTK and Samsung UE                   |
 | $N$       | 60                          | ssb-perRACH-OccasionAndCB-PreamblesPerSSB = OneAnd60 |
 | $I_{max}$ | 185 (MTK) and 155 (Samsung) | -                                                    |
+| $P_{noise,1}$ | 25 | -                                                    |
 
 ![image](https://hackmd.io/_uploads/rk7p3kVsyg.png)
 
