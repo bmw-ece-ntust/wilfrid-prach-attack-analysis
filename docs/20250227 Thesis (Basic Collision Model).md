@@ -283,6 +283,8 @@ plt.show()
 
 #### 3.2.3. Result
 
+$P_C$ = 0
+
 ![image](https://hackmd.io/_uploads/HkccxM4jyx.png)
 
 ## 4. Add Msg1 and Channel Noise Energy
@@ -412,5 +414,10 @@ plt.show()
 
 #### 4.3.3. Result
 
-![image](https://hackmd.io/_uploads/S1T7XXNsyl.png)
+$P_C$ = 0
 
+![image](https://hackmd.io/_uploads/HkJ497Ejyx.png)
+
+![image](https://hackmd.io/_uploads/Hka4qQNsyx.png)
+
+![image](https://hackmd.io/_uploads/r1ASc7Ni1x.png)
