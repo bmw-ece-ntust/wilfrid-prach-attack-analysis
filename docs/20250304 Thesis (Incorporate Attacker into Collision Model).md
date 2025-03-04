@@ -143,6 +143,7 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60):
     T_A = 0
     N_i = 0
     N_S_i_list = []
+    N_hat_S_i_list = []
     N_C_i_list = []
     K_i_list = []
     i_list = []
@@ -162,18 +163,19 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60):
             N_i = 0.000000001
         i_list.append(i)
         K_i_list.append(K_i)
-        N_S_i = K_i * np.exp(-K_i / N_i)  # Expected successful preambles
-        N_C_i = N_i - N_S_i - (N_i * np.exp(-K_i / N_i))  # Collided preambles
+        N_S_i = (K_i + 1) * np.exp(-1 * (K_i + 1) / N_i)
+        N_C_i = N_i - N_S_i - (N_i * np.exp(-1 * (K_i + 1) / N_i))  # Collided preambles
+        N_hat_S_i = N_S_i - ( N_S_i / (N_S_i + N_C_i) )  # Expected successful preambles
 		
-        N_S_i_list.append(N_S_i)
+        N_S_i_list.append(N_hat_S_i)
         N_C_i_list.append(N_C_i)
         
-        N_S_total += N_S_i
+        N_S_total += N_hat_S_i
         N_C_total += N_C_i
         N_total += N_i
         weighted_sum_TA += i * N_S_i  # Weighted sum for Ta calculation
         
-        K_i = K_i - N_S_i  # Remaining UEs after success
+        K_i = K_i - N_hat_S_i  # Remaining UEs after success
         
         if (K_i <= 0):
             P_msg1_i = 0
@@ -224,7 +226,6 @@ plt.legend()
 
 plt.tight_layout()
 plt.show()
-
 ```
 
 #### 2.3.3. Result
