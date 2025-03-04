@@ -95,7 +95,12 @@ N_{C,i} = N_i - (K_i + 1) e^{-(K_i + 1)/N_1} - N_i e^{-(K_i + 1)/N_i}
 ```math
 \hat{N}_{S,i} =
 \begin{cases} 
-N_{S,i}-1, & \text{if } attacker msg1 inside N_{S,i} \\ 
+N_{S,i}-1, & \text{if attacker msg1 inside } N_{S,i} \\ 
 N_{S,i}, & \text{otherwise} 
+\end{cases}
+```
+```math
+P(\hat{N}_{S,i} = N_{S,i}-1) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}} \\
+P(\hat{N}_{S,i} = N_{S,i}) = \frac{N_{C,i}}{N_{S,i} + N_{C,i}}
 \end{cases}
 ```
