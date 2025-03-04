@@ -91,7 +91,7 @@ N_{S,i} = (K_i + 1) e^{-(K_i + 1)/N_i}
 N_{C,i} = N_i - (K_i + 1) e^{-(K_i + 1)/N_1} - N_i e^{-(K_i + 1)/N_i}
 ```
 
-3. $N_{S,i}$ should be transformed to <p>\(\hat{N}_{S,i}\)</p> according to whether attacker's Msg1 is inside $N_{S,i}$ or $N_{C,i}$
+3. $N_{S,i}$ should be transformed to `$\hat{N}_{S,i}$` according to whether attacker's Msg1 is inside $N_{S,i}$ or $N_{C,i}$
 ```math
 \hat{N}_{S,i} =
 \begin{cases} 
