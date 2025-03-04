@@ -231,3 +231,8 @@ plt.show()
 
 $P_C$ = 0
 
+![image](https://hackmd.io/_uploads/B1X18BNs1g.png)
+
+![image](https://hackmd.io/_uploads/ryoJ8BNs1l.png)
+
+![image](https://hackmd.io/_uploads/ByIl8SNs1x.png)
