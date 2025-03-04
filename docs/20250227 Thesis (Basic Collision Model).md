@@ -287,4 +287,41 @@ plt.show()
 
 ## 4. Add Msg1 and Channel Noise Energy
 
+### 4.1. Model Parameters
+
+| Parameter | Description                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------- |
+| $M$       | number of UEs sending Msg1                                                                                      |
+| $N$     | total number of Preambles per SSB                                                                |
+| $N_i$     | number of Preambles per SSB for the $i^{th}$ SSB                                                                |
+| $N_{C,i}$ | expected value of the preambles that have at least 2 UEs' Msg1                                                  |
+| $N_{S,i}$ | expected value of the preambles that have only 1 UE's Msg1                                                      |
+| $K_i$     | Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$                              |
+| $P_S$     | probability of successfull Msg1 complete reception by gNB within maximum number of SSB $I_{max}$                |
+| $P_C$     | ratio between the number of collided preamble and the overall number of preamble in the period of $I_{max}$ SSB |
+| $P_{noise,i}$     | gNB noise power threshold for the $i^{th}$ SSB |
+| $P_{msg1,i}$     | UEs' power received on the gNB for the $i^{th}$ SSB |
+
+### 4.2. Equation
+
+0. All equations from [2.2](#22-equation) are still used
+
+1. gNB will calculate current channel noise = 0.9 x last channel noise + 0.1 msg signal power
+```math
+P_{noise,i+1} = 0.9 * P_{noise,i} + P_{msg1,i}
+```
+
+2. $P_{msg1,i}$ for all UEs are constant 55dB
+```math
+P_{msg1,i} = 50
+```
+
+3. $N_i$ depends if $P_{msg1,i}$ > P_{noise,i}
+```math
+N_i =
+\begin{cases} 
+N, & \text{if } P_{msg1,i} > P_{noise,i} \\ 
+0, & \text{otherwise} 
+\end{cases}
+```
 
