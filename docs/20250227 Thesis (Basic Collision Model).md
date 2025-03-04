@@ -24,6 +24,17 @@
       - [3.1.1. Parameters](#311-parameters)
       - [3.1.2. Code](#312-code)
       - [3.1.3. Result](#313-result)
+    + [3.2. Modify Code to Imitate ZX's Result](#32-modify-code-to-imitate-zx-s-result)
+      - [3.2.1. Parameters](#321-parameters)
+      - [3.2.2. Code](#322-code)
+      - [3.2.3. Result](#323-result)
+  * [4. Add Msg1 and Channel Noise Energy](#4-add-msg1-and-channel-noise-energy)
+    + [4.1. Model Parameters](#41-model-parameters)
+    + [4.2. Equation](#42-equation)
+    + [4.3. Modify Code to Add Msg1 and Channel Noise Energy](#43-modify-code-to-add-msg1-and-channel-noise-energy)
+      - [4.3.1. Parameters](#431-parameters)
+      - [4.3.2. Code](#432-code)
+      - [4.3.3. Result](#433-result)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -229,7 +240,7 @@ plt.show()
 
 #### 3.2.2. Code
 
-```python
+```python=
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -237,6 +248,8 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60):
     P_C = 0
     P_S = 0
     T_A = 0
+    N_S_i_list = []
+    N_C_i_list = []
     K_i_list = []
     i_list = []
     
@@ -251,7 +264,10 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60):
         K_i_list.append(K_i)
         N_S_i = K_i * np.exp(-K_i / N)  # Expected successful preambles
         N_C_i = N - N_S_i - (N * np.exp(-K_i / N))  # Collided preambles
-        
+        		
+        N_S_i_list.append(N_S_i)
+        N_C_i_list.append(N_C_i)
+		
         N_S_total += N_S_i
         N_C_total += N_C_i
         N_total += N
@@ -263,16 +279,40 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60):
     P_S = N_S_total / M  # Access success probability
     T_A = weighted_sum_TA / N_S_total if N_S_total > 0 else 0  # Average access delay
     
-    return N, P_C, P_S, T_A, K_i_list, i_list
+    return N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list
 
 # Compute values
-N, P_C, P_S, T_A, K_i_list, i_list = compute_PC_PS_TA()
+N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list = compute_PC_PS_TA()
+
+print("P_C = " + str(P_C) + "\n")
 
 # Plot Ki graph
+plt.figure(figsize=(18, 5))
+plt.subplot(1, 3, 1)
 plt.plot(i_list, K_i_list, marker='o', linestyle='-', color='r', label='K_i')
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Remaining UEs (K_i)')
 plt.title('Remaining UEs vs Number of Slots')
+plt.ylim(0, 5)
+plt.grid(True)
+plt.legend()
+
+# Plot NSi graph
+plt.subplot(1, 3, 2)
+plt.plot(i_list, N_S_i_list, marker='o', linestyle='-', color='b', label='N_S_i')
+plt.xlabel('Number of Slots (i)')
+plt.ylabel('Expected successful preambles (N_S_i)')
+plt.title('Expected successful preambles vs Number of Slots')
+plt.ylim(0, 5)
+plt.grid(True)
+plt.legend()
+
+# Plot NCi graph
+plt.subplot(1, 3, 3)
+plt.plot(i_list, N_C_i_list, marker='o', linestyle='-', color='g', label='N_C_i')
+plt.xlabel('Number of Slots (i)')
+plt.ylabel('Collided preambles (N_C_i)')
+plt.title('Collided preambles vs Number of Slots')
 plt.ylim(0, 5)
 plt.grid(True)
 plt.legend()
@@ -285,7 +325,11 @@ plt.show()
 
 $P_C$ = 0
 
-![image](https://hackmd.io/_uploads/HkccxM4jyx.png)
+![image](https://hackmd.io/_uploads/B1AX3XEoJx.png)
+
+![image](https://hackmd.io/_uploads/rJ1BhQVjke.png)
+
+![image](https://hackmd.io/_uploads/HksHnXVj1g.png)
 
 ## 4. Add Msg1 and Channel Noise Energy
 
