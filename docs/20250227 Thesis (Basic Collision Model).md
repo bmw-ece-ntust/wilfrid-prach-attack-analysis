@@ -59,24 +59,24 @@ sequenceDiagram
 
 ### 1.3. PRACH parameters
 
-| Category                | Parameter                                                                                                                | Value                                 | 
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| UE RA | ra-ResponseWindow<hr>ra-ContentionResolutionTimer | 10ms<hr>64ms | 
-| gNB RO  | ssb-PositionsInBurst<hr>prach-ConfigurationIndex<hr>msg1-FDM<hr>ssb-perRACH-OccasionAndCB-PreamblesPerSSB                                                                    | 1 SSB<hr>159<hr>1 RO<hr>OneAnd60                          | 
+| Category | Parameter                                                                                                 | Value                            |
+| -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| UE RA    | ra-ResponseWindow<hr>ra-ContentionResolutionTimer                                                         | 10ms<hr>64ms                     |
+| gNB RO   | ssb-PositionsInBurst<hr>prach-ConfigurationIndex<hr>msg1-FDM<hr>ssb-perRACH-OccasionAndCB-PreamblesPerSSB | 1 SSB<hr>159<hr>1 RO<hr>OneAnd60 |
 
 ## 2. Model Collision Probability in PRACH by Approximation
 
 ### 2.1. Model Parameters
 
-| Parameter                | Description                                                                                                                |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | 
-| $M$ | number of UEs sending Msg1 | 
-| $N_i$ | number of Preambles per SSB for the $i^{th}$ SSB | 
-| $N_{C,i}$  | expected value of the preambles that have at least 2 UEs' Msg1                                                                 | 
-| $N_{S,i}$  | expected value of the preambles that have only 1 UE's Msg1                                                                 | 
-| $K_i$  | Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$                                                                 | 
-| $P_S$  | probability of successfull Msg1 complete reception by gNB within maximum number of SSB $I_{max}$                                                                | 
-| $P_C$  | ratio between the number of collided preamble and the overall number of preamble in the period of $I_{max}$ SSB                                                                 | 
+| Parameter | Description                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------- |
+| $M$       | number of UEs sending Msg1                                                                                      |
+| $N_i$     | number of Preambles per SSB for the $i^{th}$ SSB                                                                |
+| $N_{C,i}$ | expected value of the preambles that have at least 2 UEs' Msg1                                                  |
+| $N_{S,i}$ | expected value of the preambles that have only 1 UE's Msg1                                                      |
+| $K_i$     | Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$                              |
+| $P_S$     | probability of successfull Msg1 complete reception by gNB within maximum number of SSB $I_{max}$                |
+| $P_C$     | ratio between the number of collided preamble and the overall number of preamble in the period of $I_{max}$ SSB |
 
 ### 2.2. Equation
 
@@ -121,11 +121,11 @@ T_a = \left( \sum_{i=1}^{I_{\text{max}}} i \times N_{S,i} \right) / \sum_{i=1}^{
 
 #### 3.1.1. Parameters
 
-| Parameter                | Value                                                                                                                |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------- | 
-| $M$ | 100 | 
-| $N$ | 5~45 | 
-| $I_{max}$  | 10                                                                 | 
+| Parameter | Value |
+| --------- | ----- |
+| $M$       | 100   |
+| $N$       | 5~45  |
+| $I_{max}$ | 10    |
 
 
 #### 3.1.2. Code
@@ -206,4 +206,33 @@ plt.show()
 ```
 
 #### 3.1.3. Result
+
+![image](https://hackmd.io/_uploads/ryH4LyVjJl.png)
+
+![image](https://hackmd.io/_uploads/r1GSLyNskg.png)
+
+![image](https://hackmd.io/_uploads/ByxULkNiJl.png)
+
+
+### 3.2. Modify Code to Imitate ZX's Result
+
+#### 3.2.1. Parameters
+
+| Parameter | Value                       | Reference                                            |
+| --------- | --------------------------- | ---------------------------------------------------- |
+| $M$       | 2                           | Experiment uses MTK and Samsung UE                   |
+| $N$       | 60                          | ssb-perRACH-OccasionAndCB-PreamblesPerSSB = OneAnd60 |
+| $I_{max}$ | 185 (MTK) and 155 (Samsung) | -                                                    |
+
+![image](https://hackmd.io/_uploads/rk7p3kVsyg.png)
+
+
+
+#### 3.2.2. Code
+
+```python
+
+```
+
+#### 3.2.3. Result
 
