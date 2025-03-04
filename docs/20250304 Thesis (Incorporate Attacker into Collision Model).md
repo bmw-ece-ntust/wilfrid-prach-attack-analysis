@@ -100,6 +100,11 @@ N_{S,i}, & \text{otherwise}
 \end{cases}
 ```
 ```math
-P(\hat{N}_{S,i} = N_{S,i}-1) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}} \\
+P(\hat{N}_{S,i} = N_{S,i}-1) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}}
+```
+```math
 P(\hat{N}_{S,i} = N_{S,i}) = \frac{N_{C,i}}{N_{S,i} + N_{C,i}}
+```
+```math
+\hat{N}_{S,i} = N_{S,i} - \frac{N_{S,i}}{N_{S,i} + N_{C,i}}
 ```
