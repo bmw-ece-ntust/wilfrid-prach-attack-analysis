@@ -95,7 +95,7 @@ N_{C,i} = N_i - (K_i + 1) e^{-(K_i + 1)/N_1} - N_i e^{-(K_i + 1)/N_i}
 ```math
 \hat{N}_{S,i} =
 \begin{cases} 
-N, & \text{if } K_i > 0 \\ 
-0, & \text{otherwise} 
+N_{S,i}-1, & \text{if } attacker msg1 inside N_{S,i} \\ 
+N_{S,i}, & \text{otherwise} 
 \end{cases}
 ```
