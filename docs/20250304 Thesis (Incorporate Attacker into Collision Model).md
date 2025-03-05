@@ -51,7 +51,7 @@ flowchart TD
 ```mermaid
 sequenceDiagram
     gNB->>UE:SSB/PBCH<br/>System Information
-    gNB->>Attacker::SSB/PBCH<br/>System Information
+    gNB->>Attacker:SSB/PBCH<br/>System Information
     UE->>gNB: PRACH<br/>Random Access Preamble (Msg1)
     Attacker->>gNB: PRACH<br/>Random Access Preamble (Msg1)
 ```
