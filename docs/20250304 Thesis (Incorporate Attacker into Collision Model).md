@@ -51,12 +51,9 @@ flowchart TD
 ```mermaid
 sequenceDiagram
     gNB->>UE:SSB/PBCH<br/>System Information
-	UE->>gNB: PRACH<br/>Random Access Preamble (Msg1)
-    gNB->>UE: PDCCH<br/>Donwlink Control Information
-    gNB->>UE: PDSCH<br/>Randon Access Response (Msg2)
-    UE->>gNB: PUSCH<br/>RRC Connection Setup Request (Msg3)
-    gNB->>UE: PDCCH<br/>Donwlink Control Information
-    gNB->>UE: PDSCH<br/>RRC Connection Setup (Msg4)
+    gNB->>Attacker::SSB/PBCH<br/>System Information
+    UE->>gNB: PRACH<br/>Random Access Preamble (Msg1)
+    Attacker->>gNB: PRACH<br/>Random Access Preamble (Msg1)
 ```
 
 ### 1.3. Notes and Assumptions
