@@ -286,8 +286,13 @@ N_{S,i}-1, & \text{if 1 attacker msg1 inside } N_{S,i} \\
 N_{S,i} - O, & \text{if O attacker msg1 inside } N_{S,i}
 \end{cases}
 ```
+3a. We can see that `$\hat{N}_{S,i}$` is just $N_{S,i}$ minus the number of attacker's msg1 that fall in $N_{S,i}$. Let $X$ be the number of attacker's msg1 that fall in $N_{S,i}$. Then we can define: 
 ```math
-P(\hat{N}_{S,i} = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{O} \times \binom{O}{0}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
+\hat{N}_{S,i}() = N_{S,i} - E[X]
+```
+Since we know the number of $N_{S,i}$, $N_{C,i}$, and $O$, we can treat $X$ as a function of $N_{S,i}$, $N_{C,i}$, and $O$ and get a recursive function
+```math
+\hat{N}_{S,i}() = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{O} \times \binom{O}{0}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
 ```
 ```math
 P(\hat{N}_{S,i} = N_{S,i} - 1) = \frac{\binom{N_{S,i}}{1}\times \binom{N_{C,i}}{O-1} \times \binom{O}{1}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
