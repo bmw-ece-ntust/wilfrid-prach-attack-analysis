@@ -7,7 +7,8 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
     total_attempts = 0
     total_T_A = 0
     
-    K_i_list = np.zeros(I_max)
+    i_list = np.arange(1, I_max + 1)
+	K_i_list = np.zeros(I_max)
     N_S_i_list = np.zeros(I_max)
     N_C_i_list = np.zeros(I_max)
     
@@ -72,7 +73,7 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
     N_S_i_list /= num_simulations
     N_C_i_list /= num_simulations
     
-    return N, P_C, P_S, T_A, K_i_list, np.arange(1, I_max + 1), N_S_i_list, N_C_i_list
+    return N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list
 
 # Compute values
 N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list = compute_PC_PS_TA()
