@@ -285,7 +285,10 @@ P(\hat{N}_{S,i} = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom
 P(\hat{N}_{S,i} = N_{S,i} - 1) = \frac{\binom{N_{S,i}}{1}\times \binom{N_{C,i}}{O-1} \times \binom{O}{1}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
 ```
 ```math
-\hat{N}_{S,i} = N_{S,i} - 
+\hat{N}_{S,i} = (N_{S,i} - 0)*P(\hat{N}_{S,i} = N_{S,i} - 0) + (N_{S,i} - 1)*P(\hat{N}_{S,i} = N_{S,i} - 1) + ...
+```
+```math
+\hat{N}_{S,i} = \sum_{j=0}^{O} (N_{S,i}-j)\times \frac{\binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}{\sum_{k=0}^{O} \binom{N_{S,i}}{k}\times \binom{N_{C,i}}{O-k} \times \binom{O}{k}}
 ```
 
 4. Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$
