@@ -62,65 +62,9 @@ sequenceDiagram
 1. Attacker send preamble to every RO
 2. Fixed preamble index sent by the attacker
 
-## 2. Model Collision Probability in PRACH by Approximation with Attacker
+## 2. Simulation Implementation in Python Code
 
-### 2.1. Model Parameters
-
-| Parameter | Description                                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| $M$       | number of UEs sending Msg1                                                                                      |
-| $N$     | total number of Preambles per SSB                                                                |
-| $N_i$     | number of Preambles per SSB for the $i^{th}$ SSB                                                                |
-| $N_{C,i}$ | expected value of the preambles that have at least 2 UEs and/or attacker's Msg1                                                  |
-| $N_{S,i}$ | expected value of the preambles that have only 1 UE or attacker's Msg1                                                      |
-| $\hat{N}_{S,i}$ | expected value of the preambles that have only 1 UE's Msg1                                                      |
-| $K_i$     | Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$                              |
-| $P_S$     | probability of successfull Msg1 complete reception by gNB within maximum number of SSB $I_{max}$                |
-| $P_C$     | ratio between the number of collided preamble and the overall number of preamble in the period of $I_{max}$ SSB |
-| $P_{noise,i}$     | gNB noise power threshold for the $i^{th}$ SSB |
-| $P_{msg1,i}$     | UEs and attacker's power received on the gNB for the $i^{th}$ SSB |
-
-
-### 2.2. Equation
-
-0. Equations from Basic Collision Model [4.2](https://github.com/bmw-ece-ntust/prach-attack-analysis/blob/master/docs/20250227%20Thesis%20(Basic%20Collision%20Model).md#42-equation) are still used but some are modified to incorporate attacker
-
-1. Expected value of the number of preambles that have only 1 UE or attacker's Msg1 for the $i^{th}$ SSB
-```math
-N_{S,i} = (K_i + 1) e^{-(K_i + 1)/N_i}
-```
-
-2. Expected value of the number of preambles that have at least 2 UEs and/or attacker's Msg1 for the $i^{th}$ SSB
-```math
-N_{C,i} = N_i - (K_i + 1) e^{-(K_i + 1)/N_1} - N_i e^{-(K_i + 1)/N_i}
-```
-
-3. $N_{S,i}$ should be transformed to `$\hat{N}_{S,i}$` according to whether attacker's Msg1 is inside $N_{S,i}$ or $N_{C,i}$
-```math
-\hat{N}_{S,i} =
-\begin{cases} 
-N_{S,i}-1, & \text{if attacker msg1 inside } N_{S,i} \\ 
-N_{S,i}, & \text{otherwise} 
-\end{cases}
-```
-```math
-P(\hat{N}_{S,i} = N_{S,i}-1) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}}
-```
-```math
-P(\hat{N}_{S,i} = N_{S,i}) = \frac{N_{C,i}}{N_{S,i} + N_{C,i}}
-```
-```math
-\hat{N}_{S,i} = N_{S,i} - \frac{N_{S,i}}{N_{S,i} + N_{C,i}}
-```
-
-4. Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$
-```math
-K_{i+1} = K_i - \hat{N}_{S,i}
-```
-
-### 2.3. Code
-
-#### 2.3.1. Parameters
+### 2.1. Parameters
 
 | Parameter | Value                       | Reference                                            |
 | --------- | --------------------------- | ---------------------------------------------------- |
@@ -129,13 +73,13 @@ K_{i+1} = K_i - \hat{N}_{S,i}
 | $I_{max}$ | 185 (MTK) and 155 (Samsung) | -                                                    |
 | $P_{noise,1}$ | 25 | -                                                    |
 
-#### 2.3.2. Code
+### 2.2. Code
 
 ```python
 
 ```
 
-#### 2.3.3. Result
+### 2.3.3. Result
 
 $P_C$ = 0
 
