@@ -22,7 +22,7 @@
       - [2.1.1. Parameters](#211-parameters)
       - [2.1.2. Code](#212-code)
       - [2.1.3. Result](#213-result)
-    + [2.2. Modify Code to Imitate ZX's Result](#22-modify-code-to-imitate-zx-s-result)
+    + [2.2. Modify Code to Imitate ZX's Result](#22-modify-code-to-imitate-zxs-result)
       - [2.2.1. Parameters](#221-parameters)
       - [2.2.2. Code](#222-code)
       - [2.2.3. Result](#223-result)
