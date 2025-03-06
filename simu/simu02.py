@@ -78,12 +78,12 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
 # Compute values
 N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list = compute_PC_PS_TA()
 
-print(f"P_C = {P_C}\nP_S = {P_S}\nT_A = {T_A}")
+print(f"P_C = {P_C}\n")
 
 # Plot graphs
 plt.figure(figsize=(18, 5))
 plt.subplot(1, 3, 1)
-plt.plot(i_list, K_i_list, 'r-', label='K_i')
+plt.plot(i_list, K_i_list, marker='o', linestyle='-', color='r', label='K_i')
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Remaining UEs (K_i)')
 plt.title('Remaining UEs vs Number of Slots')
@@ -91,7 +91,7 @@ plt.grid(True)
 plt.legend()
 
 plt.subplot(1, 3, 2)
-plt.plot(i_list, N_S_i_list, 'b-', label='N_S_i')
+plt.plot(i_list, N_S_i_list, marker='o', linestyle='-', color='b', label='N_S_i')
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Expected successful preambles (N_S_i)')
 plt.title('Successful Preambles vs Number of Slots')
@@ -99,7 +99,7 @@ plt.grid(True)
 plt.legend()
 
 plt.subplot(1, 3, 3)
-plt.plot(i_list, N_C_i_list, 'g-', label='N_C_i')
+plt.plot(i_list, N_C_i_list, marker='o', linestyle='-', color='g', label='N_C_i')
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Collided preambles (N_C_i)')
 plt.title('Collided Preambles vs Number of Slots')
