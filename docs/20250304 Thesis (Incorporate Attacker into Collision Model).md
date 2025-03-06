@@ -303,7 +303,7 @@ Y(N_{S,i}, N_{C,i}, O) =
 O, & \text{if } Y(N_{S,i}, 0, O) \\
 0, & \text{if } Y(0, N_{C,i}, O) \\
 0, & \text{if } Y(N_{S,i}, N_{C,i}, 0) \\
-p \times ( 1 + Y(N_{S,i} - 1, N_{C,i}, O-1) ) + (1 - p) \times ( Y(N_{S,i}, N_{C,i} - 1, O-1) ), & \text{otherwise}
+p \times ( 1 + Y(N_{S,i} - 1, N_{C,i}, O-1) ) + (1 - p) \times Y(N_{S,i}, N_{C,i} - 1, O-1), & \text{otherwise}
 \end{cases}
 ```
 
