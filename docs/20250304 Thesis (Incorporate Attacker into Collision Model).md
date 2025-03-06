@@ -292,16 +292,19 @@ N_{S,i} - O, & \text{if O attacker msg1 inside } N_{S,i}
 ```
 3b. Let $Y = E[X]$. Since we know the number of $N_{S,i}$, $N_{C,i}$, and $O$, we can treat $Y$ as a function of $N_{S,i}$, $N_{C,i}$, and $O$ and get a recursive function
 ```math
-Y(N_{S,i}, N_{C,i}, O) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}} \times ( 1 + Y(N_{S,i} - 1, N_{C,i}, O-1) ) + \frac{N_{C,i}}{N_{S,i} + N_{C,i}} \times ( 0 + Y(N_{S,i}, N_{C,i} - 1, O-1) )
+p(N_{S,i}, N_{C,i}) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}}
 ```
 ```math
-P(\hat{N}_{S,i} = N_{S,i} - 1) = \frac{\binom{N_{S,i}}{1}\times \binom{N_{C,i}}{O-1} \times \binom{O}{1}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
+Y(N_{S,i}, N_{C,i}, O) = p \times ( 1 + Y(N_{S,i} - 1, N_{C,i}, O-1) ) + (1 - p) \times ( 0 + Y(N_{S,i}, N_{C,i} - 1, O-1) )
 ```
 ```math
-\hat{N}_{S,i} = (N_{S,i} - 0)*P(\hat{N}_{S,i} = N_{S,i} - 0) + (N_{S,i} - 1)*P(\hat{N}_{S,i} = N_{S,i} - 1) + ...
-```
-```math
-\hat{N}_{S,i} = \sum_{j=0}^{O} (N_{S,i}-j)\times \frac{\binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}{\sum_{k=0}^{O} \binom{N_{S,i}}{k}\times \binom{N_{C,i}}{O-k} \times \binom{O}{k}}
+Y(N_{S,i}, N_{C,i}, O) =
+\begin{cases} 
+p \times ( 1 + Y(N_{S,i} - 1, N_{C,i}, O-1) ) + (1 - p) \times ( Y(N_{S,i}, N_{C,i} - 1, O-1) ), & \text{otherwise} \\  
+O, & \text{if } Y(N_{S,i}, 0, O) \\
+0, & \text{if } Y(0, N_{C,i}, O) \\
+0, & \text{if } Y(N_{S,i}, N_{C,i}, 0)
+\end{cases}
 ```
 
 4. Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$
