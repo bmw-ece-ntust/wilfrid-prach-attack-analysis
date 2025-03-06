@@ -5,6 +5,7 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
     P_C = 0
     P_S = 0
     T_A = 0
+    N_i = 0
     N_S_i_list = []
     N_C_i_list = []
     K_i_list = []
@@ -24,12 +25,18 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
     for i_simulations in range(num_simulations):
         print("i_simulations = " + str(i_simulations) + "\n") 
         K_i = M  # Initially, all UEs attempt Msg1
+        P_msg1_i = 50
+        P_noise_i = 25
         N_C_total = 0
         N_S_total = 0
         N_total = 0
         weighted_sum_TA = 0
         
         for i in range(1, I_max + 1):
+            if (P_msg1_i > P_noise_i):
+                N_i = N
+            else:
+                N_i = 0.000000001
             K_i_list[i-1] = K_i_list[i-1] + K_i
             preamble_choices = np.random.randint(0, N, K_i)  # Each UE picks a preamble randomly
             unique, counts = np.unique(preamble_choices, return_counts=True)
@@ -48,6 +55,12 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
             weighted_sum_TA += i * N_S_i  # Weighted sum for Ta calculation
             
             K_i -= N_S_i  # Remaining UEs after success
+            
+            if (K_i <= 0):
+                P_msg1_i = 0
+        
+            P_noise_i = 0.9 * P_noise_i + 0.1 * P_msg1_i
+            
             if K_i <= 0:
                 break  # All UEs successfully sent Msg1
         
