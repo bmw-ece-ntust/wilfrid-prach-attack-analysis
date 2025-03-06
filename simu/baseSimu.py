@@ -1,12 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-def compute_PC_PS_TA(M=50, I_max=5, N_values=range(5, 46), num_simulations=int(1e7)):
+def compute_PC_PS_TA(M=100, I_max=10, N_values=range(5, 46), num_simulations=int(1e4)):
     P_C_list = []
     P_S_list = []
     T_A_list = []
     
     for N in N_values:
+        print("N = " + str(N) + "\n") 
         total_collisions = 0
         total_successes = 0
         total_attempts = 0
@@ -83,6 +84,7 @@ plt.plot(N_values, T_A_list, marker='^', linestyle='-', color='g', label='T_A (S
 plt.xlabel('Number of Preambles (N)')
 plt.ylabel('Average Access Delay (T_A)')
 plt.title('Average Access Delay vs Number of Preambles')
+plt.ylim(0, 10)
 plt.grid(True)
 plt.legend()
 
