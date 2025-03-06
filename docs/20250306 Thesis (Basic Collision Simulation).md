@@ -27,12 +27,11 @@
       - [2.2.2. Code](#222-code)
       - [2.2.3. Result](#223-result)
   * [3. Add Msg1 and Channel Noise Energy](#3-add-msg1-and-channel-noise-energy)
-    + [3.1. Model Parameters](#31-model-parameters)
-    + [3.2. Equation](#32-equation)
-    + [3.3. Modify Code to Add Msg1 and Channel Noise Energy](#33-modify-code-to-add-msg1-and-channel-noise-energy)
-      - [3.3.1. Parameters](#331-parameters)
-      - [4.3.2. Code](#432-code)
-      - [3.3.3. Result](#333-result)
+    + [3.1. Msg1 and Channel Noise Energy Equation](#31-msg1-and-channel-noise-energy-equation)
+    + [3.2. Modify Code to Add Msg1 and Channel Noise Energy](#32-modify-code-to-add-msg1-and-channel-noise-energy)
+      - [3.2.1. Parameters](#321-parameters)
+      - [3.2.2. Code](#322-code)
+      - [3.2.3. Result](#323-result)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -330,24 +329,7 @@ $P_C$ = 0
 
 ## 3. Add Msg1 and Channel Noise Energy
 
-### 3.1. Model Parameters
-
-| Parameter | Description                                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| $M$       | number of UEs sending Msg1                                                                                      |
-| $N$     | total number of Preambles per SSB                                                                |
-| $N_i$     | number of Preambles per SSB for the $i^{th}$ SSB                                                                |
-| $N_{C,i}$ | expected value of the preambles that have at least 2 UEs' Msg1                                                  |
-| $N_{S,i}$ | expected value of the preambles that have only 1 UE's Msg1                                                      |
-| $K_i$     | Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$                              |
-| $P_S$     | probability of successfull Msg1 complete reception by gNB within maximum number of SSB $I_{max}$                |
-| $P_C$     | ratio between the number of collided preamble and the overall number of preamble in the period of $I_{max}$ SSB |
-| $P_{noise,i}$     | gNB noise power threshold for the $i^{th}$ SSB |
-| $P_{msg1,i}$     | UEs' power received on the gNB for the $i^{th}$ SSB |
-
-### 3.2. Equation
-
-0. All equations from [2.2](#22-equation) are still used
+### 3.1. Msg1 and Channel Noise Energy Equation
 
 1. gNB will calculate current channel noise = 0.9 x last channel noise + 0.1 msg signal power
 ```math
@@ -372,9 +354,9 @@ N, & \text{if } K_i > 0 \\
 \end{cases}
 ```
 
-### 3.3. Modify Code to Add Msg1 and Channel Noise Energy
+### 3.2. Modify Code to Add Msg1 and Channel Noise Energy
 
-#### 3.3.1. Parameters
+#### 3.2.1. Parameters
 
 | Parameter | Value                       | Reference                                            |
 | --------- | --------------------------- | ---------------------------------------------------- |
@@ -386,13 +368,13 @@ N, & \text{if } K_i > 0 \\
 ![image](https://hackmd.io/_uploads/rk7p3kVsyg.png)
 
 
-#### 4.3.2. Code
+#### 3.2.2. Code
 
 ```python
 
 ```
 
-#### 3.3.3. Result
+#### 3.2.3. Result
 
 $P_C$ = 0
 
