@@ -234,3 +234,61 @@ $P_C$ = 0
 ![image](https://hackmd.io/_uploads/ryoJ8BNs1l.png)
 
 ![image](https://hackmd.io/_uploads/ByIl8SNs1x.png)
+
+## 3. Extend number of msg1 sent by attacker
+
+### 3.1. Model Parameters
+
+| Parameter | Description                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------- |
+| $M$       | number of UEs sending Msg1                                                                                      |
+| $N$     | total number of Preambles per SSB                                                                |
+| $O$     | total number of dummy Preambles sent by attacker                                                                |
+| $N_i$     | number of Preambles per SSB for the $i^{th}$ SSB                                                                |
+| $N_{C,i}$ | expected value of the preambles that have at least 2 UEs and/or attacker's Msg1                                                  |
+| $N_{S,i}$ | expected value of the preambles that have only 1 UE or attacker's Msg1                                                      |
+| $\hat{N}_{S,i}$ | expected value of the preambles that have only 1 UE's Msg1                                                      |
+| $K_i$     | Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$                              |
+| $P_S$     | probability of successfull Msg1 complete reception by gNB within maximum number of SSB $I_{max}$                |
+| $P_C$     | ratio between the number of collided preamble and the overall number of preamble in the period of $I_{max}$ SSB |
+| $P_{noise,i}$     | gNB noise power threshold for the $i^{th}$ SSB |
+| $P_{msg1,i}$     | UEs and attacker's power received on the gNB for the $i^{th}$ SSB |
+
+### 3.2. Equation
+
+0. Equations from [2.2](#22-equation) should be extended from 1 preamble to $O$ preambles sent by attacker
+
+1. Expected value of the number of preambles that have only 1 UE or attacker's Msg1 for the $i^{th}$ SSB
+```math
+N_{S,i} = (K_i + O) e^{-(K_i + O)/N_i}
+```
+
+2. Expected value of the number of preambles that have at least 2 UEs and/or attacker's Msg1 for the $i^{th}$ SSB
+```math
+N_{C,i} = N_i - (K_i + O) e^{-(K_i + O)/N_i} - N_i e^{-(K_i + O)/N_i}
+```
+
+3. $N_{S,i}$ should be transformed to `$\hat{N}_{S,i}$` according to whether attacker's Msg1 is inside $N_{S,i}$ or $N_{C,i}$
+```math
+\hat{N}_{S,i} =
+\begin{cases} 
+N_{S,i} - 0, & \text{if none of attacker msg1 inside } N_{S,i} \\  
+N_{S,i}-1, & \text{if 1 attacker msg1 inside } N_{S,i} \\
+... \\
+N_{S,i} - O, & \text{if O attacker msg1 inside } N_{S,i}
+\end{cases}
+```
+```math
+P(\hat{N}_{S,i} = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{o} \times \binom{o}{0}}{\sum_{j=0}^{o} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{o-j} \times \binom{o}{j}}
+```
+```math
+P(\hat{N}_{S,i} = N_{S,i} - 1) = 
+```
+```math
+\hat{N}_{S,i} = N_{S,i} - 
+```
+
+4. Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$
+```math
+K_{i+1} = K_i - \hat{N}_{S,i}
+```
