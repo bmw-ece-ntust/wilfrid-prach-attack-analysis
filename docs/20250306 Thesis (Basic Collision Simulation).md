@@ -505,5 +505,3 @@ $P_C$ = 0
 
 ![image](https://hackmd.io/_uploads/HJibxhIike.png)
 
-$P_C$ = 0
-
