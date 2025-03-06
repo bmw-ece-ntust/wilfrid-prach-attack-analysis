@@ -279,10 +279,10 @@ N_{S,i} - O, & \text{if O attacker msg1 inside } N_{S,i}
 \end{cases}
 ```
 ```math
-P(\hat{N}_{S,i} = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{o} \times \binom{o}{0}}{\sum_{j=0}^{o} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{o-j} \times \binom{o}{j}}
+P(\hat{N}_{S,i} = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{O} \times \binom{O}{0}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
 ```
 ```math
-P(\hat{N}_{S,i} = N_{S,i} - 1) = 
+P(\hat{N}_{S,i} = N_{S,i} - 1) = \frac{\binom{N_{S,i}}{1}\times \binom{N_{C,i}}{O-1} \times \binom{O}{1}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
 ```
 ```math
 \hat{N}_{S,i} = N_{S,i} - 
