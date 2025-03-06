@@ -42,7 +42,7 @@
 
 ```mermaid
 flowchart TD
-    A[BaseStation]
+    A[BaseStation with N preambles per SSB]
     B(UE 1)
     C(UE 2)
     D(...)
