@@ -269,6 +269,14 @@ N_{C,i} = N_i - (K_i + O) e^{-(K_i + O)/N_i} - N_i e^{-(K_i + O)/N_i}
 ```
 
 3. $N_{S,i}$ should be transformed to `$\hat{N}_{S,i}$` according to whether attacker's Msg1 is inside $N_{S,i}$ or $N_{C,i}$
+```mermaid
+flowchart TD
+    A[O attacker msg1]
+    B(N_S_i)
+    C(N_C_i)
+    A-->B
+    A-->C
+```
 ```math
 \hat{N}_{S,i} =
 \begin{cases} 
