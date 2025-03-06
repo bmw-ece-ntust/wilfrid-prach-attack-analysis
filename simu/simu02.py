@@ -87,6 +87,7 @@ plt.plot(i_list, K_i_list, marker='o', linestyle='-', color='r', label='K_i')
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Remaining UEs (K_i)')
 plt.title('Remaining UEs vs Number of Slots')
+plt.ylim(0, 5)
 plt.grid(True)
 plt.legend()
 
@@ -95,6 +96,7 @@ plt.plot(i_list, N_S_i_list, marker='o', linestyle='-', color='b', label='N_S_i'
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Expected successful preambles (N_S_i)')
 plt.title('Successful Preambles vs Number of Slots')
+plt.ylim(0, 5)
 plt.grid(True)
 plt.legend()
 
@@ -103,6 +105,7 @@ plt.plot(i_list, N_C_i_list, marker='o', linestyle='-', color='g', label='N_C_i'
 plt.xlabel('Number of Slots (i)')
 plt.ylabel('Collided preambles (N_C_i)')
 plt.title('Collided Preambles vs Number of Slots')
+plt.ylim(0, 5)
 plt.grid(True)
 plt.legend()
 
