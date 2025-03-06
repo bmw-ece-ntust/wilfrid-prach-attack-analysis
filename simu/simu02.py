@@ -8,7 +8,7 @@ def compute_PC_PS_TA(M=2, I_max=155, N=60, num_simulations=int(1e4)):
     total_T_A = 0
     
     i_list = np.arange(1, I_max + 1)
-	K_i_list = np.zeros(I_max)
+    K_i_list = np.zeros(I_max)
     N_S_i_list = np.zeros(I_max)
     N_C_i_list = np.zeros(I_max)
     
