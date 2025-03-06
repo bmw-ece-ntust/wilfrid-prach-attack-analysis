@@ -18,23 +18,24 @@
     + [1.2. 5G PRACH](#12-5g-prach)
     + [1.3. PRACH parameters](#13-prach-parameters)
   * [2. Simulation Implementation in Python Code](#2-simulation-implementation-in-python-code)
-    + [3.1. Code based on original Paper](#31-code-based-on-original-paper)
-      - [3.1.1. Parameters](#311-parameters)
-      - [3.1.2. Code](#312-code)
-      - [3.1.3. Result](#313-result)
-    + [3.2. Modify Code to Imitate ZX's Result](#32-modify-code-to-imitate-zx-s-result)
-      - [3.2.1. Parameters](#321-parameters)
-      - [3.2.2. Code](#322-code)
-      - [3.2.3. Result](#323-result)
-  * [4. Add Msg1 and Channel Noise Energy](#4-add-msg1-and-channel-noise-energy)
-    + [4.1. Model Parameters](#41-model-parameters)
-    + [4.2. Equation](#42-equation)
-    + [4.3. Modify Code to Add Msg1 and Channel Noise Energy](#43-modify-code-to-add-msg1-and-channel-noise-energy)
-      - [4.3.1. Parameters](#431-parameters)
+    + [2.1. Code based on original Paper](#21-code-based-on-original-paper)
+      - [2.1.1. Parameters](#211-parameters)
+      - [2.1.2. Code](#212-code)
+      - [2.1.3. Result](#213-result)
+    + [2.2. Modify Code to Imitate ZX's Result](#22-modify-code-to-imitate-zx-s-result)
+      - [2.2.1. Parameters](#221-parameters)
+      - [2.2.2. Code](#222-code)
+      - [2.2.3. Result](#223-result)
+  * [3. Add Msg1 and Channel Noise Energy](#3-add-msg1-and-channel-noise-energy)
+    + [3.1. Model Parameters](#31-model-parameters)
+    + [3.2. Equation](#32-equation)
+    + [3.3. Modify Code to Add Msg1 and Channel Noise Energy](#33-modify-code-to-add-msg1-and-channel-noise-energy)
+      - [3.3.1. Parameters](#331-parameters)
       - [4.3.2. Code](#432-code)
-      - [4.3.3. Result](#433-result)
+      - [3.3.3. Result](#333-result)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## 1. Define UE and PRACH parameters
 
@@ -75,9 +76,9 @@ sequenceDiagram
 
 ## 2. Simulation Implementation in Python Code
 
-### 3.1. Code based on original Paper
+### 2.1. Code based on original Paper
 
-#### 3.1.1. Parameters
+#### 2.1.1. Parameters
 
 | Parameter | Value |
 | --------- | ----- |
@@ -86,7 +87,7 @@ sequenceDiagram
 | $I_{max}$ | 10    |
 
 
-#### 3.1.2. Code
+#### 2.1.2. Code
 
 ```python
 import numpy as np
@@ -184,18 +185,17 @@ plt.show()
 
 ```
 
-#### 3.1.3. Result
+#### 2.1.3. Result
 
-![image](https://hackmd.io/_uploads/ryH4LyVjJl.png)
+![image](https://hackmd.io/_uploads/rkLMAtLskx.png)
 
-![image](https://hackmd.io/_uploads/r1GSLyNskg.png)
+![image](https://hackmd.io/_uploads/B1-XRFIoye.png)
 
-![image](https://hackmd.io/_uploads/ByxULkNiJl.png)
+![image](https://hackmd.io/_uploads/H1A7RF8iyg.png)
 
+### 2.2. Modify Code to Imitate ZX's Result
 
-### 3.2. Modify Code to Imitate ZX's Result
-
-#### 3.2.1. Parameters
+#### 2.2.1. Parameters
 
 | Parameter | Value                       | Reference                                            |
 | --------- | --------------------------- | ---------------------------------------------------- |
@@ -206,102 +206,18 @@ plt.show()
 ![image](https://hackmd.io/_uploads/rk7p3kVsyg.png)
 
 
-#### 3.2.2. Code
+#### 2.2.2. Code
 
 ```python=
-import numpy as np
-import matplotlib.pyplot as plt
 
-def compute_PC_PS_TA(M=2, I_max=155, N=60):
-    P_C = 0
-    P_S = 0
-    T_A = 0
-    N_S_i_list = []
-    N_C_i_list = []
-    K_i_list = []
-    i_list = []
-    
-    K_i = M  # Initially, all UEs attempt Msg1
-    N_C_total = 0
-    N_S_total = 0
-    N_total = 0
-    weighted_sum_TA = 0
-    
-    for i in range(1, I_max + 1):
-        i_list.append(i)
-        K_i_list.append(K_i)
-        N_S_i = K_i * np.exp(-K_i / N)  # Expected successful preambles
-        N_C_i = N - N_S_i - (N * np.exp(-K_i / N))  # Collided preambles
-        		
-        N_S_i_list.append(N_S_i)
-        N_C_i_list.append(N_C_i)
-		
-        N_S_total += N_S_i
-        N_C_total += N_C_i
-        N_total += N
-        weighted_sum_TA += i * N_S_i  # Weighted sum for Ta calculation
-        
-        K_i = K_i - N_S_i  # Remaining UEs after success
-    
-    P_C = N_C_total / N_total  # Collision probability
-    P_S = N_S_total / M  # Access success probability
-    T_A = weighted_sum_TA / N_S_total if N_S_total > 0 else 0  # Average access delay
-    
-    return N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list
-
-# Compute values
-N, P_C, P_S, T_A, K_i_list, i_list, N_S_i_list, N_C_i_list = compute_PC_PS_TA()
-
-print("P_C = " + str(P_C) + "\n")
-
-# Plot Ki graph
-plt.figure(figsize=(18, 5))
-plt.subplot(1, 3, 1)
-plt.plot(i_list, K_i_list, marker='o', linestyle='-', color='r', label='K_i')
-plt.xlabel('Number of Slots (i)')
-plt.ylabel('Remaining UEs (K_i)')
-plt.title('Remaining UEs vs Number of Slots')
-plt.ylim(0, 5)
-plt.grid(True)
-plt.legend()
-
-# Plot NSi graph
-plt.subplot(1, 3, 2)
-plt.plot(i_list, N_S_i_list, marker='o', linestyle='-', color='b', label='N_S_i')
-plt.xlabel('Number of Slots (i)')
-plt.ylabel('Expected successful preambles (N_S_i)')
-plt.title('Expected successful preambles vs Number of Slots')
-plt.ylim(0, 5)
-plt.grid(True)
-plt.legend()
-
-# Plot NCi graph
-plt.subplot(1, 3, 3)
-plt.plot(i_list, N_C_i_list, marker='o', linestyle='-', color='g', label='N_C_i')
-plt.xlabel('Number of Slots (i)')
-plt.ylabel('Collided preambles (N_C_i)')
-plt.title('Collided preambles vs Number of Slots')
-plt.ylim(0, 5)
-plt.grid(True)
-plt.legend()
-
-plt.tight_layout()
-plt.show()
 ```
 
-#### 3.2.3. Result
+#### 2.2.3. Result
 
-$P_C$ = 0
 
-![image](https://hackmd.io/_uploads/B1AX3XEoJx.png)
+## 3. Add Msg1 and Channel Noise Energy
 
-![image](https://hackmd.io/_uploads/rJ1BhQVjke.png)
-
-![image](https://hackmd.io/_uploads/HksHnXVj1g.png)
-
-## 4. Add Msg1 and Channel Noise Energy
-
-### 4.1. Model Parameters
+### 3.1. Model Parameters
 
 | Parameter | Description                                                                                                     |
 | --------- | --------------------------------------------------------------------------------------------------------------- |
@@ -316,7 +232,7 @@ $P_C$ = 0
 | $P_{noise,i}$     | gNB noise power threshold for the $i^{th}$ SSB |
 | $P_{msg1,i}$     | UEs' power received on the gNB for the $i^{th}$ SSB |
 
-### 4.2. Equation
+### 3.2. Equation
 
 0. All equations from [2.2](#22-equation) are still used
 
@@ -343,9 +259,9 @@ N, & \text{if } K_i > 0 \\
 \end{cases}
 ```
 
-### 4.3. Modify Code to Add Msg1 and Channel Noise Energy
+### 3.3. Modify Code to Add Msg1 and Channel Noise Energy
 
-#### 4.3.1. Parameters
+#### 3.3.1. Parameters
 
 | Parameter | Value                       | Reference                                            |
 | --------- | --------------------------- | ---------------------------------------------------- |
@@ -453,7 +369,7 @@ plt.show()
 
 ```
 
-#### 4.3.3. Result
+#### 3.3.3. Result
 
 $P_C$ = 0
 
