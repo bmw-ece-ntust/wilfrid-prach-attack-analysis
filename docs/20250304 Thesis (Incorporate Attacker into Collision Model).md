@@ -288,11 +288,11 @@ N_{S,i} - O, & \text{if O attacker msg1 inside } N_{S,i}
 ```
 3a. We can see that `$\hat{N}_{S,i}$` is just $N_{S,i}$ minus the number of attacker's msg1 that fall in $N_{S,i}$. Let $X$ be the number of attacker's msg1 that fall in $N_{S,i}$. Then we can define: 
 ```math
-\hat{N}_{S,i}() = N_{S,i} - E[X]
+\hat{N}_{S,i} = N_{S,i} - E[X]
 ```
-Since we know the number of $N_{S,i}$, $N_{C,i}$, and $O$, we can treat $X$ as a function of $N_{S,i}$, $N_{C,i}$, and $O$ and get a recursive function
+3b. Let $Y = E[X]$. Since we know the number of $N_{S,i}$, $N_{C,i}$, and $O$, we can treat $Y$ as a function of $N_{S,i}$, $N_{C,i}$, and $O$ and get a recursive function
 ```math
-\hat{N}_{S,i}() = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{O} \times \binom{O}{0}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
+Y(N_{S,i}, N_{C,i}, O) = \frac{N_{S,i}}{N_{S,i} + N_{C,i}} \times ( 1 + Y(N_{S,i} - 1, N_{C,i}, O-1) ) + \frac{N_{C,i}}{N_{S,i} + N_{C,i}} \times ( 0 + Y(N_{S,i}, N_{C,i} - 1, O-1) )
 ```
 ```math
 P(\hat{N}_{S,i} = N_{S,i} - 1) = \frac{\binom{N_{S,i}}{1}\times \binom{N_{C,i}}{O-1} \times \binom{O}{1}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
