@@ -32,8 +32,8 @@
 
 ```mermaid
 flowchart TD
-    A[BaseStation]
-    B[[Attacker]]
+    A[BaseStation with N preambles per SSB]
+    B[[Attacker with O preambles per slot]]
     C(UE 1)
     D(UE 2)
     E(...)
