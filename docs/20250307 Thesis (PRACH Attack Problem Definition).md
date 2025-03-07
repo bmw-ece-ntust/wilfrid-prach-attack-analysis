@@ -20,7 +20,7 @@
 
 ```mermaid
 stateDiagram-v2
-    classDef zhongXinCase fill:white
+    classDef zhongXinCase fill:#800
 
     s1: PRACH Attack
     s2: Attack Msg1
