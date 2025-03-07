@@ -11,7 +11,15 @@
 - [Techniques and Impact Evaluation of RACH Jamming in 5G network](https://etheses.lib.ntust.edu.tw/thesis/detail/64057b454c8e6e7e11cfd2812c8fecf7/)
 
 **Table of Contents:**
-- 
+- [20250307 Thesis (Random Access Procedure and Attack)](#20250307-thesis--random-access-procedure-and-attack-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. Random Access Procedure Step by step](#1-random-access-procedure-step-by-step)
+  * [2. Random Access Procedure Attack Step by step](#2-random-access-procedure-attack-step-by-step)
+  * [2.1. RACH Msg 1 attack](#21-rach-msg-1-attack)
+  * [2.2. RACH Msg 3 attack](#22-rach-msg-3-attack)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## 1. Random Access Procedure Step by step
 
