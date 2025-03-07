@@ -18,17 +18,9 @@
 
 ## 1. Map of PRACH Attack Problem
 
-**Available Data from ZhongXin's Thesis:**
-- Attack Msg1 and Msg3 seperately:
-    - Attack Msg1:
-        - with noise threshold
-        - with 1 UE
-        - with attacker start early
-            - with varying attack period (1)
-            - without varying attack period (2)
-    - Attack Msg3:
-        - with noise threshold
-        - with 1 UE (3)
+**Legend:**
+- Different Color = Available Data from ZhongXin's Thesis
+- Line to Dot = Planned problem focus
 
 ```mermaid
 stateDiagram-v2
@@ -130,4 +122,16 @@ stateDiagram-v2
 
 
 ## 2. PRACH Attack Problem to focus on
+
+**Available Data from ZhongXin's Thesis:**
+- Attack Msg1 and Msg3 seperately:
+    - Attack Msg1:
+        - with noise threshold
+        - with 1 UE
+        - with attacker start early
+            - with varying attack period (1)
+            - without varying attack period (2)
+    - Attack Msg3:
+        - with noise threshold
+        - with 1 UE (3)
 
