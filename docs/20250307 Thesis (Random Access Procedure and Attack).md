@@ -7,7 +7,8 @@
 - [x] Understand Random Access Procedure Attack
 
 **References:**
-- 
+- [5G/NR - Initial Access/RACH](https://www.sharetechnote.com/html/5G/5G_RACH.html)
+- [Techniques and Impact Evaluation of RACH Jamming in 5G network](https://etheses.lib.ntust.edu.tw/thesis/detail/64057b454c8e6e7e11cfd2812c8fecf7/)
 
 **Table of Contents:**
 - 
@@ -55,3 +56,53 @@ transmission
 
 ## 2. Random Access Procedure Attack Step by step
 
+## 2.1. RACH Msg 1 attack
+
+RACH Msg1 attack transmits a Msg1 in every RO to collide with other UEs on the PRACH, with an expected collision probability of one in sixty-four
+
+```mermaid
+sequenceDiagram
+    gNB->>UE: [1] SSB/PBCH<br/>System Information
+    gNB->>Attacker: [2] SSB/PBCH<br/>System Information
+    Note over UE,Attacker: Synchronization
+    UE->>gNB: [3] PRACH<br/>Random Access Preamble (Msg1)
+    UE->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
+    Note over UE,gNB,Attacker: [5] Msg1 attack Complete
+```
+
+1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
+transmission
+
+2. Attacker also receive synchronization signal and PBCH (SSB)
+
+3. UE determines the allocation of PRACH resources and transmits a preamble (Msg1) to the gNB
+
+4. Attacker also transmits a preamble (Msg1) to the gNB
+
+## 2.2. RACH Msg 3 attack
+
+RACH Msg3 attack decodes Msg2 to determine UL grants corresponding to RAPIDs, then transmits scrambled Msg3 to cause collisions or interference, with an expected collision probability of 100 percent.
+
+```mermaid
+sequenceDiagram
+    Note over UE,gNB,attacker: ...
+    gNB->>UE: [1] PDCCH<br/>Downlink Control Information
+    gNB->>Attacker: [2] PDCCH<br/>Downlink Control Information
+    gNB->>UE: [3] PDSCH<br/>Random Access Response (Msg2)
+    gNB->>Attacker: [4] PDSCH<br/>Random Access Response (Msg2)
+    UE->>gNB: [5] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    Attacker->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    Note over UE,gNB,Attacker: [7] Msg1 attack Complete
+```
+
+1. gNB indicates the downlink control information (DCI) on the PDCCH, specifying the location of the PDSCH where Msg2 will be transmitted
+
+2. Attacker also receive the downlink control information (DCI) on the PDCCH
+
+3. Msg2 will be transmitted by gNB
+
+4. Attacker also receive Msg2
+
+5. UE uses the information in Msg2, to transmit the RRC setup request (Msg3) on PUSCH
+
+6. Attacker uses the same information in Msg2, to transmit the scrambled Msg3 on PUSCH
