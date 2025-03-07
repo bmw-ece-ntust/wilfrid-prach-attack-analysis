@@ -56,6 +56,8 @@ transmission
 
 ## 2. Random Access Procedure Attack Step by step
 
+**Note:** for Zhong Xin's thesis, Msg1 and Msg3 attack is done seperately
+
 ## 2.1. RACH Msg 1 attack
 
 RACH Msg1 attack transmits a Msg1 in every RO to collide with other UEs on the PRACH, with an expected collision probability of one in sixty-four
