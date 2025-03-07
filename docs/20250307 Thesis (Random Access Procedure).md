@@ -13,6 +13,17 @@
 
 ## 1. Step by step
 
+```mermaid
+sequenceDiagram
+    gNB->>UE: [1] SSB/PBCH<br/>System Information
+	  UE->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
+    gNB->>UE: PDCCH<br/>Donwlink Control Information
+    gNB->>UE: PDSCH<br/>Randon Access Response (Msg2)
+    UE->>gNB: PUSCH<br/>RRC Connection Setup Request (Msg3)
+    gNB->>UE: PDCCH<br/>Donwlink Control Information
+    gNB->>UE: PDSCH<br/>RRC Connection Setup (Msg4)
+```
+
 1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
 transmission
 
