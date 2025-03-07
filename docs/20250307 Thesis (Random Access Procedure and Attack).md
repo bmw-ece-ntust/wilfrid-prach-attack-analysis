@@ -92,7 +92,7 @@ sequenceDiagram
     gNB->>Attacker: [4] PDSCH<br/>Random Access Response (Msg2)
     UE->>gNB: [5] PUSCH<br/>RRC Connection Setup Request (Msg3)
     Attacker->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
-    Note over gNB,Attacker: [7] Msg1 attack Complete
+    Note over gNB,Attacker: [7] Msg3 attack Complete
 ```
 
 1. gNB indicates the downlink control information (DCI) on the PDCCH, specifying the location of the PDSCH where Msg2 will be transmitted
