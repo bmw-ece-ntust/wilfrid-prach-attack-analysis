@@ -20,6 +20,8 @@
 
 ```mermaid
 stateDiagram-v2
+    classDef zhongXinCase fill:white
+
     s1: PRACH Attack
     s2: Attack Msg1
     s3: Attack Msg3
@@ -51,14 +53,14 @@ stateDiagram-v2
     s7 --> s14
     s8 --> s15
     s8 --> s16
-    s17: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with uniform start time
-    s18: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with different start time
-    s19: Attack Msg1<br>with noise threshold<br>with multi UE<br>with uniform start time
-    s20: Attack Msg1<br>with noise threshold<br>with multi UE<br>with different start time
-    s21: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with uniform start time
-    s22: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with different start time
-    s23: Attack Msg1<br>without noise threshold<br>with multi UE<br>with uniform start time
-    s24: Attack Msg1<br>without noise threshold<br>with multi UE<br>with different start time
+    s17: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early
+    s18: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early
+    s19: Attack Msg1<br>with noise threshold<br>with multi UE<br>with attacker start early
+    s20: Attack Msg1<br>with noise threshold<br>with multi UE<br>without attacker start early
+    s21: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early
+    s22: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early
+    s23: Attack Msg1<br>without noise threshold<br>with multi UE<br>with attacker start early
+    s24: Attack Msg1<br>without noise threshold<br>with multi UE<br>without attacker start early
     s9 --> s17
     s9 --> s18
     s10 --> s19
@@ -67,14 +69,14 @@ stateDiagram-v2
     s11 --> s22
     s12 --> s23
     s12 --> s24
-    s25: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with uniform start time
-    s26: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with different start time
-    s27: Attack Msg3<br>with noise threshold<br>with multi UE<br>with uniform start time
-    s28: Attack Msg3<br>with noise threshold<br>with multi UE<br>with different start time
-    s29: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with uniform start time
-    s30: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with different start time
-    s31: Attack Msg3<br>without noise threshold<br>with multi UE<br>with uniform start time
-    s32: Attack Msg3<br>without noise threshold<br>with multi UE<br>with different start time
+    s25: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with attacker start early
+    s26: Attack Msg3<br>with noise threshold<br>with 1 UE<br>without attacker start early
+    s27: Attack Msg3<br>with noise threshold<br>with multi UE<br>with attacker start early
+    s28: Attack Msg3<br>with noise threshold<br>with multi UE<br>without attacker start early
+    s29: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with attacker start early
+    s30: Attack Msg3<br>without noise threshold<br>with 1 UE<br>without attacker start early
+    s31: Attack Msg3<br>without noise threshold<br>with multi UE<br>with attacker start early
+    s32: Attack Msg3<br>without noise threshold<br>with multi UE<br>without attacker start early
     s13 --> s25
     s13 --> s26
     s14 --> s27
@@ -83,6 +85,8 @@ stateDiagram-v2
     s15 --> s30
     s16 --> s31
     s16 --> s32
+
+    class s17 zhongXinCase
 ```
 
 
