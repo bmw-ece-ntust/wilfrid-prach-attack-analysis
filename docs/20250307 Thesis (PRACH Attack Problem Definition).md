@@ -67,6 +67,22 @@ stateDiagram-v2
     s11 --> s22
     s12 --> s23
     s12 --> s24
+    s25: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with uniform start time
+    s26: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with different start time
+    s27: Attack Msg3<br>with noise threshold<br>with multi UE<br>with uniform start time
+    s28: Attack Msg3<br>with noise threshold<br>with multi UE<br>with different start time
+    s29: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with uniform start time
+    s30: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with different start time
+    s31: Attack Msg3<br>without noise threshold<br>with multi UE<br>with uniform start time
+    s32: Attack Msg3<br>without noise threshold<br>with multi UE<br>with different start time
+    s13 --> s25
+    s13 --> s26
+    s14 --> s27
+    s14 --> s28
+    s15 --> s29
+    s15 --> s30
+    s16 --> s31
+    s16 --> s32
 ```
 
 
