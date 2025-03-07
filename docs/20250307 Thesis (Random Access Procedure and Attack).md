@@ -1,9 +1,10 @@
-# 20250307 Thesis (Random Access Procedure)
+# 20250307 Thesis (Random Access Procedure and Attack)
 
 ###### tags: `2025`
 
 **Goal:**
 - [x] Understand 5G Random Access Procedure
+- [x] Understand Random Access Procedure Attack
 
 **References:**
 - 
