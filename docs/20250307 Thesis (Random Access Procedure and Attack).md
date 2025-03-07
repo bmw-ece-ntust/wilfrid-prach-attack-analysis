@@ -85,24 +85,31 @@ RACH Msg3 attack decodes Msg2 to determine UL grants corresponding to RAPIDs, th
 
 ```mermaid
 sequenceDiagram
-    Note over gNB,UE: ...
-    gNB->>UE: [1] PDCCH<br/>Downlink Control Information
-    gNB->>Attacker: [2] PDCCH<br/>Downlink Control Information
-    gNB->>UE: [3] PDSCH<br/>Random Access Response (Msg2)
-    gNB->>Attacker: [4] PDSCH<br/>Random Access Response (Msg2)
-    UE->>gNB: [5] PUSCH<br/>RRC Connection Setup Request (Msg3)
-    Attacker->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
-    Note over gNB,Attacker: [7] Msg3 attack Complete
+    gNB->>UE: [1] SSB/PBCH<br/>System Information
+    gNB->>Attacker: [2] SSB/PBCH<br/>System Information
+    Note over gNB,Attacker: ...
+    gNB->>UE: [3] PDCCH<br/>Downlink Control Information
+    gNB->>Attacker: [4] PDCCH<br/>Downlink Control Information
+    gNB->>UE: [5] PDSCH<br/>Random Access Response (Msg2)
+    gNB->>Attacker: [6] PDSCH<br/>Random Access Response (Msg2)
+    UE->>gNB: [7] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    Attacker->>gNB: [8] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    Note over gNB,Attacker: [9] Msg3 attack Complete
 ```
 
-1. gNB indicates the downlink control information (DCI) on the PDCCH, specifying the location of the PDSCH where Msg2 will be transmitted
+1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
+transmission
 
-2. Attacker also receive the downlink control information (DCI) on the PDCCH
+2. Attacker also receive synchronization signal and PBCH (SSB)
 
-3. Msg2 will be transmitted by gNB
+3. gNB indicates the downlink control information (DCI) on the PDCCH, specifying the location of the PDSCH where Msg2 will be transmitted
 
-4. Attacker also receive Msg2
+4. Attacker also receive the downlink control information (DCI) on the PDCCH
 
-5. UE uses the information in Msg2, to transmit the RRC setup request (Msg3) on PUSCH
+5. Msg2 will be transmitted by gNB
 
-6. Attacker uses the same information in Msg2, to transmit the scrambled Msg3 on PUSCH
+6. Attacker also receive Msg2
+
+7. UE uses the information in Msg2, to transmit the RRC setup request (Msg3) on PUSCH
+
+8. Attacker uses the same information in Msg2, to transmit the scrambled Msg3 on PUSCH
