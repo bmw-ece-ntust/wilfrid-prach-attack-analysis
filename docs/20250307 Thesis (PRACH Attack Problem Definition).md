@@ -117,40 +117,12 @@ stateDiagram-v2
     s23 --> s46
     s24 --> s47
     s24 --> s48
-    s49: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
-    s50: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
-    s51: Attack Msg3<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
-    s52: Attack Msg3<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
-    s53: Attack Msg3<br>with noise threshold<br>with multi UE<br>with attacker start early<br>with varying attack period
-    s54: Attack Msg3<br>with noise threshold<br>with multi UE<br>with attacker start early<br>without varying attack period
-    s55: Attack Msg3<br>with noise threshold<br>with multi UE<br>without attacker start early<br>with varying attack period
-    s56: Attack Msg3<br>with noise threshold<br>with multi UE<br>without attacker start early<br>without varying attack period
-    s57: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
-    s58: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
-    s59: Attack Msg3<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
-    s60: Attack Msg3<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
-    s61: Attack Msg3<br>without noise threshold<br>with multi UE<br>with attacker start early<br>with varying attack period
-    s62: Attack Msg3<br>without noise threshold<br>with multi UE<br>with attacker start early<br>without varying attack period
-    s63: Attack Msg3<br>without noise threshold<br>with multi UE<br>without attacker start early<br>with varying attack period
-    s64: Attack Msg3<br>without noise threshold<br>with multi UE<br>without attacker start early<br>without varying attack period
-    s25 --> s49
-    s25 --> s50
-    s26 --> s51
-    s26 --> s52
-    s27 --> s53
-    s27 --> s54
-    s28 --> s55
-    s28 --> s56
-    s29 --> s57
-    s29 --> s58
-    s30 --> s59
-    s30 --> s60
-    s31 --> s61
-    s31 --> s62
-    s32 --> s63
-    s32 --> s64
 
-    class s1 zhongXinCase
+    s33 --> [*]
+    s34 --> [*]
+    s25 --> [*]
+
+    class s33,s34,s25 zhongXinCase
 ```
 
 
