@@ -20,8 +20,13 @@
 
 ```mermaid
 stateDiagram-v2
-    State1: PRACH Attack
-    State1 --> [*]
+    s1: PRACH Attack
+    s2: Attack Msg1
+    s3: Attack Msg3
+    s4: Attack Msg1 and Msg3 Together
+    s1 --> s2
+    s1 --> s3
+    s1 --> s4
 ```
 
 
