@@ -85,7 +85,7 @@ RACH Msg3 attack decodes Msg2 to determine UL grants corresponding to RAPIDs, th
 
 ```mermaid
 sequenceDiagram
-    Note over gNB,Attacker: ...
+    Note over gNB,UE: ...
     gNB->>UE: [1] PDCCH<br/>Downlink Control Information
     gNB->>Attacker: [2] PDCCH<br/>Downlink Control Information
     gNB->>UE: [3] PDSCH<br/>Random Access Response (Msg2)
