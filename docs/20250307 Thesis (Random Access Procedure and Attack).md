@@ -66,7 +66,7 @@ sequenceDiagram
     gNB->>Attacker: [2] SSB/PBCH<br/>System Information
     Note over UE,Attacker: Synchronization
     UE->>gNB: [3] PRACH<br/>Random Access Preamble (Msg1)
-    UE->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
+    Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
     Note over gNB,Attacker: [5] Msg1 attack Complete
 ```
 
@@ -85,7 +85,7 @@ RACH Msg3 attack decodes Msg2 to determine UL grants corresponding to RAPIDs, th
 
 ```mermaid
 sequenceDiagram
-    Note over gNB,attacker: ...
+    Note over gNB,Attacker: ...
     gNB->>UE: [1] PDCCH<br/>Downlink Control Information
     gNB->>Attacker: [2] PDCCH<br/>Downlink Control Information
     gNB->>UE: [3] PDSCH<br/>Random Access Response (Msg2)
