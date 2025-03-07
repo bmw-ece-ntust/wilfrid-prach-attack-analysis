@@ -17,14 +17,14 @@
 ```mermaid
 sequenceDiagram
     gNB->>UE: [1] SSB/PBCH<br/>System Information
-    UE->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
+    UE->>gNB+: [2] PRACH<br/>Random Access Preamble (Msg1)
     Note over UE: [3] Calculate RAR Window
     gNB->>UE: [4] PDCCH<br/>Downlink Control Information
-    gNB->>UE: [5] PDSCH<br/>Random Access Response (Msg2)
-    UE->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    gNB->>UE-: [5] PDSCH<br/>Random Access Response (Msg2)
+    UE->>gNB+: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
     Note over UE: [7] Start CR Timer
     gNB->>UE: [8] PDCCH<br/>Donwlink Control Information
-    gNB->>UE: [9] PDSCH<br/>RRC Connection Setup (Msg4)
+    gNB->>UE-: [9] PDSCH<br/>RRC Connection Setup (Msg4)
     Note over UE,gNB: [10] RA Complete
 ```
 
