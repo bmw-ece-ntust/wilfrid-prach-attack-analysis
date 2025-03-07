@@ -67,7 +67,7 @@ sequenceDiagram
     Note over UE,Attacker: Synchronization
     UE->>gNB: [3] PRACH<br/>Random Access Preamble (Msg1)
     UE->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
-    Note over UE,gNB,Attacker: [5] Msg1 attack Complete
+    Note over gNB,Attacker: [5] Msg1 attack Complete
 ```
 
 1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
@@ -85,7 +85,7 @@ RACH Msg3 attack decodes Msg2 to determine UL grants corresponding to RAPIDs, th
 
 ```mermaid
 sequenceDiagram
-    Note over UE,gNB,attacker: ...
+    Note over gNB,attacker: ...
     gNB->>UE: [1] PDCCH<br/>Downlink Control Information
     gNB->>Attacker: [2] PDCCH<br/>Downlink Control Information
     gNB->>UE: [3] PDSCH<br/>Random Access Response (Msg2)
