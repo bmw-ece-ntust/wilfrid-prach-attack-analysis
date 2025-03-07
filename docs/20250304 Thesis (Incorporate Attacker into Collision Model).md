@@ -286,7 +286,6 @@ N_{S,i}-1, & \text{if 1 attacker msg1 inside } N_{S,i} \\
 N_{S,i} - O, & \text{if O attacker msg1 inside } N_{S,i}
 \end{cases}
 ```
-<!--
 ```math
 P(\hat{N}_{S,i} = N_{S,i} - 0 = N_{S,i}) = \frac{\binom{N_{S,i}}{0}\times \binom{N_{C,i}}{O} \times \binom{O}{0}}{\sum_{j=0}^{O} \binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}
 ```
@@ -299,7 +298,7 @@ P(\hat{N}_{S,i} = N_{S,i} - 1) = \frac{\binom{N_{S,i}}{1}\times \binom{N_{C,i}}{
 ```math
 \hat{N}_{S,i} = \sum_{j=0}^{O} (N_{S,i}-j)\times \frac{\binom{N_{S,i}}{j}\times \binom{N_{C,i}}{O-j} \times \binom{O}{j}}{\sum_{k=0}^{O} \binom{N_{S,i}}{k}\times \binom{N_{C,i}}{O-k} \times \binom{O}{k}}
 ```
--->
+<!--
 3a. We can see that `$\hat{N}_{S,i}$` is just $N_{S,i}$ minus the number of attacker's msg1 that fall in $N_{S,i}$. Let $X$ be the number of attacker's msg1 that fall in $N_{S,i}$. Then we can define: 
 ```math
 \hat{N}_{S,i} = N_{S,i} - E[X]
@@ -320,6 +319,7 @@ O, & \text{if } Y(N_{S,i}, 0, O) \\
 p \times ( 1 + Y(N_{S,i} - p, N_{C,i}, O-1) ) + (1 - p) \times Y(N_{S,i}, N_{C,i} - (1 - p), O-1), & \text{otherwise}
 \end{cases}
 ```
+-->
 
 4. Average number of UEs that transmit Msg1 in the $i^{th}$ SSB. Initially, $K_1 = M$
 ```math
