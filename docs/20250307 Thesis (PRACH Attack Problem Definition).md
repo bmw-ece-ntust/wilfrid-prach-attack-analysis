@@ -47,7 +47,7 @@ stateDiagram-v2
     s14: Attack Msg3<br>with noise threshold<br>multi UE
     s15: Attack Msg3<br>without noise threshold<br>1 UE
     s16: Attack Msg3<br>without noise threshold<br>multi UE
-    s7 --> s12
+    s7 --> s13
     s7 --> s14
     s8 --> s15
     s8 --> s16
