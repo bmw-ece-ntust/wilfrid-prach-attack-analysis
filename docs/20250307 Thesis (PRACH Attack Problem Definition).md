@@ -27,8 +27,14 @@ stateDiagram-v2
     s1 --> s2
     s1 --> s3
     s1 --> s4
-    s5: Attack Msg1<br>abc
+    s5: Attack Msg1<br>with noise threshold
+    s6: Attack Msg1<br>without noise threshold
     s2 --> s5
+    s2 --> s6
+    s7: Attack Msg3<br>with noise threshold
+    s8: Attack Msg3<br>without noise threshold
+    s3 --> s7
+    s3 --> s8
 ```
 
 
