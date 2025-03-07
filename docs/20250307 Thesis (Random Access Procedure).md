@@ -17,12 +17,14 @@
 sequenceDiagram
     gNB->>UE: [1] SSB/PBCH<br/>System Information
     UE->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
-    activate UE
-    gNB->>UE: PDCCH<br/>Donwlink Control Information
-    gNB->>UE: PDSCH<br/>Randon Access Response (Msg2)
-    UE->>gNB: PUSCH<br/>RRC Connection Setup Request (Msg3)
-    gNB->>UE: PDCCH<br/>Donwlink Control Information
-    gNB->>UE: PDSCH<br/>RRC Connection Setup (Msg4)
+    Note over UE: [3] Calculate RAR Window
+    gNB->>UE: [4] PDCCH<br/>Downlink Control Information
+    gNB->>UE: [5] PDSCH<br/>Random Access Response (Msg2)
+    UE->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    Note over UE: [7] Start CR Timer
+    gNB->>UE: [8] PDCCH<br/>Donwlink Control Information
+    gNB->>UE: [9] PDSCH<br/>RRC Connection Setup (Msg4)
+    Note over UE,gNB: [10] RA Complete
 ```
 
 1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
