@@ -16,7 +16,7 @@
 ```mermaid
 sequenceDiagram
     gNB->>UE: [1] SSB/PBCH<br/>System Information
-	  UE->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
+    +UE->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
     gNB->>UE: PDCCH<br/>Donwlink Control Information
     gNB->>UE: PDSCH<br/>Randon Access Response (Msg2)
     UE->>gNB: PUSCH<br/>RRC Connection Setup Request (Msg3)
