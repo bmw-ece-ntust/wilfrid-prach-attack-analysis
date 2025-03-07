@@ -22,11 +22,13 @@ sequenceDiagram
         Note over UE: [3] Calculate RAR Window
         gNB->>UE: [4] PDCCH<br/>Downlink Control Information
         gNB->>UE: [5] PDSCH<br/>Random Access Response (Msg2)
+    end
     UE->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
     critical CR Timer
         Note over UE: [7] Start CR Timer
         gNB->>UE: [8] PDCCH<br/>Donwlink Control Information
         gNB->>UE: [9] PDSCH<br/>RRC Connection Setup (Msg4)
+    end
     Note over UE,gNB: [10] RA Complete
 ```
 
