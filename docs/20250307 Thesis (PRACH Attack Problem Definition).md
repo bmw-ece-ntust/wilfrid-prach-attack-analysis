@@ -135,3 +135,38 @@ stateDiagram-v2
         - with noise threshold
         - with 1 UE (3)
 
+```mermaid
+stateDiagram-v2
+    classDef zhongXinCase fill:#fdd
+
+    s1: Zhong Xin Case
+    
+    s13: Attack Msg3<br>with noise threshold<br>with 1 UE
+    s15: Attack Msg3<br>without noise threshold<br>with 1 UE
+
+    s25: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
+    s26: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
+    s27: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
+    s28: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
+
+    s33: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
+    s34: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
+    s35: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
+    s36: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
+
+    s1 --> s25
+    s1 --> s26
+    s1 --> s13
+
+    s25 --> s27
+    s25 --> s33
+    s33 --> s35
+
+    s26 --> s28
+    s26 --> s34
+    s34 --> s36
+
+    s13 --> s15
+
+    class s1,s25,s26,s13 zhongXinCase
+```
