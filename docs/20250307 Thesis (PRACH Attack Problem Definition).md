@@ -28,7 +28,7 @@
             - without varying attack period (2)
     - Attack Msg3:
         - with noise threshold
-        - with 1 UE
+        - with 1 UE (3)
 
 ```mermaid
 stateDiagram-v2
