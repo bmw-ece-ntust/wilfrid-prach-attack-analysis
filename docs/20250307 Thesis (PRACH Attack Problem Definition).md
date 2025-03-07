@@ -135,6 +135,7 @@ stateDiagram-v2
         - with noise threshold
         - with 1 UE (3)
 
+**Planned problem focus:**
 ```mermaid
 stateDiagram-v2
     classDef zhongXinCase fill:#fdd
