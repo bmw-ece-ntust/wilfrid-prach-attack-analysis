@@ -3,8 +3,8 @@
 ###### tags: `2025`
 
 **Goal:**
-- [x] Understand 5G Random Access Procedure
-- [x] Understand Random Access Procedure Attack
+- [x] [Understand 5G Random Access Procedure](#1-random-access-procedure-step-by-step)
+- [x] [Understand Random Access Procedure Attack](#2-random-access-procedure-attack-step-by-step)
 
 **References:**
 - [5G/NR - Initial Access/RACH](https://www.sharetechnote.com/html/5G/5G_RACH.html)
