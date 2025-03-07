@@ -69,60 +69,46 @@ stateDiagram-v2
     s11 --> s22
     s12 --> s23
     s12 --> s24
-    s25: Attack Msg3<br>with noise threshold<br>with 1 UE<br>with attacker start early
-    s26: Attack Msg3<br>with noise threshold<br>with 1 UE<br>without attacker start early
-    s27: Attack Msg3<br>with noise threshold<br>with multi UE<br>with attacker start early
-    s28: Attack Msg3<br>with noise threshold<br>with multi UE<br>without attacker start early
-    s29: Attack Msg3<br>without noise threshold<br>with 1 UE<br>with attacker start early
-    s30: Attack Msg3<br>without noise threshold<br>with 1 UE<br>without attacker start early
-    s31: Attack Msg3<br>without noise threshold<br>with multi UE<br>with attacker start early
-    s32: Attack Msg3<br>without noise threshold<br>with multi UE<br>without attacker start early
-    s13 --> s25
-    s13 --> s26
-    s14 --> s27
-    s14 --> s28
-    s15 --> s29
-    s15 --> s30
-    s16 --> s31
-    s16 --> s32
-    s33: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
-    s34: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
-    s35: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
-    s36: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
-    s37: Attack Msg1<br>with noise threshold<br>with multi UE<br>with attacker start early<br>with varying attack period
-    s38: Attack Msg1<br>with noise threshold<br>with multi UE<br>with attacker start early<br>without varying attack period
-    s39: Attack Msg1<br>with noise threshold<br>with multi UE<br>without attacker start early<br>with varying attack period
-    s40: Attack Msg1<br>with noise threshold<br>with multi UE<br>without attacker start early<br>without varying attack period
-    s41: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
-    s42: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
-    s43: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
-    s44: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
-    s45: Attack Msg1<br>without noise threshold<br>with multi UE<br>with attacker start early<br>with varying attack period
-    s46: Attack Msg1<br>without noise threshold<br>with multi UE<br>with attacker start early<br>without varying attack period
-    s47: Attack Msg1<br>without noise threshold<br>with multi UE<br>without attacker start early<br>with varying attack period
-    s48: Attack Msg1<br>without noise threshold<br>with multi UE<br>without attacker start early<br>without varying attack period
-    s17 --> s33
-    s17 --> s34
-    s18 --> s35
-    s18 --> s36
-    s19 --> s37
-    s19 --> s38
-    s20 --> s39
-    s20 --> s40
-    s21 --> s41
-    s21 --> s42
-    s22 --> s43
-    s22 --> s44
-    s23 --> s45
-    s23 --> s46
-    s24 --> s47
-    s24 --> s48
+    s25: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
+    s26: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
+    s27: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
+    s28: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
+    s29: Attack Msg1<br>with noise threshold<br>with multi UE<br>with attacker start early<br>with varying attack period
+    s30: Attack Msg1<br>with noise threshold<br>with multi UE<br>with attacker start early<br>without varying attack period
+    s31: Attack Msg1<br>with noise threshold<br>with multi UE<br>without attacker start early<br>with varying attack period
+    s32: Attack Msg1<br>with noise threshold<br>with multi UE<br>without attacker start early<br>without varying attack period
+    s33: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
+    s34: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
+    s35: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
+    s36: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
+    s37: Attack Msg1<br>without noise threshold<br>with multi UE<br>with attacker start early<br>with varying attack period
+    s38: Attack Msg1<br>without noise threshold<br>with multi UE<br>with attacker start early<br>without varying attack period
+    s39: Attack Msg1<br>without noise threshold<br>with multi UE<br>without attacker start early<br>with varying attack period
+    s40: Attack Msg1<br>without noise threshold<br>with multi UE<br>without attacker start early<br>without varying attack period
+    s17 --> s25
+    s17 --> s26
+    s18 --> s27
+    s18 --> s28
+    s19 --> s29
+    s19 --> s30
+    s20 --> s31
+    s20 --> s32
+    s21 --> s33
+    s21 --> s34
+    s22 --> s35
+    s22 --> s36
+    s23 --> s37
+    s23 --> s38
+    s24 --> s39
+    s24 --> s40
 
-    s33 --> [*]
-    s34 --> [*]
     s25 --> [*]
+    s27 --> [*]
+    s33 --> [*]
+    s35 --> [*]
+    s13 --> [*]
 
-    class s33,s34,s25 zhongXinCase
+    class s25,s26,s13 zhongXinCase
 ```
 
 
