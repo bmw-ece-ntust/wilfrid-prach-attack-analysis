@@ -12,7 +12,7 @@
 **Table of Contents:**
 - 
 
-## 1. Step by step
+## 1. Random Access Procedure Step by step
 
 ```mermaid
 sequenceDiagram
@@ -48,3 +48,6 @@ transmission
 9. gNB send RRC connection setup (Msg4) on the PDSCH
 
 10.  If the UE receives Msg4 within the CR timer, it transitions to the RRC connected state and sends the RRC connection complete (Msg4 Ack), completing the RA process
+
+## 2. Random Access Procedure Attack Step by step
+
