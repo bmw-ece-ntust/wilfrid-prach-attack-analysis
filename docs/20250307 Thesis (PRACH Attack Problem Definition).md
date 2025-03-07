@@ -20,7 +20,7 @@
 
 ```mermaid
 stateDiagram-v2
-    classDef zhongXinCase fill:#f99
+    classDef zhongXinCase fill:#fcc
 
     s1: PRACH Attack
     s2: Attack Msg1
@@ -86,7 +86,7 @@ stateDiagram-v2
     s16 --> s31
     s16 --> s32
 
-    class s17 zhongXinCase
+    class s17,s25 zhongXinCase
 ```
 
 
