@@ -242,7 +242,8 @@ P_{S,i} =
 \begin{cases} 
 1, & \text{if } P_{UE,i} > P_{noise,i} \\ 
 0, & \text{otherwise} 
-\end{cases}```
+\end{cases}
+```
 
 #### 3.1.3. Possible Extension
 
