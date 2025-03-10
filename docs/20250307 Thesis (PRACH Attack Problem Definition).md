@@ -179,16 +179,19 @@ stateDiagram-v2
 
 | Parameter | Description                                                                                                 | Value                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| $\alpha$    | Noise threshold parameter                                                         | 0 == without noise threshold<hr> $x$ = with noise threshold                     |
+| $\alpha$    | Noise threshold parameter                         | 0 = without noise threshold<hr> $x$ = with noise threshold           |
 | gNB RO   | ssb-PositionsInBurst<hr>prach-ConfigurationIndex<hr>msg1-FDM<hr>ssb-perRACH-OccasionAndCB-PreamblesPerSSB | 1 SSB<hr>159<hr>1 RO<hr>OneAnd60 |
 
 ```mermaid
 flowchart LR
-    markdown["`This **is** _Markdown_`"]
     input["`**Input:**
     α
     Line 3`"]
-    input --> markdown
+    process["`**Model**`"]
+    output["`**Input:**
+    α
+    Line 3`"]
+    input --> process --> output
 ```
 **Notes:**
 1. Noise threshold:
