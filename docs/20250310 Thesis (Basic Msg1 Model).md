@@ -13,34 +13,33 @@
 **Table of Contents:**
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
-## 1. Define UE and PRACH parameters
+## 1. System Model
 
-### 1.1. System Model
-
-```mermaid
-flowchart TD
-    A[BaseStation with N preambles per SSB]
-    B(UE 1)
-    C(UE 2)
-    D(...)
-	E(UE M)
-    B-->A
-    C-->A
-    D-->A
-	E-->A
-```
-
-### 1.2. 5G PRACH
+### 1.2. PRACH Msg1 Attack Overview
 
 ```mermaid
 sequenceDiagram
-    gNB->>UE:SSB/PBCH<br/>System Information
-	UE->>gNB: PRACH<br/>Random Access Preamble (Msg1)
-    gNB->>UE: PDCCH<br/>Donwlink Control Information
-    gNB->>UE: PDSCH<br/>Randon Access Response (Msg2)
-    UE->>gNB: PUSCH<br/>RRC Connection Setup Request (Msg3)
-    gNB->>UE: PDCCH<br/>Donwlink Control Information
-    gNB->>UE: PDSCH<br/>RRC Connection Setup (Msg4)
+    gNB->>UE: [1] SSB/PBCH<br/>System Information
+    gNB->>Attacker: [2] SSB/PBCH<br/>System Information
+    Note over UE,Attacker: Synchronization
+    UE->>gNB: [3] PRACH<br/>Random Access Preamble (Msg1)
+    Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
+    Note over gNB,Attacker: Msg1 attack Complete
+```
+### 1.2. Actors
+
+```mermaid
+flowchart TD
+    A["`**Basestation:**
+    *N* preamble ID
+    *P_noise* threshold`"]
+    B("`**UE:**
+    *P_UE* msg1 power`")
+    A[["`**Attacker:**
+    *P_attacker* msg1 power
+    *j* time early start`"]]
+    B-->A
+    C-->A
 ```
 
 ### 1.3. PRACH parameters
