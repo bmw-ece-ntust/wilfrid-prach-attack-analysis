@@ -175,13 +175,24 @@ stateDiagram-v2
 
 ## 3. Input and Output of the PRACH Attack Problem
 
+### 3.1. Attack Msg1
+
+| Parameter | Description                                                                                                 | Value                            |
+| -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| $\alpha$    | Noise threshold parameter                                                         | 0 == without noise threshold<hr> $x$ = with noise threshold                     |
+| gNB RO   | ssb-PositionsInBurst<hr>prach-ConfigurationIndex<hr>msg1-FDM<hr>ssb-perRACH-OccasionAndCB-PreamblesPerSSB | 1 SSB<hr>159<hr>1 RO<hr>OneAnd60 |
+
 ```mermaid
 flowchart LR
     markdown["`This **is** _Markdown_`"]
     input["`**Input:**
-    Line 2
+    $\alpha$
     Line 3`"]
     input --> markdown
 ```
-
+**Notes:**
+1. Noise threshold:
+```math
+P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
+```
 
