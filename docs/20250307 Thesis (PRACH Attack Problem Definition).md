@@ -188,7 +188,7 @@ stateDiagram-v2
 
 ### 3.1. Attack Msg1
 
-#### 3.1.1. Initial model
+#### 3.1.1. Assumptions
 
 | Parameter      | Description                                                                                         | Value                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -199,6 +199,11 @@ stateDiagram-v2
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                                                               | $x$ (Constant)                                                                                    |
 | $P_{attacker}$ | Attacker's Msg1 dB Power (Constant)                                                                 | $x$ (Constant)                                                                                    |
 | $P_{UE}$       | UE's Msg1 dB Power (Constant)                                                                       | $x$ (Constant)                                                                                    |
+
+#### 3.1.2. Initial model
+
+| Parameter      | Description                                                                                         | Value                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $\alpha$       | Noise threshold parameter                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
 | $\theta$       | Number of slots of early start for attacker relative to UE                                          | 0 = without attacker start early<br> $x$ = with attacker start early                              |
 | $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc) |
@@ -230,7 +235,7 @@ flowchart LR
 P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 ```
 
-#### 3.1.2. Possible Extension
+#### 3.1.3. Possible Extension
 
 | Parameter | Description                    | Value                                          |
 | --------- | ------------------------------ | ---------------------------------------------- |
@@ -239,7 +244,7 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 
 ### 3.2. Attack Msg3
 
-#### 3.2.1. Initial model
+#### 3.2.1. Assumptions
 
 | Parameter      | Description                                          | Value          |
 | -------------- | ---------------------------------------------------- | -------------- |
@@ -249,8 +254,14 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 | $I_{max}$      | Number of Total Slots of Msg3 observation (Constant) | $x$ (Constant) |
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                | $x$ (Constant) |
 | $P_{attacker}$ | Attacker's Msg3 dB Power (Constant)                  | $x$ (Constant) |
+
+
+#### 3.2.2. Initial model
+
+| Parameter      | Description                                          | Value          |
+| -------------- | ---------------------------------------------------- | -------------- |
 | $P_{UE}$       | UE's Msg3 dB Power                                   | $x$            |
-| $P_S$          | UE's Msg1 Access Success Probability                 | This is output |
+| $P_S$          | UE's Msg3 Access Success Probability                 | This is output |
 
 ```mermaid
 flowchart LR
@@ -267,7 +278,7 @@ flowchart LR
     input --> process --> output
 ```
 
-#### 3.2.2. Possible Extension
+#### 3.2.3. Possible Extension
 
 | Parameter | Description                    | Value                                          |
 | --------- | ------------------------------ | ---------------------------------------------- |
