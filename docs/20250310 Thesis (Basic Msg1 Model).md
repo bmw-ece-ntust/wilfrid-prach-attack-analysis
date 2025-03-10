@@ -30,13 +30,13 @@ sequenceDiagram
 
 ```mermaid
 flowchart TD
-    A["`**Basestation:**
+    A("`**Basestation:**
     -----------
     *N* preamble ID
-    *P_noise* threshold`"]
-    B("`**UE:**
+    *P_noise* threshold`")
+    B["`**UE:**
     --
-    *P_UE* msg1 power`")
+    *P_UE* msg1 power`"]
     C[["`**Attacker:**
     --------
     *P_attacker* msg1 power
