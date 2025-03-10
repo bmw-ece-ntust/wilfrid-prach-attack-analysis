@@ -73,6 +73,8 @@ gantt
     ‎  : ue1, 30, 5m
     ‎  : ue2, 40, 5m
     ‎  : ue3, 50, 5m
+    section UE ‎ 
+    ‎j : j1, 00, 30m
 ```
 
 ## 2. Model Collision Probability in PRACH by Approximation
