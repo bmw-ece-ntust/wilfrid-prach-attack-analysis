@@ -272,7 +272,7 @@ flowchart LR
     O
     P_noise
     P_attacker`"]
-    inputV["`**Input:**
+    inputV["`**Variable Input:**
     P_UE`"]
     process["`**Msg3 Model**`"]
     output["`**Output:**
