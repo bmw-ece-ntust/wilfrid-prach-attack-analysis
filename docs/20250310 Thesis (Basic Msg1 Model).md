@@ -48,6 +48,15 @@ flowchart TD
 
 ### 1.3. Timing Diagram
 
+```mermaid
+gantt
+    dateFormat HH:mm
+    axisFormat %H:%M
+    Initial milestone : milestone, m1, 17:49, 2m
+    Task A : 10m
+    Task B : 5m
+    Final milestone : milestone, m2, 18:08, 4m
+```
 
 ## 2. Model Collision Probability in PRACH by Approximation
 
