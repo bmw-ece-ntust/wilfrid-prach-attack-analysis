@@ -75,7 +75,7 @@ gantt
     ‎  : ue2, 40, 5m
     ‎  : ue3, 50, 5m
     section ‎ 
-    ‎j : j1, 00, 30m
+    ‎j : active, j1, 00, 30m
 ```
 
 ```mermaid
@@ -102,7 +102,7 @@ gantt
     ‎  : ue2, 40, 5m
     ‎  : ue3, 50, 5m
     section ‎ 
-    ‎j : j1, 00, 30m
+    ‎j : active, j1, 00, 30m
 ```
 
 ```mermaid
@@ -128,7 +128,7 @@ gantt
     ‎  : ue2, 40, 5m
     ‎  : ue3, 50, 5m
     section ‎ 
-    ‎j : j1, 00, 30m
+    ‎j : active, j1, 00, 30m
 ```
 
 ## 2. Model Collision Probability in PRACH by Approximation
