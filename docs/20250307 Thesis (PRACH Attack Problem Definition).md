@@ -205,7 +205,7 @@ stateDiagram-v2
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $i$       | identifier for the ith Random Access Occasion                                                                           | 0..∞ (integer)                                       |
 | $\alpha$       | Noise update factor parameter                                                                           | 0..1 (real)                                       |
-| $\theta$       | Number of Random Access Occasion early start for attacker relative to UE                                          | 0..∞ (integer)                              |
+| $j$       | Number of Random Access Occasion early start for attacker relative to UE                                          | 0..∞ (integer)                              |
 | $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 0..1 (real) |
 
 #### 3.1.3. Output Parameter or Performance Metrics
@@ -225,7 +225,7 @@ flowchart LR
     P_UE`"]
     inputV["`**Variable Input:**
     α
-    θ
+    j
     β`"]
     process["`**Msg1 Model**`"]
     output["`**Output:**
