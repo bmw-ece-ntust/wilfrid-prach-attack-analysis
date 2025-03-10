@@ -266,5 +266,5 @@ flowchart LR
 | Parameter | Description                    | Value                                          |
 | --------- | ------------------------------ | ---------------------------------------------- |
 | $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
-| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto 64) |
+| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto $M$) |
 
