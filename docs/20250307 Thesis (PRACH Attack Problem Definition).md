@@ -13,6 +13,12 @@
 - [20250307 Thesis (Random Access Procedure and Attack)](https://github.com/bmw-ece-ntust/wilfrid-prach-attack-analysis/blob/master/docs/20250307%20Thesis%20(Random%20Access%20Procedure%20and%20Attack).md)
 
 **Table of Contents:**
+- [20250307 Thesis (PRACH Attack Problem Definition)](#20250307-thesis--prach-attack-problem-definition-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. Map of PRACH Attack Problem](#1-map-of-prach-attack-problem)
+  * [2. PRACH Attack Problem to focus on](#2-prach-attack-problem-to-focus-on)
+  * [3. Input and Output of the PRACH Attack Problem](#3-input-and-output-of-the-prach-attack-problem)
+    + [3.1. Attack Msg1](#31-attack-msg1)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -180,15 +186,16 @@ stateDiagram-v2
 | Parameter | Description                                                                                                 | Value                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | $\alpha$    | Noise threshold parameter                         | 0 = without noise threshold<hr> $x$ = with noise threshold           |
-| gNB RO   | ssb-PositionsInBurst<hr>prach-ConfigurationIndex<hr>msg1-FDM<hr>ssb-perRACH-OccasionAndCB-PreamblesPerSSB | 1 SSB<hr>159<hr>1 RO<hr>OneAnd60 |
+| $\theta$    | Number of slots of early start for attacker relative to UE            | 0 = without attacker start early<hr> $x$ = with attacker start early     |
 
 ```mermaid
 flowchart LR
     input["`**Input:**
     α
+    θ
     Line 3`"]
     process["`**Model**`"]
-    output["`**Input:**
+    output["`**Output:**
     α
     Line 3`"]
     input --> process --> output
