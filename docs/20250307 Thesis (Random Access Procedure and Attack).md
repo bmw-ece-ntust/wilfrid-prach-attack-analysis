@@ -77,7 +77,7 @@ sequenceDiagram
     Note over UE,Attacker: Synchronization
     UE->>gNB: [3] PRACH<br/>Random Access Preamble (Msg1)
     Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
-    Note over gNB,Attacker: [5] Msg1 attack Complete
+    Note over gNB,Attacker: Msg1 attack Complete
 ```
 
 1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
@@ -104,7 +104,7 @@ sequenceDiagram
     gNB->>Attacker: [6] PDSCH<br/>Random Access Response (Msg2)
     UE->>gNB: [7] PUSCH<br/>RRC Connection Setup Request (Msg3)
     Attacker->>gNB: [8] PUSCH<br/>RRC Connection Setup Request (Msg3)
-    Note over gNB,Attacker: [9] Msg3 attack Complete
+    Note over gNB,Attacker: Msg3 attack Complete
 ```
 
 1.  gNB transmits the synchronization signal and PBCH (SSB), enabling the UE to acquire the cell’s system information and synchronize with the downlink
