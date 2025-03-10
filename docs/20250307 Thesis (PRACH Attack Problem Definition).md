@@ -207,6 +207,11 @@ stateDiagram-v2
 | $\alpha$       | Noise update factor parameter                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
 | $\theta$       | Number of Random Access Occasion early start for attacker relative to UE                                          | 0 = without attacker start early<br> $x$ = with attacker start early                              |
 | $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc) |
+
+#### 3.1.3. Output Parameter or Performance Metrics
+
+| Parameter      | Description                                                                                         | Value                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $P_S$          | UE's Msg1 Access Success Probability                                                                | This is output                                                                                    |
 
 ```mermaid
@@ -245,7 +250,7 @@ P_{S,i} =
 \end{cases}
 ```
 
-#### 3.1.3. Possible Extension
+#### 3.1.4. Possible Extension
 
 | Parameter | Description                    | Value                                          |
 | --------- | ------------------------------ | ---------------------------------------------- |
@@ -271,7 +276,14 @@ P_{S,i} =
 | Parameter      | Description                                          | Value          |
 | -------------- | ---------------------------------------------------- | -------------- |
 | $P_{UE}$       | UE's Msg3 dB Power                                   | $x$            |
+
+
+#### 3.2.3. Output Parameter or Performance Metrics
+
+| Parameter      | Description                                          | Value          |
+| -------------- | ---------------------------------------------------- | -------------- |
 | $P_S$          | UE's Msg3 Access Success Probability                 | This is output |
+
 
 ```mermaid
 flowchart LR
@@ -290,7 +302,7 @@ flowchart LR
     process --> output
 ```
 
-#### 3.2.3. Possible Extension
+#### 3.2.4. Possible Extension
 
 | Parameter | Description                    | Value                                          |
 | --------- | ------------------------------ | ---------------------------------------------- |
