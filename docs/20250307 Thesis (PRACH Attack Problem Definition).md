@@ -176,7 +176,7 @@ stateDiagram-v2
     s26 --> s34
     s34 --> s36
 
-    class s1,s25,s26,s13 zhongXinCase
+    class s1,s25,s26,s13,s15 zhongXinCase
 ```
 
 ## 3. Input and Output of the PRACH Attack Problem
