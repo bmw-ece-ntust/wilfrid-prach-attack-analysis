@@ -185,20 +185,27 @@ stateDiagram-v2
 
 | Parameter | Description                                                                                                 | Value                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| $M$    | Number of UE (Constant)                         | 1 (Constant)           |
+| $N$    | Number of Random Access Occasion (Constant)                         | 64 (Constant)           |
+| $I_max$    | Number of Total Slots of observation (Constant)                         | $x$ (Constant)           |
 | $\alpha$    | Noise threshold parameter                         | 0 = without noise threshold<br> $x$ = with noise threshold           |
 | $\theta$    | Number of slots of early start for attacker relative to UE            | 0 = without attacker start early<br> $x$ = with attacker start early     |
-| $\beta$    | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion  | 1   = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc)     |
+| $\beta$    | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion  | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc)     |
+| $P_S$    | UE's Msg1 Access Success Probability  | This is output     |
 
 ```mermaid
 flowchart LR
     input["`**Input:**
+    M
+    N
+    I_max
     α
     θ
     β
     Line 3`"]
     process["`**Model**`"]
     output["`**Output:**
-    α
+    
     Line 3`"]
     input --> process --> output
 ```
