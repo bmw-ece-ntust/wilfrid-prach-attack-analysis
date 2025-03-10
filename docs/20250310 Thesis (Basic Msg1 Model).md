@@ -43,12 +43,8 @@ flowchart TD
     C-->A
 ```
 
-### 1.3. PRACH parameters
+### 1.3. Timing Diagram
 
-| Category | Parameter                                                                                                 | Value                            |
-| -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| UE RA    | ra-ResponseWindow<hr>ra-ContentionResolutionTimer                                                         | 10ms<hr>64ms                     |
-| gNB RO   | ssb-PositionsInBurst<hr>prach-ConfigurationIndex<hr>msg1-FDM<hr>ssb-perRACH-OccasionAndCB-PreamblesPerSSB | 1 SSB<hr>159<hr>1 RO<hr>OneAnd60 |
 
 ## 2. Model Collision Probability in PRACH by Approximation
 
