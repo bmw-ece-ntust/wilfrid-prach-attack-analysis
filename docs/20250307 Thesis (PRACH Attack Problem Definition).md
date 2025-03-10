@@ -236,6 +236,13 @@ flowchart LR
 ```math
 P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
 ```
+2. UE's Msg1 Success with Noise threshold:
+```math
+P_{S,i} =
+\begin{cases} 
+1, & \text{if } P_{UE,i} > P_{noise,i} \\ 
+0, & \text{otherwise} 
+\end{cases}```
 
 #### 3.1.3. Possible Extension
 
