@@ -56,26 +56,25 @@ gantt
     dateFormat mm
     title beta = 1
     axisFormat %M
-    section gNB RAO
+    section gNB
     RAO 1 : done, rao1, 00, 5m
     RAO 2 : done, rao2, 10, 5m
     RAO 3 : done, rao3, 20, 5m
     RAO 4 : done, rao4, 30, 5m
     RAO 5 : done, rao5, 40, 5m
     RAO 6 : done, rao5, 50, 5m
-    section Attacker<br>Msg1
-    ‎  : crit, att1, 00, 5m
-    ‎  : crit, att2, 10, 5m
-    ‎  : crit, att3, 20, 5m
-    ‎  : crit, att4, 30, 5m
-    ‎  : crit, att5, 40, 5m
-    ‎  : crit, att5, 50, 5m
-    section UE Msg1
-    ‎  : ue1, 30, 5m
-    ‎  : ue2, 40, 5m
-    ‎  : ue3, 50, 5m
-    section ‎ 
+    section Attacker
+    ‎Msg1 : crit, att1, 00, 5m
+    ‎Msg1 : crit, att2, 10, 5m
+    ‎Msg1 : crit, att3, 20, 5m
+    ‎Msg1 : crit, att4, 30, 5m
+    ‎Msg1 : crit, att5, 40, 5m
+    ‎Msg1 : crit, att5, 50, 5m
     ‎j : active, j1, 00, 30m
+    section UE
+    ‎Msg1 : ue1, 30, 5m
+    ‎Msg1 : ue2, 40, 5m
+    ‎Msg1 : ue3, 50, 5m
 ```
 
 ```mermaid
@@ -86,23 +85,22 @@ gantt
     dateFormat mm
     title beta = 0.5
     axisFormat %M
-    section gNB RAO
+    section gNB
     RAO 1 : done, rao1, 00, 5m
     RAO 2 : done, rao2, 10, 5m
     RAO 3 : done, rao3, 20, 5m
     RAO 4 : done, rao4, 30, 5m
     RAO 5 : done, rao5, 40, 5m
     RAO 6 : done, rao5, 50, 5m
-    section Attacker<br>Msg1
-    ‎  : crit, att1, 00, 5m
-    ‎  : crit, att3, 20, 5m
-    ‎  : crit, att5, 40, 5m
-    section UE Msg1
-    ‎  : ue1, 30, 5m
-    ‎  : ue2, 40, 5m
-    ‎  : ue3, 50, 5m
-    section ‎ 
+    section Attacker
+    ‎Msg1 : crit, att1, 00, 5m
+    ‎Msg1 : crit, att3, 20, 5m
+    ‎Msg1 : crit, att5, 40, 5m
     ‎j : active, j1, 00, 30m
+    section UE
+    ‎Msg1 : ue1, 30, 5m
+    ‎Msg1 : ue2, 40, 5m
+    ‎Msg1 : ue3, 50, 5m
 ```
 
 ```mermaid
@@ -120,15 +118,14 @@ gantt
     RAO 4 : done, rao4, 30, 5m
     RAO 5 : done, rao5, 40, 5m
     RAO 6 : done, rao5, 50, 5m
-    section Attacker<br>Msg1
-    ‎  : crit, att1, 00, 5m
-    ‎  : crit, att5, 40, 5m
-    section UE Msg1
-    ‎  : ue1, 30, 5m
-    ‎  : ue2, 40, 5m
-    ‎  : ue3, 50, 5m
-    section ‎ 
+    section Attacker
+    Msg1 : crit, att1, 00, 5m
+    ‎Msg1 : crit, att5, 40, 5m
     ‎j : active, j1, 00, 30m
+    section UE Msg1
+    ‎Msg1 : ue1, 30, 5m
+    ‎Msg1 : ue2, 40, 5m
+    ‎Msg1 : ue3, 50, 5m
 ```
 
 ## 2. Model Collision Probability in PRACH by Approximation
