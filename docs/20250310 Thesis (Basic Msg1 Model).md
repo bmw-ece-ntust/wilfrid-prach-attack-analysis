@@ -62,7 +62,7 @@ gantt
     4 : rao4, 30, 5m
     5 : rao5, 40, 5m
     6 : rao5, 50, 5m
-    section Attacker Msg1
+    section Attacker<br>Msg1
     ‎  : att1, 00, 5m
     ‎  : att2, 10, 5m
     ‎  : att3, 20, 5m
