@@ -56,10 +56,10 @@ stateDiagram-v2
     s5 --> s10
     s6 --> s11
     s6 --> s12
-    s13: Attack Msg3<br>with noise threshold<br>with 1 UE
-    s14: Attack Msg3<br>with noise threshold<br>with multi UE
-    s15: Attack Msg3<br>without noise threshold<br>with 1 UE
-    s16: Attack Msg3<br>without noise threshold<br>with multi UE
+    s13: Attack Msg3<br>with variable UE power<br>with 1 UE
+    s14: Attack Msg3<br>with variable UE power<br>with multi UE
+    s15: Attack Msg3<br>without variable UE power<br>with 1 UE
+    s16: Attack Msg3<br>without variable UE power<br>with multi UE
     s7 --> s13
     s7 --> s14
     s8 --> s15
@@ -124,7 +124,7 @@ stateDiagram-v2
     s13 --> [*]
     s15 --> [*]
 
-    class s25,s26,s13 zhongXinCase
+    class s25,s26,s13,s15 zhongXinCase
 ```
 
 
@@ -139,8 +139,9 @@ stateDiagram-v2
             - with varying attack period (1)
             - without varying attack period (2)
     - Attack Msg3:
-        - with noise threshold
-        - with 1 UE (3)
+        - with 1 UE
+            - with variable UE power (3)
+            - without variable UE power (4)
 
 **Planned problem focus:**
 ```mermaid
@@ -149,8 +150,8 @@ stateDiagram-v2
 
     s1: Zhong Xin Case
     
-    s13: Attack Msg3<br>with noise threshold<br>with 1 UE
-    s15: Attack Msg3<br>without noise threshold<br>with 1 UE
+    s13: Attack Msg3<br>with variable UE power<br>with 1 UE
+    s15: Attack Msg3<br>without variable UE power<br>with 1 UE
 
     s25: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
     s26: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
@@ -165,6 +166,7 @@ stateDiagram-v2
     s1 --> s25
     s1 --> s26
     s1 --> s13
+    s1 --> s15
 
     s25 --> s27
     s25 --> s33
@@ -173,8 +175,6 @@ stateDiagram-v2
     s26 --> s28
     s26 --> s34
     s34 --> s36
-
-    s13 --> s15
 
     class s1,s25,s26,s13 zhongXinCase
 ```
@@ -185,19 +185,19 @@ stateDiagram-v2
 
 #### 3.1.1. Initial model
 
-| Parameter | Description                                                                                                 | Value                            |
-| -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| $M$    | Number of UE (Constant)                         | 1 (Constant)           |
-| $N$    | Number of Preamble ID (Constant)                         | 64 (Constant)           |
-| $O$    | Number of Attacked Random Access Occasion (Constant)                         | 1 (Constant)           |
-| $I_{max}$    | Number of Total Slots of observation (Constant)                         | $x$ (Constant)           |
-| $P_{noise}$    | Initial Noise dB Threshold (Constant)                         | $x$ (Constant)           |
-| $P_{attacker}$    | Attacker's Msg1 dB Power (Constant)                         | $x$ (Constant)           |
-| $P_{UE}$    | UE's Msg1 dB Power (Constant)                         | $x$ (Constant)           |
-| $\alpha$    | Noise threshold parameter                         | 0 = without noise threshold<br> $x$ = with noise threshold           |
-| $\theta$    | Number of slots of early start for attacker relative to UE            | 0 = without attacker start early<br> $x$ = with attacker start early     |
-| $\beta$    | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion  | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc)     |
-| $P_S$    | UE's Msg1 Access Success Probability  | This is output     |
+| Parameter      | Description                                                                                         | Value                                                                                             |
+| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| $M$            | Number of UE (Constant)                                                                             | 1 (Constant)                                                                                      |
+| $N$            | Number of Preamble ID (Constant)                                                                    | 64 (Constant)                                                                                     |
+| $O$            | Number of Attacked Random Access Occasion (Constant)                                                | 1 (Constant)                                                                                      |
+| $I_{max}$      | Number of Total Slots of Msg1 observation (Constant)                                                     | $x$ (Constant)                                                                                    |
+| $P_{noise}$    | Initial Noise dB Threshold (Constant)                                                               | $x$ (Constant)                                                                                    |
+| $P_{attacker}$ | Attacker's Msg1 dB Power (Constant)                                                                 | $x$ (Constant)                                                                                    |
+| $P_{UE}$       | UE's Msg1 dB Power (Constant)                                                                       | $x$ (Constant)                                                                                    |
+| $\alpha$       | Noise threshold parameter                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
+| $\theta$       | Number of slots of early start for attacker relative to UE                                          | 0 = without attacker start early<br> $x$ = with attacker start early                              |
+| $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc) |
+| $P_S$          | UE's Msg1 Access Success Probability                                                                | This is output                                                                                    |
 
 ```mermaid
 flowchart LR
@@ -212,7 +212,7 @@ flowchart LR
     α
     θ
     β`"]
-    process["`**Model**`"]
+    process["`**Msg1 Model**`"]
     output["`**Output:**
     P_S vs. θ
     P_S vs. α
@@ -227,8 +227,44 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 
 #### 3.1.2. Possible Extension
 
-| Parameter | Description                                                                                                 | Value                            |
-| -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| $M$    | Number of UE                       | 1 = initial model<br>$x$ = extension          |
-| $O$    | Number of Attacked Preamble ID                         | 1 = initial model<br>$x$ = extension (upto 64)          |
+| Parameter | Description                    | Value                                          |
+| --------- | ------------------------------ | ---------------------------------------------- |
+| $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
+| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto 64) |
+
+### 3.2. Attack Msg1
+
+#### 3.2.1. Initial model
+
+| Parameter      | Description                                          | Value          |
+| -------------- | ---------------------------------------------------- | -------------- |
+| $M$            | Number of UE (Constant)                              | 1 (Constant)   |
+| $O$            | Number of Attacked Msg3 (Constant)                   | 1 (Constant)   |
+| $I_{max}$      | Number of Total Slots of Msg3 observation (Constant) | $x$ (Constant) |
+| $P_{noise}$    | Initial Noise dB Threshold (Constant)                | $x$ (Constant) |
+| $P_{attacker}$ | Attacker's Msg3 dB Power (Constant)                  | $x$ (Constant) |
+| $P_{UE}$       | UE's Msg3 dB Power                                   | $x$            |
+| $P_S$          | UE's Msg1 Access Success Probability                 | This is output |
+
+```mermaid
+flowchart LR
+    input["`**Input:**
+    M (const)
+    O (const)
+    I_max (const)
+    P_noise (const)
+    P_attacker (const)
+    P_UE`"]
+    process["`**Msg3 Model**`"]
+    output["`**Output:**
+    P_S vs. P_UE`"]
+    input --> process --> output
+```
+
+#### 3.2.2. Possible Extension
+
+| Parameter | Description                    | Value                                          |
+| --------- | ------------------------------ | ---------------------------------------------- |
+| $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
+| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto 64) |
 
