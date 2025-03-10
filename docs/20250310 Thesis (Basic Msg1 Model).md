@@ -54,6 +54,7 @@ displayMode: compact
 ---
 gantt
     dateFormat mm
+    title beta = 1
     axisFormat %M
     section gNB RAO<br>number (i)
     1 : rao1, 00, 5m
