@@ -194,7 +194,7 @@ stateDiagram-v2
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $M$            | Number of UE (Constant)                                                                             | 1 (Constant)                                                                                      |
 | $N$            | Number of Preamble ID (Constant)                                                                    | 64 (Constant)                                                                                     |
-| $O$            | Number of Attacked Random Access Occasion (Constant)                                                | 1 (Constant)                                                                                      |
+| $O$            | Number of Attacked Preamble ID (Constant)                                                | 1 (Constant)                                                                                      |
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                                                               | $x$ (Constant)                                                                                    |
 | $P_{attacker}$ | Attacker's Msg1 dB Power (Constant)                                                                 | $x$ (Constant)                                                                                    |
 | $P_{UE}$       | UE's Msg1 dB Power (Constant)                                                                       | $x$ (Constant)                                                                                    |
@@ -204,7 +204,7 @@ stateDiagram-v2
 | Parameter      | Description                                                                                         | Value                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $\alpha$       | Noise updater parameter                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
-| $\theta$       | Number of slots of early start for attacker relative to UE                                          | 0 = without attacker start early<br> $x$ = with attacker start early                              |
+| $\theta$       | Number of Random Access Occasion early start for attacker relative to UE                                          | 0 = without attacker start early<br> $x$ = with attacker start early                              |
 | $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc) |
 | $P_S$          | UE's Msg1 Access Success Probability                                                                | This is output                                                                                    |
 
