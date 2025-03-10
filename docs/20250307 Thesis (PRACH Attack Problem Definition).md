@@ -246,13 +246,13 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
 
 ### 3.2. Attack Msg3
 
-#### 3.2.1. Assumptions
+#### 3.2.1. Assumptions or Constant Input Parameter
 
 | Parameter      | Description                                          | Value          |
 | -------------- | ---------------------------------------------------- | -------------- |
 | $M$            | Number of UE (Constant)                              | 1 (Constant)   |
 | $N$            | Number of RAPID (Constant)                              | 1 (Constant)   |
-| $O$            | Number of Attacked Msg3 (Constant)                   | 1 (Constant)   |
+| $O$            | Number of Attacked RAPID (Constant)                   | 1 (Constant)   |
 | $I_{max}$      | Number of Total Slots of Msg3 observation (Constant) | $x$ (Constant) |
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                | $x$ (Constant) |
 | $P_{attacker}$ | Attacker's Msg3 dB Power (Constant)                  | $x$ (Constant) |
