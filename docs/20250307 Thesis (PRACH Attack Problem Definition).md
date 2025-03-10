@@ -186,7 +186,7 @@ stateDiagram-v2
 flowchart LR
     markdown["`This **is** _Markdown_`"]
     input["`**Input:**
-    &#945;
+    α
     Line 3`"]
     input --> markdown
 ```
