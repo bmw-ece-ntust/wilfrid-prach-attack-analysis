@@ -19,6 +19,11 @@
   * [2. PRACH Attack Problem to focus on](#2-prach-attack-problem-to-focus-on)
   * [3. Input and Output of the PRACH Attack Problem](#3-input-and-output-of-the-prach-attack-problem)
     + [3.1. Attack Msg1](#31-attack-msg1)
+      - [3.1.1. Initial model](#311-initial-model)
+      - [3.1.2. Possible Extension](#312-possible-extension)
+    + [3.2. Attack Msg3](#32-attack-msg3)
+      - [3.2.1. Initial model](#321-initial-model)
+      - [3.2.2. Possible Extension](#322-possible-extension)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -232,7 +237,7 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 | $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
 | $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto 64) |
 
-### 3.2. Attack Msg1
+### 3.2. Attack Msg3
 
 #### 3.2.1. Initial model
 
