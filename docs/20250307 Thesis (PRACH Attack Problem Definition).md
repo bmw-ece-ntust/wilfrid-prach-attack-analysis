@@ -49,8 +49,8 @@ stateDiagram-v2
     s6: Attack Msg1<br>without noise threshold
     s2 --> s5
     s2 --> s6
-    s7: Attack Msg3<br>with noise threshold
-    s8: Attack Msg3<br>without noise threshold
+    s7: Attack Msg3<br>with variable UE power
+    s8: Attack Msg3<br>without variable UE power
     s3 --> s7
     s3 --> s8
     s9: Attack Msg1<br>with noise threshold<br>with 1 UE
