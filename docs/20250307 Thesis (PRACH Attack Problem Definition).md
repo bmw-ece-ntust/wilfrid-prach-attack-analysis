@@ -188,19 +188,18 @@ stateDiagram-v2
 
 ### 3.1. Attack Msg1
 
-#### 3.1.1. Assumptions
+#### 3.1.1. Assumptions or Constant Input Parameter
 
 | Parameter      | Description                                                                                         | Value                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $M$            | Number of UE (Constant)                                                                             | 1 (Constant)                                                                                      |
 | $N$            | Number of Preamble ID (Constant)                                                                    | 64 (Constant)                                                                                     |
 | $O$            | Number of Attacked Random Access Occasion (Constant)                                                | 1 (Constant)                                                                                      |
-| $I_{max}$      | Number of Total Slots of Msg1 observation (Constant)                                                     | $x$ (Constant)                                                                                    |
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                                                               | $x$ (Constant)                                                                                    |
 | $P_{attacker}$ | Attacker's Msg1 dB Power (Constant)                                                                 | $x$ (Constant)                                                                                    |
 | $P_{UE}$       | UE's Msg1 dB Power (Constant)                                                                       | $x$ (Constant)                                                                                    |
 
-#### 3.1.2. Initial model
+#### 3.1.2. Variable Input Parameter
 
 | Parameter      | Description                                                                                         | Value                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
@@ -211,14 +210,14 @@ stateDiagram-v2
 
 ```mermaid
 flowchart LR
-    input["`**Input:**
-    M (const)
-    N (const)
-    O (const)
-    I_max (const)
-    P_noise (const)
-    P_attacker (const)
-    P_UE (const)
+    inputC["`**Const Input:**
+    M
+    N
+    O
+    P_noise
+    P_attacker
+    P_UE`"]
+    inputV["`**Variable Input:**
     α
     θ
     β`"]
@@ -227,7 +226,9 @@ flowchart LR
     P_S vs. θ
     P_S vs. α
     P_S vs. β`"]
-    input --> process --> output
+    inputC --> process
+    inputV --> process
+    process --> output
 ```
 **Notes:**
 1. Noise threshold:
