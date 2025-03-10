@@ -5,6 +5,7 @@
 **Goal:**
 - [x] Map the PRACH Attack Problem
 - [x] Define the PRACH Attack Problem that I want to focus on
+- [ ] Define the input and output of the problem
 
 **References:**
 - [5G/NR - Initial Access/RACH](https://www.sharetechnote.com/html/5G/5G_RACH.html)
@@ -171,3 +172,8 @@ stateDiagram-v2
 
     class s1,s25,s26,s13 zhongXinCase
 ```
+
+## 3. Input and Output of the PRACH Attack Problem
+
+
+
