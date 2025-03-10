@@ -56,12 +56,12 @@ gantt
     dateFormat mm
     axisFormat %M
     section RAO number (i)
-    1 : a1, 0, 5m
-    2 : 5m
-    3 : 5m
-    4 : 5m
-    5 : 5m
-    6 : 5m
+    1 : m1, 0, 5m
+    2 : 10, 5m
+    3 : 20, 5m
+    4 : 30, 5m
+    5 : 40, 5m
+    6 : 50, 5m
 ```
 
 ## 2. Model Collision Probability in PRACH by Approximation
