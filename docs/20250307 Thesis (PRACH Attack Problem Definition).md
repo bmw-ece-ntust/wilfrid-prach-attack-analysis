@@ -178,7 +178,7 @@ stateDiagram-v2
 ```mermaid
 flowchart LR
     markdown["`This **is** _Markdown_`"]
-    input["`*Input*
+    input["`<ins>Input</ins>
     Line 2
     Line 3`"]
     input --> markdown
