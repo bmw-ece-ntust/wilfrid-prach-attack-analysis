@@ -35,7 +35,7 @@ flowchart TD
     *P_noise* threshold`"]
     B("`**UE:**
     *P_UE* msg1 power`")
-    A[["`**Attacker:**
+    C[["`**Attacker:**
     *P_attacker* msg1 power
     *j* time early start`"]]
     B-->A
