@@ -78,6 +78,32 @@ gantt
     ‎j : j1, 00, 30m
 ```
 
+```mermaid
+---
+displayMode: compact
+---
+gantt
+    dateFormat mm
+    title beta = 0.5
+    axisFormat %M
+    section gNB RAO
+    RAO 1 : rao1, 00, 5m
+    RAO 2 : rao2, 10, 5m
+    RAO 3 : rao3, 20, 5m
+    RAO 4 : rao4, 30, 5m
+    RAO 5 : rao5, 40, 5m
+    RAO 6 : rao5, 50, 5m
+    section Attacker<br>Msg1
+    ‎  : att1, 00, 5m
+    ‎  : att3, 20, 5m
+    ‎  : att5, 40, 5m
+    section UE Msg1
+    ‎  : ue1, 30, 5m
+    ‎  : ue2, 40, 5m
+    ‎  : ue3, 50, 5m
+    section ‎ 
+    ‎j : j1, 00, 30m
+```
 
 ```mermaid
 ---
