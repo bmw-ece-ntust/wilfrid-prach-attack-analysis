@@ -160,13 +160,13 @@ stateDiagram-v2
 
     s25: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
     s26: Attack Msg1<br>with noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
-    s27: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
-    s28: Attack Msg1<br>with noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
+    s27: Attack Msg1<br>with noise threshold<br>with 1 UE<br>*without attacker start early*<br>with varying attack period
+    s28: Attack Msg1<br>with noise threshold<br>with 1 UE<br>*without attacker start early*<br>without varying attack period
 
-    s33: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>with varying attack period
-    s34: Attack Msg1<br>without noise threshold<br>with 1 UE<br>with attacker start early<br>without varying attack period
-    s35: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>with varying attack period
-    s36: Attack Msg1<br>without noise threshold<br>with 1 UE<br>without attacker start early<br>without varying attack period
+    s33: Attack Msg1<br>*without noise threshold*<br>with 1 UE<br>with attacker start early<br>with varying attack period
+    s34: Attack Msg1<br>*without noise threshold*<br>with 1 UE<br>with attacker start early<br>without varying attack period
+    s35: Attack Msg1<br>*without noise threshold*<br>with 1 UE<br>*without attacker start early*<br>with varying attack period
+    s36: Attack Msg1<br>*without noise threshold*<br>with 1 UE<br>*without attacker start early*<br>without varying attack period
 
     s1 --> s25
     s1 --> s26
