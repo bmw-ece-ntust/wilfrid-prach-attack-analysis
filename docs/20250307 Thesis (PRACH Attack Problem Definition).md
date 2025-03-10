@@ -19,14 +19,17 @@
   * [2. PRACH Attack Problem to focus on](#2-prach-attack-problem-to-focus-on)
   * [3. Input and Output of the PRACH Attack Problem](#3-input-and-output-of-the-prach-attack-problem)
     + [3.1. Attack Msg1](#31-attack-msg1)
-      - [3.1.1. Initial model](#311-initial-model)
-      - [3.1.2. Possible Extension](#312-possible-extension)
+      - [3.1.1. Assumptions or Constant Input Parameter](#311-assumptions-or-constant-input-parameter)
+      - [3.1.2. Variable Input Parameter](#312-variable-input-parameter)
+      - [3.1.3. Output Parameter or Performance Metrics](#313-output-parameter-or-performance-metrics)
+      - [3.1.4. Possible Extension](#314-possible-extension)
     + [3.2. Attack Msg3](#32-attack-msg3)
-      - [3.2.1. Initial model](#321-initial-model)
-      - [3.2.2. Possible Extension](#322-possible-extension)
+      - [3.2.1. Assumptions or Constant Input Parameter](#321-assumptions-or-constant-input-parameter)
+      - [3.2.2. Variable Input Parameter](#322-variable-input-parameter)
+      - [3.2.3. Output Parameter or Performance Metrics](#323-output-parameter-or-performance-metrics)
+      - [3.2.4. Possible Extension](#324-possible-extension)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## 1. Map of PRACH Attack Problem
 
@@ -190,29 +193,29 @@ stateDiagram-v2
 
 #### 3.1.1. Assumptions or Constant Input Parameter
 
-| Parameter      | Description                                                                                         | Constant Value                                                                                             |
-| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| $M$            | Number of UE                                                                             | 1                                                                                      |
-| $N$            | Number of Preamble ID                                                                     | 64                                                                                      |
-| $O$            | Number of Attacked Preamble ID                                                 | 1                                                                                       |
-| $P_{noise}$    | Initial Noise dB Threshold                                                                | $x$                                                                                     |
-| $P_{attacker}$ | Attacker's Msg1 dB Power                                                                 | $x$                                                                                     |
-| $P_{UE}$       | UE's Msg1 dB Power                                                                       | $x$                                                                                    |
+| Parameter      | Description                    | Constant Value |
+| -------------- | ------------------------------ | -------------- |
+| $M$            | Number of UE                   | 1              |
+| $N$            | Number of Preamble ID          | 64             |
+| $O$            | Number of Attacked Preamble ID | 1              |
+| $P_{noise}$    | Initial Noise dB Threshold     | $x$            |
+| $P_{attacker}$ | Attacker's Msg1 dB Power       | $x$            |
+| $P_{UE}$       | UE's Msg1 dB Power             | $x$            |
 
 #### 3.1.2. Variable Input Parameter
 
-| Parameter      | Description                                                                                         | Value Range                                                                                            |
-| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| $i$       | identifier for the ith Random Access Occasion                                                                           | 0..∞ (integer)                                       |
-| $\alpha$       | Noise update factor parameter                                                                           | 0..1 (real)                                       |
-| $j$       | Number of Random Access Occasion early start for attacker relative to UE                                          | 0..∞ (integer)                              |
-| $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 0..1 (real) |
+| Parameter | Description                                                                                         | Value Range    |
+| --------- | --------------------------------------------------------------------------------------------------- | -------------- |
+| $i$       | identifier for the ith Random Access Occasion                                                       | 0..∞ (integer) |
+| $\alpha$  | Noise update factor parameter                                                                       | 0..1 (real)    |
+| $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | 0..∞ (integer) |
+| $\beta$   | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 0..1 (real)    |
 
 #### 3.1.3. Output Parameter or Performance Metrics
 
-| Parameter      | Description                                                                                         | Value Range                                                                                            |
-| -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| $P_S$          | UE's Msg1 Access Success Probability                                                                | 0 or 1                                                                                    |
+| Parameter | Description                          | Value Range |
+| --------- | ------------------------------------ | ----------- |
+| $P_S$     | UE's Msg1 Access Success Probability | 0 or 1      |
 
 ```mermaid
 flowchart LR
@@ -261,27 +264,27 @@ P_{S,i} =
 
 #### 3.2.1. Assumptions or Constant Input Parameter
 
-| Parameter      | Description                                          | Constant Value          |
-| -------------- | ---------------------------------------------------- | -------------- |
-| $M$            | Number of UE                               | 1    |
-| $N$            | Number of RAPID                               | 1    |
-| $O$            | Number of Attacked RAPID                    | 1    |
-| $P_{noise}$    | Initial Noise dB Threshold                 | $x$  |
-| $P_{attacker}$ | Attacker's Msg3 dB Power                   | $x$  |
+| Parameter      | Description                | Constant Value |
+| -------------- | -------------------------- | -------------- |
+| $M$            | Number of UE               | 1              |
+| $N$            | Number of RAPID            | 1              |
+| $O$            | Number of Attacked RAPID   | 1              |
+| $P_{noise}$    | Initial Noise dB Threshold | $x$            |
+| $P_{attacker}$ | Attacker's Msg3 dB Power   | $x$            |
 
 
 #### 3.2.2. Variable Input Parameter
 
-| Parameter      | Description                                          | Value          |
-| -------------- | ---------------------------------------------------- | -------------- |
-| $P_{UE}$       | UE's Msg3 dB Power                                   | $x$            |
+| Parameter | Description        | Value |
+| --------- | ------------------ | ----- |
+| $P_{UE}$  | UE's Msg3 dB Power | $x$   |
 
 
 #### 3.2.3. Output Parameter or Performance Metrics
 
-| Parameter      | Description                                          | Value          |
-| -------------- | ---------------------------------------------------- | -------------- |
-| $P_S$          | UE's Msg3 Access Success Probability                 | This is output |
+| Parameter | Description                          | Value          |
+| --------- | ------------------------------------ | -------------- |
+| $P_S$     | UE's Msg3 Access Success Probability | This is output |
 
 
 ```mermaid
@@ -303,10 +306,10 @@ flowchart LR
 
 #### 3.2.4. Possible Extension
 
-| Parameter | Description                    | Value                                          |
-| --------- | ------------------------------ | ---------------------------------------------- |
-| $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
-| $N$            | Number of RAPID                               | 1 = initial model<br>$x$ = extension (upto $M$)   |
+| Parameter | Description              | Value                                           |
+| --------- | ------------------------ | ----------------------------------------------- |
+| $M$       | Number of UE             | 1 = initial model<br>$x$ = extension            |
+| $N$       | Number of RAPID          | 1 = initial model<br>$x$ = extension (upto $M$) |
 | $O$       | Number of Attacked RAPID | 1 = initial model<br>$x$ = extension (upto $N$) |
 
 **Notes:**
