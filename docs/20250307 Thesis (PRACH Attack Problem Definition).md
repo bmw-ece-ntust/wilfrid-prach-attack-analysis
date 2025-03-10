@@ -229,7 +229,7 @@ flowchart LR
     β`"]
     process["`**Msg1 Model**`"]
     output["`**Output:**
-    P_S vs. θ
+    P_S vs. j
     P_S vs. α
     P_S vs. β`"]
     inputC --> process
