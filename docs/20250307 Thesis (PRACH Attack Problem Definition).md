@@ -141,12 +141,12 @@ stateDiagram-v2
         - with noise threshold
         - with 1 UE
         - with attacker start early
-            - with varying attack period (1)
-            - without varying attack period (2)
+            - without varying attack period (1)
+            - with varying attack period (2)
     - Attack Msg3:
         - with 1 UE
-            - with variable UE power (3)
-            - without variable UE power (4)
+            - without variable UE power (3)
+            - with variable UE power (4)
 
 **Planned problem focus:**
 ```mermaid
@@ -168,10 +168,10 @@ stateDiagram-v2
     s35: Attack Msg1<br>*without noise threshold*<br>with 1 UE<br>*without attacker start early*<br>with varying attack period
     s36: Attack Msg1<br>*without noise threshold*<br>with 1 UE<br>*without attacker start early*<br>without varying attack period
 
-    s1 --> s25
     s1 --> s26
-    s1 --> s13
+    s1 --> s25
     s1 --> s15
+    s1 --> s13
 
     s25 --> s27
     s25 --> s33
