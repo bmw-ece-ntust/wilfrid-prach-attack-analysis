@@ -187,7 +187,7 @@ stateDiagram-v2
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | $\alpha$    | Noise threshold parameter                         | 0 = without noise threshold<br> $x$ = with noise threshold           |
 | $\theta$    | Number of slots of early start for attacker relative to UE            | 0 = without attacker start early<br> $x$ = with attacker start early     |
-| $\beta$    | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion  | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc)     |
+| $\beta$    | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion  | 1   = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc)     |
 
 ```mermaid
 flowchart LR
