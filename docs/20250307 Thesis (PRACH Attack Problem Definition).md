@@ -204,7 +204,7 @@ stateDiagram-v2
 | Parameter      | Description                                                                                         | Value                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | $i$       | identifier for the ith Random Access Occasion                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
-| $\alpha$       | Noise updater parameter                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
+| $\alpha$       | Noise update factor parameter                                                                           | 0 = without noise threshold<br> $x$ = with noise threshold                                        |
 | $\theta$       | Number of Random Access Occasion early start for attacker relative to UE                                          | 0 = without attacker start early<br> $x$ = with attacker start early                              |
 | $\beta$        | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc) |
 | $P_S$          | UE's Msg1 Access Success Probability                                                                | This is output                                                                                    |
@@ -258,7 +258,7 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
 | $P_{attacker}$ | Attacker's Msg3 dB Power (Constant)                  | $x$ (Constant) |
 
 
-#### 3.2.2. Initial model
+#### 3.2.2. Variable Input Parameter
 
 | Parameter      | Description                                          | Value          |
 | -------------- | ---------------------------------------------------- | -------------- |
@@ -267,17 +267,19 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
 
 ```mermaid
 flowchart LR
-    input["`**Input:**
-    M (const)
-    O (const)
-    I_max (const)
-    P_noise (const)
-    P_attacker (const)
+    inputC["`**Constant Input:**
+    M
+    O
+    P_noise
+    P_attacker`"]
+    inputV["`**Input:**
     P_UE`"]
     process["`**Msg3 Model**`"]
     output["`**Output:**
     P_S vs. P_UE`"]
-    input --> process --> output
+    inputC --> process
+    inputV --> process
+    process --> output
 ```
 
 #### 3.2.3. Possible Extension
@@ -286,7 +288,7 @@ flowchart LR
 | --------- | ------------------------------ | ---------------------------------------------- |
 | $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
 | $N$            | Number of RAPID                               | 1 = initial model<br>$x$ = extension (upto $M$)   |
-| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto $N$) |
+| $O$       | Number of Attacked RAPID | 1 = initial model<br>$x$ = extension (upto $N$) |
 
 **Notes:**
 1. Variable $N$ as an extension to accomodate possibility of 2 or more UE choosing the same RAPID due to collision in Msg1
