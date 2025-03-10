@@ -239,6 +239,7 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 | Parameter      | Description                                          | Value          |
 | -------------- | ---------------------------------------------------- | -------------- |
 | $M$            | Number of UE (Constant)                              | 1 (Constant)   |
+| $N$            | Number of RAPID (Constant)                              | 1 (Constant)   |
 | $O$            | Number of Attacked Msg3 (Constant)                   | 1 (Constant)   |
 | $I_{max}$      | Number of Total Slots of Msg3 observation (Constant) | $x$ (Constant) |
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                | $x$ (Constant) |
@@ -266,5 +267,8 @@ flowchart LR
 | Parameter | Description                    | Value                                          |
 | --------- | ------------------------------ | ---------------------------------------------- |
 | $M$       | Number of UE                   | 1 = initial model<br>$x$ = extension           |
-| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto $M$) |
+| $N$            | Number of RAPID                               | 1 = initial model<br>$x$ = extension (upto $M$)   |
+| $O$       | Number of Attacked Preamble ID | 1 = initial model<br>$x$ = extension (upto $N$) |
 
+**Notes:**
+1. Variable $N$ as an extension to accomodate possibility of 2 or more UE choosing the same RAPID due to collision in Msg1
