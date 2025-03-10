@@ -188,7 +188,7 @@ stateDiagram-v2
 | Parameter | Description                                                                                                 | Value                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | $M$    | Number of UE (Constant)                         | 1 (Constant)           |
-| $N$    | Number of Random Access Occasion (Constant)                         | 64 (Constant)           |
+| $N$    | Number of Preamble ID (Constant)                         | 64 (Constant)           |
 | $O$    | Number of Attacked Random Access Occasion (Constant)                         | 1 (Constant)           |
 | $I_{max}$    | Number of Total Slots of observation (Constant)                         | $x$ (Constant)           |
 | $P_{noise}$    | Initial Noise dB Threshold (Constant)                         | $x$ (Constant)           |
@@ -230,5 +230,5 @@ P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 | Parameter | Description                                                                                                 | Value                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | $M$    | Number of UE                       | 1 = initial model<br>$x$ = extension          |
-| $O$    | Number of Attacked Random Access Occasion                         | 1 = initial model<br>$x$ = extension          |
+| $O$    | Number of Attacked Preamble ID                         | 1 = initial model<br>$x$ = extension (upto 64)          |
 
