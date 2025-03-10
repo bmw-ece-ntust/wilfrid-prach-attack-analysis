@@ -183,11 +183,17 @@ stateDiagram-v2
 
 ### 3.1. Attack Msg1
 
+#### 3.1.1. Initial model
+
 | Parameter | Description                                                                                                 | Value                            |
 | -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | $M$    | Number of UE (Constant)                         | 1 (Constant)           |
 | $N$    | Number of Random Access Occasion (Constant)                         | 64 (Constant)           |
+| $O$    | Number of Attacked Random Access Occasion (Constant)                         | 1 (Constant)           |
 | $I_max$    | Number of Total Slots of observation (Constant)                         | $x$ (Constant)           |
+| $P_noise$    | Initial Noise dB Threshold (Constant)                         | $x$ (Constant)           |
+| $P_attacker$    | Attacker's Msg1 dB Power (Constant)                         | $x$ (Constant)           |
+| $P_UE$    | UE's Msg1 dB Power (Constant)                         | $x$ (Constant)           |
 | $\alpha$    | Noise threshold parameter                         | 0 = without noise threshold<br> $x$ = with noise threshold           |
 | $\theta$    | Number of slots of early start for attacker relative to UE            | 0 = without attacker start early<br> $x$ = with attacker start early     |
 | $\beta$    | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion  | 1 = without varying attacker period<br> $0.x$ = with varying attack periode (e.g. 0.5, 0.25, etc)     |
@@ -199,14 +205,17 @@ flowchart LR
     M
     N
     I_max
+    P_noise
+    P_attacker
+    P_UE
     α
     θ
-    β
-    Line 3`"]
+    β`"]
     process["`**Model**`"]
     output["`**Output:**
-    
-    Line 3`"]
+    P_S vs. θ
+    P_S vs. α
+    P_S vs. β`"]
     input --> process --> output
 ```
 **Notes:**
@@ -214,4 +223,11 @@ flowchart LR
 ```math
 P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{msg1 error,i}
 ```
+
+#### 3.1.2. Possible Extension
+
+| Parameter | Description                                                                                                 | Value                            |
+| -------- | --------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| $M$    | Number of UE                       | 1 = initial model<br>$x$ = extension          |
+| $O$    | Number of Attacked Random Access Occasion                         | 1 = initial model<br>$x$ = extension          |
 
