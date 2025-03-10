@@ -57,12 +57,12 @@ gantt
     title beta = 1
     axisFormat %M
     section gNB RAO
-    RAO 1 : rao1, 00, 5m
-    RAO 2 : rao2, 10, 5m
-    RAO 3 : rao3, 20, 5m
-    RAO 4 : rao4, 30, 5m
-    RAO 5 : rao5, 40, 5m
-    RAO 6 : rao5, 50, 5m
+    RAO 1 : done, rao1, 00, 5m
+    RAO 2 : done, rao2, 10, 5m
+    RAO 3 : done, rao3, 20, 5m
+    RAO 4 : done, rao4, 30, 5m
+    RAO 5 : done, rao5, 40, 5m
+    RAO 6 : done, rao5, 50, 5m
     section Attacker<br>Msg1
     ‎  : att1, 00, 5m
     ‎  : att2, 10, 5m
@@ -87,12 +87,12 @@ gantt
     title beta = 0.5
     axisFormat %M
     section gNB RAO
-    RAO 1 : rao1, 00, 5m
-    RAO 2 : rao2, 10, 5m
-    RAO 3 : rao3, 20, 5m
-    RAO 4 : rao4, 30, 5m
-    RAO 5 : rao5, 40, 5m
-    RAO 6 : rao5, 50, 5m
+    RAO 1 : done, rao1, 00, 5m
+    RAO 2 : done, rao2, 10, 5m
+    RAO 3 : done, rao3, 20, 5m
+    RAO 4 : done, rao4, 30, 5m
+    RAO 5 : done, rao5, 40, 5m
+    RAO 6 : done, rao5, 50, 5m
     section Attacker<br>Msg1
     ‎  : att1, 00, 5m
     ‎  : att3, 20, 5m
@@ -114,12 +114,12 @@ gantt
     title beta = 0.25
     axisFormat %M
     section gNB RAO
-    RAO 1 : rao1, 00, 5m
-    RAO 2 : rao2, 10, 5m
-    RAO 3 : rao3, 20, 5m
-    RAO 4 : rao4, 30, 5m
-    RAO 5 : rao5, 40, 5m
-    RAO 6 : rao5, 50, 5m
+    RAO 1 : done, rao1, 00, 5m
+    RAO 2 : done, rao2, 10, 5m
+    RAO 3 : done, rao3, 20, 5m
+    RAO 4 : done, rao4, 30, 5m
+    RAO 5 : done, rao5, 40, 5m
+    RAO 6 : done, rao5, 50, 5m
     section Attacker<br>Msg1
     ‎  : att1, 00, 5m
     ‎  : att5, 40, 5m
