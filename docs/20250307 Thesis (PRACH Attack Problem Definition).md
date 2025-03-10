@@ -175,11 +175,11 @@ stateDiagram-v2
 
     s25 --> s27
     s25 --> s33
-    s33 --> s35
+    s27 --> s35
 
     s26 --> s28
     s26 --> s34
-    s34 --> s36
+    s28 --> s36
 
     class s1,s25,s26,s13,s15 zhongXinCase
 ```
