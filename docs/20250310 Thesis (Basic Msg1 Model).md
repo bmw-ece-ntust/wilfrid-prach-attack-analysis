@@ -55,7 +55,7 @@ displayMode: compact
 gantt
     dateFormat mm
     axisFormat %M
-    section RAO number (i)
+    section gNB RAO<br>number (i)
     1 : rao1, 00, 5m
     2 : rao2, 10, 5m
     3 : rao3, 20, 5m
