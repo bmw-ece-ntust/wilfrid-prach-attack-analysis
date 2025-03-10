@@ -190,14 +190,14 @@ stateDiagram-v2
 
 #### 3.1.1. Assumptions or Constant Input Parameter
 
-| Parameter      | Description                                                                                         | Value                                                                                             |
+| Parameter      | Description                                                                                         | Constant Value                                                                                             |
 | -------------- | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| $M$            | Number of UE (Constant)                                                                             | 1 (Constant)                                                                                      |
-| $N$            | Number of Preamble ID (Constant)                                                                    | 64 (Constant)                                                                                     |
-| $O$            | Number of Attacked Preamble ID (Constant)                                                | 1 (Constant)                                                                                      |
-| $P_{noise}$    | Initial Noise dB Threshold (Constant)                                                               | $x$ (Constant)                                                                                    |
-| $P_{attacker}$ | Attacker's Msg1 dB Power (Constant)                                                                 | $x$ (Constant)                                                                                    |
-| $P_{UE}$       | UE's Msg1 dB Power (Constant)                                                                       | $x$ (Constant)                                                                                    |
+| $M$            | Number of UE                                                                             | 1                                                                                      |
+| $N$            | Number of Preamble ID                                                                     | 64                                                                                      |
+| $O$            | Number of Attacked Preamble ID                                                 | 1                                                                                       |
+| $P_{noise}$    | Initial Noise dB Threshold                                                                | $x$                                                                                     |
+| $P_{attacker}$ | Attacker's Msg1 dB Power                                                                 | $x$                                                                                     |
+| $P_{UE}$       | UE's Msg1 dB Power                                                                       | $x$                                                                                    |
 
 #### 3.1.2. Variable Input Parameter
 
@@ -261,14 +261,13 @@ P_{S,i} =
 
 #### 3.2.1. Assumptions or Constant Input Parameter
 
-| Parameter      | Description                                          | Value          |
+| Parameter      | Description                                          | Constant Value          |
 | -------------- | ---------------------------------------------------- | -------------- |
-| $M$            | Number of UE (Constant)                              | 1 (Constant)   |
-| $N$            | Number of RAPID (Constant)                              | 1 (Constant)   |
-| $O$            | Number of Attacked RAPID (Constant)                   | 1 (Constant)   |
-| $I_{max}$      | Number of Total Slots of Msg3 observation (Constant) | $x$ (Constant) |
-| $P_{noise}$    | Initial Noise dB Threshold (Constant)                | $x$ (Constant) |
-| $P_{attacker}$ | Attacker's Msg3 dB Power (Constant)                  | $x$ (Constant) |
+| $M$            | Number of UE                               | 1    |
+| $N$            | Number of RAPID                               | 1    |
+| $O$            | Number of Attacked RAPID                    | 1    |
+| $P_{noise}$    | Initial Noise dB Threshold                 | $x$  |
+| $P_{attacker}$ | Attacker's Msg3 dB Power                   | $x$  |
 
 
 #### 3.2.2. Variable Input Parameter
