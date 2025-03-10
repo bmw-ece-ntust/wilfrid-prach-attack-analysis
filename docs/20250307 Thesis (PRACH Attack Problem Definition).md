@@ -234,7 +234,7 @@ flowchart LR
 **Notes:**
 1. Noise threshold:
 ```math
-P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker,i}
+P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
 ```
 
 #### 3.1.3. Possible Extension
