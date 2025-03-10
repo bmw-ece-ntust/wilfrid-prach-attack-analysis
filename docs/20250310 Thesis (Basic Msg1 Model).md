@@ -63,16 +63,16 @@ gantt
     5 : rao5, 40, 5m
     6 : rao5, 50, 5m
     section Attacker Msg1
-      : att1, 00, 5m
-      : att2, 10, 5m
-      : att3, 20, 5m
-      : att4, 30, 5m
-      : att5, 40, 5m
-      : att5, 50, 5m
+    ‎  : att1, 00, 5m
+    ‎  : att2, 10, 5m
+    ‎  : att3, 20, 5m
+    ‎  : att4, 30, 5m
+    ‎  : att5, 40, 5m
+    ‎  : att5, 50, 5m
     section UE Msg1
-      : ue1, 30, 5m
-      : ue2, 40, 5m
-      : ue3, 50, 5m
+    ‎  : ue1, 30, 5m
+    ‎  : ue2, 40, 5m
+    ‎  : ue3, 50, 5m
 ```
 
 ## 2. Model Collision Probability in PRACH by Approximation
