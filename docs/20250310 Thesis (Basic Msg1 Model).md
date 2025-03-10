@@ -64,12 +64,12 @@ gantt
     RAO 5 : done, rao5, 40, 5m
     RAO 6 : done, rao5, 50, 5m
     section Attacker<br>Msg1
-    ‎  : att1, 00, 5m
-    ‎  : att2, 10, 5m
-    ‎  : att3, 20, 5m
-    ‎  : att4, 30, 5m
-    ‎  : att5, 40, 5m
-    ‎  : att5, 50, 5m
+    ‎  : crit, att1, 00, 5m
+    ‎  : crit, att2, 10, 5m
+    ‎  : crit, att3, 20, 5m
+    ‎  : crit, att4, 30, 5m
+    ‎  : crit, att5, 40, 5m
+    ‎  : crit, att5, 50, 5m
     section UE Msg1
     ‎  : ue1, 30, 5m
     ‎  : ue2, 40, 5m
@@ -94,9 +94,9 @@ gantt
     RAO 5 : done, rao5, 40, 5m
     RAO 6 : done, rao5, 50, 5m
     section Attacker<br>Msg1
-    ‎  : att1, 00, 5m
-    ‎  : att3, 20, 5m
-    ‎  : att5, 40, 5m
+    ‎  : crit, att1, 00, 5m
+    ‎  : crit, att3, 20, 5m
+    ‎  : crit, att5, 40, 5m
     section UE Msg1
     ‎  : ue1, 30, 5m
     ‎  : ue2, 40, 5m
@@ -121,8 +121,8 @@ gantt
     RAO 5 : done, rao5, 40, 5m
     RAO 6 : done, rao5, 50, 5m
     section Attacker<br>Msg1
-    ‎  : att1, 00, 5m
-    ‎  : att5, 40, 5m
+    ‎  : crit, att1, 00, 5m
+    ‎  : crit, att5, 40, 5m
     section UE Msg1
     ‎  : ue1, 30, 5m
     ‎  : ue2, 40, 5m
