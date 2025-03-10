@@ -37,7 +37,8 @@ flowchart TD
     *P_UE* msg1 power`")
     C[["`**Attacker:**
     *P_attacker* msg1 power
-    *j* time early start`"]]
+    *j* time early start
+    *beta* attack period`"]]
     B-->A
     C-->A
 ```
