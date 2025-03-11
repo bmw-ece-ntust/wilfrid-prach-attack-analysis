@@ -319,6 +319,7 @@ plt.show()
 
 #### 2.3.3. Result
 
+$\alpha = 0.1$
 ![image](https://hackmd.io/_uploads/BJGX686jkg.png)
 
 ## 3. Add UE and Attacker Channel Model
