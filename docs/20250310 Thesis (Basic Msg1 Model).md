@@ -181,6 +181,7 @@ flowchart LR
     inputC --> process
     inputV --> process
     process --> output
+```
 
 ### 2.2. Model Equation
 
