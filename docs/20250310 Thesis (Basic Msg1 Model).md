@@ -193,7 +193,7 @@ P_{noise,1} = P_{noise}
 ```math
 P_{noise,i+1} =
 \begin{cases} 
-(1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}, & \text{if } (i-1) \bmod \frac{1}{beta} = 0 \\ 
+(1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}, & \text{if } (i-1) \bmod \frac{1}{\beta} = 0 \\ 
 (1 - \alpha) * P_{noise,i} + \alpha * P_{noise}, & \text{otherwise} 
 \end{cases}
 ```
