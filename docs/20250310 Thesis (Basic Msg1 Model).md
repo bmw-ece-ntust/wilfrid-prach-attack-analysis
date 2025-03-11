@@ -489,4 +489,6 @@ plt.show()
 
 #### 3.3.3. Result
 
-$P_C$ = 0
+$\alpha = 0.1$
+![image](https://hackmd.io/_uploads/HJIKZOTi1l.png)
+
