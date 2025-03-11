@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 
 def compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max):
     j_range = np.arange(1, j_max + 1)
-    results = {}
+    results_P_S = {}
+    results_P_noise_j1 = {}
     
     for beta in beta_values:
         P_noise_values = [P_noise]
@@ -17,9 +18,12 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max):
             P_noise_values.append(P_next)
         
         P_S = [1 if P_UE > P_noise_values[j] else 0 for j in range(j_max)]
-        results[beta] = P_S
+        results_P_S[beta] = P_S
+
+        P_noise_j1 = [P_noise_values[j] for j in range(j_max)]
+        results_P_noise_j1[beta] = P_noise_j1
     
-    return j_range, results
+    return j_range, results_P_S, results_P_noise_j1
 
 # Given parameters
 P_noise = 28  # dB
