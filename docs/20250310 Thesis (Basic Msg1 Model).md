@@ -202,7 +202,7 @@ P_{noise,i+1} =
 ```math
 P_{S} =
 \begin{cases} 
-1, & \text{if } P_{UE,i} > P_{noise,j+1} \\ 
+1, & \text{if } P_{UE} > P_{noise,j+1} \\ 
 0, & \text{otherwise} 
 \end{cases}
 ```
