@@ -290,6 +290,7 @@ plt.show()
 
 #### 2.3.3. Result
 
+![image](https://hackmd.io/_uploads/BkkANr6skx.png)
 
 ## 3. Add Msg1 and Channel Noise Energy
 
