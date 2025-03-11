@@ -37,7 +37,7 @@ j_max = 110
 j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max)
 
 # Plot results
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(15, 6))
 plt.subplot(1, 2, 1)
 for beta, P_S in results_P_S.items():
     plt.plot(j_range, P_S, label=f'β = {beta}')
