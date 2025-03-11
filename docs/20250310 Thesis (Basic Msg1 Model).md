@@ -33,12 +33,14 @@ flowchart TD
     A("`**Basestation:**
     -----------
     *N* preamble ID
-    *P_noise* threshold`")
-    B["`**UE:**
-    --
+    *P_noise* threshold
+    *alpha* noise threshold update factor`")
+    B["`**UE (M=1):**
+    -------
     *P_UE* msg1 power`"]
     C[["`**Attacker:**
-    --------
+    ---------
+    *O* number of msg1 attacked
     *P_attacker* msg1 power
     *j* time early start
     *beta* attack period`"]]
