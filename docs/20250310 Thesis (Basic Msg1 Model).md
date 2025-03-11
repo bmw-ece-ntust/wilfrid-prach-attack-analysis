@@ -352,7 +352,12 @@ flowchart LR
 
 1. UE to gNB Channel Model
 ```math
-P_{UE} = P_{UE,TX} G_{UE} G_{gNB} (\frac{\lambda}{4 \pi})^2 (\frac{1}{d})^\gamma
+P_{UE} = P_{UE,TX} G_{UE} G_{gNB} (\frac{\lambda}{4 \pi})^2 (\frac{1}{d_{UE}})^\gamma
+```
+
+2. Attacker to gNB Channel Model
+```math
+P_{attacker} = P_{attacker,TX} G_{attacker} G_{gNB} (\frac{\lambda}{4 \pi})^2 (\frac{1}{d_{attacker}})^\gamma
 ```
 
 
