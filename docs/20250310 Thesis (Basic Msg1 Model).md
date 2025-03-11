@@ -9,6 +9,7 @@
 - Modeling Random Access with Capture and Power Control for IEEE 802.11be Systems
 - [Modeling and Estimation of One-Shot Random Access for Finite-User Multichannel Slotted ALOHA Systems](https://ieeexplore.ieee.org/document/6211364)
 - [20250307 Thesis (PRACH Attack Problem Definition)](https://github.com/bmw-ece-ntust/wilfrid-prach-attack-analysis/blob/master/docs/20250307%20Thesis%20(PRACH%20Attack%20Problem%20Definition).md)
+- [Wireless Communications: Principles and Practice](https://www.amazon.com/Wireless-Communications-Principles-Practice-2nd/dp/0130422320)
 
 **Table of Contents:**
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
@@ -294,12 +295,35 @@ plt.show()
 
 ## 3. Add UE and Attacker distance
 
+**Notes:**
+1. Parameters and Equation are referenced from [Wireless Communications: Principles and Practice](https://www.amazon.com/Wireless-Communications-Principles-Practice-2nd/dp/0130422320)
+
 ### 3.1. Model Parameters
 
-| Parameter | Description                                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| $M$       | number of UEs sending Msg1                                                                                      |
-| $N$     | total number of Preambles per SSB                                                                |
+#### 3.1.1. Assumptions or Constant Input Parameter
+
+| Parameter      | Description                    | Constant Value |
+| -------------- | ------------------------------ | -------------- |
+| $G_{UE}$       | antenna gain of UE             | $x$            |
+| $G_{attacker}$ | antenna gain of attacker       | $x$            |
+| $\lambda$      | wavelength of the signal       | $x$            |
+| $\gamma$       | path loss exponent             | $x$            |
+
+#### 3.1.2. Variable Input Parameter
+
+| Parameter | Description                                                                                         | Value Range    |
+| --------- | --------------------------------------------------------------------------------------------------- | -------------- |
+| $d_{UE}$       | distance between gNB to UE                                                       | 0..∞ (real) |
+| $d_{attacker}$  | distance between gNB to attacker                                                                       | 0..∞ (real)    |
+| $P_{UE,TX}$       | UE's Msg1 dB Power (tx by UE)                            | 0..∞ (real) |
+| $P_{attacker,TX}$   | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real)    |
+
+#### 3.1.3. Output Parameter or Performance Metrics
+
+| Parameter | Description                          | Value Range |
+| --------- | ------------------------------------ | ----------- |
+| $P_{attacker}$     | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real)      |
+| $P_{UE}$     | UE's Msg1 dB Power (rx by gNB) | 0..∞ (real)      |
 
 ### 3.2. Equation
 
