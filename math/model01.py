@@ -53,8 +53,8 @@ for beta, P_noise_j1 in results_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'β = {beta}')
 
 plt.xlabel("j (RAO Early Start)")
-plt.ylabel("P_noise_j1 (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different β Values")
+plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different β Values")
 plt.legend()
 plt.grid()
 
