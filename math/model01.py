@@ -48,7 +48,7 @@ plt.title("UE Msg1 Success Probability vs j for Different β Values")
 plt.legend()
 plt.grid()
 
-plt.subplot(1, 2, 1)
+plt.subplot(1, 2, 2)
 for beta, P_noise_j1 in results_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'β = {beta}')
 
