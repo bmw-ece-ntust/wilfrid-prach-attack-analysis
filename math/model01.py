@@ -28,7 +28,7 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max):
 # Given parameters
 P_noise = 28  # dB
 P_attacker = 55  # dB
-P_UE = 55  # dB
+P_UE = 54  # dB
 alpha = 0.1
 beta_values = [1, 0.5, 0.25, 0.125]
 j_max = 110
