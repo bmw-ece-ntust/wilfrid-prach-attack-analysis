@@ -304,6 +304,7 @@ plt.show()
 
 | Parameter      | Description              | Constant Value |
 | -------------- | ------------------------ | -------------- |
+| $G_{gNB}$       | antenna gain of gNB       | $x$            |
 | $G_{UE}$       | antenna gain of UE       | $x$            |
 | $G_{attacker}$ | antenna gain of attacker | $x$            |
 | $\lambda$      | wavelength of the signal | $x$            |
@@ -328,6 +329,7 @@ plt.show()
 ```mermaid
 flowchart LR
     inputC["`**Constant Input:**
+    G_gNB
     G_UE
     G_attacker
     lambda
@@ -348,9 +350,9 @@ flowchart LR
 
 ### 3.2. Equation
 
-1. gNB will calculate current channel noise = 0.9 x last channel noise + 0.1 msg signal power
+1. UE to gNB Channel Model
 ```math
-P_{noise,i+1} = 0.9 * P_{noise,i} + P_{msg1,i}
+P_{UE} = P_{UE,TX} G_{UE} G_{gNB} (\frac{\lambda}{4 \pi}) (\frac{1}{d})
 ```
 
 
