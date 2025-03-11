@@ -77,8 +77,8 @@ d_attacker = 1
 G_UE = 1
 G_attacker = 1
 G_gNB = 1
-wavelength = 1
-path_loss_exp = 4 * np.pi
+wavelength = 4 * np.pi
+path_loss_exp = 1
 
 # Run simulation
 j_range, results_P_S, results_P_noise_j1 = simulate(j_max, P_noise, P_UE_TX, P_attacker_TX, alpha, beta_values, d_UE, d_attacker, G_UE, G_attacker, G_gNB, wavelength, path_loss_exp)
