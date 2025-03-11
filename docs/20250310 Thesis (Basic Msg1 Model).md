@@ -185,11 +185,19 @@ flowchart LR
 
 ### 2.2. Model Equation
 
-1. Noise threshold:
+1. Noise threshold for $RAO = 1$:
+```math
+P_{noise,1} = P_{noise}
+```
+2. Noise threshold for $RAO = i$:
 ```math
 P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
 ```
-2. UE's Msg1 Success with Noise threshold:
+3. Noise threshold for $i$ from $1$ to $j+1$ when attacker start early:
+```math
+P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
+```
+4. UE's Msg1 Success with Noise threshold:
 ```math
 P_{S,i} =
 \begin{cases} 
