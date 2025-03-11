@@ -41,8 +41,8 @@ j_max = 110
 G_gNB = 1
 G_UE = 1
 G_attacker = 1
-wavelength = 1
-gamma = 4 * np.pi
+wavelength = 4 * np.pi
+gamma = 1
 d_UE = 1
 d_attacker = 1
 
