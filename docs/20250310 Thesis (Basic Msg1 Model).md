@@ -292,7 +292,7 @@ plt.show()
 
 ![image](https://hackmd.io/_uploads/BkkANr6skx.png)
 
-## 3. Add Msg1 and Channel Noise Energy
+## 3. Add UE and Attacker distance
 
 ### 3.1. Model Parameters
 
