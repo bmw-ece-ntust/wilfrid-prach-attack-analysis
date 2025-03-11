@@ -197,10 +197,7 @@ P_{noise,i+1} =
 (1 - \alpha) * P_{noise,i} + \alpha * P_{noise}, & \text{otherwise} 
 \end{cases}
 ```
-3. Noise threshold for $i$ from $1$ to $j+1$ when attacker start early:
-```math
-P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
-```
+3. Noise threshold for when attacker start early for $j$ RAO is equal to evaluating $P_{noise,i+1}$ over the range $i \in [1, j+1]$ and taking the $P_{noise,j}$
 4. UE's Msg1 Success with Noise threshold:
 ```math
 P_{S,i} =
