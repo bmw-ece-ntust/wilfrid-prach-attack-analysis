@@ -319,7 +319,7 @@ plt.show()
 
 #### 2.3.3. Result
 
-![image](https://hackmd.io/_uploads/BkkANr6skx.png)
+![image](https://hackmd.io/_uploads/BJGX686jkg.png)
 
 ## 3. Add UE and Attacker Channel Model
 
