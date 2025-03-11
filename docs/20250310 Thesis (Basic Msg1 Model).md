@@ -293,7 +293,7 @@ plt.show()
 
 ![image](https://hackmd.io/_uploads/BkkANr6skx.png)
 
-## 3. Add UE and Attacker distance
+## 3. Add UE and Attacker Channel Model
 
 **Notes:**
 1. Parameters and Equation are referenced from [Wireless Communications: Principles and Practice](https://www.amazon.com/Wireless-Communications-Principles-Practice-2nd/dp/0130422320)
@@ -302,32 +302,51 @@ plt.show()
 
 #### 3.1.1. Assumptions or Constant Input Parameter
 
-| Parameter      | Description                    | Constant Value |
-| -------------- | ------------------------------ | -------------- |
-| $G_{UE}$       | antenna gain of UE             | $x$            |
-| $G_{attacker}$ | antenna gain of attacker       | $x$            |
-| $\lambda$      | wavelength of the signal       | $x$            |
-| $\gamma$       | path loss exponent             | $x$            |
+| Parameter      | Description              | Constant Value |
+| -------------- | ------------------------ | -------------- |
+| $G_{UE}$       | antenna gain of UE       | $x$            |
+| $G_{attacker}$ | antenna gain of attacker | $x$            |
+| $\lambda$      | wavelength of the signal | $x$            |
+| $\gamma$       | path loss exponent       | $x$            |
 
 #### 3.1.2. Variable Input Parameter
 
-| Parameter | Description                                                                                         | Value Range    |
-| --------- | --------------------------------------------------------------------------------------------------- | -------------- |
-| $d_{UE}$       | distance between gNB to UE                                                       | 0..∞ (real) |
-| $d_{attacker}$  | distance between gNB to attacker                                                                       | 0..∞ (real)    |
-| $P_{UE,TX}$       | UE's Msg1 dB Power (tx by UE)                            | 0..∞ (real) |
-| $P_{attacker,TX}$   | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real)    |
+| Parameter         | Description                          | Value Range |
+| ----------------- | ------------------------------------ | ----------- |
+| $d_{UE}$          | distance between gNB to UE           | 0..∞ (real) |
+| $d_{attacker}$    | distance between gNB to attacker     | 0..∞ (real) |
+| $P_{UE,TX}$       | UE's Msg1 dB Power (tx by UE)        | 0..∞ (real) |
+| $P_{attacker,TX}$ | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real) |
 
 #### 3.1.3. Output Parameter or Performance Metrics
 
-| Parameter | Description                          | Value Range |
-| --------- | ------------------------------------ | ----------- |
-| $P_{attacker}$     | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real)      |
-| $P_{UE}$     | UE's Msg1 dB Power (rx by gNB) | 0..∞ (real)      |
+| Parameter      | Description                          | Value Range |
+| -------------- | ------------------------------------ | ----------- |
+| $P_{attacker}$ | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real) |
+| $P_{UE}$       | UE's Msg1 dB Power (rx by gNB)       | 0..∞ (real) |
+
+```mermaid
+flowchart LR
+    inputC["`**Constant Input:**
+    G_UE
+    G_attacker
+    lambda
+    gamma`"]
+    inputV["`**Variable Input:**
+    d_UE
+    d_attacker
+    P_UE,TX
+    P_attacker,TX`"]
+    process["`**Channel Model**`"]
+    output["`**Output:**
+    P_attacker
+    P_UE`"]
+    inputC --> process
+    inputV --> process
+    process --> output
+```
 
 ### 3.2. Equation
-
-0. All equations from [2.2](#22-equation) are still used
 
 1. gNB will calculate current channel noise = 0.9 x last channel noise + 0.1 msg signal power
 ```math
