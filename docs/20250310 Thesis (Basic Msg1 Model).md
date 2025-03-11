@@ -130,28 +130,76 @@ gantt
     ‎Msg1 : ue3, 50, 5m
 ```
 
-## 2. Model Collision Probability in PRACH by Approximation
+## 2. Basic Model
 
 ### 2.1. Model Parameters
 
-| Parameter | Description                                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------------------------- |
-| $M$       | number of UEs sending Msg1                                                                                      |
-| $N_i$     | number of Preambles per SSB for the $i^{th}$ SSB                                                                |
+#### 2.1.1. Assumptions or Constant Input Parameter
 
-### 2.2. Equation
+| Parameter      | Description                    | Constant Value |
+| -------------- | ------------------------------ | -------------- |
+| $M$            | Number of UE                   | 1              |
+| $N$            | Number of Preamble ID          | 64             |
+| $O$            | Number of Attacked Preamble ID | 1              |
+| $P_{noise}$    | Initial Noise dB Threshold     | $x$            |
+| $P_{attacker}$ | Attacker's Msg1 dB Power       | $x$            |
+| $P_{UE}$       | UE's Msg1 dB Power             | $x$            |
 
-1. Expected value of the number of preambles that have only 1 UE's Msg1 for the first SSB
+#### 2.1.2. Variable Input Parameter
+
+| Parameter | Description                                                                                         | Value Range    |
+| --------- | --------------------------------------------------------------------------------------------------- | -------------- |
+| $i$       | identifier for the ith Random Access Occasion                                                       | 0..∞ (integer) |
+| $\alpha$  | Noise update factor parameter                                                                       | 0..1 (real)    |
+| $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | 0..∞ (integer) |
+| $\beta$   | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 0..1 (real)    |
+
+#### 2.1.3. Output Parameter or Performance Metrics
+
+| Parameter | Description                          | Value Range |
+| --------- | ------------------------------------ | ----------- |
+| $P_S$     | UE's Msg1 Access Success Probability | 0 or 1      |
+
+```mermaid
+flowchart LR
+    inputC["`**Constant Input:**
+    M
+    N
+    O
+    P_noise
+    P_attacker
+    P_UE`"]
+    inputV["`**Variable Input:**
+    α
+    j
+    β`"]
+    process["`**Msg1 Model**`"]
+    output["`**Output:**
+    P_S vs. j
+    P_S vs. α
+    P_S vs. β`"]
+    inputC --> process
+    inputV --> process
+    process --> output
+
+### 2.2. Model Equation
+
+1. Noise threshold:
 ```math
-N_{S,1} = M e^{-M/N_1}
+P_{noise,i+1} = (1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}
+```
+2. UE's Msg1 Success with Noise threshold:
+```math
+P_{S,i} =
+\begin{cases} 
+1, & \text{if } P_{UE,i} > P_{noise,i} \\ 
+0, & \text{otherwise} 
+\end{cases}
 ```
 
+### 2.3. Model Implementation in Python Code
 
-## 3. Model Implementation in Python Code
-
-### 3.1. Code based on original Paper
-
-#### 3.1.1. Parameters
+#### 2.3.1. Parameters
 
 | Parameter | Value |
 | --------- | ----- |
@@ -160,48 +208,25 @@ N_{S,1} = M e^{-M/N_1}
 | $I_{max}$ | 10    |
 
 
-#### 3.1.2. Code
+#### 2.3.2. Code
 
 ```python
 
 ```
 
-#### 3.1.3. Result
+#### 2.3.3. Result
 
 
-### 3.2. Modify Code to Imitate ZX's Result
+## 3. Add Msg1 and Channel Noise Energy
 
-#### 3.2.1. Parameters
-
-| Parameter | Value                       | Reference                                            |
-| --------- | --------------------------- | ---------------------------------------------------- |
-| $M$       | 2                           | Experiment uses MTK and Samsung UE                   |
-| $N$       | 60                          | ssb-perRACH-OccasionAndCB-PreamblesPerSSB = OneAnd60 |
-| $I_{max}$ | 185 (MTK) and 155 (Samsung) | -                                                    |
-
-
-
-#### 3.2.2. Code
-
-```python=
-
-```
-
-#### 3.2.3. Result
-
-$P_C$ = 0
-
-
-## 4. Add Msg1 and Channel Noise Energy
-
-### 4.1. Model Parameters
+### 3.1. Model Parameters
 
 | Parameter | Description                                                                                                     |
 | --------- | --------------------------------------------------------------------------------------------------------------- |
 | $M$       | number of UEs sending Msg1                                                                                      |
 | $N$     | total number of Preambles per SSB                                                                |
 
-### 4.2. Equation
+### 3.2. Equation
 
 0. All equations from [2.2](#22-equation) are still used
 
@@ -211,9 +236,9 @@ P_{noise,i+1} = 0.9 * P_{noise,i} + P_{msg1,i}
 ```
 
 
-### 4.3. Modify Code to Add Msg1 and Channel Noise Energy
+### 3.3. Modify Code to Add Msg1 and Channel Noise Energy
 
-#### 4.3.1. Parameters
+#### 3.3.1. Parameters
 
 | Parameter | Value                       | Reference                                            |
 | --------- | --------------------------- | ---------------------------------------------------- |
@@ -223,12 +248,12 @@ P_{noise,i+1} = 0.9 * P_{noise,i} + P_{msg1,i}
 | $P_{noise,1}$ | 25 | -                                                    |
 
 
-#### 4.3.2. Code
+#### 3.3.2. Code
 
 ```python
 
 ```
 
-#### 4.3.3. Result
+#### 3.3.3. Result
 
 $P_C$ = 0
