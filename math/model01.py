@@ -34,11 +34,12 @@ beta_values = [1, 0.5, 0.25, 0.125]
 j_max = 110
 
 # Compute results
-j_range, results = compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max)
+j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max)
 
 # Plot results
 plt.figure(figsize=(10, 6))
-for beta, P_S in results.items():
+plt.subplot(1, 2, 1)
+for beta, P_S in results_P_S.items():
     plt.plot(j_range, P_S, label=f'β = {beta}')
 
 plt.xlabel("j (RAO Early Start)")
@@ -46,4 +47,16 @@ plt.ylabel("P_S (Msg1 Success Probability)")
 plt.title("UE Msg1 Success Probability vs j for Different β Values")
 plt.legend()
 plt.grid()
+
+plt.subplot(1, 2, 1)
+for beta, P_noise_j1 in results_P_noise_j1.items():
+    plt.plot(j_range, P_noise_j1, label=f'β = {beta}')
+
+plt.xlabel("j (RAO Early Start)")
+plt.ylabel("P_noise_j1 (Msg1 Success Probability)")
+plt.title("UE Msg1 Success Probability vs j for Different β Values")
+plt.legend()
+plt.grid()
+
+plt.tight_layout()
 plt.show()
