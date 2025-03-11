@@ -12,6 +12,33 @@
 - [Wireless Communications: Principles and Practice](https://www.amazon.com/Wireless-Communications-Principles-Practice-2nd/dp/0130422320)
 
 **Table of Contents:**
+- [20250310 Thesis (Basic Msg1 Model)](#20250310-thesis--basic-msg1-model-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. System Model](#1-system-model)
+    + [1.2. PRACH Msg1 Attack Overview](#12-prach-msg1-attack-overview)
+    + [1.2. Actors](#12-actors)
+    + [1.3. Timing Diagram](#13-timing-diagram)
+  * [2. Basic Model](#2-basic-model)
+    + [2.1. Model Parameters](#21-model-parameters)
+      - [2.1.1. Assumptions or Constant Input Parameter](#211-assumptions-or-constant-input-parameter)
+      - [2.1.2. Variable Input Parameter](#212-variable-input-parameter)
+      - [2.1.3. Output Parameter or Performance Metrics](#213-output-parameter-or-performance-metrics)
+    + [2.2. Model Equation](#22-model-equation)
+    + [2.3. Model Implementation in Python Code](#23-model-implementation-in-python-code)
+      - [2.3.1. Parameters](#231-parameters)
+      - [2.3.2. Code](#232-code)
+      - [2.3.3. Result](#233-result)
+  * [3. Add UE and Attacker Channel Model](#3-add-ue-and-attacker-channel-model)
+    + [3.1. Model Parameters](#31-model-parameters)
+      - [3.1.1. Assumptions or Constant Input Parameter](#311-assumptions-or-constant-input-parameter)
+      - [3.1.2. Variable Input Parameter](#312-variable-input-parameter)
+      - [3.1.3. Output Parameter or Performance Metrics](#313-output-parameter-or-performance-metrics)
+    + [3.2. Equation](#32-equation)
+    + [3.3. Modify Code to Add UE and Attacker Channel Model](#33-modify-code-to-add-ue-and-attacker-channel-model)
+      - [3.3.1. Parameters](#331-parameters)
+      - [3.3.2. Code](#332-code)
+      - [3.3.3. Result](#333-result)
+
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1. System Model
@@ -304,7 +331,7 @@ plt.show()
 
 | Parameter      | Description              | Constant Value |
 | -------------- | ------------------------ | -------------- |
-| $G_{gNB}$       | antenna gain of gNB       | $x$            |
+| $G_{gNB}$       | antenna gain of gNB     | $x$            |
 | $G_{UE}$       | antenna gain of UE       | $x$            |
 | $G_{attacker}$ | antenna gain of attacker | $x$            |
 | $\lambda$      | wavelength of the signal | $x$            |
@@ -361,17 +388,21 @@ P_{attacker} = P_{attacker,TX} G_{attacker} G_{gNB} (\frac{\lambda}{4 \pi})^2 (\
 ```
 
 
-### 3.3. Modify Code to Add Msg1 and Channel Noise Energy
+### 3.3. Modify Code to Add UE and Attacker Channel Model
 
 #### 3.3.1. Parameters
 
-| Parameter | Value                       | Reference                                            |
-| --------- | --------------------------- | ---------------------------------------------------- |
-| $M$       | 2                           | Experiment uses MTK and Samsung UE                   |
-| $N$       | 60                          | ssb-perRACH-OccasionAndCB-PreamblesPerSSB = OneAnd60 |
-| $I_{max}$ | 185 (MTK) and 155 (Samsung) | -                                                    |
-| $P_{noise,1}$ | 25 | -                                                    |
-
+| Parameter         | Description                          | Value       |
+| ----------------- | ------------------------------------ | ----------- |
+| $G_{gNB}$         | antenna gain of gNB                  | $x$         |
+| $G_{UE}$          | antenna gain of UE                   | $x$         |
+| $G_{attacker}$    | antenna gain of attacker             | $x$         |
+| $\lambda$         | wavelength of the signal             | $x$         |
+| $\gamma$          | path loss exponent                   | $x$         |
+| $d_{UE}$          | distance between gNB to UE           | 0..∞ (real) |
+| $d_{attacker}$    | distance between gNB to attacker     | 0..∞ (real) |
+| $P_{UE,TX}$       | UE's Msg1 dB Power (tx by UE)        | 0..∞ (real) |
+| $P_{attacker,TX}$ | Attacker's Msg1 dB Power (rx by gNB) | 0..∞ (real) |
 
 #### 3.3.2. Code
 
