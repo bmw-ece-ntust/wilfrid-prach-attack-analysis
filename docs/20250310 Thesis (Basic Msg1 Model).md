@@ -352,7 +352,7 @@ flowchart LR
 
 1. UE to gNB Channel Model
 ```math
-P_{UE} = P_{UE,TX} G_{UE} G_{gNB} (\frac{\lambda}{4 \pi}) (\frac{1}{d})
+P_{UE} = P_{UE,TX} G_{UE} G_{gNB} (\frac{\lambda}{4 \pi})^2 (\frac{1}{d})^\gamma
 ```
 
 
