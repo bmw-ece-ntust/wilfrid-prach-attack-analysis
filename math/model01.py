@@ -52,6 +52,7 @@ plt.subplot(1, 2, 2)
 for beta, P_noise_j1 in results_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'β = {beta}')
 
+plt.axhline(P_UE, color='red', ls='dotted')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different β Values")
