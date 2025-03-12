@@ -330,6 +330,8 @@ plt.show()
 
 $\alpha = 0.1$
 
+![image](https://hackmd.io/_uploads/Hys2n5Aj1e.png)
+
 ## 3. Add UE and Attacker Channel Simulation
 
 ### 3.1. Model Parameters
@@ -407,3 +409,5 @@ flowchart LR
 #### 3.2.3. Result
 
 $\alpha = 0.1$
+
+
