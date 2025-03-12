@@ -52,7 +52,7 @@ plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in results_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 
-plt.axhline(P_UE, color='red', ls='dotted')
+plt.axhline(P_UE, color='red', ls='dotted', label=f'P_UE')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
