@@ -49,8 +49,8 @@
 sequenceDiagram
     gNB->>Attacker: [1] SSB/PBCH<br/>System Information
     Note over Attacker: Synchronization
-    Attacker->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
-    Note over Attacker: Repeat j times
+    loop Repeat j times
+        Attacker->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
     gNB->>UE: [3] SSB/PBCH<br/>System Information
     Note over UE: Synchronization
     Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
