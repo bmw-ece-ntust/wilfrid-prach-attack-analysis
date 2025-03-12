@@ -88,15 +88,15 @@ displayMode: compact
 ---
 gantt
     dateFormat mm
-    title beta = 1
+    title T_a = 1
     axisFormat %M
     section gNB
-    RAO 1 : done, rao1, 00, 5m
-    RAO 2 : done, rao2, 10, 5m
-    RAO 3 : done, rao3, 20, 5m
-    RAO 4 : done, rao4, 30, 5m
-    RAO 5 : done, rao5, 40, 5m
-    RAO 6 : done, rao5, 50, 5m
+    RAO 1 : active, rao1, 00, 5m
+    RAO 2 : active, rao2, 10, 5m
+    RAO 3 : active, rao3, 20, 5m
+    RAO 4 : active, rao4, 30, 5m
+    RAO 5 : active, rao5, 40, 5m
+    RAO 6 : active, rao5, 50, 5m
     section Attacker
     ‎Msg1 : crit, att1, 00, 5m
     ‎Msg1 : crit, att2, 10, 5m
@@ -104,7 +104,8 @@ gantt
     ‎Msg1 : crit, att4, 30, 5m
     ‎Msg1 : crit, att5, 40, 5m
     ‎Msg1 : crit, att5, 50, 5m
-    ‎j : active, j1, 00, 30m
+    T_a : done, ta1, 00, 10m
+    ‎j : done, j1, 00, 30m
     section UE
     ‎Msg1 : ue1, 30, 5m
     ‎Msg1 : ue2, 40, 5m
@@ -117,20 +118,21 @@ displayMode: compact
 ---
 gantt
     dateFormat mm
-    title beta = 0.5
+    title T_a = 2
     axisFormat %M
     section gNB
-    RAO 1 : done, rao1, 00, 5m
-    RAO 2 : done, rao2, 10, 5m
-    RAO 3 : done, rao3, 20, 5m
-    RAO 4 : done, rao4, 30, 5m
-    RAO 5 : done, rao5, 40, 5m
-    RAO 6 : done, rao5, 50, 5m
+    RAO 1 : active, rao1, 00, 5m
+    RAO 2 : active, rao2, 10, 5m
+    RAO 3 : active, rao3, 20, 5m
+    RAO 4 : active, rao4, 30, 5m
+    RAO 5 : active, rao5, 40, 5m
+    RAO 6 : active, rao5, 50, 5m
     section Attacker
     ‎Msg1 : crit, att1, 00, 5m
     ‎Msg1 : crit, att3, 20, 5m
     ‎Msg1 : crit, att5, 40, 5m
-    ‎j : active, j1, 00, 30m
+    T_a : done, ta1, 00, 20m
+    ‎j : done, j1, 00, 30m
     section UE
     ‎Msg1 : ue1, 30, 5m
     ‎Msg1 : ue2, 40, 5m
@@ -143,19 +145,20 @@ displayMode: compact
 ---
 gantt
     dateFormat mm
-    title beta = 0.25
+    title T_a = 4
     axisFormat %M
-    section gNB RAO
-    RAO 1 : done, rao1, 00, 5m
-    RAO 2 : done, rao2, 10, 5m
-    RAO 3 : done, rao3, 20, 5m
-    RAO 4 : done, rao4, 30, 5m
-    RAO 5 : done, rao5, 40, 5m
-    RAO 6 : done, rao5, 50, 5m
+    section gNB
+    RAO 1 : active, rao1, 00, 5m
+    RAO 2 : active, rao2, 10, 5m
+    RAO 3 : active, rao3, 20, 5m
+    RAO 4 : active, rao4, 30, 5m
+    RAO 5 : active, rao5, 40, 5m
+    RAO 6 : active, rao5, 50, 5m
     section Attacker
     Msg1 : crit, att1, 00, 5m
     ‎Msg1 : crit, att5, 40, 5m
-    ‎j : active, j1, 00, 30m
+    T_a : done, ta1, 00, 40m
+    ‎j : done, j1, 00, 30m
     section UE Msg1
     ‎Msg1 : ue1, 30, 5m
     ‎Msg1 : ue2, 40, 5m
