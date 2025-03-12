@@ -64,18 +64,18 @@ sequenceDiagram
 flowchart TD
     A("`**Basestation:**
     -----------
-    *N* preamble ID
-    *P_noise* threshold
-    *α* noise threshold update factor`")
+    *N* - preamble ID
+    *P_noise* - threshold
+    *α* - noise threshold update factor`")
     B["`**UE (M=1):**
     -------
-    *P_UE* msg1 power`"]
+    *P_UE* - msg1 power`"]
     C[["`**Attacker:**
     ---------
-    *O* number of msg1 attacked
-    *P_attacker* msg1 power
-    *j* time early start
-    *T_a* attack period`"]]
+    *O* - number of msg1 attacked
+    *P_attacker* - msg1 power
+    *j* - time early start
+    *T_a* - attack period`"]]
     B-->A
     C-->A
 ```
