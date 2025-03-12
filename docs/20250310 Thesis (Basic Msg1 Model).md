@@ -47,11 +47,14 @@
 
 ```mermaid
 sequenceDiagram
-    gNB->>UE: [1] SSB/PBCH<br/>System Information
-    gNB->>Attacker: [2] SSB/PBCH<br/>System Information
-    Note over UE,Attacker: Synchronization
-    UE->>gNB: [3] PRACH<br/>Random Access Preamble (Msg1)
+    gNB->>Attacker: [1] SSB/PBCH<br/>System Information
+    Note over Attacker: Synchronization
+    Attacker->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
+    Note over Attacker: Repeat j times
+    gNB->>UE: [3] SSB/PBCH<br/>System Information
+    Note over UE: Synchronization
     Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
+    UE->>gNB: [5] PRACH<br/>Random Access Preamble (Msg1)
     Note over gNB,Attacker: Msg1 attack Complete
 ```
 ### 1.2. Actors
