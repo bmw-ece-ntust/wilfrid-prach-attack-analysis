@@ -251,9 +251,9 @@ P_{S} =
 | $P_{noise}$    | Initial Noise dB Threshold     | 28            |
 | $P_{attacker}$ | Attacker's Msg1 dB Power       | 55            |
 | $P_{UE}$       | UE's Msg1 dB Power             | 54            |
-| $\alpha$  | Noise update factor parameter                                                                       | 0.1    |
-| $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | 0..110 |
-| $\beta$   | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 1,0.5,0.25,0.125    |
+| $\alpha$       | Noise update factor parameter                                            | 0.1      |
+| $j$            | Number of Random Access Occasion early start for attacker relative to UE | 0..110   |
+| $T_a$          | Variability of Attack Period                                             | 1,2,4,8  |
 
 
 #### 2.3.2. Code
