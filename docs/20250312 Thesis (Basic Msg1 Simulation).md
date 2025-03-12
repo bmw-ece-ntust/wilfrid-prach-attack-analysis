@@ -11,6 +11,31 @@
 - [20250310 Thesis (Basic Msg1 Model)](https://github.com/bmw-ece-ntust/wilfrid-prach-attack-analysis/blob/master/docs/20250310%20Thesis%20(Basic%20Msg1%20Model).md)
 
 **Table of Contents:**
+- [20250312 Thesis (Basic Msg1 Simulation)](#20250312-thesis--basic-msg1-simulation-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. System Model](#1-system-model)
+    + [1.2. PRACH Msg1 Attack Overview](#12-prach-msg1-attack-overview)
+    + [1.2. Actors](#12-actors)
+    + [1.3. Timing Diagram](#13-timing-diagram)
+  * [2. Basic Model Simulation](#2-basic-model-simulation)
+    + [2.1. Model Parameters](#21-model-parameters)
+      - [2.1.1. Assumptions or Constant Input Parameter](#211-assumptions-or-constant-input-parameter)
+      - [2.1.2. Variable Input Parameter](#212-variable-input-parameter)
+      - [2.1.3. Output Parameter or Performance Metrics](#213-output-parameter-or-performance-metrics)
+    + [2.2. Simulation Implementation in Python Code](#22-simulation-implementation-in-python-code)
+      - [2.2.1. Parameters](#221-parameters)
+      - [2.2.2. Code](#222-code)
+      - [2.2.3. Result](#223-result)
+  * [3. Add UE and Attacker Channel Simulation](#3-add-ue-and-attacker-channel-simulation)
+    + [3.1. Model Parameters](#31-model-parameters)
+      - [3.1.1. Assumptions or Constant Input Parameter](#311-assumptions-or-constant-input-parameter)
+      - [3.1.2. Variable Input Parameter](#312-variable-input-parameter)
+      - [3.1.3. Output Parameter or Performance Metrics](#313-output-parameter-or-performance-metrics)
+    + [3.2. Modify Code to Add UE and Attacker Channel Model](#32-modify-code-to-add-ue-and-attacker-channel-model)
+      - [3.2.1. Parameters](#321-parameters)
+      - [3.2.2. Code](#322-code)
+      - [3.2.3. Result](#323-result)
+
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1. System Model
