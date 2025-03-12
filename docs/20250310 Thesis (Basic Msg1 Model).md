@@ -187,7 +187,7 @@ gantt
 | $i$       | identifier for the ith Random Access Occasion                                                       | 0..∞ (integer) |
 | $\alpha$  | Noise update factor parameter                                                                       | 0..1 (real)    |
 | $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | 0..∞ (integer) |
-| $\beta$   | Variability/Percentage of Attack Period. This parameter is directly related to ssb-perRACH-Occasion | 0..1 (real)    |
+| $T_a$     | Variability of Attack Period                                                                        | 0..∞ (integer) |
 
 #### 2.1.3. Output Parameter or Performance Metrics
 
@@ -207,12 +207,12 @@ flowchart LR
     inputV["`**Variable Input:**
     α
     j
-    β`"]
+    T_a`"]
     process["`**Msg1 Model**`"]
     output["`**Output:**
     P_S vs. j
     P_S vs. α
-    P_S vs. β`"]
+    P_S vs. T_a`"]
     inputC --> process
     inputV --> process
     process --> output
@@ -228,7 +228,7 @@ P_{noise,1} = P_{noise}
 ```math
 P_{noise,i+1} =
 \begin{cases} 
-(1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}, & \text{if } i > 1 \text{ and } (i-2) \bmod \frac{1}{\beta} = 0 \\ 
+(1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}, & \text{if } i > 1 \text{ and } (i-2) \bmod T_a = 0 \\ 
 (1 - \alpha) * P_{noise,i} + \alpha * P_{noise}, & \text{otherwise} 
 \end{cases}
 ```
