@@ -58,7 +58,7 @@ P_attacker = 55  # dB
 P_UE = 54  # dB
 alpha = 0.1
 beta_values = [1, 0.5, 0.25, 0.125]
-j_max = 110
+j_max = 1000
 
 # Run simulation
 j_range, results_P_S, results_P_noise_j1 = simulate(j_max, P_noise, P_attacker, P_UE, alpha, beta_values)
