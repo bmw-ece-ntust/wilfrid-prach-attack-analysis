@@ -2,11 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 ##### Mathematical #####
-def compute_p_success(P_noise, P_attacker_TX, P_UE_TX, alpha, beta_values, j_max, G_gNB, G_UE, G_attacker, wavelength, gamma, d_UE, d_attacker):
-    # Compute received power based on channel model
-    P_UE = P_UE_TX * G_UE * G_gNB * (wavelength / (4 * np.pi))**2 * (1 / d_UE)**gamma
-    P_attacker = P_attacker_TX * G_attacker * G_gNB * (wavelength / (4 * np.pi))**2 * (1 / d_attacker)**gamma
-    
+def compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max):
     j_range = np.arange(1, j_max + 1)
     results_P_S = {}
     results_P_noise_j1 = {}
@@ -85,17 +81,17 @@ def simulate(j_max, P_noise, P_attacker, P_UE, alpha, beta_values):
 ##### Main Program #####
 # Given parameters
 P_noise = 28  # dB
-P_attacker_TX = 55  # dB
-P_UE_TX = 54  # dB
+P_attacker = 55  # dB
+P_UE = 54  # dB
 alpha = 0.1
 beta_values = [1, 0.5, 0.25, 0.125]
 j_max = 110
 
 # Compute results
-j_range, math_P_S, math__P_noise_j1 = compute_p_success(P_noise, P_attacker_TX, P_UE_TX, alpha, beta_values, j_max, G_gNB, G_UE, G_attacker, wavelength, gamma, d_UE, d_attacker)
+j_range, math_P_S, math__P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max)
 
 # Run simulation
-j_range, simu_P_S, simu_P_noise_j1 = simulate(j_max, P_noise, P_attacker_TX, P_UE_TX, alpha, beta_values)
+j_range, simu_P_S, simu_P_noise_j1 = simulate(j_max, P_noise, P_attacker, P_UE, alpha, beta_values)
 
 # Plot results
 plt.figure(figsize=(12, 6))
