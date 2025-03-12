@@ -66,7 +66,7 @@ flowchart TD
     -----------
     *N* preamble ID
     *P_noise* threshold
-    *alpha* noise threshold update factor`")
+    *α* noise threshold update factor`")
     B["`**UE (M=1):**
     -------
     *P_UE* msg1 power`"]
@@ -75,7 +75,7 @@ flowchart TD
     *O* number of msg1 attacked
     *P_attacker* msg1 power
     *j* time early start
-    *beta* attack period`"]]
+    *T_a* attack period`"]]
     B-->A
     C-->A
 ```
