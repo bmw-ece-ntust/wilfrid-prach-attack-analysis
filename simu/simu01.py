@@ -88,7 +88,7 @@ beta_values = [1, 0.5, 0.25, 0.125]
 j_max = 110
 
 # Compute results
-j_range, math_P_S, math__P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max)
+j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max)
 
 # Run simulation
 j_range, simu_P_S, simu_P_noise_j1 = simulate(j_max, P_noise, P_attacker, P_UE, alpha, beta_values)
