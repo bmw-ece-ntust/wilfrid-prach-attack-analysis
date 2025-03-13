@@ -301,11 +301,85 @@ sudo apt install --reinstall libyaml-cpp-dev
 ```shell=
 ./build_oai -w USRP --ninja --nrUE --gNB --build-lib "nrscope" -C
 ```
-
+![image](https://github.com/user-attachments/assets/f5a08d78-d968-4c93-b1cc-72d2d69c3c21)
 
 #### 1.3.2. Compile Attacker
 
-abcabc
+
+<b>1. Install USRP B210 dependency</b>
+
+```shell=
+sudo apt install -y autoconf automake build-essential ccache cmake cpufrequtils doxygen ethtool g++ git inetutils-tools libboost-all-dev libncurses5 libncurses5-dev libusb-1.0-0 libusb-1.0-0-dev libusb-dev python3-dev python3-mako python3-numpy python3-requests python3-scipy python3-setuptools python3-ruamel.yaml
+```
+
+<b>2. Build UHD from source</b>
+
+```shell=
+git clone https://github.com/EttusResearch/uhd.git
+cd uhd
+git checkout v4.6.0.0
+cd host
+mkdir build
+cd build
+cmake ../
+make -j $(nproc)
+make test # This step is optional
+sudo make install
+sudo ldconfig
+```
+
+<b>3. Download FPGA Image</b>
+
+```shell=
+sudo uhd_images_downloader
+```
+
+<b>4. Install Gnuradio</b>
+
+```shell=
+sudo apt install gnuradio
+```
+
+<b>5. Check if the system can recognise B210 through USB</b>
+
+```shell=
+lsusb
+```
+![image](https://github.com/user-attachments/assets/74b16423-e985-4729-9eaf-494168a294a4)
+
+<b>6. Test the device with uhd to see if it works</b>
+
+```shell=
+sudo uhd_find_devices
+```
+![image](https://github.com/user-attachments/assets/70109067-5a38-4971-92e8-0e58a5b2324b)
+
+<b>7. Clone MSG1 Attacker and checkout to rework_UE branch</b>
+
+```shell=
+git clone https://github.com/Richard-yq/OAI-UE-MSG1-attacker.git
+cd  OAI-UE-MSG1-attacker
+git checkout rework_UE
+```
+
+<b>8. Install ASN.1</b>
+
+```shell=
+cd cmake_targets
+sudo ./build_oai -I
+```
+
+<b>9. Install nrscope</b>
+
+```shell=
+sudo apt install -y libforms-dev libforms-bin
+```
+
+<b>10. Install nrscope</b>
+
+```shell=
+./build_oai -w USRP --ninja --nrUE --gNB --build-lib "nrscope" -C
+```
 
 ### 1.4. Run
 
@@ -344,23 +418,9 @@ gNBs =
     ...
 ```
 
-##### 1.4.1.2. UE Configuration
+##### 1.4.1.2. Attacker Configuration
 
-<b>1. We use example configuration from `/ci-scripts/conf_files/nrue.uicc.conf`</b>
-
-<b>2. Be aware that you might need to change 3 things in the UE configuration file:</b>
-- imsi (modify as your desired ue identity. Values that I use is below)
-```shell=
-imsi = "001010000000001";
-```
-- nssai_sst & nssai_sd (modify as your desired Slice Configuration. Values that I use is below)
-```shell=
-nssai_sst=1;
-```
-- dnn (modify as your desired DNN. Values that I use is below)
-```shell=
-dnn="internet";
-```
+<b>We directly pass attacker's simulated UE configuration through command line</b>
 
 #### 1.4.2. Result
 
@@ -369,16 +429,17 @@ dnn="internet";
 <b>1. Run OAI gNB</b>
 
 ```shell=
-cd ~/openairinterface5g/cmake_targets/ran_build/build
-# sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim --sa
-sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --rfsim --sa
+cd openairinterface5g/cmake_target/ran_build/build
+sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --sa -E --continuous-tx --log_config.PRACH_debug
 ```
+![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
 
-<b>2. Run OAI nrUE</b>
+
+<b>2. Run Attacker</b>
 
 ```shell=
-cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo ./nr-uesoftmodem --rfsim --rfsimulator.serveraddr 127.0.0.1 --sa -r 106 --numerology 1 --band 78 -C 3619200000 -O ../../../ci-scripts/conf_files/nrue.uicc.conf
+cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 --sa -E --ue-fo-compensation
 ```
 
 <b>3. Stop OAI UE, OAI gNB and open5gs</b>
