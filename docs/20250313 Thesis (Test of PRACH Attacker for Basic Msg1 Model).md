@@ -45,7 +45,9 @@
 | ----------------------------------------- | ------------------ |
 | gNB Run                                  | :heavy_check_mark: |
 | Attacker Run                                  | :heavy_check_mark: |
-| UE Run                   | :heavy_check_mark: |
+| Attacker Sync to gNB                                  | :heavy_check_mark: |
+| Attacker Send Msg1 to gNB                                  | :heavy_check_mark: |
+| UE Run and Send Msg1 to gNB                   | :heavy_check_mark: |
 | Data Compiled                   | :heavy_check_mark: |
 
 ### 1.0. Minimum Requirement
@@ -439,39 +441,11 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 
 ```shell=
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
-sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 --sa -E --ue-fo-compensation
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation
 ```
 
-<b>3. Stop OAI UE, OAI gNB and open5gs</b>
-
-```shell=
-# To stop OAI UE, just ctrl + c on OAI UE terminal
-
-# To stop OAI UE, just ctrl + c on OAI gNB terminal
-
-# Stop open5gs
-./stop_open5gs.sh
-```
-
-<b>4. Result explanation</b>
+<b>3. Result explanation</b>
 - Since we set the 5G System (CN, RAN & UE) to have only 1 slice, we can see that there is only 1 slice (both on Allowed NSSAI & PDU Session)
 
 ##### 1.4.2.2. Modify OAI UE slice configuration
 
-<b>1. Run OAI gNB</b>
-
-```shell=
-cd ~/openairinterface5g/cmake_targets/ran_build/build
-# sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --rfsim --sa
-sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --rfsim --sa
-```
-
-<b>2. Run OAI nrUE</b>
-
-```shell=
-cd ~/openairinterface5g/cmake_targets/ran_build/build
-sudo ./nr-uesoftmodem --rfsim --rfsimulator.serveraddr 127.0.0.1 --sa -r 106 --numerology 1 --band 78 -C 3619200000 -O ../../../ci-scripts/conf_files/nrue.uicc.conf
-```
-
-<b>3. Result explanation</b>
-- Since we set the 5G System (CN & RAN) to have only 1 slice sst=1, we can see that there is only 1 slice on Allowed NSSAI
