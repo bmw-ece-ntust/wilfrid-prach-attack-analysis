@@ -87,7 +87,56 @@ flowchart TD
 
 ### 1.2. Environment
 
-#### 1.2.1. OAI gNB and UE
+#### 1.2.1. OAI gNB
+
+<b>Hardware:</b>
+
+| Item         | Info                                                         |
+| ------------ | ------------------------------------------------------------ |
+| CPU          |  |
+| Memory       |                                                |
+| Disk         |                                                         |
+| Server Model |                                  |
+
+Command Line Codes
+```shell=
+# Check CPU Type, freq, cores, numbers
+lscpu
+
+# Check total memory
+lshw -C memory
+
+# Check total disk
+df -h
+df --total -h | grep 'total' | awk '{print $2}'
+
+# Check server model
+sudo dmidecode -t system
+```
+
+
+<b>Software:</b>
+
+| Item       | Info                                                                                                    |
+| ---------- | ------------------------------------------------------------------------------------------------------- |
+| OS         |                                                                               |
+| Kernel     |                                                                                     |
+| OAI Commit |  |
+
+Command Line Codes
+```shell=
+# Check OS
+lsb_release -a
+
+# Check kernel
+uname -a
+uname -r
+
+# Check OAI commit
+git log -1
+```
+
+#### 1.2.2. OAI UE for attacker
 
 <b>Hardware:</b>
 
