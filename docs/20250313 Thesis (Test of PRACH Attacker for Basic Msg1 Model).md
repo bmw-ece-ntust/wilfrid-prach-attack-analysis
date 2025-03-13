@@ -12,6 +12,26 @@
 - [Attacker guide for Wilfrid paper](https://ntust-bmwlab.notion.site/Attacker-guide-for-Wilfrid-paper-12d1009831438064b6afcf322b4fa252)
 
 **Table of Contents:**
+- [20250313 Thesis (Test of PRACH Attacker for Basic Msg1 Model)](#20250313-thesis--test-of-prach-attacker-for-basic-msg1-model-)
+          + [tags: `2025`](#tags---2025-)
+  * [0. Summary](#0-summary)
+  * [1. PRACH Attacker for Basic Msg1 Model](#1-prach-attacker-for-basic-msg1-model)
+    + [1.0. Minimum Requirement](#10-minimum-requirement)
+      - [1.0.1. OAI gNB with USRP](#101-oai-gnb-with-usrp)
+      - [1.0.2. OAI UE with USRP for attacker](#102-oai-ue-with-usrp-for-attacker)
+    + [1.1. Topology](#11-topology)
+    + [1.2. Environment](#12-environment)
+      - [1.2.1. OAI gNB](#121-oai-gnb)
+      - [1.2.2. OAI UE for attacker](#122-oai-ue-for-attacker)
+    + [1.3. Compile](#13-compile)
+    + [1.4. Run](#14-run)
+      - [1.4.1. Configuration](#141-configuration)
+        * [1.4.1.1. gNB Configuration](#1411-gnb-configuration)
+        * [1.4.1.2. UE Configuration](#1412-ue-configuration)
+      - [1.4.2. Result](#142-result)
+        * [1.4.2.1. Initial Run](#1421-initial-run)
+        * [1.4.2.2. Modify OAI UE slice configuration](#1422-modify-oai-ue-slice-configuration)
+
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
