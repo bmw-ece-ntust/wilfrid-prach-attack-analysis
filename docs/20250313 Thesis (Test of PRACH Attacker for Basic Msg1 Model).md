@@ -69,16 +69,16 @@ flowchart TD
     A("`**Basestation:**
     -----------
     OAI gNB
-    Intel NUC Kit NUC7i7BNH`")
+    (Intel NUC Kit NUC7i7BNH)`")
     B["`**UE:**
     -------
     MTK UE`"]
     C[["`**Attacker:**
     ---------
     OAI gNB
-    Intel NUC Kit NUC7i7BNH`"]]
-    u1[["`USRP B210`"]]
-    u2[["`USRP B210`"]]
+    (Intel NUC Kit NUC7i7BNH)`"]]
+    u1(["`USRP B210`"])
+    u2(["`USRP B210`"])
     B-- OTA -->u1
     C-->u2
     u2-- OTA -->u1
