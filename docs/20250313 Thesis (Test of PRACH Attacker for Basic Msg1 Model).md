@@ -64,7 +64,26 @@
 
 ### 1.1. Topology
 
-
+```mermaid
+flowchart TD
+    A("`**Basestation:**
+    -----------
+    OAI gNB
+    Intel NUC Kit NUC7i7BNH`")
+    B["`**UE:**
+    -------
+    MTK UE`"]
+    C[["`**Attacker:**
+    ---------
+    OAI gNB
+    Intel NUC Kit NUC7i7BNH`"]]
+    u1[["`USRP B210`"]]
+    u2[["`USRP B210`"]]
+    B-- OTA -->u1
+    C-->u2
+    u2-- OTA -->u1
+    u1-->A
+```
 
 ### 1.2. Environment
 
