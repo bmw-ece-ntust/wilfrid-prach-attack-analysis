@@ -437,13 +437,13 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 ```
 ![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
 
-
 <b>2. Run Attacker</b>
 
 ```shell=
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
 sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation
 ```
+![image](https://github.com/user-attachments/assets/ec91cf07-b6c8-4070-927d-c75f945939fe)
 
 <b>3. Result explanation</b>
 - Since we set the 5G System (CN, RAN & UE) to have only 1 slice, we can see that there is only 1 slice (both on Allowed NSSAI & PDU Session)
