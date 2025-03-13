@@ -446,7 +446,15 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/ec91cf07-b6c8-4070-927d-c75f945939fe)
 
 <b>3. Result explanation</b>
-- Since we set the 5G System (CN, RAN & UE) to have only 1 slice, we can see that there is only 1 slice (both on Allowed NSSAI & PDU Session)
+- We can see from Attacker's Log, it is placing Msg1 in every frame slot 19 symbol 0
+![image](https://github.com/user-attachments/assets/10795ed6-c16a-45d7-86d9-23c7a9045967)
+- And from gNB, it receive the attacker's Msg1 and start RA procedure
+![image](https://github.com/user-attachments/assets/4c30527b-62b1-4b02-84d7-5cd6d587fac7)
+- gNB use TC-RNTI 0388 for attacker and generate Msg2
+![image](https://github.com/user-attachments/assets/d9d7ae47-660b-408c-a3fb-83bf13e3b338)
+- But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
+![image](https://github.com/user-attachments/assets/6f10bf75-f13b-4bd3-9a4d-38d6e4da944d)
+
 
 ##### 1.4.2.2. Modify OAI UE slice configuration
 
