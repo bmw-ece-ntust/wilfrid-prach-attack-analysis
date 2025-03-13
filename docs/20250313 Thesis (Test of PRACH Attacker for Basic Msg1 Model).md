@@ -100,9 +100,13 @@ flowchart TD
     u1(["`USRP B210`"])
     u2(["`USRP B210`"])
     B-- OTA -->u1
+    subgraph Attacker
     C-->u2
+    end
     u2-- OTA -->u1
+    subgraph Basestation
     u1-->A
+    end
 ```
 
 ### 1.2. Environment
