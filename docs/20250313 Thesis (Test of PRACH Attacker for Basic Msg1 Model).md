@@ -255,11 +255,12 @@ lsusb
 ```
 ![image](https://github.com/user-attachments/assets/62f7b806-ded9-47db-a60b-be403876438d)
 
-<b>6. Install Gnuradio</b>
+<b>6. Test the device with uhd to see if it works</b>
 
 ```shell=
-sudo apt install gnuradio
-
+sudo uhd_find_devices
+```
+![image](https://github.com/user-attachments/assets/a7924ed6-28cf-4a0c-993a-6d680106dbc4)
 
 <b>4. Install Gnuradio</b>
 
