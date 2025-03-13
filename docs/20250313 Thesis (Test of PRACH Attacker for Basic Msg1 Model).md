@@ -455,13 +455,17 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/d9d7ae47-660b-408c-a3fb-83bf13e3b338)
 - But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
 ![image](https://github.com/user-attachments/assets/6f10bf75-f13b-4bd3-9a4d-38d6e4da944d)
-- Be aware that we hardcode the prach_ConfigurationIndex to 159 in `openair2/LAYER2/NR_MAC_UE/config_ue.c`
+- Be aware that we hardcode the prach_ConfigurationIndex to 159 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions
 ![image](https://github.com/user-attachments/assets/dd5fa1bb-08d9-4ba6-a1b9-ea768d5cb62d)
+![image](https://github.com/user-attachments/assets/53b6f767-01c6-4697-9a94-7a8eca8011df)
+
 
 ##### 1.4.2.2. Modify Attacker Period to every 2 frames
 
-<b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c`</b>
+<b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
 ![image](https://github.com/user-attachments/assets/f71f5932-7f0b-4eb1-888a-db40d401650e)
+![image](https://github.com/user-attachments/assets/a4e7bda0-2fa1-407e-9ae4-c12519aad880)
+
 
 <b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
 ![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
@@ -480,4 +484,3 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
 sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation
 ```
-![image](https://github.com/user-attachments/assets/e6b9d40f-ed43-4cf5-a7a3-43707c19af21)
