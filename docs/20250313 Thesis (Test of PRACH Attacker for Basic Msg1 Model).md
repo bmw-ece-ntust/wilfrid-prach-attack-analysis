@@ -144,7 +144,7 @@ sudo dmidecode -t system
 | ---------- | -------------------------- |
 | OS         | Ubuntu 22.04.4 LTS (jammy) |
 | Kernel     | 6.8.0-52-generic           |
-| OAI Commit |                            |
+| OAI Commit | 60b0c1827dbda37e1b2d0dfc91227d6ce9826827 (HEAD -> develop, origin/develop, origin/HEAD)                           |
 
 Command Line Codes
 ```shell=
@@ -262,11 +262,14 @@ sudo uhd_find_devices
 ```
 ![image](https://github.com/user-attachments/assets/a7924ed6-28cf-4a0c-993a-6d680106dbc4)
 
-<b>4. Install Gnuradio</b>
+<b>7. Download OAI gNB from gitlab</b>
 
 ```shell=
-sudo apt install gnuradio
-
+git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git
+cd openairinterface5g
+git checkout develop
+```
+![image](https://github.com/user-attachments/assets/81627044-e22e-4b86-88bb-f946c2caa73e)
 
 <b>4. Install Gnuradio</b>
 
