@@ -271,11 +271,27 @@ git checkout develop
 ```
 ![image](https://github.com/user-attachments/assets/81627044-e22e-4b86-88bb-f946c2caa73e)
 
-<b>4. Install Gnuradio</b>
+<b>8. Dependency</b>
 
 ```shell=
-sudo apt install gnuradio
+cd cmake_targets
+./build_oai -I
 ```
+![image](https://github.com/user-attachments/assets/8f365538-230e-4a47-a42b-9d4e2930d6f9)
+
+<b>9. Install nrscope</b>
+
+```shell=
+sudo apt install -y libforms-dev libforms-bin
+```
+![image](https://github.com/user-attachments/assets/ea4316bb-e8e9-4aa3-a274-238768dfef43)
+
+<b>10. Build oai gNB with USRP mode</b>
+
+```shell=
+./build_oai -w USRP --ninja --nrUE --gNB --build-lib "nrscope" -C
+```
+
 
 #### 1.3.2. Compile Attacker
 
