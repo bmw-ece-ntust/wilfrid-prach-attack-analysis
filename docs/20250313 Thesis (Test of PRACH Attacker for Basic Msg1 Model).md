@@ -464,7 +464,8 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 <b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
 ![image](https://github.com/user-attachments/assets/f71f5932-7f0b-4eb1-888a-db40d401650e)
-![image](https://github.com/user-attachments/assets/a4e7bda0-2fa1-407e-9ae4-c12519aad880)
+![image](https://github.com/user-attachments/assets/75fe00c5-8745-4d38-8a25-b1ba4134aca8)
+
 
 
 <b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
