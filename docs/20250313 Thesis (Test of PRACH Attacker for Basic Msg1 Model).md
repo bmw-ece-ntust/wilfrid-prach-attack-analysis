@@ -214,38 +214,63 @@ git log -1
 
 #### 1.3.1. Compile gNB
 
-<b>1. Get openairinterface5g source code</b>
+<b>1. Install USRP B210 dependency</b>
 
 ```shell=
-# Get openairinterface5g source code
-git clone https://gitlab.eurecom.fr/oai/openairinterface5g.git ~/openairinterface5g
-cd ~/openairinterface5g
-git checkout develop
-git log -1
+sudo apt install -y autoconf automake build-essential ccache cmake cpufrequtils doxygen ethtool g++ git inetutils-tools libboost-all-dev libncurses5 libncurses5-dev libusb-1.0-0 libusb-1.0-0-dev libusb-dev python3-dev python3-mako python3-numpy python3-requests python3-scipy python3-setuptools python3-ruamel.yaml
 ```
 
-<b>2. Install OAI dependencies</b>
+<b>2. Build UHD from source</b>
 
 ```shell=
-# Install OAI dependencies
-cd ~/openairinterface5g/cmake_targets
-./build_oai -I
+git clone https://github.com/EttusResearch/uhd.git
+cd uhd
+git checkout v4.6.0.0
+cd host
+mkdir build
+cd build
+cmake ../
+make -j $(nproc)
+make test # This step is optional
+sudo make install
+sudo ldconfig
 ```
 
-<b>3. nrscope dependencies</b>
+<b>3. Download FPGA Image</b>
 
 ```shell=
-# nrscope dependencies
-sudo apt install -y libforms-dev libforms-bin
+sudo uhd_images_downloader
 ```
 
-
-<b>4. Build OAI gNB</b>
+<b>4. Install Gnuradio</b>
 
 ```shell=
-# Build OAI gNB
-cd ~/openairinterface5g/cmake_targets
-./build_oai -w SIMU --ninja --nrUE --gNB --build-lib "nrscope" -C
+sudo apt install gnuradio
+```
+
+<b>5. Check if the system can recognise B210 through USB</b>
+
+```shell=
+lsusb
+```
+![image](https://github.com/user-attachments/assets/62f7b806-ded9-47db-a60b-be403876438d)
+
+<b>6. Install Gnuradio</b>
+
+```shell=
+sudo apt install gnuradio
+
+
+<b>4. Install Gnuradio</b>
+
+```shell=
+sudo apt install gnuradio
+
+
+<b>4. Install Gnuradio</b>
+
+```shell=
+sudo apt install gnuradio
 ```
 
 #### 1.3.2. Compile Attacker
