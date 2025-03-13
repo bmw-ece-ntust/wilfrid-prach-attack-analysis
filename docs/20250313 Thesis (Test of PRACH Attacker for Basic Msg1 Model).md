@@ -286,7 +286,17 @@ sudo apt install -y libforms-dev libforms-bin
 ```
 ![image](https://github.com/user-attachments/assets/ea4316bb-e8e9-4aa3-a274-238768dfef43)
 
-<b>10. Build oai gNB with USRP mode</b>
+<b>10. Optional Reinstall yaml-cpp</b>
+
+```shell=
+# this is optional
+# sometimes, the yaml-cpp library is broken, so will result in error of step 11
+sudo apt update
+sudo apt install --reinstall libyaml-cpp-dev
+```
+![image](https://github.com/user-attachments/assets/221673fa-ad55-4d89-9802-d0c45e66c127)
+
+<b>11. Build oai gNB with USRP mode</b>
 
 ```shell=
 ./build_oai -w USRP --ninja --nrUE --gNB --build-lib "nrscope" -C
@@ -295,7 +305,7 @@ sudo apt install -y libforms-dev libforms-bin
 
 #### 1.3.2. Compile Attacker
 
-abc
+abcabc
 
 ### 1.4. Run
 
