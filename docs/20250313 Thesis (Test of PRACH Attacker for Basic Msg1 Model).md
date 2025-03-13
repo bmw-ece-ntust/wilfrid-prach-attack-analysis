@@ -91,12 +91,12 @@ flowchart TD
 
 <b>Hardware:</b>
 
-| Item         | Info                                                         |
-| ------------ | ------------------------------------------------------------ |
+| Item         | Info                                     |
+| ------------ | ---------------------------------------- |
 | CPU          | Intel(R) Core(TM) i7-7567U CPU @ 3.50GHz |
-| Memory       | 8GB                                               |
-| Disk         | 922GB                                                        |
-| Server Model | Intel Corporation NUC7i7BNH J31153-310                               |
+| Memory       | 8GB                                      |
+| Disk         | 922GB                                    |
+| Server Model | Intel Corporation NUC7i7BNH J31153-310   |
 
 Command Line Codes
 ```shell=
@@ -116,11 +116,11 @@ sudo dmidecode -t system
 
 <b>Software:</b>
 
-| Item       | Info                                                                                                    |
-| ---------- | ------------------------------------------------------------------------------------------------------- |
-| OS         | Ubuntu 22.04.4 LTS (jammy)                                                                              |
-| Kernel     | 6.8.0-52-generic                                                                                    |
-| OAI Commit |  |
+| Item       | Info                       |
+| ---------- | -------------------------- |
+| OS         | Ubuntu 22.04.4 LTS (jammy) |
+| Kernel     | 6.8.0-52-generic           |
+| OAI Commit |                            |
 
 Command Line Codes
 ```shell=
@@ -139,12 +139,12 @@ git log -1
 
 <b>Hardware:</b>
 
-| Item         | Info                                                         |
-| ------------ | ------------------------------------------------------------ |
+| Item         | Info                                     |
+| ------------ | ---------------------------------------- |
 | CPU          | Intel(R) Core(TM) i7-7567U CPU @ 3.50GHz |
-| Memory       | 8GB                                               |
-| Disk         | 922GB                                                        |
-| Server Model |                                  |
+| Memory       | 8GB                                      |
+| Disk         | 922GB                                    |
+| Server Model |                                          |
 
 Command Line Codes
 ```shell=
@@ -165,11 +165,11 @@ sudo dmidecode -t system
 
 <b>Software:</b>
 
-| Item       | Info                                                                                                    |
-| ---------- | ------------------------------------------------------------------------------------------------------- |
-| OS         |  Ubuntu 22.04.4 LTS (jammy)                                                                             |
-| Kernel     |  6.8.0-52-generic                                                                                   |
-| OAI Commit |  |
+| Item       | Info                       |
+| ---------- | -------------------------- |
+| OS         | Ubuntu 22.04.4 LTS (jammy) |
+| Kernel     | 6.8.0-52-generic           |
+| OAI Commit |                            |
 
 Command Line Codes
 ```shell=
