@@ -211,6 +211,9 @@ git log -1
 
 ### 1.3. Compile
 
+
+#### 1.3.1. Compile gNB
+
 <b>1. Get openairinterface5g source code</b>
 
 ```shell=
@@ -245,6 +248,9 @@ cd ~/openairinterface5g/cmake_targets
 ./build_oai -w SIMU --ninja --nrUE --gNB --build-lib "nrscope" -C
 ```
 
+#### 1.3.2. Compile Attacker
+
+abc
 
 ### 1.4. Run
 
