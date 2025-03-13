@@ -24,16 +24,17 @@
       - [1.2.1. OAI gNB](#121-oai-gnb)
       - [1.2.2. OAI UE for attacker](#122-oai-ue-for-attacker)
     + [1.3. Compile](#13-compile)
+      - [1.3.1. Compile gNB](#131-compile-gnb)
+      - [1.3.2. Compile Attacker](#132-compile-attacker)
     + [1.4. Run](#14-run)
       - [1.4.1. Configuration](#141-configuration)
         * [1.4.1.1. gNB Configuration](#1411-gnb-configuration)
-        * [1.4.1.2. UE Configuration](#1412-ue-configuration)
+        * [1.4.1.2. Attacker Configuration](#1412-attacker-configuration)
       - [1.4.2. Result](#142-result)
         * [1.4.2.1. Initial Run](#1421-initial-run)
         * [1.4.2.2. Modify OAI UE slice configuration](#1422-modify-oai-ue-slice-configuration)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 
 ## 0. Summary
 
@@ -41,14 +42,14 @@
 
 ## 1. PRACH Attacker for Basic Msg1 Model
 
-| Step                                      | Status             |
-| ----------------------------------------- | ------------------ |
-| gNB Run                                  | :heavy_check_mark: |
-| Attacker Run                                  | :heavy_check_mark: |
-| Attacker Sync to gNB                                  | :heavy_check_mark: |
-| Attacker Send Msg1 to gNB                                  | :heavy_check_mark: |
-| UE Run and Send Msg1 to gNB                   | :heavy_check_mark: |
-| Data Compiled                   | :heavy_check_mark: |
+| Step                        | Status             |
+| --------------------------- | ------------------ |
+| gNB Run                     | :heavy_check_mark: |
+| Attacker Run                | :heavy_check_mark: |
+| Attacker Sync to gNB        | :heavy_check_mark: |
+| Attacker Send Msg1 to gNB   | :heavy_check_mark: |
+| UE Run and Send Msg1 to gNB | :heavy_check_mark: |
+| Data Compiled               | :heavy_check_mark: |
 
 ### 1.0. Minimum Requirement
 
