@@ -53,14 +53,14 @@
 
 | Item   | Info       |
 | ------ | ---------- |
-| CPU    | 2 @ > 2GHz |
-| Memory | 3GB        |
+| CPU    |  |
+| Memory |         |
 
 <b>Software:</b>
 
 | Item | Info            |
 | ---- | --------------- |
-| OS   | Ubuntu 20/22/24 |
+| OS   |  |
 
 ### 1.1. Topology
 
@@ -93,10 +93,10 @@ flowchart TD
 
 | Item         | Info                                                         |
 | ------------ | ------------------------------------------------------------ |
-| CPU          |  |
-| Memory       |                                                |
-| Disk         |                                                         |
-| Server Model |                                  |
+| CPU          | Intel(R) Core(TM) i7-7567U CPU @ 3.50GHz |
+| Memory       | 8GB                                               |
+| Disk         | 922GB                                                        |
+| Server Model | Intel Corporation NUC7i7BNH J31153-310                               |
 
 Command Line Codes
 ```shell=
@@ -104,7 +104,7 @@ Command Line Codes
 lscpu
 
 # Check total memory
-lshw -C memory
+sudo lshw -C memory
 
 # Check total disk
 df -h
@@ -114,13 +114,12 @@ df --total -h | grep 'total' | awk '{print $2}'
 sudo dmidecode -t system
 ```
 
-
 <b>Software:</b>
 
 | Item       | Info                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------- |
-| OS         |                                                                               |
-| Kernel     |                                                                                     |
+| OS         | Ubuntu 22.04.4 LTS (jammy)                                                                              |
+| Kernel     | 6.8.0-52-generic                                                                                    |
 | OAI Commit |  |
 
 Command Line Codes
@@ -142,9 +141,9 @@ git log -1
 
 | Item         | Info                                                         |
 | ------------ | ------------------------------------------------------------ |
-| CPU          |  |
-| Memory       |                                                |
-| Disk         |                                                         |
+| CPU          | Intel(R) Core(TM) i7-7567U CPU @ 3.50GHz |
+| Memory       | 8GB                                               |
+| Disk         | 922GB                                                        |
 | Server Model |                                  |
 
 Command Line Codes
@@ -153,7 +152,7 @@ Command Line Codes
 lscpu
 
 # Check total memory
-lshw -C memory
+sudo lshw -C memory
 
 # Check total disk
 df -h
@@ -168,8 +167,8 @@ sudo dmidecode -t system
 
 | Item       | Info                                                                                                    |
 | ---------- | ------------------------------------------------------------------------------------------------------- |
-| OS         |                                                                               |
-| Kernel     |                                                                                     |
+| OS         |  Ubuntu 22.04.4 LTS (jammy)                                                                             |
+| Kernel     |  6.8.0-52-generic                                                                                   |
 | OAI Commit |  |
 
 Command Line Codes
