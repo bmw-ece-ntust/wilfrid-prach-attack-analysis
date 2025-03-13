@@ -480,3 +480,4 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
 sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation
 ```
+![image](https://github.com/user-attachments/assets/e6b9d40f-ed43-4cf5-a7a3-43707c19af21)
