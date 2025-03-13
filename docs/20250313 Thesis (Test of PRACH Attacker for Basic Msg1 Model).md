@@ -454,7 +454,12 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/d9d7ae47-660b-408c-a3fb-83bf13e3b338)
 - But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
 ![image](https://github.com/user-attachments/assets/6f10bf75-f13b-4bd3-9a4d-38d6e4da944d)
+- Be aware that we hardcode the prach_ConfigurationIndex to 159 in `openair2/LAYER2/NR_MAC_UE/config_ue.c`
+![image](https://github.com/user-attachments/assets/dd5fa1bb-08d9-4ba6-a1b9-ea768d5cb62d)
 
+##### 1.4.2.2. Modify Attacker Period to every 2 frames
 
-##### 1.4.2.2. Modify OAI UE slice configuration
+<b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c`</b>
+![image](https://github.com/user-attachments/assets/f71f5932-7f0b-4eb1-888a-db40d401650e)
 
+<b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
