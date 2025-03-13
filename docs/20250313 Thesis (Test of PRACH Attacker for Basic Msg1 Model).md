@@ -241,8 +241,6 @@ sudo ./nr-uesoftmodem --rfsim --rfsimulator.serveraddr 127.0.0.1 --sa -r 106 --n
 
 <b>4. Result explanation</b>
 - Since we set the 5G System (CN, RAN & UE) to have only 1 slice, we can see that there is only 1 slice (both on Allowed NSSAI & PDU Session)
-![image](https://hackmd.io/_uploads/B1jcteCkyl.png)
-![image](https://hackmd.io/_uploads/Hk5IceR1Jg.png)
 
 ##### 1.4.2.2. Modify OAI UE slice configuration
 
