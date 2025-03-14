@@ -22,12 +22,12 @@ plt.figure(figsize=(10, 6))
 
 # Plot data for each column (1, 2, 4, 8)
 for col in data:
-    plt.plot(frames, data[col], label=f'Column {col}', marker='o')
+    plt.plot(frames, data[col], label=f'Period {col}', marker='o')
 
 # Add labels and title
 plt.xlabel('Frame')
-plt.ylabel('Value')
-plt.title('Graph of Frame vs Values for Columns 1, 2, 4, 8')
+plt.ylabel('P_noise')
+plt.title("gNB's P_noise vs Frame for Attacker Period 1, 2, 4, 8")
 plt.legend()
 
 # Show grid for better readability
