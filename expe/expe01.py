@@ -53,7 +53,7 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 # Plot results
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
-for Ta, P_S in results_P_S.items():
+for Ta, P_S in math_P_S.items():
     plt.plot(j_range, P_S, label=f'Ta = {Ta}')
 
 plt.xlabel("j (RAO Early Start)")
