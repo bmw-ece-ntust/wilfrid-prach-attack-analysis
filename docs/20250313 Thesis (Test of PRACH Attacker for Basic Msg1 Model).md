@@ -32,7 +32,9 @@
         * [1.4.1.2. Attacker Configuration](#1412-attacker-configuration)
       - [1.4.2. Result](#142-result)
         * [1.4.2.1. Initial Run](#1421-initial-run)
-        * [1.4.2.2. Modify OAI UE slice configuration](#1422-modify-oai-ue-slice-configuration)
+        * [1.4.2.2. Modify Attacker Period to every 2 frames](#1422-modify-attacker-period-to-every-2-frames)
+        * [1.4.2.3. Modify Attacker Period to every 4 frames](#1423-modify-attacker-period-to-every-4-frames)
+        * [1.4.2.4. Modify Attacker Period to every 8 frames](#1424-modify-attacker-period-to-every-8-frames)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
