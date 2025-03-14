@@ -438,7 +438,7 @@ prach_ConfigurationIndex = 159;
 
 ```shell=
 cd openairinterface5g/cmake_target/ran_build/build
-sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --sa -E --continuous-tx --log_config.PRACH_debug
+sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 -E --continuous-tx --log_config.PRACH_debug
 ```
 ![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
 
@@ -446,19 +446,19 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 
 ```shell=
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
-sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
 ```
 ![image](https://github.com/user-attachments/assets/ec91cf07-b6c8-4070-927d-c75f945939fe)
 
 <b>3. Result explanation</b>
 - We can see from Attacker's Log, it is placing Msg1 in every frame slot 19 symbol 0
-![image](https://github.com/user-attachments/assets/10795ed6-c16a-45d7-86d9-23c7a9045967)
+![image](https://github.com/user-attachments/assets/765ccb52-4cd4-4cc5-98f2-875f249625a8)
 - And from gNB, it receive the attacker's Msg1 and start RA procedure
-![image](https://github.com/user-attachments/assets/4c30527b-62b1-4b02-84d7-5cd6d587fac7)
-- gNB use TC-RNTI 0388 for attacker and generate Msg2
-![image](https://github.com/user-attachments/assets/d9d7ae47-660b-408c-a3fb-83bf13e3b338)
+![image](https://github.com/user-attachments/assets/8f06dd75-6f21-4c3c-9130-1ac692f8c7e3)
+- gNB use TC-RNTI 5ea7 for attacker and generate Msg2
+![image](https://github.com/user-attachments/assets/ab6cf0c2-8be3-4f94-ba7c-352b34a091b5)
 - But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
-![image](https://github.com/user-attachments/assets/6f10bf75-f13b-4bd3-9a4d-38d6e4da944d)
+![image](https://github.com/user-attachments/assets/aa6783a0-f454-4046-a0ed-13090adb31f6)
 - Be aware that we hardcode the prach_ConfigurationIndex to 159 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions
 ![image](https://github.com/user-attachments/assets/dd5fa1bb-08d9-4ba6-a1b9-ea768d5cb62d)
 ![image](https://github.com/user-attachments/assets/e3635ed4-2f41-45dd-94d1-5ec2dc8f15d3)
@@ -469,8 +469,6 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 <b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
 ![image](https://github.com/user-attachments/assets/f71f5932-7f0b-4eb1-888a-db40d401650e)
 ![image](https://github.com/user-attachments/assets/75fe00c5-8745-4d38-8a25-b1ba4134aca8)
-
-
 
 <b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
 ![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
