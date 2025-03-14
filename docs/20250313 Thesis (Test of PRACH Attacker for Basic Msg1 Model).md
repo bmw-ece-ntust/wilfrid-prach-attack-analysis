@@ -536,6 +536,12 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 <b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
 ![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
 
+<b>0.3. Configure gNB's prach_ConfigurationIndex to 161 in `targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf`</b>
+
+
+<b>0.4. Recompile gNB following [1.3.1.](#131-compile-gnb)</b>
+
+
 <b>1. Run OAI gNB</b>
 
 ```shell=
