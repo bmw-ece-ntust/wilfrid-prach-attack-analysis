@@ -495,4 +495,31 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 - And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
 ![image](https://github.com/user-attachments/assets/7ddc0a5b-047b-464a-b8c4-43aeb8ecc520)
 
+##### 1.4.2.3. Modify Attacker Period to every 4 frames
+
+<b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
+
+
+<b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
+![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
+
+<b>1. Run OAI gNB</b>
+
+```shell=
+cd openairinterface5g/cmake_target/ran_build/build
+sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --sa -E --continuous-tx --log_config.PRACH_debug
+```
+![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
+
+<b>2. Run Attacker</b>
+
+```shell=
+cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
+```
+
+<b>3. Result explanation</b>
+- We can see from Attacker's Log, it is placing Msg1 in every odd frame slot 19 symbol 0
+
+- And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
 
