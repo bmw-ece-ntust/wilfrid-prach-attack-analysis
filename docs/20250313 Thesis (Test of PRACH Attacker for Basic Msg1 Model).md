@@ -610,7 +610,5 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 | 40    | 54.72 |       |       |       |
 | 41    | 54.72 | 35.08 | 25.36 | 18.52 |
 
-
-
-![image](https://github.com/user-attachments/assets/d86e9501-94a0-457b-9872-6432143f05b9)
+![image](https://github.com/user-attachments/assets/8b94f374-d16e-48e5-a459-0802f46d329d)
 
