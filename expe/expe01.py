@@ -3,7 +3,7 @@ import numpy as np
 
 ##### Mathematical #####
 def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max):
-    j_range = np.arange(0, j_max)
+    j_range = np.arange(0, j_max + 1)
     results_P_S = {}
     results_P_noise_j1 = {}
     
@@ -18,10 +18,10 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
             
             P_noise_values.append(P_next)
         
-        P_S = [1 if P_UE > (P_noise_values[j] + delta) else 0 for j in range(j_max)]
+        P_S = [1 if P_UE > (P_noise_values[j] + delta) else 0 for j in range(j_max + 1)]
         results_P_S[Ta] = P_S
 
-        P_noise_j1 = [P_noise_values[j] for j in range(j_max)]
+        P_noise_j1 = [P_noise_values[j] for j in range(j_max + 1)]
         results_P_noise_j1[Ta] = P_noise_j1
     
     return j_range, results_P_S, results_P_noise_j1
