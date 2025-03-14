@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max):
-    j_range = np.arange(0, j_max + 1)
+    j_range = np.arange(0, j_max)
     results_P_S = {}
     results_P_noise_j1 = {}
     
