@@ -63,7 +63,7 @@ plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
-for Ta, P_noise_j1 in results_P_noise_j1.items():
+for Ta, P_noise_j1 in math_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 for col in data:
     plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
