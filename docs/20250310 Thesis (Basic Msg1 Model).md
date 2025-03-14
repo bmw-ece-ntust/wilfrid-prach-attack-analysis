@@ -66,7 +66,8 @@ flowchart TD
     -----------
     *N* - preamble ID
     *P_noise* - threshold
-    *α* - noise threshold update factor`")
+    *α* - noise threshold update factor
+    *delta* - Msg1 threshold`")
     B["`**UE (M=1):**
     -------
     *P_UE* - msg1 power`"]
@@ -186,6 +187,7 @@ gantt
 | --------- | --------------------------------------------------------------------------------------------------- | -------------- |
 | $i$       | identifier for the ith Random Access Occasion                                                       | 0..∞ (integer) |
 | $\alpha$  | Noise update factor parameter                                                                       | 0..1 (real)    |
+| $\delta$  | Msg1 to Noise dB Threshold                                                                       | 0..∞ (real)    |
 | $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | 0..∞ (integer) |
 | $T_a$     | Variability of Attack Period                                                                        | 0..∞ (integer) |
 
@@ -206,6 +208,7 @@ flowchart LR
     P_UE`"]
     inputV["`**Variable Input:**
     α
+    δ
     j
     T_a`"]
     process["`**Msg1 Model**`"]
