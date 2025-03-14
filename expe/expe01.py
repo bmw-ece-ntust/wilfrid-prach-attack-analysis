@@ -40,7 +40,7 @@ data = {
 ##### Main Program #####
 # Given parameters
 P_noise = 17.3  # dB
-P_attacker = 55  # dB
+P_attacker = 43  # dB
 P_UE = 54  # dB
 alpha = 0.1
 Ta_values = [1, 2, 4, 8]
