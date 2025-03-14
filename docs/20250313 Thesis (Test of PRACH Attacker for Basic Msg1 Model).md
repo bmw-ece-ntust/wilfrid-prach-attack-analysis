@@ -537,10 +537,7 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
 
 <b>0.3. Configure gNB's prach_ConfigurationIndex to 161 in `targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf`</b>
-
-
-<b>0.4. Recompile gNB following [1.3.1.](#131-compile-gnb)</b>
-
+![image](https://github.com/user-attachments/assets/283e228a-1153-4860-b8a6-ccf6675e3bb7)
 
 <b>1. Run OAI gNB</b>
 
@@ -556,9 +553,11 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
 sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
 ```
+![image](https://github.com/user-attachments/assets/d6bf5841-5bbf-4b8c-9173-8c346e91ea51)
 
 <b>3. Result explanation</b>
 - We can see from Attacker's Log, it is placing Msg1 in every odd frame slot 19 symbol 0
-
+![image](https://github.com/user-attachments/assets/eefb3b1a-56ca-432c-926b-8ebebe4548f8)
 - And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
+![image](https://github.com/user-attachments/assets/15a71bd7-6097-4f27-bfbe-3e4b75ce23fe)
 
