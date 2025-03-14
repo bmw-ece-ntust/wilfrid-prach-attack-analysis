@@ -497,7 +497,9 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 ##### 1.4.2.3. Modify Attacker Period to every 4 frames
 
-<b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
+<b>0.1. Hardcode prach_ConfigurationIndex to 147 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
+![image](https://github.com/user-attachments/assets/0753b6d6-3b23-4202-ac9d-4c1d622c9ef7)
+![image](https://github.com/user-attachments/assets/8f3857fc-a35b-4b5a-af61-bd04ccaaba23)
 
 
 <b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
