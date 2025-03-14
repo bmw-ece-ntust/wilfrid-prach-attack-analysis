@@ -2,16 +2,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ##### Mathematical #####
-def compute_p_success(P_noise, P_attacker, P_UE, alpha, beta_values, j_max):
+def compute_p_success(P_noise, P_attacker, P_UE, alpha, Ta_values, j_max):
     j_range = np.arange(1, j_max + 1)
     results_P_S = {}
     results_P_noise_j1 = {}
     
-    for beta in beta_values:
+    for Ta in Ta_values:
         P_noise_values = [P_noise]
         
         for i in range(1, j_max + 1):
-            if (i - 2) % (1 / beta) == 0 and i > 1:
+            if (i - 2) % (Ta) == 0 and i > 1:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_attacker
             else:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_noise
@@ -37,21 +37,43 @@ data = {
     8: [17.38, 18.1, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.42, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52]
 }
 
-# Set up the plot
-plt.figure(figsize=(10, 6))
+##### Main Program #####
+# Given parameters
+P_noise = 17.3  # dB
+P_attacker = 55  # dB
+P_UE = 54  # dB
+alpha = 0.1
+Ta_values = [1, 2, 4, 8]
+j_max = 41
 
-# Plot data for each column (1, 2, 4, 8)
-for col in data:
-    plt.plot(frames, data[col], linestyle='none', label=f'Period {col}', marker='o')
+# Compute results
+j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, Ta_values, j_max)
 
-# Add labels and title
-plt.xlabel('Frame')
-plt.ylabel('P_noise')
-plt.title("gNB's P_noise vs Frame for Attacker Period 1, 2, 4, 8")
+
+# Plot results
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 2, 1)
+for Ta, P_S in results_P_S.items():
+    plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+
+plt.xlabel("j (RAO Early Start)")
+plt.ylabel("P_S (Msg1 Success Probability)")
+plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
 plt.legend()
+plt.grid()
 
-# Show grid for better readability
-plt.grid(True)
+plt.subplot(1, 2, 2)
+for Ta, P_noise_j1 in results_P_noise_j1.items():
+    plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+for col in data:
+    plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
 
-# Show the plot
+plt.axhline(P_UE, color='red', ls='dotted', label=f'P_UE')
+plt.xlabel("j (RAO Early Start)")
+plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
+plt.legend()
+plt.grid()
+
+plt.tight_layout()
 plt.show()
