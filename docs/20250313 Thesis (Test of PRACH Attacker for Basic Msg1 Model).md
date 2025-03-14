@@ -563,3 +563,6 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 - And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
 ![image](https://github.com/user-attachments/assets/15a71bd7-6097-4f27-bfbe-3e4b75ce23fe)
 
+### 1.5. Results Compilation and Visualization
+
+abc
