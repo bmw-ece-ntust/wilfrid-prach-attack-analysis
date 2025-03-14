@@ -196,7 +196,7 @@ sudo dmidecode -t system
 | ---------- | -------------------------- |
 | OS         | Ubuntu 22.04.4 LTS (jammy) |
 | Kernel     | 6.8.0-52-generic           |
-| OAI Commit |                            |
+| OAI Commit | 59b419d31c0ed8d6bea975c087b06d77f7ce25d7 (HEAD, origin/develop, origin/HEAD, develop)                           |
 
 Command Line Codes
 ```shell=
@@ -361,7 +361,7 @@ sudo uhd_find_devices
 ```shell=
 git clone https://github.com/Richard-yq/OAI-UE-MSG1-attacker.git
 cd  OAI-UE-MSG1-attacker
-git checkout rework_UE
+git checkout develop
 ```
 
 <b>8. Install ASN.1</b>
@@ -393,7 +393,7 @@ sudo apt install -y libforms-dev libforms-bin
 
 <b>1. We use example configuration from `/targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf`</b>
 
-<b>2. Be aware that you might need to change 3 things in the configuration file:</b>
+<b>2. Be aware that you might need to change 4 things in the configuration file:</b>
 - AMF and Network Interface Parameters (modify as your AMF and gNB ip address. Values that I use is below)
 ```shell=
 ////////// AMF parameters:
@@ -420,6 +420,10 @@ gNBs =
     ...
     min_rxtxtime = 6; # value 6 is because default USRP value
     ...
+```
+- prach_ConfigurationIndex (modify as your desired prach_ConfigurationIndex. Values that I use is below)
+```shell=
+prach_ConfigurationIndex = 159;
 ```
 
 ##### 1.4.1.2. Attacker Configuration
