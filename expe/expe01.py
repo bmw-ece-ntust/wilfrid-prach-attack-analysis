@@ -22,7 +22,7 @@ plt.figure(figsize=(10, 6))
 
 # Plot data for each column (1, 2, 4, 8)
 for col in data:
-    plt.plot(frames, data[col], label=f'Period {col}', marker='o')
+    plt.plot(frames, data[col], linestyle='none', label=f'Period {col}', marker='o')
 
 # Add labels and title
 plt.xlabel('Frame')
