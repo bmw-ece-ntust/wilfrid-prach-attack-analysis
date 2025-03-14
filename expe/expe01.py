@@ -69,7 +69,7 @@ for Ta, P_noise_j1 in math_P_noise_j1.items():
 for col in data:
     plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
 
-plt.axhline(P_UE, color='red', ls='dotted', label=f'P_UE')
+plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
