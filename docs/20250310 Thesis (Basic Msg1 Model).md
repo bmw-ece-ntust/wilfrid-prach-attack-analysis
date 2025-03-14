@@ -215,6 +215,7 @@ flowchart LR
     output["`**Output:**
     P_S vs. j
     P_S vs. α
+    P_S vs. δ
     P_S vs. T_a`"]
     inputC --> process
     inputV --> process
@@ -240,7 +241,7 @@ P_{noise,i+1} =
 ```math
 P_{S} =
 \begin{cases} 
-1, & \text{if } P_{UE} > P_{noise,j+1} \\ 
+1, & \text{if } P_{UE} > (P_{noise,j+1} + \delta) \\ 
 0, & \text{otherwise} 
 \end{cases}
 ```
