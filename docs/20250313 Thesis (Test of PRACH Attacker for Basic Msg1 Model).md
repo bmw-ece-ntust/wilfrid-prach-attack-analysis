@@ -485,8 +485,14 @@ sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band
 
 ```shell=
 cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
-sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
 ```
+![image](https://github.com/user-attachments/assets/eca5e60e-c4ac-4ebf-855f-9990a8dbe392)
 
+<b>3. Result explanation</b>
+- We can see from Attacker's Log, it is placing Msg1 in every odd frame slot 19 symbol 0
+![image](https://github.com/user-attachments/assets/d79e9838-5c30-4351-afa4-2d769545044c)
+- And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
+![image](https://github.com/user-attachments/assets/7ddc0a5b-047b-464a-b8c4-43aeb8ecc520)
 
 
