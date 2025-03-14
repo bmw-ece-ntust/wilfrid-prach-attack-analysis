@@ -334,7 +334,7 @@ plt.show()
 
 $\alpha = 0.1$
 $\delta = 12$
-![image](https://hackmd.io/_uploads/Sk7hW0Royx.png)
+![image](https://github.com/user-attachments/assets/ae692850-66bc-43bb-8d5a-f93b0d04659c)
 
 ## 3. Add UE and Attacker Channel Model
 
