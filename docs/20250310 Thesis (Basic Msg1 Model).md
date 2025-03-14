@@ -256,6 +256,7 @@ P_{S} =
 | $P_{attacker}$ | Attacker's Msg1 dB Power       | 55            |
 | $P_{UE}$       | UE's Msg1 dB Power             | 54            |
 | $\alpha$       | Noise update factor parameter                                            | 0.1      |
+| $\delta$       | Msg1 to Noise dB Threshold                                            | 12      |
 | $j$            | Number of Random Access Occasion early start for attacker relative to UE | 0..110   |
 | $T_a$          | Variability of Attack Period                                             | 1,2,4,8  |
 
@@ -266,8 +267,8 @@ P_{S} =
 import numpy as np
 import matplotlib.pyplot as plt
 
-def compute_p_success(P_noise, P_attacker, P_UE, alpha, Ta_values, j_max):
-    j_range = np.arange(1, j_max + 1)
+def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max):
+    j_range = np.arange(0, j_max + 1)
     results_P_S = {}
     results_P_noise_j1 = {}
     
@@ -282,7 +283,7 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, Ta_values, j_max):
             
             P_noise_values.append(P_next)
         
-        P_S = [1 if P_UE > P_noise_values[j] else 0 for j in range(j_max)]
+        P_S = [1 if P_UE > (P_noise_values[j] + delta) else 0 for j in range(j_max)]
         results_P_S[Ta] = P_S
 
         P_noise_j1 = [P_noise_values[j] for j in range(j_max)]
@@ -291,15 +292,16 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, Ta_values, j_max):
     return j_range, results_P_S, results_P_noise_j1
 
 # Given parameters
-P_noise = 28  # dB
+P_noise = 17.4  # dB
 P_attacker = 55  # dB
 P_UE = 54  # dB
 alpha = 0.1
+delta = 12
 Ta_values = [1, 2, 4, 8]
-j_max = 110
+j_max = 42
 
 # Compute results
-j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, Ta_values, j_max)
+j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
 
 # Plot results
 plt.figure(figsize=(12, 6))
@@ -317,7 +319,7 @@ plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in results_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 
-plt.axhline(P_UE, color='red', ls='dotted', label=f'P_UE')
+plt.axhline(P_UE - delta, color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
@@ -331,6 +333,7 @@ plt.show()
 #### 2.3.3. Result
 
 $\alpha = 0.1$
+$\delta = 12$
 ![image](https://hackmd.io/_uploads/Sk7hW0Royx.png)
 
 ## 3. Add UE and Attacker Channel Model
