@@ -58,7 +58,7 @@ plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label=f'P_UE - {
 plt.axhline(P_UE - delta_values[3], color='red', ls='dotted', label=f'P_UE - {delta_values[3]}')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different delta Values")
 plt.legend()
 plt.grid()
 
