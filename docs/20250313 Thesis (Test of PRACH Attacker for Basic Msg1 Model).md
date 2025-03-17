@@ -35,6 +35,7 @@
         * [1.4.2.2. Modify Attacker Period to every 2 frames](#1422-modify-attacker-period-to-every-2-frames)
         * [1.4.2.3. Modify Attacker Period to every 4 frames](#1423-modify-attacker-period-to-every-4-frames)
         * [1.4.2.4. Modify Attacker Period to every 8 frames](#1424-modify-attacker-period-to-every-8-frames)
+    + [1.5. Results Compilation and Visualization](#15-results-compilation-and-visualization)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
