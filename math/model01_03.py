@@ -31,7 +31,7 @@ P_attacker = 55  # dB
 P_UE = 54  # dB
 alpha = 0.12
 delta_values = [14,12,10,8]
-Ta_values = 1
+Ta = 1
 j_max = 42
 
 # Compute results
