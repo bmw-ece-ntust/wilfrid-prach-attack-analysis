@@ -30,7 +30,7 @@ P_noise = 17.4  # dB
 P_attacker = 55  # dB
 P_UE = 54  # dB
 alpha = 0.12
-delta_values = [14,12,10,8]
+delta_values = [16,12,8,4]
 Ta = 1
 j_max = 42
 
