@@ -295,7 +295,7 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
 P_noise = 17.4  # dB
 P_attacker = 55  # dB
 P_UE = 54  # dB
-alpha = 0.1
+alpha = 0.12
 delta = 12
 Ta_values = [1, 2, 4, 8]
 j_max = 42
@@ -333,7 +333,7 @@ plt.show()
 #### 2.3.3. Result
 
 $\alpha = 0.12$,$\delta = 12$
-![image](https://github.com/user-attachments/assets/ae692850-66bc-43bb-8d5a-f93b0d04659c)
+![image](https://github.com/user-attachments/assets/9386be4e-f929-4334-a8bb-314b1c58f5c8)
 
 $T_a = 1$,$\delta = 12$
 
