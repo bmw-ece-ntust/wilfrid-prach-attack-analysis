@@ -332,9 +332,11 @@ plt.show()
 
 #### 2.3.3. Result
 
-$\alpha = 0.1$
-$\delta = 12$
+$\alpha = 0.12$,$\delta = 12$
 ![image](https://github.com/user-attachments/assets/ae692850-66bc-43bb-8d5a-f93b0d04659c)
+
+$T_a = 1$,$\delta = 12$
+
 
 ## 3. Add UE and Attacker Channel Model
 
