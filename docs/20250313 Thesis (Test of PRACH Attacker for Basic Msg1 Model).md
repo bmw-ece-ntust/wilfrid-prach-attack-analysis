@@ -618,7 +618,7 @@ $\delta = 12$
 
 $T_a = 1$,
 $\delta = 12$
-
+![image](https://github.com/user-attachments/assets/0e19a389-e3cb-4b82-919e-21fac7c6ad43)
 
 $\alpha = 0.12$,
 $T_a = 1$
