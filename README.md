@@ -6,19 +6,24 @@
 **System Model:**
 ```mermaid
 flowchart TD
-    A[BaseStation]
-    B[[Attacker]]
-    C(UE 1)
-    D(UE 2)
-    E(...)
-	F(UE M)
+    A("`**Basestation:**
+    -----------
+    *N* - preamble ID
+    *P_noise* - threshold
+    *α* - noise threshold update factor
+    *delta* - Msg1 threshold`")
+    B["`**UE (M=1):**
+    -------
+    *P_UE* - msg1 power`"]
+    C[["`**Attacker:**
+    ---------
+    *O* - number of msg1 attacked
+    *P_attacker* - msg1 power
+    *j* - time early start
+    *T_a* - attack period`"]]
     B-->A
     C-->A
-    D-->A
-	E-->A
-	F-->A
 ```
-
 **Repository Structure:**
 ```
 prach-attack-analysis
