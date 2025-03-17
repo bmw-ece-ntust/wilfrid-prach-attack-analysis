@@ -59,7 +59,7 @@ for alpha, P_S in math_P_S.items():
 
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
+plt.title("UE Msg1 Success Probability vs j for Different alpha Values")
 plt.legend()
 plt.grid()
 
@@ -72,7 +72,7 @@ for col in data:
 plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different alpha Values")
 plt.legend()
 plt.grid()
 
