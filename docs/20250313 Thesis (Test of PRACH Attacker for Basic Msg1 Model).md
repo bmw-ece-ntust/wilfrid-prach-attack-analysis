@@ -622,3 +622,4 @@ $\delta = 12$
 
 $\alpha = 0.12$,
 $T_a = 1$
+![Uploading image.png…]()
