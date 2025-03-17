@@ -338,7 +338,7 @@ $\delta = 12$
 
 $T_a = 1$,
 $\delta = 12$
-![image](https://github.com/user-attachments/assets/e5a6dfa4-f8ef-4daf-b4d4-72af9b407553)
+![image](https://github.com/user-attachments/assets/79ec05c9-80f5-458e-9614-68dc8547e01e)
 
 $\alpha = 0.12$,
 $T_a = 1$
