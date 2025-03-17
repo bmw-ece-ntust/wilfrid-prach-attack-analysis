@@ -622,4 +622,4 @@ $\delta = 12$
 
 $\alpha = 0.12$,
 $T_a = 1$
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/d2b831c0-bbcc-4d43-b0c1-68e6129951a9)
