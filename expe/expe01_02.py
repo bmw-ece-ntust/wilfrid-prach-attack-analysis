@@ -32,9 +32,9 @@ frames = np.arange(42)  # frame indices (0 to 41)
 # Manually adjusted data to ensure every column has 42 values
 data = {
     0.18: [19.16, 25.64, 31, 35.38, 39, 41.94, 44.36, 46.38, 47.98, 49.26, 50.38, 51.24, 52.02, 52.62, 53.06, 53.48, 53.84, 54.12, 54.28, 54.48, 54.66, 54.78, 54.86, 54.94, 54.98, 55.04, 55.1, 55.12, 55.16, 55.22, 55.22, 55.18, 55.24, 55.26, 55.24, 55.28, 55.28, 55.3, 55.3, 55.32, 55.36, 55.34],
-    0.12: [17.2, 18.02, np.nan, 21.98, np.nan, 24.96, np.nan, 27.34, np.nan, 29.16, np.nan, 30.56, np.nan, 31.62, np.nan, 32.46, np.nan, 33.16, np.nan, 33.64, np.nan, 34.06, np.nan, 34.36, np.nan, 34.62, np.nan, 34.72, np.nan, 34.82, np.nan, 34.88, np.nan, 34.94, np.nan, 34.96, np.nan, 35, np.nan, 35.02, np.nan, 35.08],
-    0.06: [17.38, 17.82, np.nan, np.nan, np.nan, 20.88, np.nan, np.nan, np.nan, 22.58, np.nan, np.nan, np.nan, 23.72, np.nan, np.nan, np.nan, 24.5, np.nan, np.nan, np.nan, 24.8, np.nan, np.nan, np.nan, 25, np.nan, np.nan, np.nan, 25.06, np.nan, np.nan, np.nan, 25.2, np.nan, np.nan, np.nan, 25.18, np.nan, np.nan, np.nan, 25.36],
-    0: [17.38, 18.1, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.42, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52]
+    0.12: [],
+    0.06: [],
+    0: []
 }
 
 ##### Main Program #####
