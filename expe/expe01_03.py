@@ -42,37 +42,39 @@ data = {
 P_noise = 18.4  # dB
 P_attacker = 55  # dB
 P_UE = 54  # dB
-alpha_values = [0.18,0.12,0.06,0]
-delta = 12
+alpha = 0.12
+delta_values = [18, 12, 6, 0]
 Ta = 1
 j_max = 41
 
 # Compute results
-j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha_values, delta, Ta, j_max)
+j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta_values, Ta, j_max)
 
 
 # Plot results
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
-for alpha, P_S in math_P_S.items():
-    plt.plot(j_range, P_S, label=f'alpha = {alpha}')
+for delta, P_S in math_P_S.items():
+    plt.plot(j_range, P_S, label=f'delta = {delta}')
 
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different alpha Values")
+plt.title("UE Msg1 Success Probability vs j for Different delta Values")
 plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
-for alpha, P_noise_j1 in math_P_noise_j1.items():
-    plt.plot(j_range, P_noise_j1, label=f'alpha = {alpha}')
+for delta, P_noise_j1 in math_P_noise_j1.items():
+    plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
 for col in data:
-    plt.plot(frames, data[col], linestyle='none', label=f'alpha = {col} (Expe)', marker='o')
+    plt.plot(frames, data[col], linestyle='none', label=f'delta = {col} (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
-plt.xlabel("j (RAO Early Start)")
+plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label=f'P_UE - {delta_values[0]}')
+plt.axhline(P_UE - delta_values[1], color='orange', ls='dotted', label=f'P_UE - {delta_values[1]}')
+plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label=f'P_UE - {delta_values[2]}')
+plt.axhline(P_UE - delta_values[3], color='red', ls='dotted', label=f'P_UE - {delta_values[3]}')plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different alpha Values")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different delta Values")
 plt.legend()
 plt.grid()
 
