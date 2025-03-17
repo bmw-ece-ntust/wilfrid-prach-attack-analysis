@@ -2,12 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ##### Mathematical #####
-def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max):
+def compute_p_success(P_noise, P_attacker, P_UE, alpha_values, delta, Ta, j_max):
     j_range = np.arange(0, j_max + 1)
     results_P_S = {}
     results_P_noise_j1 = {}
     
-    for Ta in Ta_values:
+    for alpha in alpha_values:
         P_noise_values = [P_noise]
         
         for i in range(1, j_max + 1):
@@ -42,20 +42,20 @@ data = {
 P_noise = 17.4  # dB
 P_attacker = 55  # dB
 P_UE = 54  # dB
-alpha = 0.12
+alpha_values = [0.18,0.12,0.06,0]
 delta = 12
-Ta_values = [1, 2, 4, 8]
+Ta = 1
 j_max = 41
 
 # Compute results
-j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
+j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha_values, delta, Ta, j_max)
 
 
 # Plot results
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
-for Ta, P_S in math_P_S.items():
-    plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+for alpha, P_S in math_P_S.items():
+    plt.plot(j_range, P_S, label=f'alpha = {alpha}')
 
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
@@ -64,8 +64,8 @@ plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
-for Ta, P_noise_j1 in math_P_noise_j1.items():
-    plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+for alpha, P_noise_j1 in math_P_noise_j1.items():
+    plt.plot(j_range, P_noise_j1, label=f'alpha = {alpha}')
 for col in data:
     plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
 
