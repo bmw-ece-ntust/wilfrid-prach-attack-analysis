@@ -336,6 +336,9 @@ $\alpha = 0.12$,$\delta = 12$
 ![image](https://github.com/user-attachments/assets/9386be4e-f929-4334-a8bb-314b1c58f5c8)
 
 $T_a = 1$,$\delta = 12$
+![image](https://github.com/user-attachments/assets/e5a6dfa4-f8ef-4daf-b4d4-72af9b407553)
+
+$\alpha = 0.12$,$T_a = 1$
 
 
 ## 3. Add UE and Attacker Channel Model
