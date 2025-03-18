@@ -177,9 +177,9 @@ gantt
 | $M$            | Number of UE                   | 1              |
 | $N$            | Number of Preamble ID          | 64             |
 | $O$            | Number of Attacked Preamble ID | 1              |
-| $P_{noise}$    | Initial Noise dB Threshold     | $x$            |
-| $P_{attacker}$ | Attacker's Msg1 dB Power       | $x$            |
-| $P_{UE}$       | UE's Msg1 dB Power             | $x$            |
+| $P_{noise}$    | Initial Noise dB Threshold     | (real)         |
+| $P_{attacker}$ | Attacker's Msg1 dB Power       | (real)         |
+| $P_{UE}$       | UE's Msg1 dB Power             | (real)         |
 
 #### 2.1.2. Variable Input Parameter
 
@@ -250,15 +250,15 @@ P_{S} =
 
 #### 2.3.1. Parameters
 
-| Parameter      | Description                    | Value |
-| -------------- | ------------------------------ | -------------- |
-| $P_{noise}$    | Initial Noise dB Threshold     | 28            |
-| $P_{attacker}$ | Attacker's Msg1 dB Power       | 55            |
-| $P_{UE}$       | UE's Msg1 dB Power             | 54            |
-| $\alpha$       | Noise update factor parameter                                            | 0.1      |
-| $\delta$       | Msg1 to Noise dB Threshold                                            | 12      |
-| $j$            | Number of Random Access Occasion early start for attacker relative to UE | 0..110   |
-| $T_a$          | Variability of Attack Period                                             | 1,2,4,8  |
+| Parameter      | Description                                                              | Value   |
+| -------------- | ------------------------------------------------------------------------ | ------- |
+| $P_{noise}$    | Initial Noise dB Threshold                                               | 28      |
+| $P_{attacker}$ | Attacker's Msg1 dB Power                                                 | 55      |
+| $P_{UE}$       | UE's Msg1 dB Power                                                       | 54      |
+| $\alpha$       | Noise update factor parameter                                            | 0.1     |
+| $\delta$       | Msg1 to Noise dB Threshold                                               | 12      |
+| $j$            | Number of Random Access Occasion early start for attacker relative to UE | 0..110  |
+| $T_a$          | Variability of Attack Period                                             | 1,2,4,8 |
 
 
 #### 2.3.2. Code
@@ -356,11 +356,11 @@ $T_a = 1$
 
 | Parameter      | Description              | Constant Value |
 | -------------- | ------------------------ | -------------- |
-| $G_{gNB}$       | antenna gain of gNB     | $x$            |
-| $G_{UE}$       | antenna gain of UE       | $x$            |
-| $G_{attacker}$ | antenna gain of attacker | $x$            |
-| $\lambda$      | wavelength of the signal | $x$            |
-| $\gamma$       | path loss exponent       | $x$            |
+| $G_{gNB}$      | antenna gain of gNB      | (real)         |
+| $G_{UE}$       | antenna gain of UE       | (real)         |
+| $G_{attacker}$ | antenna gain of attacker | (real)         |
+| $\lambda$      | wavelength of the signal | (real)         |
+| $\gamma$       | path loss exponent       | (real)         |
 
 #### 3.1.2. Variable Input Parameter
 
