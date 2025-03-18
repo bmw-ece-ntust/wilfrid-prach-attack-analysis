@@ -162,5 +162,15 @@
     - Comprehensive Vulnerability Analysis of each physical channel (PBCH, etc) and signal (RS, SS) in 5G NR, identifying their vulnerabilities to jamming, spoofing, and sniffing attacks.
     - proposes specific mitigation techniques that do not require changes to specifications but can be incorporated into implementations (Timer-based and blacklisting mechanisms for PSS/SSS spoofing, limit broadcast message content to essential information, etc)
 
+## 12. A Novel Jamming Attacks Detection Approach Based on Machine Learning for Wireless Communication
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
 
 
