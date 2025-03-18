@@ -149,3 +149,17 @@
         - Encryption of MIB SIB
         - Scrambling of Uplink Control Channel Assignments
         - etc
+
+## 11. 5G NR Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
+
+
+
