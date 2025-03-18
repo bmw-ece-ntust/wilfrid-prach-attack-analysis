@@ -137,9 +137,9 @@
 ## 10. Enhancing the security of LTE networks against jamming attacks
 
 - **Problem:**
-    - 
+    - LTE lacks built-in security measures to prevent targeted jamming attacks
 - **Importance:**
-    - 
+    - LTE is being adopted for emergency response networks, such as the Nationwide Public Safety Broadband Network (NPSBN), USA. Jamming attacks could disrupt communications for first responders, law enforcement, and disaster recovery teams.
 - **Challenge:**
     - 
 - **Contribution:**
