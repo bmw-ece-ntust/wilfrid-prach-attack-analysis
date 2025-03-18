@@ -41,7 +41,7 @@
 - **Importance:**
     - 5G is critical for modern infrastructure, including emergency response, autonomous vehicles, and smart cities. Jamming threats could cause severe disruptions in these areas
 - **Challenge:**
-    - i dont know
+    - In-depth knowledge of 5G NR standard to determine vunerability
 - **Contribution:**
     - Comprehensive Review of 5G NR Jamming Vulnerabilities (PBCH, PDCCH, PUCCH, RACH, mMIMO vunerabilities)
     - Identifies Gaps in Current Research (lack of data for ML based jam detection, complexity of high protection DSSS method, etc) and Future Directions (building dataset for DL anti-jamming, cyber-security embedded initial design of 5G NR, etc)
