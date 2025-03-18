@@ -153,13 +153,14 @@
 ## 11. 5G NR Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
 
 - **Problem:**
-    - 
+    - 5G NR is vulnerable to RF interference, jamming, spoofing, and sniffing attacks
 - **Importance:**
-    - 
+    - Society will become increasingly dependent on 5G, making its security and availability critical
 - **Challenge:**
-    - 
+    - Different attack vectors have varying levels of complexity and efficiency, requiring prioritization of hardening efforts
 - **Contribution:**
-    - 
+    - Comprehensive Vulnerability Analysis of each physical channel (PBCH, etc) and signal (RS, SS) in 5G NR, identifying their vulnerabilities to jamming, spoofing, and sniffing attacks.
+    - proposes specific mitigation techniques that do not require changes to specifications but can be incorporated into implementations (Timer-based and blacklisting mechanisms for PSS/SSS spoofing, limit broadcast message content to essential information, etc)
 
 
 
