@@ -26,13 +26,13 @@
 ## 1. Smart PRACH Jamming: A Serious Threat for 5G Campus Networks
 
 - **Problem:**
-    - PRACH jammer can block critical device operations, such as an Automated Guided Vehicle (AGV) failing to move between factory zones
+    - PRACH jammer in industrial environment can cause large-scale failure, such as an Automated Guided Vehicle (AGV) failing to move between factory zones
 - **Importance:**
     - Traditional broadband jamming consumes high power and affects the entire network, but smart jamming is highly targeted, energy-efficient, and harder to detect
 - **Challenge:**
     - No research has practical implementation of PRACH jammer
 - **Contribution:**
-    - Modeling and Implementation of a Smart PRACH Jammer
+    - Modeling of Smart Jamming Attack (Ratio of success preamble, etc) and Implementation of a Smart PRACH Jammer in OAI
 
 ## 2. Smart Jamming Attacks in 5G New Radio: A Review
 
