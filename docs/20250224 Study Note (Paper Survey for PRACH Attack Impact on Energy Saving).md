@@ -90,7 +90,7 @@
 - **Importance:**
     - LTE is widely used in critical infrastructures, including emergency services, military networks, and smart grids. Attacks on LTE can lead to service failures in life-critical situations.
 - **Challenge:**
-    - Less available literature related to LTE jamming attack and mitigation of those attack
+    - Less available open literature related to LTE jamming attack and mitigation of those attack
 - **Contribution:**
     - Comprehensive Threat Assessment (LTE's PRACH, PCFICH, PUCCH, PBCH vunerabilities and jamming efficiency vs. implementation on those channels)
     - Survey of Mitigation Techniques (Scrambling PUCCH resource mapping, encrypt MIB SIB, UE based spoofing detection, etc)
