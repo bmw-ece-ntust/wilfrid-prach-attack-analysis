@@ -170,7 +170,7 @@ gantt
 
 ```mermaid
 xychart-beta
-    title "Sales Revenue"
+    title "Noise Threshold Evolution"
     x-axis RAO 1 --> 10
     y-axis "Power (dB)" 15 --> 55
     bar [55, 55, 55, 55, 55, 55, 55, 55, 55, 55]
