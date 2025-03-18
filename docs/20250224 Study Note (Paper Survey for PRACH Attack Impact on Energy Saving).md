@@ -96,5 +96,15 @@
     - Comprehensive Threat Assessment (LTE's PRACH, PCFICH, PUCCH, PBCH vunerabilities and jamming efficiency vs. implementation on those channels)
     - Survey of Mitigation Techniques (Scrambling PUCCH resource mapping, encrypt MIB SIB, UE based spoofing detection, etc)
 
+## 7. Analysis and Mitigation of Interference to the LTE Physical Control Format Indicator Channel
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
 
 
