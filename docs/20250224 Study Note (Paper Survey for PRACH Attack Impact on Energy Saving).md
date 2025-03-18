@@ -83,4 +83,16 @@
 - **Contribution:**
     - Experimental Evaluation of Smart Uplink Jamming in PUCCH and PUSCH in srsLTE UE
 
+## 6. LTE/LTE-A Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
+
+- **Problem:**
+    - abc
+- **Importance:**
+    - abc
+- **Challenge:**
+    - abc
+- **Contribution:**
+    - abc
+
+
 
