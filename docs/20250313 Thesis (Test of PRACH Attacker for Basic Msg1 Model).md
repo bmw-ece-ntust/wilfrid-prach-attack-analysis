@@ -50,9 +50,9 @@
 | gNB Run                     | :heavy_check_mark: |
 | Attacker Run                | :heavy_check_mark: |
 | Attacker Sync to gNB        | :heavy_check_mark: |
-| Attacker Send Msg1 to gNB   | :heavy_check_mark: |
-| UE Run and Send Msg1 to gNB | :heavy_check_mark: |
-| Data Compiled               | :heavy_check_mark: |
+| [Attacker Send Msg1 to gNB](#1421-initial-run)   | :heavy_check_mark: |
+| UE Run and Send Msg1 to gNB | :x: |
+| [Data Compiled](#15-results-compilation-and-visualization)               | :heavy_check_mark: |
 
 ### 1.0. Minimum Requirement
 
