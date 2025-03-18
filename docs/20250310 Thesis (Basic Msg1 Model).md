@@ -171,7 +171,7 @@ gantt
 ```mermaid
 xychart-beta
     title "Sales Revenue"
-    x-axis RAO 1 --> 41
+    x-axis RAO 1 --> 10
     y-axis "Power (dB)" 15 --> 55
     bar [55, 55, 55, 55, 55, 55, 55, 55, 55, 55, 55]
     line [17.78, 22.3, 26.28, 29.8, 32.86, 35.56, 37.92, 39.94, 41.74, 43.36]
