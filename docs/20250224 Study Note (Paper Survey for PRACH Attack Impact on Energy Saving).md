@@ -79,8 +79,8 @@
 - **Importance:**
     - LTE networks are vulnerable to smart uplink jamming attacks, which can severely disrupt communication in critical infrastructures (e.g., energy grids, healthcare, emergency services, and transportation)
 - **Challenge:**
-    - i dont know
+    - Smart jammers need to use minimal power (reduce visibility) and gather information of target before attack
 - **Contribution:**
-    - Experimental Evaluation of Smart Uplink Jamming
+    - Experimental Evaluation of Smart Uplink Jamming in PUCCH and PUSCH in srsLTE UE
 
 
