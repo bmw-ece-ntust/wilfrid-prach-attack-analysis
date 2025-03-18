@@ -68,7 +68,7 @@
 - **Challenge:**
     - De-anonymizing user-specific identifiers (C-RNTI) is complex, requiring deep protocol-level knowledge
 - **Contribution:**
-    - Developed a method for de-anonymizing user information, allowing the jammer to identify specific users by extracting the C-RNTI
+    - Developed a method for de-anonymizing user information, allowing the jammer to identify specific users by extracting the C-RNTI in PDCCH
     - Tested the attack in both wired and over-the-air (OTA) environments, demonstrating 100% effectiveness in blocking uplink communication
 
 
