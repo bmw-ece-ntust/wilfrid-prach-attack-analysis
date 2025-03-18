@@ -106,9 +106,21 @@
     - PCFICH is a fundamental part of the LTE design, meaning any changes to mitigate jamming must be backward-compatible.
 - **Contribution:**
     - PCFICH Vulnerability Analysis (evaluate impact of PCFICH jamning in simulation)
-    -  Proposed Mitigation Strategies (Extra-Blind PDCCH Decoding, eliminate PCFICH by fix number of OFDM symbols)
+    - Proposed Mitigation Strategies (Extra-Blind PDCCH Decoding, eliminate PCFICH by fix number of OFDM symbols)
 
 ## 8. Detection and Mitigation of Uplink Control Channel Jamming in LTE
+
+- **Problem:**
+    - PUCCH is statically allocated in the frequency spectrum, making it an easy target for protocol-aware adversaries
+- **Importance:**
+    - Mission-Critical Applications: LTE is increasingly being used for public safety networks (e.g., FirstNET), military communications, and emergency response systems. Ensuring high availability of LTE networks under jamming attacks is crucial for these use cases
+- **Challenge:**
+    - Mitigation Trade-offs, like duplicating control signals on PUSCH will consume extra bandwidth
+- **Contribution:**
+    - Detection Strategies (Monitoring for Excess PUCCH Energy, Tracking PUCCH Error Rates)
+    - Mitigation Strategies (shifting Control Signaling to the PUSCH, robust modulation and coding scheme) and simulation of the strategy
+
+## 9. Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey
 
 - **Problem:**
     - 
@@ -118,4 +130,3 @@
     - 
 - **Contribution:**
     - 
-
