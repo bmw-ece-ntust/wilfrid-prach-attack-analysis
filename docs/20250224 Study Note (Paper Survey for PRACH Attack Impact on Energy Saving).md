@@ -133,3 +133,14 @@
     - Survey of Jamming Attacks (categories of attack and technologies attacked)
     - Survey of Jamming Attacks (traditional and advanced mechanisms)
     - Identifying Research Gaps and Future Directions (integration of AI to jamming detection, Deployment challenges of advanced anti-jamming techniques in real-world networks, etc)
+
+## 10. Enhancing the security of LTE networks against jamming attacks
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
