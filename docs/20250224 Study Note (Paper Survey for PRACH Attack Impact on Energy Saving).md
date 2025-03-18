@@ -165,12 +165,14 @@
 ## 12. A Novel Jamming Attacks Detection Approach Based on Machine Learning for Wireless Communication
 
 - **Problem:**
-    - 
+    - Jamming detection techniques have been proposed, including fuzzy logic, game theory, channel surfing, and time series, but most of these techniques are inefficient in detecting smart jammers
 - **Importance:**
-    - 
+    - With billions of wireless devices expected to connect to 5G networks, the security implications are significant, especially for applications like self-driving cars, IoT, e-health services, and smart cities
 - **Challenge:**
-    - 
+    - Existing methods typically require more resources and ultimately serve only as a stopgap
+    - There's a need for accurate feature selection and algorithm training/testing, which is often neglected in existing approaches
 - **Contribution:**
-    - 
+    - A comparison of several machine learning models (random forest, support vector machine, neural network) for detecting jamming signals
+    - Investigation of signal features that effectively identify jamming signals (bad packet ratio, packet delivery ratio, received signal strength, clear channel assessment)
 
 
