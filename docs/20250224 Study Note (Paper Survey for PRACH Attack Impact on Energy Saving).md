@@ -141,6 +141,11 @@
 - **Importance:**
     - LTE is being adopted for emergency response networks, such as the Nationwide Public Safety Broadband Network (NPSBN), USA. Jamming attacks could disrupt communications for first responders, law enforcement, and disaster recovery teams.
 - **Challenge:**
-    - 
+    - Implementation Complexity and Compatibility Issue of anti jamming solutions
+    - Performance Trade-offs of anti jamming solutions
 - **Contribution:**
-    - 
+    - proposes several security enhancements to mitigate smart jamming attacks in LTE:
+        - Spread-Spectrum Jamming Resiliency
+        - Encryption of MIB SIB
+        - Scrambling of Uplink Control Channel Assignments
+        - etc
