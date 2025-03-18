@@ -167,7 +167,7 @@ gantt
 ```
 
 ### 1.4. Noise Evolution
-
+<!--
 ```mermaid
 xychart-beta
     title "Noise Threshold Evolution"
@@ -177,6 +177,9 @@ xychart-beta
     line [17.78, 22.3, 26.28, 29.8, 32.86, 35.56, 37.92, 39.94, 41.74, 43.36]
     line [29.78, 34.3, 38.28, 41.8, 44.86, 47.56, 49.92, 51.94, 53.74, 55.36]
 ```
+-->
+![Uploading image.png…]()
+
 
 ## 2. Basic Model
 
