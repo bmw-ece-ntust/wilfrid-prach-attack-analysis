@@ -108,4 +108,16 @@
     - PCFICH Vulnerability Analysis (evaluate impact of PCFICH jamning in simulation)
     -  Proposed Mitigation Strategies (Extra-Blind PDCCH Decoding, eliminate PCFICH by fix number of OFDM symbols)
 
+## 8. Detection and Mitigation of Uplink Control Channel Jamming in LTE
+
+- **Problem:**
+    - PCFICH (Physical Control Format Indicator Channel) in LTE is highly vulnerable to jamming attacks, which can severely disrupt network operations by preventing UEs from decoding downlink control information.
+- **Importance:**
+    - LTE is used in critical applications, including public safety, military communications, and emergency response. A successful PCFICH jamming attack can completely disrupt these essential services.
+- **Challenge:**
+    - PCFICH is a fundamental part of the LTE design, meaning any changes to mitigate jamming must be backward-compatible.
+- **Contribution:**
+    - PCFICH Vulnerability Analysis (evaluate impact of PCFICH jamning in simulation)
+    -  Proposed Mitigation Strategies (Extra-Blind PDCCH Decoding, eliminate PCFICH by fix number of OFDM symbols)
+
 
