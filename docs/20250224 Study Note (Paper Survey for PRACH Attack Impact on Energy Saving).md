@@ -123,10 +123,13 @@
 ## 9. Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey
 
 - **Problem:**
-    - 
+    - Despite advancements in wireless communication, there is still threat of jamming attacks in wireless networks and the lack of effective anti-jamming strategies
 - **Importance:**
-    - 
+    - With the rise of IoT, smart cities, and autonomous vehicles, Jamming can lead to severe service disruptions
 - **Challenge:**
-    - 
+    - Limited real-world deployment of anti-jamming techniques (theoritical only)
+    - Trade-off between security and network efficiency
 - **Contribution:**
-    - 
+    - Survey of Jamming Attacks (categories of attack and technologies attacked)
+    - Survey of Jamming Attacks (traditional and advanced mechanisms)
+    - Identifying Research Gaps and Future Directions (integration of AI to jamming detection, Deployment challenges of advanced anti-jamming techniques in real-world networks, etc)
