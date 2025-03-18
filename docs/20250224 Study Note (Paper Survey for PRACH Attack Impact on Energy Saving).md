@@ -44,7 +44,7 @@
     - i dont know
 - **Contribution:**
     - Comprehensive Review of 5G NR Jamming Vulnerabilities (PBCH, PDCCH, PUCCH, RACH, mMIMO vunerabilities)
-    - Identifies Gaps in Current Research (lack of data for ML based jam detection, etc) and Future Directions
+    - Identifies Gaps in Current Research (lack of data for ML based jam detection, complexity of high protection DSSS method, etc) and Future Directions (building dataset for DL anti-jamming, cyber-security embedded initial design of 5G NR, etc)
 
 ## 3. Resilience of LTE networks against smart jamming attacks
 
