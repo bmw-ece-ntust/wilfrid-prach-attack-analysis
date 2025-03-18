@@ -56,8 +56,8 @@
     - Existing anti-jamming techniques (e.g., frequency hopping, pilot boosting) may degrade network performance rather than effectively counteract attacks
     - Game-theoretic approaches must balance network resilience with practical implementation constraints, ensuring countermeasures do not disrupt legitimate network operations
 - **Contribution:**
-    - Game-Theoretic Modeling of Smart Jamming Attacks
-    - Proposed Adaptive Anti-Jamming Countermeasures
+    - Game-Theoretic Modeling of Smart Jamming Attacks (Cheater and Saboteur vs. eNB, single shot and repeated bayesian game)
+    - Proposed Adaptive Anti-Jamming Countermeasures (Increase CS-RS Tx Power, change eNB frequency, etc)
 
 ## 4. Implementation and Evaluation of a Smart Uplink Jamming Attack in a Public 5G Network
 
