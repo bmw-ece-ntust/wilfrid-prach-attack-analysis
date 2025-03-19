@@ -178,7 +178,7 @@ xychart-beta
     line [29.78, 34.3, 38.28, 41.8, 44.86, 47.56, 49.92, 51.94, 53.74, 55.36]
 ```
 -->
-![image](https://github.com/user-attachments/assets/f353af27-c571-49d8-a770-c97e914c9ef9)
+![image](https://github.com/user-attachments/assets/3560b286-ca0e-47bf-aad4-a23980892cf0)
 
 
 ## 2. Basic Model
