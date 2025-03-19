@@ -178,13 +178,14 @@
 ## 13. Modeling and Analysis of Random Access Channels With Bursty Arrivals in OFDMA Wireless Networks
 
 - **Problem:**
-    - 
+    - Current RACH (Random Access Channel) models assume Poisson-distributed arrivals with a constant rate, but in reality, bursty arrivals cause severe congestion, leading to high collision rates and network inefficiencies.
 - **Importance:**
-    - 
+    - M2M (Machine-to-Machine) communication is expected to introduce massive device connections, creating bursty traffic patterns that current models do not handle effectively.
 - **Challenge:**
-    - 
+    - RACH behavior involves multiple complex factors, such as periodic access characteristics, backoff policies, and power ramping effects
 - **Contribution:**
-    - 
+    - Analytical model that captures transient RACH behavior under bursty arrivals
+    - Develop a computationally efficient method to model OFDMA RACH behavior in transient conditions, improving over past iterative approaches.
 
 
 
