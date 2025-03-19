@@ -192,11 +192,13 @@
 - **Problem:**
     - The performance of beam-based random access (RA) in 5G beamforming networks is not well understood, particularly in scenarios with bursty arrivals from massive IoT devices.
 - **Importance:**
-    - 
+    - Beamforming is a critical feature in 5G NR and is widely used to improve spectral efficiency and network coverage.
 - **Challenge:**
-    - 
+    - The number of possible beam mapping configurations is very large, making it difficult to analyze all possible scenarios.
 - **Contribution:**
-    - 
+    - Developed an Analytical Model for Beam-Based Random Access
+    - Identifies potential RACH load unbalance issues and proposes solutions to distribute RA requests more evenly.
+    - Examines how backoff window size and maximum retransmission limits influence RA success rates and access latency.
 
 ## 15. Jamming-Resistant Receivers for the Massive MIMO Uplink
 
