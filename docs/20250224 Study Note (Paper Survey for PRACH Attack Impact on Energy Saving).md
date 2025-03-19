@@ -187,5 +187,15 @@
     - Analytical model that captures transient RACH behavior under bursty arrivals
     - Develop a computationally efficient method to model OFDMA RACH behavior in transient conditions, improving over past iterative approaches.
 
+## 14. Analytical Modeling and Performance Evaluation of Beam-Based Random Access Protocol for 5G Beamforming Networks
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
 
 
