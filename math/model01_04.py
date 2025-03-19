@@ -49,10 +49,10 @@ plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for Ta, P_S in results_P_S_1.items():
     if (Ta == 2):
-        plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+        plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 55')
 for Ta, P_S in results_P_S_2.items():
     if (Ta == 1):
-        plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+        plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 55')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
 plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
@@ -62,10 +62,10 @@ plt.grid()
 plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in results_P_noise_j1_1.items():
     if (Ta == 2):
-        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 27.5')
 for Ta, P_noise_j1 in results_P_noise_j1_2.items():
     if (Ta == 1):
-        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 27.5')
 plt.axhline(P_UE - delta, color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
