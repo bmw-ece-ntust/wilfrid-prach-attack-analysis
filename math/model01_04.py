@@ -50,7 +50,7 @@ plt.subplot(1, 2, 1)
 for Ta, P_S in results_P_S_1.items():
     if (Ta == 2):
         plt.plot(j_range, P_S, label=f'Ta = {Ta}')
-for Ta, P_S in results_P_S_1_2.items():
+for Ta, P_S in results_P_S_2.items():
     if (Ta == 1):
         plt.plot(j_range, P_S, label=f'Ta = {Ta}')
 plt.xlabel("j (RAO Early Start)")
