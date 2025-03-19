@@ -267,12 +267,12 @@ P_{S} =
 
 | Parameter      | Description                                                              | Value   |
 | -------------- | ------------------------------------------------------------------------ | ------- |
-| $P_{noise}$    | Initial Noise dB Threshold                                               | 28      |
+| $P_{noise}$    | Initial Noise dB Threshold                                               | 17.4      |
 | $P_{attacker}$ | Attacker's Msg1 dB Power                                                 | 55      |
 | $P_{UE}$       | UE's Msg1 dB Power                                                       | 54      |
-| $\alpha$       | Noise update factor parameter                                            | 0.1     |
+| $\alpha$       | Noise update factor parameter                                            | 0.12     |
 | $\delta$       | Msg1 to Noise dB Threshold                                               | 12      |
-| $j$            | Number of Random Access Occasion early start for attacker relative to UE | 0..110  |
+| $j$            | Number of Random Access Occasion early start for attacker relative to UE | 0..41  |
 | $T_a$          | Variability of Attack Period                                             | 1,2,4,8 |
 
 
