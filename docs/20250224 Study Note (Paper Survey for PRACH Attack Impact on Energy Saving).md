@@ -190,7 +190,7 @@
 ## 14. Analytical Modeling and Performance Evaluation of Beam-Based Random Access Protocol for 5G Beamforming Networks
 
 - **Problem:**
-    - 
+    - The performance of beam-based random access (RA) in 5G beamforming networks is not well understood, particularly in scenarios with bursty arrivals from massive IoT devices.
 - **Importance:**
     - 
 - **Challenge:**
