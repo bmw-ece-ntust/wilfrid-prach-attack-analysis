@@ -175,4 +175,16 @@
     - A comparison of several machine learning models (random forest, support vector machine, neural network) for detecting jamming signals
     - Investigation of signal features that effectively identify jamming signals (bad packet ratio, packet delivery ratio, received signal strength, clear channel assessment)
 
+## 13. Modeling and Analysis of Random Access Channels With Bursty Arrivals in OFDMA Wireless Networks
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
+
+
 
