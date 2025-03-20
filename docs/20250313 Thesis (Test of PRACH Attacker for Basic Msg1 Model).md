@@ -564,6 +564,25 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 - And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
 ![image](https://github.com/user-attachments/assets/15a71bd7-6097-4f27-bfbe-3e4b75ce23fe)
 
+##### 1.4.2.5. Modify gNB Alpha Value
+
+<b>0.1. Change alpha value updater in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+![image](https://github.com/user-attachments/assets/9f988cb8-42b2-4c5d-9d48-59cb3c9e87c7)
+
+<b>0.2. Recompile gNB following [1.3.1.](#131-compile-gnb)</b>
+
+##### 1.4.2.6. Modify gNB Delta Value
+
+<b>0.1. Change delta value in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+![image](https://github.com/user-attachments/assets/ee9f04b5-af40-4734-9aaa-b3ff0546e9eb)
+
+##### 1.4.2.7. Modify Attacker Msg1 Energy
+
+<b>0.1. Change alpha value updater in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+
+<b>0.2. Recompile gNB following [1.3.1.](#131-compile-gnb)</b>
+
+
 ### 1.5. Results Compilation and Visualization
 
 | Noise in frame | Period=1     | 2     | 4     | 8     |
