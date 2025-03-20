@@ -1,7 +1,7 @@
 ##
 ## Institution : National Taiwan Univeristy of Science and Technology
 ## Name : Wilfrid Azariah
-## File Name : model01_03.py
+## File Name : expe01_03.py
 ## Dependency : numpy, matplotlib
 ##
 ## Description:
