@@ -1,3 +1,19 @@
+##
+## Institution : National Taiwan Univeristy of Science and Technology
+## Name : Wilfrid Azariah
+## File Name : model01_03.py
+## Dependency : numpy, matplotlib
+##
+## Description:
+## Basic attacker model that will calculate UE's msg1 received
+## probability by gNB when attacker has j early start
+## This code change the gnb noise to msg1 threshold while keeping
+## alpha = 0.12 and T_a = 1
+##
+## This program also contain the data from real OAI gNB setup
+## and plot it on the same figure as the math model
+###############################################################
+
 import matplotlib.pyplot as plt
 import numpy as np
 
