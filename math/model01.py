@@ -1,3 +1,16 @@
+##
+## Institution : National Taiwan Univeristy of Science and Technology
+## Name : Wilfrid Azariah
+## File Name : model01.py
+## Dependency : numpy, matplotlib
+##
+## Description:
+## Basic attacker model that will calculate UE's msg1 received
+## probability by gNB when attacker has j early start
+## This code change the attacker periode while keeping
+## alpha = 0.12 and delta = 12
+###############################################################
+
 import numpy as np
 import matplotlib.pyplot as plt
 
