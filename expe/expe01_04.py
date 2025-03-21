@@ -58,31 +58,43 @@ data_2 = {
 # Given parameters
 P_noise = 17.4  # dB
 P_attacker = 55  # dB
-P_UE = 54  # dB
+P_UE = 45  # dB
 alpha = 0.12
 delta = 12
 Ta_values = [1, 2, 4, 8]
 j_max = 41
 
-# Compute results
-j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
+# Compute results 1
+j_range, math_P_S_1, math_P_noise_j1_1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
+
+# Slightly Change parameters
+P_attacker = 31.4  # dB
+
+# Compute results 2
+j_range, math_P_S_2, math_P_noise_j1_2 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
 
 
 # Plot results
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
-for Ta, P_S in math_P_S.items():
-    plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+for Ta, P_S in math_P_S_1.items():
+    if (Ta == 2):
+        plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 55')
+for Ta, P_S in math_P_S_2.items():
+    if (Ta == 1):
+        plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 31.4')
+
 
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
+plt.title("UE Msg1 Success Probability vs j for Different Ta,Pattacker Values")
 plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
-for Ta, P_noise_j1 in math_P_noise_j1.items():
-    plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+for Ta, P_noise_j1 in math_P_noise_j1_1.items():
+    if (Ta == 2):
+        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 55')
 for col in data:
     plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
 
