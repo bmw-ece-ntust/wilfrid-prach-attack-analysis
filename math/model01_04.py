@@ -38,7 +38,7 @@ j_max = 42
 j_range, results_P_S_1, results_P_noise_j1_1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
 
 # Slightly Change parameters
-P_attacker = 27.5  # dB
+P_attacker = 32  # dB
 
 # Compute results 2
 j_range, results_P_S_2, results_P_noise_j1_2 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
