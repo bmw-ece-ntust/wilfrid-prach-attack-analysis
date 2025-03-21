@@ -95,8 +95,15 @@ plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in math_P_noise_j1_1.items():
     if (Ta == 2):
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 55')
-for col in data:
-    plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
+for Ta, P_noise_j1 in math_P_noise_j1_2.items():
+    if (Ta == 1):
+        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 31.4')
+for col in data_1:
+    if (col == 2):
+        plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col}, Pattacker = 55 (Expe)', marker='o')
+for col in data_2:
+    if (col == 1):
+        plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col}, Pattacker = 31.4 (Expe)', marker='o')
 
 plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
