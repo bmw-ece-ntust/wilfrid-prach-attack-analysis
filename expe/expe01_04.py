@@ -108,7 +108,7 @@ for col in data_2:
 plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta,Pattacker Values")
 plt.legend()
 plt.grid()
 
