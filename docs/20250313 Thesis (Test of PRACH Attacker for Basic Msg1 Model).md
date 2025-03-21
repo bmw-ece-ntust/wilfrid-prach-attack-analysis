@@ -642,3 +642,9 @@ $\delta = 12$
 $\alpha = 0.12$,
 $T_a = 1$
 ![image](https://github.com/user-attachments/assets/d2b831c0-bbcc-4d43-b0c1-68e6129951a9)
+
+$\alpha = 0.12$,
+$\delta = 12$
+![image](https://github.com/user-attachments/assets/c7bf8154-9eb6-44c8-801a-d6bbf4854e53)
+
+
