@@ -26,9 +26,9 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
     return j_range, results_P_S, results_P_noise_j1
 
 # Given parameters
-P_noise = 17.4  # dB
+P_noise = 17.8  # dB
 P_attacker = 55  # dB
-P_UE = 46  # dB
+P_UE = 45  # dB
 alpha = 0.12
 delta = 12
 Ta_values = [1, 2, 4, 8]
@@ -38,7 +38,7 @@ j_max = 42
 j_range, results_P_S_1, results_P_noise_j1_1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
 
 # Slightly Change parameters
-P_attacker = 33  # dB
+P_attacker = 31.4  # dB
 
 # Compute results 2
 j_range, results_P_S_2, results_P_noise_j1_2 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
@@ -52,10 +52,10 @@ for Ta, P_S in results_P_S_1.items():
         plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 55')
 for Ta, P_S in results_P_S_2.items():
     if (Ta == 1):
-        plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 33')
+        plt.plot(j_range, P_S, label=f'Ta = {Ta}, Pattacker = 31.4')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
+plt.title("UE Msg1 Success Probability vs j for Different Ta,Pattacker Values")
 plt.legend()
 plt.grid()
 
@@ -65,11 +65,11 @@ for Ta, P_noise_j1 in results_P_noise_j1_1.items():
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 55')
 for Ta, P_noise_j1 in results_P_noise_j1_2.items():
     if (Ta == 1):
-        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 33')
+        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 31.4')
 plt.axhline(P_UE - delta, color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
+plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta,Pattacker Values")
 plt.legend()
 plt.grid()
 
