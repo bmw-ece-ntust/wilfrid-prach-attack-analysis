@@ -56,7 +56,7 @@ data_2 = {
 
 ##### Main Program #####
 # Given parameters
-P_noise = 17.4  # dB
+P_noise = 17.8  # dB
 P_attacker = 55  # dB
 P_UE = 45  # dB
 alpha = 0.12
