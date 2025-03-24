@@ -12,8 +12,15 @@
 **Table of Contents:**
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+## 1. Paper Requirements
 
-## 1. Paper Agenda
+<b>Max. Pages:</b> 6
+
+<b>Deadline:</b> 1 April 2025
+
+<b>Topic of Interest:</b> Attack prediction, detection, response, and prevention
+
+## 2. Paper Agenda
 <b>I. Introduction</b>
 - Context & Motivation:
   - Importance of 5G RACH access and its role in network reliability.
