@@ -41,7 +41,11 @@
 
 ## 0. Summary
 
-1. abc
+1. More early attacker’s Msg1 start relative to UE = Higher gNB noise threshold
+2. Attacker period decrease (more frequent attacker Msg1 transmissions) = Higher gNB noise threshold
+3. Attacker with higher power but less frequent interval (e.g., 55 dB with $T_a = 2$) = Higher gNB noise threshold > attacker with lower power but more frequent interval (e.g., 31.4 dB with $T_a = 1$)
+4. Low $\alpha$ in gNB = noise threshold at the gNB updates more slowly = increase UE access success
+5. Low $\delta$ in gNB = required UE power for Msg1 detection is reduced = increase UE access success 
 
 ## 1. PRACH Attacker for Basic Msg1 Model
 
