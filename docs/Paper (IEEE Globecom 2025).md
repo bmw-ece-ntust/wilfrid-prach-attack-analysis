@@ -42,7 +42,7 @@
   - Prior studies focus on ML-based detection but lack predictive mathematical models.
   - No prior work validates theoretical models using real-world 5G testbed experiments.
   - Our work fills this gap by providing an analytical and experimental approach.
-III. System Model & Problem Definition
+<b>III. System Model & Problem Definition</b>
 - Subsection 1: Network Model
   - Define the network setup:
     - Entities: gNB, legitimate UEs, attacker UE.
@@ -61,14 +61,14 @@ III. System Model & Problem Definition
   - Problem Formulation
     - How does P noise evolve over time under attack?
     - Under what conditions can P UE > P noise​ so the UE can still connect?
-IV. Mathematical Analysis of Jamming Impact
+<b>IV. Mathematical Analysis of Jamming Impact</b>
 - Subsection 1: Noise Threshold Evolution
   - Develop an equation for P noise accumulation over multiple RACH slots.
 - Subsection 2: Probability of UE Success
   - Derive the probability function for a legitimate UE to connect.
 - Subsection 3: Model Predictions & Insights
   - Analyze how attacker transmission frequency T a and power P attacker affect UE connectivity.
-V. Experimental Setup & Validation
+<b>V. Experimental Setup & Validation</b>
 - Subsection 1: 5G Testbed Setup
   - Describe hardware & software:
     - gNB: OpenAirInterface gNB on USRP B210.
@@ -82,13 +82,13 @@ V. Experimental Setup & Validation
 - Subsection 3: Results & Model Validation
   - Compare mathematical predictions vs. experimentally observed results.
   - Show graphs of P noise increase and UE success probability trends.
-VI. Attack Strategies & Countermeasures
+<b>VI. Attack Strategies & Countermeasures</b>
 - Subsection 1: Optimizing the Attack
   - Identify optimal attacker period and power level for maximum disruption.
 - Subsection 2: Defensive Mechanisms for gNBs
   - Adaptive Noise Thresholding: Dynamically adjust P noise to ignore attack influence.
   - Machine Learning-Based Detection: Identify anomalies in Msg1 transmission patterns.
-VII. Conclusion & Future Work
+<b>VII. Conclusion & Future Work</b>
 - Summary of Key Findings
   - RACH jamming effectively blocks UE access by increasing P noise.
   - Our mathematical model accurately predicts attack impact.
