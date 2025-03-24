@@ -615,6 +615,6 @@ $\delta = 12$
 5. Low $\delta$ in gNB = required UE power for Msg1 detection is reduced = increase UE access success<br>
 $\alpha = 0.12$,
 $T_a = 1$
-![image](https://github.com/user-attachments/assets/d2b831c0-bbcc-4d43-b0c1-68e6129951a9)
+![image](https://github.com/user-attachments/assets/f942aedb-4dec-46e9-85ce-a1cc85cad69e)
 
 
