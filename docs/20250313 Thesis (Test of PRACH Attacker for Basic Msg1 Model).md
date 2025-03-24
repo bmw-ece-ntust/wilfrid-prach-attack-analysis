@@ -589,6 +589,17 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 ### 1.5. Results Compilation and Visualization
 
+#### 1.5.1. Parameters Description
+
+| Parameter | Description                                                                                         | (actor) Parameter in OAI    |
+| --------- | --------------------------------------------------------------------------------------------------- | -------------- |
+| $\alpha$  | Noise update factor parameter                                                                       | (gNB) Hardcoded, need to recompile after change    |
+| $\delta$  | Msg1 to Noise dB Threshold                                                                       | (gNB) prach_dtx_threshold    |
+| $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | (attacker) No parameter, this is time of how long attacker start early |
+| $T_a$     | Variability of Attack Period                                                                        | (gNB) prach_ConfigurationIndex<br>(attacker) prach_ConfigurationIndex, but need to hardcode so that attacker does not follow gNB's PBCH  |
+
+#### 1.5.2. Results
+
 1. More early attacker’s Msg1 start relative to UE (bigger j) = Higher gNB noise threshold<br>
 (all figures)
 2. Attacker period decrease (more frequent attacker Msg1 transmissions) = Higher gNB noise threshold<br>
