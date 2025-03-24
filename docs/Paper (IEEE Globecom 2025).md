@@ -86,13 +86,14 @@
   - Compare mathematical predictions vs. experimentally observed results.
   - Show graphs of P noise increase and UE success probability trends.
 
-<br><b>VI. Attack Strategies & Countermeasures</b>
+<b>VI. Attack Strategies & Countermeasures</b>
 - Subsection 1: Optimizing the Attack
   - Identify optimal attacker period and power level for maximum disruption.
 - Subsection 2: Defensive Mechanisms for gNBs
   - Adaptive Noise Thresholding: Dynamically adjust P noise to ignore attack influence.
   - Machine Learning-Based Detection: Identify anomalies in Msg1 transmission patterns.
-<br><b>VII. Conclusion & Future Work</b>
+
+<b>VII. Conclusion & Future Work</b>
 - Summary of Key Findings
   - RACH jamming effectively blocks UE access by increasing P noise.
   - Our mathematical model accurately predicts attack impact.
@@ -100,4 +101,4 @@
 - Future Directions
   - Implement real-time detection mechanisms.
   - Extend the model to multiple attackers.
-</p>
+
