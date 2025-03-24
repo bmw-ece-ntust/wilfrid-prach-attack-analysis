@@ -83,9 +83,16 @@ plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in math_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 for col in data:
-    plt.plot(frames, data[col], linestyle='none', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 1):
+        plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 2):
+        plt.plot(frames, data[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 3):
+        plt.plot(frames, data[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 4):
+        plt.plot(frames, data[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
+plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
