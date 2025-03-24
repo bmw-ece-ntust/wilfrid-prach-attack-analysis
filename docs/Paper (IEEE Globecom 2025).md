@@ -14,7 +14,7 @@
 
 
 ## 1. Paper Agenda
-
+<p>
 <b>I. Introduction</b>
 - Context & Motivation:
   - Importance of 5G RACH access and its role in network reliability.
@@ -28,7 +28,9 @@
   2. Derive a mathematical model to predict gNB noise accumulation and UE connection probability.
   3. Validate the model through real-world experiments using a 5G testbed and compare theoretical vs. observed results.
   4. Propose countermeasures such as adaptive noise thresholding for mitigation.
-- Paper Organization (Outline of remaining sections).<br>
+- Paper Organization (Outline of remaining sections).
+</p>
+<p>
 <b>II. Related Work</b>
 - Subsection 1: RACH Jamming Attacks in 5G
   - Summarize existing RACH jamming studies (each in 2–3 sentences):
@@ -42,6 +44,8 @@
   - Prior studies focus on ML-based detection but lack predictive mathematical models.
   - No prior work validates theoretical models using real-world 5G testbed experiments.
   - Our work fills this gap by providing an analytical and experimental approach.
+</p>
+<p>
 <br><b>III. System Model & Problem Definition</b>
 - Subsection 1: Network Model
   - Define the network setup:
@@ -61,6 +65,8 @@
   - Problem Formulation
     - How does P noise evolve over time under attack?
     - Under what conditions can P UE > P noise​ so the UE can still connect?
+</p>
+<p>
 <br><b>IV. Mathematical Analysis of Jamming Impact</b>
 - Subsection 1: Noise Threshold Evolution
   - Develop an equation for P noise accumulation over multiple RACH slots.
@@ -82,6 +88,8 @@
 - Subsection 3: Results & Model Validation
   - Compare mathematical predictions vs. experimentally observed results.
   - Show graphs of P noise increase and UE success probability trends.
+</p>
+<p>
 <br><b>VI. Attack Strategies & Countermeasures</b>
 - Subsection 1: Optimizing the Attack
   - Identify optimal attacker period and power level for maximum disruption.
@@ -96,3 +104,4 @@
 - Future Directions
   - Implement real-time detection mechanisms.
   - Extend the model to multiple attackers.
+</p>
