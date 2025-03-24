@@ -607,7 +607,7 @@ $\delta = 12$
 3. Attacker with higher power but less frequent interval (e.g., 55 dB with $T_a = 2$) = Higher gNB noise threshold > attacker with lower power but more frequent interval (e.g., 31.4 dB with $T_a = 1$)<br>
 $\alpha = 0.12$,
 $\delta = 12$
-![image](https://github.com/user-attachments/assets/c7bf8154-9eb6-44c8-801a-d6bbf4854e53)
+![image](https://github.com/user-attachments/assets/ae2860ee-6213-47fd-af27-6f262933c2e8)
 4. Low $\alpha$ in gNB = noise threshold at the gNB updates more slowly = increase UE access success<br>
 $T_a = 1$,
 $\delta = 12$
