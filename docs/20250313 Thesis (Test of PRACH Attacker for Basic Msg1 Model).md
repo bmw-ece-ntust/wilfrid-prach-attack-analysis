@@ -603,7 +603,7 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 2. Attacker period decrease (more frequent attacker Msg1 transmissions) = Higher gNB noise threshold<br>
 $\alpha = 0.12$,
 $\delta = 12$
-![image](https://github.com/user-attachments/assets/ca947927-df72-4891-ad96-ec4af4d1b499)
+![image](https://github.com/user-attachments/assets/252bf172-8fd1-49b1-beeb-f40dffcfaacf)
 3. Attacker with higher power but less frequent interval (e.g., 55 dB with $T_a = 2$) = Higher gNB noise threshold > attacker with lower power but more frequent interval (e.g., 31.4 dB with $T_a = 1$)<br>
 $\alpha = 0.12$,
 $\delta = 12$
