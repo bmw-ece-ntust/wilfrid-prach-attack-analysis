@@ -83,7 +83,14 @@ plt.subplot(1, 2, 2)
 for delta, P_noise_j1 in math_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
 for col in data:
-    plt.plot(frames, data[col], linestyle='none', label=f'delta = {col} (Expe)', marker='o')
+    if (col == 18):
+        plt.plot(frames, data[col], linestyle='none', color='blue', label=f'delta = {col} (Expe)', marker='o')
+    if (col == 12):
+        plt.plot(frames, data[col], linestyle='none', color='orange', label=f'delta = {col} (Expe)', marker='o')
+    if (col == 6):
+        plt.plot(frames, data[col], linestyle='none', color='green', label=f'delta = {col} (Expe)', marker='o')
+    if (col == 0):
+        plt.plot(frames, data[col], linestyle='none', color='red', label=f'delta = {col} (Expe)', marker='o')
 
 plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label=f'P_UE - {delta_values[0]}')
 plt.axhline(P_UE - delta_values[1], color='orange', ls='dotted', label=f'P_UE - {delta_values[1]}')
