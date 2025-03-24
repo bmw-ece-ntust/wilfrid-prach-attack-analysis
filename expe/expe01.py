@@ -87,9 +87,9 @@ for col in data:
         plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
     if (col == 2):
         plt.plot(frames, data[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
-    if (col == 3):
-        plt.plot(frames, data[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
     if (col == 4):
+        plt.plot(frames, data[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 8):
         plt.plot(frames, data[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
 
 plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
