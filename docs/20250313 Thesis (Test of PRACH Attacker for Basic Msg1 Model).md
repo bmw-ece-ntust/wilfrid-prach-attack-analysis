@@ -582,10 +582,7 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 ##### 1.4.2.7. Modify Attacker Msg1 Energy
 
-<b>0.1. Change alpha value updater in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
-
-<b>0.2. Recompile gNB following [1.3.1.](#131-compile-gnb)</b>
-
+<b>0.1. add `--ue-txgain 60` parameter when running attacker (adjust value to adjust power)</b>
 
 ### 1.5. Results Compilation and Visualization
 
