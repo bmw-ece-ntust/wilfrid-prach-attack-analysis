@@ -611,7 +611,7 @@ $\delta = 12$
 4. Low $\alpha$ in gNB = noise threshold at the gNB updates more slowly = increase UE access success<br>
 $T_a = 1$,
 $\delta = 12$
-![image](https://github.com/user-attachments/assets/0e19a389-e3cb-4b82-919e-21fac7c6ad43)
+![image](https://github.com/user-attachments/assets/750519d8-d8f5-41b2-98f3-1d867181047f)
 5. Low $\delta$ in gNB = required UE power for Msg1 detection is reduced = increase UE access success<br>
 $\alpha = 0.12$,
 $T_a = 1$
