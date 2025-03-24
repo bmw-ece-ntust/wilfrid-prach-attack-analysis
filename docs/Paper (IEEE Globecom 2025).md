@@ -29,7 +29,7 @@
   3. Validate the model through real-world experiments using a 5G testbed and compare theoretical vs. observed results.
   4. Propose countermeasures such as adaptive noise thresholding for mitigation.
 - Paper Organization (Outline of remaining sections).
-<b>II. Related Work</b>
+<br><b>II. Related Work</b>
 - Subsection 1: RACH Jamming Attacks in 5G
   - Summarize existing RACH jamming studies (each in 2–3 sentences):
     - What attack methodology was used?
@@ -42,7 +42,7 @@
   - Prior studies focus on ML-based detection but lack predictive mathematical models.
   - No prior work validates theoretical models using real-world 5G testbed experiments.
   - Our work fills this gap by providing an analytical and experimental approach.
-<b>III. System Model & Problem Definition</b>
+<br><b>III. System Model & Problem Definition</b>
 - Subsection 1: Network Model
   - Define the network setup:
     - Entities: gNB, legitimate UEs, attacker UE.
@@ -61,14 +61,14 @@
   - Problem Formulation
     - How does P noise evolve over time under attack?
     - Under what conditions can P UE > P noise​ so the UE can still connect?
-<b>IV. Mathematical Analysis of Jamming Impact</b>
+<br><b>IV. Mathematical Analysis of Jamming Impact</b>
 - Subsection 1: Noise Threshold Evolution
   - Develop an equation for P noise accumulation over multiple RACH slots.
 - Subsection 2: Probability of UE Success
   - Derive the probability function for a legitimate UE to connect.
 - Subsection 3: Model Predictions & Insights
   - Analyze how attacker transmission frequency T a and power P attacker affect UE connectivity.
-<b>V. Experimental Setup & Validation</b>
+<br><b>V. Experimental Setup & Validation</b>
 - Subsection 1: 5G Testbed Setup
   - Describe hardware & software:
     - gNB: OpenAirInterface gNB on USRP B210.
@@ -82,13 +82,13 @@
 - Subsection 3: Results & Model Validation
   - Compare mathematical predictions vs. experimentally observed results.
   - Show graphs of P noise increase and UE success probability trends.
-<b>VI. Attack Strategies & Countermeasures</b>
+<br><b>VI. Attack Strategies & Countermeasures</b>
 - Subsection 1: Optimizing the Attack
   - Identify optimal attacker period and power level for maximum disruption.
 - Subsection 2: Defensive Mechanisms for gNBs
   - Adaptive Noise Thresholding: Dynamically adjust P noise to ignore attack influence.
   - Machine Learning-Based Detection: Identify anomalies in Msg1 transmission patterns.
-<b>VII. Conclusion & Future Work</b>
+<br><b>VII. Conclusion & Future Work</b>
 - Summary of Key Findings
   - RACH jamming effectively blocks UE access by increasing P noise.
   - Our mathematical model accurately predicts attack impact.
