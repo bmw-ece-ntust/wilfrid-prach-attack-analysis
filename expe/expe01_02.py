@@ -83,9 +83,16 @@ plt.subplot(1, 2, 2)
 for alpha, P_noise_j1 in math_P_noise_j1.items():
     plt.plot(j_range, P_noise_j1, label=f'alpha = {alpha}')
 for col in data:
-    plt.plot(frames, data[col], linestyle='none', label=f'alpha = {col} (Expe)', marker='o')
+    if (col == 0.18):
+        plt.plot(frames, data[col], linestyle='none', color='blue', label=f'alpha = {col} (Expe)', marker='o')
+    if (col == 0.12):
+        plt.plot(frames, data[col], linestyle='none', color='orange', label=f'alpha = {col} (Expe)', marker='o')
+    if (col == 0.06):
+        plt.plot(frames, data[col], linestyle='none', color='green', label=f'alpha = {col} (Expe)', marker='o')
+    if (col == 0):
+        plt.plot(frames, data[col], linestyle='none', color='red', label=f'alpha = {col} (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
+plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different alpha Values")
