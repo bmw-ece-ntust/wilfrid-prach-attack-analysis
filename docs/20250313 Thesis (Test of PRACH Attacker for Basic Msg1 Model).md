@@ -591,10 +591,10 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 | Parameter | Description                                                                                         | (actor) Parameter in OAI    |
 | --------- | --------------------------------------------------------------------------------------------------- | -------------- |
 | $\alpha$  | Noise update factor parameter                                                                       | (gNB) Hardcoded, need to recompile after change    |
-| $\delta$  | Msg1 to Noise dB Threshold                                                                       | (gNB) prach_dtx_threshold    |
+| $\delta$  | Msg1 to Noise dB Threshold                                                                       | (gNB) `prach_dtx_threshold`    |
 | $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | (attacker) No parameter, this is time of how long attacker start early |
-| $T_a$     | Variability of Attack Period                                                                        | (gNB) prach_ConfigurationIndex<br>(attacker) prach_ConfigurationIndex, but need to hardcode so that attacker does not follow gNB's PBCH  |
-| $P_{attacker}$     | Attacker's Msg1 dB Power                                                                        | (attacker) ue-txgain, should also be affected by distance of attacker to gNB  |
+| $T_a$     | Variability of Attack Period                                                                        | (gNB) `prach_ConfigurationIndex`<br>(attacker) `prach_ConfigurationIndex`, but need to hardcode so that attacker does not follow gNB's PBCH  |
+| $P_{attacker}$     | Attacker's Msg1 dB Power                                                                        | (attacker) `ue-txgain`, should also be affected by distance of attacker to gNB  |
 
 #### 1.5.2. Results
 
