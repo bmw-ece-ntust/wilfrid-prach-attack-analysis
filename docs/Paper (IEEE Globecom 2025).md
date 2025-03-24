@@ -25,7 +25,7 @@
 - Context & Motivation:
   - Importance of 5G RACH access and its role in network reliability.
   - Emerging threats: RACH jamming attacks targeting Msg1 transmissions.
-  - Existing solutions focus on ML-based detection, but lack analytical models quantifying the attack impact.
+  - Existing solutions focus on attack detection, but lack analytical models quantifying the attack impact.
 - Problem Statement:
   - How does a Msg1-based RACH jamming attack affect gNB noise threshold?
   - How can we mathematically model the probability of a UE successfully connecting under attack?
@@ -46,7 +46,7 @@
   - Provide a brief summary of the 4-step RACH (Msg1 → Msg2 → Msg3 → Msg4) and 2-step RACH.
   - Explain how our attack specifically targets the Msg1 transmission step.
 - Gap Analysis & Motivation for Our Work
-  - Prior studies focus on ML-based detection but lack predictive mathematical models.
+  - Prior studies focus on attack detection but lack predictive mathematical models.
   - No prior work validates theoretical models using real-world 5G testbed experiments.
   - Our work fills this gap by providing an analytical and experimental approach.
 
