@@ -100,12 +100,12 @@ for Ta, P_noise_j1 in math_P_noise_j1_2.items():
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}, Pattacker = 31.4')
 for col in data_1:
     if (col == 2):
-        plt.plot(frames, data_1[col], linestyle='none', label=f'Ta = {col}, Pattacker = 55 (Expe)', marker='o')
+        plt.plot(frames, data_1[col], linestyle='none', color='blue', label=f'Ta = {col}, Pattacker = 55 (Expe)', marker='o')
 for col in data_2:
     if (col == 1):
-        plt.plot(frames, data_2[col], linestyle='none', label=f'Ta = {col}, Pattacker = 31.4 (Expe)', marker='o')
+        plt.plot(frames, data_2[col], linestyle='none', color='orange', label=f'Ta = {col}, Pattacker = 31.4 (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='red', ls='dotted', label=f'P_UE - delta')
+plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
 plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta,Pattacker Values")
