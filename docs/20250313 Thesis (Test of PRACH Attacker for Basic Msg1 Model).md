@@ -593,6 +593,10 @@ $\alpha = 0.12$,
 $\delta = 12$
 ![image](https://github.com/user-attachments/assets/ca947927-df72-4891-ad96-ec4af4d1b499)
 
+$\alpha = 0.12$,
+$\delta = 12$
+![image](https://github.com/user-attachments/assets/c7bf8154-9eb6-44c8-801a-d6bbf4854e53)
+
 $T_a = 1$,
 $\delta = 12$
 ![image](https://github.com/user-attachments/assets/0e19a389-e3cb-4b82-919e-21fac7c6ad43)
@@ -600,9 +604,5 @@ $\delta = 12$
 $\alpha = 0.12$,
 $T_a = 1$
 ![image](https://github.com/user-attachments/assets/d2b831c0-bbcc-4d43-b0c1-68e6129951a9)
-
-$\alpha = 0.12$,
-$\delta = 12$
-![image](https://github.com/user-attachments/assets/c7bf8154-9eb6-44c8-801a-d6bbf4854e53)
 
 
