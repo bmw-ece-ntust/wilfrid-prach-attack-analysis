@@ -589,18 +589,21 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 ### 1.5. Results Compilation and Visualization
 
+1. More early attacker’s Msg1 start relative to UE = Higher gNB noise threshold
+(all figures)
+2. Attacker period decrease (more frequent attacker Msg1 transmissions) = Higher gNB noise threshold
 $\alpha = 0.12$,
 $\delta = 12$
 ![image](https://github.com/user-attachments/assets/ca947927-df72-4891-ad96-ec4af4d1b499)
-
+3. Attacker with higher power but less frequent interval (e.g., 55 dB with $T_a = 2$) = Higher gNB noise threshold > attacker with lower power but more frequent interval (e.g., 31.4 dB with $T_a = 1$)
 $\alpha = 0.12$,
 $\delta = 12$
 ![image](https://github.com/user-attachments/assets/c7bf8154-9eb6-44c8-801a-d6bbf4854e53)
-
+4. Low $\alpha$ in gNB = noise threshold at the gNB updates more slowly = increase UE access success
 $T_a = 1$,
 $\delta = 12$
 ![image](https://github.com/user-attachments/assets/0e19a389-e3cb-4b82-919e-21fac7c6ad43)
-
+5. Low $\delta$ in gNB = required UE power for Msg1 detection is reduced = increase UE access success 
 $\alpha = 0.12$,
 $T_a = 1$
 ![image](https://github.com/user-attachments/assets/d2b831c0-bbcc-4d43-b0c1-68e6129951a9)
