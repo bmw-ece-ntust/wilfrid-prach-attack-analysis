@@ -15,7 +15,7 @@
 
 ## 1. Paper Agenda
 
-I. Introduction
+<b>I. Introduction</b>
 - Context & Motivation:
   - Importance of 5G RACH access and its role in network reliability.
   - Emerging threats: RACH jamming attacks targeting Msg1 transmissions.
@@ -29,7 +29,7 @@ I. Introduction
   3. Validate the model through real-world experiments using a 5G testbed and compare theoretical vs. observed results.
   4. Propose countermeasures such as adaptive noise thresholding for mitigation.
 - Paper Organization (Outline of remaining sections).
-II. Related Work
+<b>II. Related Work</b>
 - Subsection 1: RACH Jamming Attacks in 5G
   - Summarize existing RACH jamming studies (each in 2–3 sentences):
     - What attack methodology was used?
