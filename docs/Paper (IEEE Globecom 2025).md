@@ -28,8 +28,8 @@
   2. Derive a mathematical model to predict gNB noise accumulation and UE connection probability.
   3. Validate the model through real-world experiments using a 5G testbed and compare theoretical vs. observed results.
   4. Propose countermeasures such as adaptive noise thresholding for mitigation.
-- Paper Organization (Outline of remaining sections).
-<br><b>II. Related Work</b>
+- Paper Organization (Outline of remaining sections).<br>
+<b>II. Related Work</b>
 - Subsection 1: RACH Jamming Attacks in 5G
   - Summarize existing RACH jamming studies (each in 2–3 sentences):
     - What attack methodology was used?
