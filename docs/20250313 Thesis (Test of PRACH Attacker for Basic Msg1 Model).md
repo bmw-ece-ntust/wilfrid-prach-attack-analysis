@@ -604,12 +604,12 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 ##### 1.4.2.6. Modify gNB Delta Value
 
-<b>0.1. Change delta value in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+<b>0. Change delta value in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
 ![image](https://github.com/user-attachments/assets/ee9f04b5-af40-4734-9aaa-b3ff0546e9eb)
 
 ##### 1.4.2.7. Modify Attacker Msg1 Energy
 
-<b>0.1. add `--ue-txgain 60` parameter when running attacker (adjust value to adjust power)</b>
+<b>0. add `--ue-txgain 60` parameter when running attacker (adjust value to adjust power)</b>
 
 ### 1.5. Results Compilation and Visualization
 
@@ -1067,41 +1067,43 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 - Be aware that we hardcode the prach_ConfigurationIndex to 147 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions
 ![image](https://github.com/user-attachments/assets/0753b6d6-3b23-4202-ac9d-4c1d622c9ef7)
 ![image](https://github.com/user-attachments/assets/8f3857fc-a35b-4b5a-af61-bd04ccaaba23)
+- From UE's log, we can see that UE send Msg1 at frame 369 with preamble index 57
+![image](https://github.com/user-attachments/assets/15df930e-5f60-4243-b10b-be85327e28be)
+- But gNB never receive UE's Msg1. Instead, it only receive attacker's Msg1
+![image](https://github.com/user-attachments/assets/c9961c3e-0040-4f05-b4af-d820bfbdf4ec)
+- Turns out, OAI gNB will only consider Msg1 with the highest power
 
 ##### 2.4.2.2. Modify Attacker Msg1 Energy
 
-<b>0.1. add `--ue-txgain 40` parameter when running attacker (adjust value to adjust power)</b>
+<b>0. add `--ue-txgain 40` parameter when running attacker (adjust value to adjust power)</b>
+
+<b>1. Run OAI gNB</b>
+
+```shell=
+cd openairinterface5g/cmake_target/ran_build/build
+sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 -E --continuous-tx --log_config.PRACH_debug
+```
+![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
+
+<b>2. Run Attacker</b>
+
+```shell=
+cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
+sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa --ue-txgain 40
+```
+![image](https://github.com/user-attachments/assets/ec91cf07-b6c8-4070-927d-c75f945939fe)
+
+<b>3. Run UE by switching off airplane mode</b>
+
+![image](https://github.com/user-attachments/assets/6703b62d-206b-4d91-97e8-0949ce5d468a)
+
+<b>4. Result explanation</b>
+- We can see from Attacker's Log, it is placing Msg1 in every 4 frames slot 19 symbol 0
+
 
 ### 2.5. Results Compilation and Visualization
 
 #### 2.5.1. Parameters Description
 
-| Parameter | Description                                                                                         | (actor) Parameter in OAI    |
-| --------- | --------------------------------------------------------------------------------------------------- | -------------- |
-| $\alpha$  | Noise update factor parameter                                                                       | (gNB) Hardcoded, need to recompile after change    |
-| $\delta$  | Msg1 to Noise dB Threshold                                                                       | (gNB) `prach_dtx_threshold`    |
-| $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | (attacker) No parameter, this is time of how long attacker start early |
-| $T_a$     | Variability of Attack Period                                                                        | (gNB) `prach_ConfigurationIndex`<br>(attacker) `prach_ConfigurationIndex`, but need to hardcode so that attacker does not follow gNB's PBCH  |
-| $P_{attacker}$     | Attacker's Msg1 dB Power                                                                        | (attacker) `ue-txgain`, should also be affected by distance of attacker to gNB  |
-
 #### 2.5.2. Results
-
-1. More early attacker’s Msg1 start relative to UE (bigger j) = Higher gNB noise threshold<br>
-(all figures)
-2. Attacker period decrease (more frequent attacker Msg1 transmissions) = Higher gNB noise threshold<br>
-$\alpha = 0.12$,
-$\delta = 12$
-![image](https://github.com/user-attachments/assets/252bf172-8fd1-49b1-beeb-f40dffcfaacf)
-3. Attacker with higher power but less frequent interval (e.g., 55 dB with $T_a = 2$) = Higher gNB noise threshold > attacker with lower power but more frequent interval (e.g., 31.4 dB with $T_a = 1$)<br>
-$\alpha = 0.12$,
-$\delta = 12$
-![image](https://github.com/user-attachments/assets/ae2860ee-6213-47fd-af27-6f262933c2e8)
-4. Low $\alpha$ in gNB = noise threshold at the gNB updates more slowly = increase UE access success<br>
-$T_a = 1$,
-$\delta = 12$
-![image](https://github.com/user-attachments/assets/750519d8-d8f5-41b2-98f3-1d867181047f)
-5. Low $\delta$ in gNB = required UE power for Msg1 detection is reduced = increase UE access success<br>
-$\alpha = 0.12$,
-$T_a = 1$
-![image](https://github.com/user-attachments/assets/f942aedb-4dec-46e9-85ce-a1cc85cad69e)
 
