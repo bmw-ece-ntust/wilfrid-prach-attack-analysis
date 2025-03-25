@@ -626,7 +626,7 @@ $T_a = 1$
 | Attacker Run                | :heavy_check_mark: |
 | Attacker Sync to gNB        | :heavy_check_mark: |
 | [Attacker Send Msg1 to gNB](#2421-initial-run)   | :heavy_check_mark: |
-| UE Run and Send Msg1 to gNB | :x: |
+| [UE Run and Send Msg1 to gNB](#2421-initial-run) | :heavy_check_mark: |
 | [Data Compiled](#25-results-compilation-and-visualization)               | :x: |
 
 ### 2.0. Minimum Requirement
@@ -998,7 +998,7 @@ gNBs =
 ```
 - prach_ConfigurationIndex (modify as your desired prach_ConfigurationIndex. Values that I use is below)
 ```shell=
-prach_ConfigurationIndex = 159;
+prach_ConfigurationIndex = 147;
 ```
 
 ##### 2.4.1.2. Attacker Configuration
@@ -1025,7 +1025,10 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ```
 ![image](https://github.com/user-attachments/assets/ec91cf07-b6c8-4070-927d-c75f945939fe)
 
-<b>3. Result explanation</b>
+<b>3. Run UE by switching off airplane mode</b>
+
+
+<b>4. Result explanation</b>
 - We can see from Attacker's Log, it is placing Msg1 in every frame slot 19 symbol 0
 ![image](https://github.com/user-attachments/assets/765ccb52-4cd4-4cc5-98f2-875f249625a8)
 - And from gNB, it receive the attacker's Msg1 and start RA procedure
@@ -1034,123 +1037,13 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/ab6cf0c2-8be3-4f94-ba7c-352b34a091b5)
 - But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
 ![image](https://github.com/user-attachments/assets/aa6783a0-f454-4046-a0ed-13090adb31f6)
-- Be aware that we hardcode the prach_ConfigurationIndex to 159 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions
-![image](https://github.com/user-attachments/assets/dd5fa1bb-08d9-4ba6-a1b9-ea768d5cb62d)
-![image](https://github.com/user-attachments/assets/e3635ed4-2f41-45dd-94d1-5ec2dc8f15d3)
-
-
-##### 2.4.2.2. Modify Attacker Period to every 2 frames
-
-<b>0.1. Hardcode prach_ConfigurationIndex to 149 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
-![image](https://github.com/user-attachments/assets/f71f5932-7f0b-4eb1-888a-db40d401650e)
-![image](https://github.com/user-attachments/assets/75fe00c5-8745-4d38-8a25-b1ba4134aca8)
-
-<b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
-![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
-
-<b>1. Run OAI gNB</b>
-
-```shell=
-cd openairinterface5g/cmake_target/ran_build/build
-sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --sa -E --continuous-tx --log_config.PRACH_debug
-```
-![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
-
-<b>2. Run Attacker</b>
-
-```shell=
-cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
-sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
-```
-![image](https://github.com/user-attachments/assets/eca5e60e-c4ac-4ebf-855f-9990a8dbe392)
-
-<b>3. Result explanation</b>
-- We can see from Attacker's Log, it is placing Msg1 in every odd frame slot 19 symbol 0
-![image](https://github.com/user-attachments/assets/d79e9838-5c30-4351-afa4-2d769545044c)
-- And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
-![image](https://github.com/user-attachments/assets/7ddc0a5b-047b-464a-b8c4-43aeb8ecc520)
-
-##### 1.4.2.3. Modify Attacker Period to every 4 frames
-
-<b>0.1. Hardcode prach_ConfigurationIndex to 147 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
+- Be aware that we hardcode the prach_ConfigurationIndex to 147 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions
 ![image](https://github.com/user-attachments/assets/0753b6d6-3b23-4202-ac9d-4c1d622c9ef7)
 ![image](https://github.com/user-attachments/assets/8f3857fc-a35b-4b5a-af61-bd04ccaaba23)
 
+##### 2.4.2.2. Modify Attacker Msg1 Energy
 
-<b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
-![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
-
-<b>1. Run OAI gNB</b>
-
-```shell=
-cd openairinterface5g/cmake_target/ran_build/build
-sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --sa -E --continuous-tx --log_config.PRACH_debug
-```
-![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
-
-<b>2. Run Attacker</b>
-
-```shell=
-cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
-sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
-```
-![image](https://github.com/user-attachments/assets/4d5c449d-24d9-4861-97da-d8847f6815cf)
-
-<b>3. Result explanation</b>
-- We can see from Attacker's Log, it is placing Msg1 in every odd frame slot 19 symbol 0
-![image](https://github.com/user-attachments/assets/0da49fa8-eb6e-4bf0-8f41-fe7fa75adbec)
-- And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
-![image](https://github.com/user-attachments/assets/8e22f2e5-b161-4e4c-90da-294288a9c87f)
-
-##### 2.4.2.4. Modify Attacker Period to every 8 frames
-
-<b>0.1. Hardcode prach_ConfigurationIndex to 146 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions</b>
-![image](https://github.com/user-attachments/assets/4567ac15-c874-44ce-90de-887cafc71325)
-![image](https://github.com/user-attachments/assets/acd899e1-7acf-462e-9dbd-aa7af4e54e3d)
-
-<b>0.2. Recompile Attacker following [1.3.2.](#132-compile-attacker)</b>
-![image](https://github.com/user-attachments/assets/c8f094ed-7492-47c5-b204-e02d2bfa7b16)
-
-<b>0.3. Configure gNB's prach_ConfigurationIndex to 161 in `targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf`</b>
-![image](https://github.com/user-attachments/assets/283e228a-1153-4860-b8a6-ccf6675e3bb7)
-
-<b>1. Run OAI gNB</b>
-
-```shell=
-cd openairinterface5g/cmake_target/ran_build/build
-sudo ./nr-softmodem -O ../../../targets/PROJECTS/GENERIC-NR-5GC/CONF/gnb.sa.band78.fr1.106PRB.usrpb210.conf --gNBs.[0].min_rxtxtime 6 --sa -E --continuous-tx --log_config.PRACH_debug
-```
-![image](https://github.com/user-attachments/assets/6650b2f5-90a0-4db5-a9bd-91a7ba9d81a4)
-
-<b>2. Run Attacker</b>
-
-```shell=
-cd OAI-UE-MSG1-attacker/cmake_target/ran_build/build
-sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E --ue-fo-compensation --sa
-```
-![image](https://github.com/user-attachments/assets/d6bf5841-5bbf-4b8c-9173-8c346e91ea51)
-
-<b>3. Result explanation</b>
-- We can see from Attacker's Log, it is placing Msg1 in every odd frame slot 19 symbol 0
-![image](https://github.com/user-attachments/assets/eefb3b1a-56ca-432c-926b-8ebebe4548f8)
-- And from gNB, it receive the attacker's Msg1 and start RA procedure but never receive Msg3
-![image](https://github.com/user-attachments/assets/15a71bd7-6097-4f27-bfbe-3e4b75ce23fe)
-
-##### 2.4.2.5. Modify gNB Alpha Value
-
-<b>0.1. Change alpha value updater in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
-![image](https://github.com/user-attachments/assets/9f988cb8-42b2-4c5d-9d48-59cb3c9e87c7)
-
-<b>0.2. Recompile gNB following [1.3.1.](#131-compile-gnb)</b>
-
-##### 2.4.2.6. Modify gNB Delta Value
-
-<b>0.1. Change delta value in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
-![image](https://github.com/user-attachments/assets/ee9f04b5-af40-4734-9aaa-b3ff0546e9eb)
-
-##### 2.4.2.7. Modify Attacker Msg1 Energy
-
-<b>0.1. add `--ue-txgain 60` parameter when running attacker (adjust value to adjust power)</b>
+<b>0.1. add `--ue-txgain 40` parameter when running attacker (adjust value to adjust power)</b>
 
 ### 2.5. Results Compilation and Visualization
 
