@@ -255,7 +255,7 @@ P_{noise,i+1} =
 ```math
 P_{S} =
 \begin{cases} 
-1, & \text{if } P_{UE} > (P_{noise,j+1} + \delta) \\ 
+1, & \text{if } P_{UE} > (P_{noise,j+1} + \delta) \text{ and } P_{attacker} \\ 
 0, & \text{otherwise} 
 \end{cases}
 ```
