@@ -1059,11 +1059,11 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 - We can see from Attacker's Log, it is placing Msg1 in every 4 frames slot 19 symbol 0
 ![image](https://github.com/user-attachments/assets/824a7eb4-eb89-4834-9943-0787ae0476bf)
 - And from gNB, it receive the attacker's Msg1 and start RA procedure
-
-- gNB use TC-RNTI 5ea7 for attacker and generate Msg2
-![image](https://github.com/user-attachments/assets/ab6cf0c2-8be3-4f94-ba7c-352b34a091b5)
+![image](https://github.com/user-attachments/assets/c38a906e-9ef3-4f77-a5e5-116afd941bd5)
+- gNB use TC-RNTI 4100 for attacker and generate Msg2
+![image](https://github.com/user-attachments/assets/417d4949-1d98-4773-8fe5-b967c2de146d)
 - But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
-![image](https://github.com/user-attachments/assets/aa6783a0-f454-4046-a0ed-13090adb31f6)
+![image](https://github.com/user-attachments/assets/01b6923b-ec03-481e-add9-94bc214c0630)
 - Be aware that we hardcode the prach_ConfigurationIndex to 147 in `openair2/LAYER2/NR_MAC_UE/config_ue.c` in 2 functions
 ![image](https://github.com/user-attachments/assets/0753b6d6-3b23-4202-ac9d-4c1d622c9ef7)
 ![image](https://github.com/user-attachments/assets/8f3857fc-a35b-4b5a-af61-bd04ccaaba23)
