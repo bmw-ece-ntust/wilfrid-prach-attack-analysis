@@ -6,6 +6,7 @@
 - [ ] Write paper agenda
 
 **References:**
+- [2025/02/24 Study Note (Paper Survey for PRACH Attack Impact on Energy Saving)](https://github.com/bmw-ece-ntust/wilfrid-prach-attack-analysis/blob/master/docs/20250224%20Study%20Note%20(Paper%20Survey%20for%20PRACH%20Attack%20Impact%20on%20Energy%20Saving).md)
 - [Call for Symposium Papers](https://globecom2025.ieee-globecom.org/call-symposium-papers)
 - [CISS Symposium](https://globecom2025.ieee-globecom.org/sites/globecom2025.ieee-globecom.org/files/GC25-CFP-CISS.pdf)
 
