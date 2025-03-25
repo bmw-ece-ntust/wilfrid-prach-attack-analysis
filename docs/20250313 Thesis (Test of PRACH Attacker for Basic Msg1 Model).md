@@ -1099,7 +1099,10 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 <b>4. Result explanation</b>
 - We can see from Attacker's Log, it is placing Msg1 in every 4 frames slot 19 symbol 0
-
+![image](https://github.com/user-attachments/assets/d966b268-caaa-4019-84d9-f1ff30a6820b)
+- And from gNB, it receive the attacker's Msg1 and start RA procedure. Be aware that attacker power is reduced to 52.7
+- From UE's log, we can see that UE send Msg1 at frame 329 with preamble index 19
+- gNB never receive UE's Msg1 because it has the highest power. Attacker's Msg1 is ignored
 
 ### 2.5. Results Compilation and Visualization
 
