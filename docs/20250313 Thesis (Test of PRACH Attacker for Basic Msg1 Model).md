@@ -1056,10 +1056,10 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/6703b62d-206b-4d91-97e8-0949ce5d468a)
 
 <b>4. Result explanation</b>
-- We can see from Attacker's Log, it is placing Msg1 in every frame slot 19 symbol 0
-![image](https://github.com/user-attachments/assets/765ccb52-4cd4-4cc5-98f2-875f249625a8)
+- We can see from Attacker's Log, it is placing Msg1 in every 4 frames slot 19 symbol 0
+![image](https://github.com/user-attachments/assets/824a7eb4-eb89-4834-9943-0787ae0476bf)
 - And from gNB, it receive the attacker's Msg1 and start RA procedure
-![image](https://github.com/user-attachments/assets/8f06dd75-6f21-4c3c-9130-1ac692f8c7e3)
+
 - gNB use TC-RNTI 5ea7 for attacker and generate Msg2
 ![image](https://github.com/user-attachments/assets/ab6cf0c2-8be3-4f94-ba7c-352b34a091b5)
 - But gNB never receive attacker's Msg3, so gNB schedules retransmission of Msg3
