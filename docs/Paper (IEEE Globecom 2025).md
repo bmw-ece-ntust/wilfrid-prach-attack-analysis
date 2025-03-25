@@ -47,7 +47,7 @@
   - Provide a brief summary of the 4-step RACH (Msg1 → Msg2 → Msg3 → Msg4) and 2-step RACH.
   - Explain how our attack specifically targets the Msg1 transmission step.
 - Gap Analysis & Motivation for Our Work
-  - Prior studies focus on attack detection but lack predictive mathematical models.
+  - Prior studies focus on attack implementation but lack predictive mathematical models.
   - No prior work validates theoretical models using real-world 5G testbed experiments.
   - Our work fills this gap by providing an analytical and experimental approach.
 
@@ -69,7 +69,7 @@
     - P UE : UE’s Msg1 power.
   - Problem Formulation
     - How does P noise evolve over time under attack?
-    - Under what conditions can P UE > P noise​ so the UE can still connect?
+    - Under what conditions can P UE > P noise and P attacker​ so the UE can still connect?
 
 <b>IV. Mathematical Analysis of Jamming Impact</b>
 - Subsection 1: Noise Threshold Evolution
