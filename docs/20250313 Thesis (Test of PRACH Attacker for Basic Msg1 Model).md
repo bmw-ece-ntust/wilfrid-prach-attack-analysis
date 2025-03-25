@@ -1052,6 +1052,7 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 ![image](https://github.com/user-attachments/assets/ec91cf07-b6c8-4070-927d-c75f945939fe)
 
 <b>3. Run UE by switching off airplane mode</b>
+
 ![image](https://github.com/user-attachments/assets/6703b62d-206b-4d91-97e8-0949ce5d468a)
 
 <b>4. Result explanation</b>
