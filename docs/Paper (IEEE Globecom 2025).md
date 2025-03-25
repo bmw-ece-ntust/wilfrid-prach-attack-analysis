@@ -25,8 +25,8 @@
 <b>I. Introduction</b>
 - Context & Motivation:
   - Importance of 5G RACH access and its role in network reliability.
-  - Emerging threats: RACH jamming attacks targeting Msg1 transmissions.
-  - Existing solutions focus on attack detection, but lack analytical models quantifying the attack impact.
+  - Emerging threats: RACH jamming attacks.
+  - Existing solutions focus on attack implementation, but lack analytical models quantifying the attack impact.
 - Problem Statement:
   - How does a Msg1-based RACH jamming attack affect gNB noise threshold?
   - How can we mathematically model the probability of a UE successfully connecting under attack?
