@@ -88,11 +88,11 @@ for Ta, P_noise_j1 in math_P_noise_j1.items():
 for col in data:
     if (col == 1):
         plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
-    if (col == 2):
+    #if (col == 2):
         #plt.plot(frames, data[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
-    if (col == 4):
+    #if (col == 4):
         #plt.plot(frames, data[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
-    if (col == 8):
+    #if (col == 8):
         #plt.plot(frames, data[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
 
 plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
