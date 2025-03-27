@@ -39,9 +39,9 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
     return j_range, results_P_S, results_P_noise_j1
 
 # Given parameters
-P_noise = 17.4  # dB
-P_attacker = 55  # dB
-P_UE = 54  # dB
+P_noise = 17.1  # dB
+P_attacker = 51  # dB
+P_UE = 56.4  # dB
 alpha = 0.12
 delta = 12
 Ta_values = [1, 2, 4, 8]
