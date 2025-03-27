@@ -82,7 +82,7 @@ for Ta, P_S in math_P_S.items():
         plt.plot(j_range, P_S, label=f'Ta = {Ta}')
 for col in data_P_S:
     if (col == 1):
-        plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
 
 plt.xlabel("j (RAO Early Start)")
 plt.xticks(np.arange(0, 19, 2))
@@ -97,13 +97,13 @@ for Ta, P_noise_j1 in math_P_noise_j1.items():
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 for col in data_P_noise:
     if (col == 1):
-        plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_noise[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
     #if (col == 2):
-        #plt.plot(frames, data[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
+        #plt.plot(frames, data_P_noise[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
     #if (col == 4):
-        #plt.plot(frames, data[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
+        #plt.plot(frames, data_P_noise[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
     #if (col == 8):
-        #plt.plot(frames, data[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
+        #plt.plot(frames, data_P_noise[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
 
 plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
