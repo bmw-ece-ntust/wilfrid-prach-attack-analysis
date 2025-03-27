@@ -44,7 +44,7 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
 
 ##### Experiment #####
 # Data from the markdown table (with None values replaced by np.nan for missing data)
-frames = np.arange(42)  # frame indices (0 to 41)
+frames = np.arange(19)  # frame indices (0 to 41)
 # Manually adjusted data to ensure every column has 42 values
 data = {
     1: [17.1, 21.26666667, 24.8, 27.76666667, 30.46666667, 32.73333333, 34.7, 36.23333333, 37.7, 39.83333333, 40.93333333, 42, 42.96666667, 43.6, 44.5, 45.66666667, 46.56666667, 46.93333333, 47.3, 47.6],
