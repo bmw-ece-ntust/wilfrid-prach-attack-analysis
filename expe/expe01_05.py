@@ -80,6 +80,9 @@ plt.subplot(1, 2, 1)
 for Ta, P_S in math_P_S.items():
     if (Ta == 1):
         plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+for col in data_P_S:
+    if (col == 1):
+        plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
 
 plt.xlabel("j (RAO Early Start)")
 plt.xticks(np.arange(0, 19, 2))
@@ -92,7 +95,7 @@ plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in math_P_noise_j1.items():
     if (Ta == 1):
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
-for col in data:
+for col in data_P_noise:
     if (col == 1):
         plt.plot(frames, data[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
     #if (col == 2):
