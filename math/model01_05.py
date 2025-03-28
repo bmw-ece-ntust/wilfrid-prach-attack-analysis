@@ -54,8 +54,7 @@ j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for Ta, P_S in results_P_S.items():
-    if (Ta == 1):
-        plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+    plt.plot(j_range, P_S, label=f'Ta = {Ta}')
 
 plt.xlabel("j (RAO Early Start)")
 plt.xticks(np.arange(0, 19, 2))
@@ -66,8 +65,7 @@ plt.grid()
 
 plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in results_P_noise_j1.items():
-    if (Ta == 1):
-        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+    plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 
 plt.axhline(P_UE - delta, color='red', ls='dotted', label=f'P_UE - delta')
 plt.xlabel("j (RAO Early Start)")
