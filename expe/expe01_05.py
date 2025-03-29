@@ -93,7 +93,7 @@ plt.grid()
 
 plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in math_P_noise_j1.items():
-    if (Ta == 1):
+    if (Ta != 8):
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
 for col in data_P_noise:
     if (col == 1):
