@@ -82,13 +82,13 @@ for delta, P_S in math_P_S.items():
         plt.plot(j_range, P_S, label=f'delta = {delta}')
 for col in data_P_S:
     if (col == 24):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'delta = {delta} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'delta = {col} (Expe)', marker='o')
     if (col == 12):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'delta = {delta} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'delta = {col} (Expe)', marker='o')
     if (col == 6):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'delta = {delta} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'delta = {col} (Expe)', marker='o')
     #if (col == 0):
-        #plt.plot(frames, data_P_S[col], linestyle='none', color='red', label=f'delta = {delta} (Expe)', marker='o')
+        #plt.plot(frames, data_P_S[col], linestyle='none', color='red', label=f'delta = {col} (Expe)', marker='o')
         
 plt.xlabel("j (RAO Early Start)")
 plt.ylabel("P_S (Msg1 Success Probability)")
