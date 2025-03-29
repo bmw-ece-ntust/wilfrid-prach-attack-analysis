@@ -66,7 +66,7 @@ P_noise = 17  # dB
 P_attacker = 51  # dB
 P_UE = 56.4  # dB
 alpha = 0.12
-delta_values = [18, 12, 6, 0]
+delta_values = [24, 12, 6, 0]
 Ta = 1
 j_max = 15
 
