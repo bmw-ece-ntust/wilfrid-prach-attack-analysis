@@ -78,7 +78,7 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for delta, P_S in math_P_S.items():
-    if (col != 0):
+    if (delta != 0):
         plt.plot(j_range, P_S, label=f'delta = {delta}')
 for col in data_P_S:
     if (col == 18):
@@ -99,7 +99,7 @@ plt.grid()
 
 plt.subplot(1, 2, 2)
 for delta, P_noise_j1 in math_P_noise_j1.items():
-    if (col != 0):
+    if (delta != 0):
         plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
 for col in data_P_Noise:
     if (col == 18):
