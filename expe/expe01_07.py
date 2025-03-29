@@ -62,9 +62,9 @@ data_P_S = {
 
 ##### Main Program #####
 # Given parameters
-P_noise = 16.88  # dB
+P_noise = 17  # dB
 P_attacker = 51  # dB
-P_UE = 54  # dB
+P_UE = 56.4  # dB
 alpha = 0.12
 delta_values = [18, 12, 6, 0]
 Ta = 1
