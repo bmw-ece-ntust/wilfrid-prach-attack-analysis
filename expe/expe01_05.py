@@ -83,6 +83,10 @@ for Ta, P_S in math_P_S.items():
 for col in data_P_S:
     if (col == 1):
         plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 2):
+        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
+    if (col == 4):
+        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
 
 plt.xlabel("j (RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
