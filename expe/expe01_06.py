@@ -27,7 +27,7 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha_values, delta, Ta, j_max)
         P_noise_values = [P_noise]
         
         for i in range(1, j_max + 1):
-            if (i - 2) % (Ta) == 0 and i > 1:
+            if (i - 1) % (Ta) == 0 and i > 0:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_attacker
             else:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_noise
@@ -44,8 +44,8 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha_values, delta, Ta, j_max)
 
 ##### Experiment #####
 # Data from the markdown table (with None values replaced by np.nan for missing data)
-frames = np.arange(42)  # frame indices (0 to 41)
-# Manually adjusted data to ensure every column has 42 values
+frames = np.arange(16)  # frame indices (0 to 15)
+# Manually adjusted data to ensure every column has 16 values
 data = {
     0.18: [19.16, 19.16, 25.64, 31, 35.38, 39, 41.94, 44.36, 46.38, 47.98, 49.26, 50.38, 51.24, 52.02, 52.62, 53.06, 53.48, 53.84, 54.12, 54.28, 54.48, 54.66, 54.78, 54.86, 54.94, 54.98, 55.04, 55.1, 55.12, 55.16, 55.22, 55.22, 55.18, 55.24, 55.26, 55.24, 55.28, 55.28, 55.3, 55.3, 55.32, 55.36],
     0.12: [17.78, 17.78, 22.3, 26.28, 29.8, 32.86, 35.56, 37.92, 39.94, 41.74, 43.36, 44.78, 46.02, 47.34, 48.2, 48.96, 49.74, 50.38, 50.96, 51.54, 51.98, 52.38, 52.66, 52.96, 53.32, 53.54, 53.72, 53.86, 54.02, 54.16, 54.26, 54.36, 54.46, 54.52, 54.58, 54.64, 54.68, 54.7, 54.76, 54.76, 54.72, 54.72],
@@ -55,13 +55,13 @@ data = {
 
 ##### Main Program #####
 # Given parameters
-P_noise = 18.4  # dB
-P_attacker = 55  # dB
-P_UE = 54  # dB
-alpha_values = [0.18,0.12,0.06,0]
+P_noise = 16.88# dB
+P_attacker = 51  # dB
+P_UE = 56.4  # dB
+alpha_values = [0.24,0.12,0.06,0]
 delta = 12
 Ta = 1
-j_max = 41
+j_max = 15
 
 # Compute results
 j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha_values, delta, Ta, j_max)
