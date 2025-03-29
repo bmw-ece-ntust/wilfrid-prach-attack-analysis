@@ -81,7 +81,7 @@ for delta, P_S in math_P_S.items():
     if (delta != 0):
         plt.plot(j_range, P_S, label=f'delta = {delta}')
 for col in data_P_S:
-    if (col == 18):
+    if (col == 24):
         plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'delta = {delta} (Expe)', marker='o')
     if (col == 12):
         plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'delta = {delta} (Expe)', marker='o')
@@ -102,7 +102,7 @@ for delta, P_noise_j1 in math_P_noise_j1.items():
     if (delta != 0):
         plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
 for col in data_P_Noise:
-    if (col == 18):
+    if (col == 24):
         plt.plot(frames, data_P_Noise[col], linestyle='none', color='blue', label=f'delta = {col} (Expe)', marker='o')
     if (col == 12):
         plt.plot(frames, data_P_Noise[col], linestyle='none', color='orange', label=f'delta = {col} (Expe)', marker='o')
