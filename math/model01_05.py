@@ -45,7 +45,7 @@ P_UE = 56.4  # dB
 alpha = 0.12
 delta = 12
 Ta_values = [1, 2, 4, 8]
-j_max = 19
+j_max = 15
 
 # Compute results
 j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
