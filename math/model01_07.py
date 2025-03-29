@@ -15,7 +15,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta_values, Ta, j_max):
-    j_range = np.arange(0, j_max)
+    j_range = np.arange(0, j_max+1)
     results_P_S = {}
     results_P_noise_j1 = {}
     
@@ -23,29 +23,29 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta_values, Ta, j_max)
         P_noise_values = [P_noise]
         
         for i in range(1, j_max + 1):
-            if (i - 2) % (Ta) == 0 and i > 1:
+            if (i - 1) % (Ta) == 0 and i > 0:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_attacker
             else:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_noise
             
             P_noise_values.append(P_next)
         
-        P_S = [1 if P_UE > (P_noise_values[j] + delta) else 0 for j in range(j_max)]
+        P_S = [1 if P_UE > (P_noise_values[j] + delta) else 0 for j in range(j_max+1)]
         results_P_S[delta] = P_S
 
-        P_noise_j1 = [P_noise_values[j] for j in range(j_max)]
+        P_noise_j1 = [P_noise_values[j] for j in range(j_max+1)]
         results_P_noise_j1[delta] = P_noise_j1
     
     return j_range, results_P_S, results_P_noise_j1
 
 # Given parameters
 P_noise = 17.4  # dB
-P_attacker = 55  # dB
-P_UE = 54  # dB
+P_attacker = 51  # dB
+P_UE = 56.4  # dB
 alpha = 0.12
-delta_values = [18,12,6,0]
+delta_values = [24,12,6,0]
 Ta = 1
-j_max = 42
+j_max = 15
 
 # Compute results
 j_range, results_P_S, results_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE, alpha, delta_values, Ta, j_max)
