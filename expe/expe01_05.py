@@ -101,7 +101,7 @@ for col in data_P_noise:
     if (col == 2):
         plt.plot(frames, data_P_noise[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
     if (col == 4):
-        #plt.plot(frames, data_P_noise[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_noise[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
     #if (col == 8):
         #plt.plot(frames, data_P_noise[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
 
