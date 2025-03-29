@@ -27,7 +27,7 @@ def compute_p_success(P_noise, P_attacker, P_UE, alpha, delta, Ta_values, j_max)
         P_noise_values = [P_noise]
         
         for i in range(1, j_max + 1):
-            if (i - 2) % (Ta) == 0 and i > 0:
+            if (i - 1) % (Ta) == 0 and i > 0:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_attacker
             else:
                 P_next = (1 - alpha) * P_noise_values[-1] + alpha * P_noise
