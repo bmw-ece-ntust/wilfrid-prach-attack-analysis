@@ -66,7 +66,7 @@ P_noise = 16.88  # dB
 P_attacker = 51  # dB
 P_UE = 54  # dB
 alpha = 0.12
-delta_values = [18, 12, 6]
+delta_values = [18, 12, 6, 0]
 Ta = 1
 j_max = 15
 
@@ -78,7 +78,8 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for delta, P_S in math_P_S.items():
-    plt.plot(j_range, P_S, label=f'delta = {delta}')
+    if (col != 0):
+        plt.plot(j_range, P_S, label=f'delta = {delta}')
 for col in data_P_S:
     if (col == 18):
         plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'delta = {delta} (Expe)', marker='o')
@@ -98,7 +99,8 @@ plt.grid()
 
 plt.subplot(1, 2, 2)
 for delta, P_noise_j1 in math_P_noise_j1.items():
-    plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
+    if (col != 0):
+        plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
 for col in data_P_Noise:
     if (col == 18):
         plt.plot(frames, data_P_Noise[col], linestyle='none', color='blue', label=f'delta = {col} (Expe)', marker='o')
@@ -112,7 +114,7 @@ for col in data_P_Noise:
 plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label=f'P_UE - {delta_values[0]}')
 plt.axhline(P_UE - delta_values[1], color='orange', ls='dotted', label=f'P_UE - {delta_values[1]}')
 plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label=f'P_UE - {delta_values[2]}')
-plt.axhline(P_UE - delta_values[3], color='red', ls='dotted', label=f'P_UE - {delta_values[3]}')
+#plt.axhline(P_UE - delta_values[3], color='red', ls='dotted', label=f'P_UE - {delta_values[3]}')
 plt.xlabel("j (RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
 plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
