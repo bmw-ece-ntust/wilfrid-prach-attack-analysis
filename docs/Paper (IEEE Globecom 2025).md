@@ -27,6 +27,15 @@
   - Importance of 5G RACH access and its role in network reliability.
   - Emerging threats: RACH jamming attacks.
   - Existing solutions focus on attack implementation, but lack analytical models quantifying the attack impact.
+- Related Work: RACH Jamming Attacks in 5G
+  - Summarize existing RACH jamming studies (each in 2–3 sentences):
+    - What attack methodology was used?
+    - What were their findings?
+    - What is missing in their work that motivates our study?
+- Gap Analysis & Motivation for Our Work
+  - Prior studies focus on attack implementation but lack predictive mathematical models.
+  - No prior work validates theoretical models using real-world 5G testbed experiments.
+  - Our work fills this gap by providing an analytical and experimental approach.
 - Problem Statement:
   - How does a Msg1-based RACH jamming attack affect gNB noise threshold?
   - How can we mathematically model the probability of a UE successfully connecting under attack?
@@ -38,18 +47,13 @@
 - Paper Organization (Outline of remaining sections).
 
 <b>II. Related Work</b>
-- Subsection 1: RACH Jamming Attacks in 5G
-  - Summarize existing RACH jamming studies (each in 2–3 sentences):
-    - What attack methodology was used?
-    - What were their findings?
-    - What is missing in their work that motivates our study?
-- Subsection 2: 4-Step vs. 2-Step RACH Process
+- 4-Step vs. 2-Step RACH Process
   - Provide a brief summary of the 4-step RACH (Msg1 → Msg2 → Msg3 → Msg4) and 2-step RACH.
   - Explain how our attack specifically targets the Msg1 transmission step.
-- Gap Analysis & Motivation for Our Work
-  - Prior studies focus on attack implementation but lack predictive mathematical models.
-  - No prior work validates theoretical models using real-world 5G testbed experiments.
-  - Our work fills this gap by providing an analytical and experimental approach.
+- PRACH Detection Algorithms
+  - Overview of existing detection techniques.
+  - Discuss existing formulas for updating the noise threshold.
+  - Identify similarities and differences with our approach.
 
 <b>III. System Model & Problem Definition</b>
 - Subsection 1: Network Model
@@ -85,9 +89,12 @@
     - gNB: OpenAirInterface gNB on USRP B210.
     - UE: Commercial UE attempting RACH access.
     - Attacker: OAI-based jamming UE.
-- Subsection 2: Experimental Parameters
+- Subsection 2: Experimental Method & Parameters
+  - Ignore Msg1 Method:
+    - gNB ignores attacker Msg1 before UE Msg1.
+    - gNB ignores k legitimate UE Msg1 transmissions.
   - Define tested attack conditions:
-    - T a values: 1, 2, 4, 8 frame intervals.
+    - T a values: 1, 2, 4 frame intervals.
     - α values: 0.18, 0.12, 0.06, 0.
     - δ: Msg1 detection margin.
 - Subsection 3: Results & Model Validation
