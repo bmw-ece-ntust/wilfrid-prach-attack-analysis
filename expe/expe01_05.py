@@ -75,8 +75,8 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 
 
 # Plot results
-plt.figure(figsize=(12, 6))
-plt.subplot(1, 2, 1)
+plt.figure(figsize=(6, 12))
+plt.subplot(2, 1, 1)
 for Ta, P_S in math_P_S.items():
     if (Ta != 8):
         plt.plot(j_range, P_S, label=f'Ta = {Ta}')
@@ -95,7 +95,7 @@ plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
 plt.legend()
 plt.grid()
 
-plt.subplot(1, 2, 2)
+plt.subplot(2, 1, 2)
 for Ta, P_noise_j1 in math_P_noise_j1.items():
     if (Ta != 8):
         plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
