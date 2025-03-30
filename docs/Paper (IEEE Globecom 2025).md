@@ -11,6 +11,12 @@
 - [CISS Symposium](https://globecom2025.ieee-globecom.org/sites/globecom2025.ieee-globecom.org/files/GC25-CFP-CISS.pdf)
 
 **Table of Contents:**
+- [Paper (IEEE Globecom 2025)](#paper--ieee-globecom-2025-)
+          + [tags: `2025`](#tags---2025-)
+  * [1. Paper Requirements](#1-paper-requirements)
+  * [2. Paper Abstract](#2-paper-abstract)
+  * [3. Paper Agenda](#3-paper-agenda)
+
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## 1. Paper Requirements
