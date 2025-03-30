@@ -75,7 +75,7 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 
 
 # Plot results
-plt.figure(figsize=(6, 12))
+plt.figure(figsize=(3, 6))
 plt.subplot(2, 1, 1)
 for Ta, P_S in math_P_S.items():
     if (Ta != 8):
