@@ -21,7 +21,11 @@
 
 <b>Topic of Interest:</b> Attack prediction, detection, response, and prevention
 
-## 2. Paper Agenda
+## 2. Paper Abstract
+
+This paper investigates the impact of jamming attacks on the random access channel (RACH) of cellular networks. We implemented a jamming attacker by modifying the OpenAirInterface (OAI) user equipment (UE). The attacker transmits Message 1 (Msg1) without responding to Message 2 (Msg2), gradually increasing the noise level detected by the Next Generation Node B (gNB). Through real-world testing, we demonstrate that an early-starting attacker can raise the gNB noise threshold, preventing commercial UEs from successfully connecting. To quantify this effect, we develop a mathematical model that predicts the probability of successful UE access based on attacker period, gNB noise updating parameters, and other system variables. Our experimental results validate the accuracy of our model, showing close alignment between theoretical predictions and real-world behavior. Based on these findings, we propose attack strategies for increased effectiveness and countermeasures for gNBs, such as adaptive noise threshold adjustments to mitigate the impact of jamming.
+
+## 3. Paper Agenda
 <b>I. Introduction</b>
 - Context & Motivation:
   - Importance of 5G RACH access and its role in network reliability.
