@@ -256,6 +256,23 @@
     - Proposes an enhanced PRACH detector with a three-module approach: Forward Wavelet Transform, Denoise (threshold-based), and Inverse Wavelet Transform
     - The proposed detector meets the 3GPP requirements while maintaining relatively low computational complexity
 
+### 2.3. A proposed preamble detection algorithm for 5G-PRACH
+
+- **Problem:**
+    -  Need for effective preamble detection in the PRACH for 5G systems
+- **Importance:**
+    - Preabmle detection procedure plays a critical role in 5G system because it is the first step in both contention-based and contention-free procedures in 5G
+- **Challenge:**
+    - False alarm peaks caused by noise, Channel conditions including multipath fading, Doppler shift effects, Frequency offset, Timing offset
+    - The need to support multiple PRACH formats in 5G with different sequence lengths and subcarrier spacing
+- **Contribution:**
+    - proposes a comprehensive preamble detection method with two main processing stages:
+      - Front-End processing: Extracts PRACH data in frequency domain from received signals
+      - Behind-End (BE) processing with a multi-step detection algorithm:
+        - Finding correlation peaks in search windows
+        - Identifying interest peaks based on noise threshold
+        - Rejecting weak peaks, false alarm peaks due to timing offset, false alarm peaks due to frequency offset, weak users due to high noise
+        - Estimating true propagation delay
 
 
 
