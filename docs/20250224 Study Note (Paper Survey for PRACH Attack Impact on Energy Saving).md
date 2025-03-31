@@ -32,16 +32,9 @@
     + [1.13. Modeling and Analysis of Random Access Channels With Bursty Arrivals in OFDMA Wireless Networks](#113-modeling-and-analysis-of-random-access-channels-with-bursty-arrivals-in-ofdma-wireless-networks)
     + [1.14. Analytical Modeling and Performance Evaluation of Beam-Based Random Access Protocol for 5G Beamforming Networks](#114-analytical-modeling-and-performance-evaluation-of-beam-based-random-access-protocol-for-5g-beamforming-networks)
     + [1.15. Jamming-Resistant Receivers for the Massive MIMO Uplink](#115-jamming-resistant-receivers-for-the-massive-mimo-uplink)
-  * [**Problem:**](#--problem---)
-  * [**Importance:**](#--importance---)
-  * [**Challenge:**](#--challenge---)
-  * [**Contribution:**](#--contribution---)
   * [2. Preamble Detection References](#2-preamble-detection-references)
     + [2.1. An Enhanced PRACH Preamble Detector for Cellular IoT Communications](#21-an-enhanced-prach-preamble-detector-for-cellular-iot-communications)
-  * [**Problem:**](#--problem----1)
-  * [**Importance:**](#--importance----1)
-  * [**Challenge:**](#--challenge----1)
-  * [**Contribution:**](#--contribution----1)
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -240,13 +233,28 @@
 ### 2.1. An Enhanced PRACH Preamble Detector for Cellular IoT Communications
 
 - **Problem:**
-    - 
+    - Noise rise causes increased false alarms in preamble detection when using multiple non-orthogonal preambles PRACH detection for cellular IoT communication
 - **Importance:**
-    - 
+    - False alarms due to noise rise waste radio resources through unnecessary allocations
 - **Challenge:**
-    - 
+    - Maintaining detection performance as the number of non-orthogonal preambles increases
 - **Contribution:**
-    - 
+    - A propose two-phase preamble detection approach:
+      - Preamble Reconstruction (PR) phase: reconstructs preambles from received signals
+      - Final Preamble Detection (FPD) phase: detects preambles after interference cancellation
+
+### 2.2. Enhanced PRACH Detection by Wavelet De-noising
+
+- **Problem:**
+    -  improving PRACH detection performance in noisy and interference-heavy (low SNR conditions) environments in LTE mobile systems
+- **Importance:**
+    - RACH detection accuracy directly impacts the efficiency of uplink synchronization in LTE systems, as an example, failed detection causes UEs to increase power (power ramping), which negatively impacts PUSCH performance
+- **Challenge:**
+    - Conventional matched filter approaches fail in very noisy and time dispersive channels
+    - Meeting the 3GPP requirements (99% detection probability and 0.1% false detection probability) is challenging in low SNR environments
+- **Contribution:**
+    - Proposes an enhanced PRACH detector with a three-module approach: Forward Wavelet Transform, Denoise (threshold-based), and Inverse Wavelet Transform
+    - The proposed detector meets the 3GPP requirements while maintaining relatively low computational complexity
 
 
 
