@@ -22,8 +22,9 @@
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
+## 1. PRACH Jamming References
 
-## 1. Smart PRACH Jamming: A Serious Threat for 5G Campus Networks
+### 1.1. Smart PRACH Jamming: A Serious Threat for 5G Campus Networks
 
 - **Problem:**
     - PRACH jammer in industrial environment can cause large-scale failure, such as an Automated Guided Vehicle (AGV) failing to move between factory zones
@@ -34,7 +35,7 @@
 - **Contribution:**
     - Modeling of Smart Jamming Attack (Ratio of success preamble, etc) and Implementation of a Smart PRACH Jammer in OAI
 
-## 2. Smart Jamming Attacks in 5G New Radio: A Review
+### 1.2. Smart Jamming Attacks in 5G New Radio: A Review
 
 - **Problem:**
     - There is a lack of systematic research on how different jamming strategies impact 5G NR networks and how to develop effective countermeasures
@@ -46,7 +47,7 @@
     - Comprehensive Review of 5G NR Jamming Vulnerabilities (PBCH, PDCCH, PUCCH, RACH, mMIMO vunerabilities)
     - Identifies Gaps in Current Research (lack of data for ML based jam detection, complexity of high protection DSSS method, etc) and Future Directions (building dataset for DL anti-jamming, cyber-security embedded initial design of 5G NR, etc)
 
-## 3. Resilience of LTE networks against smart jamming attacks
+### 1.3. Resilience of LTE networks against smart jamming attacks
 
 - **Problem:**
     - Current LTE networks lack built-in resilience against targeted jamming attacks, making them susceptible to low-cost adversaries using software-defined radios (SDRs)
@@ -59,7 +60,7 @@
     - Game-Theoretic Modeling of Smart Jamming Attacks (Cheater and Saboteur vs. eNB, single shot and repeated bayesian game)
     - Proposed Adaptive Anti-Jamming Countermeasures (Increase CS-RS Tx Power, change eNB frequency, etc)
 
-## 4. Implementation and Evaluation of a Smart Uplink Jamming Attack in a Public 5G Network
+### 1.4. Implementation and Evaluation of a Smart Uplink Jamming Attack in a Public 5G Network
 
 - **Problem:**
     - Smart jamming attacks can disrupt 5G uplink communications by precisely targeting specific users (UEs) instead of jamming the entire network
@@ -72,7 +73,7 @@
     - Tested the attack in both wired and over-the-air (OTA) environments, demonstrating 100% effectiveness in blocking uplink communication
 
 
-## 5. Towards Resilient 5G: Lessons Learned from Experimental Evaluations of LTE Uplink Jamming
+### 1.5. Towards Resilient 5G: Lessons Learned from Experimental Evaluations of LTE Uplink Jamming
 
 - **Problem:**
     - Current LTE and 5G security measures are insufficient, leaving networks exposed to targeted jamming
@@ -83,7 +84,7 @@
 - **Contribution:**
     - Experimental Evaluation of Smart Uplink Jamming in PUCCH and PUSCH in srsLTE UE
 
-## 6. LTE/LTE-A Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
+### 1.6. LTE/LTE-A Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
 
 - **Problem:**
     - LTE/LTE-A networks are highly vulnerable to jamming, spoofing, and sniffing attacks
@@ -96,7 +97,7 @@
     - Comprehensive Threat Assessment (LTE's PRACH, PCFICH, PUCCH, PBCH vunerabilities and jamming efficiency vs. implementation on those channels)
     - Survey of Mitigation Techniques (Scrambling PUCCH resource mapping, encrypt MIB SIB, UE based spoofing detection, etc)
 
-## 7. Analysis and Mitigation of Interference to the LTE Physical Control Format Indicator Channel
+### 1.7. Analysis and Mitigation of Interference to the LTE Physical Control Format Indicator Channel
 
 - **Problem:**
     - PCFICH (Physical Control Format Indicator Channel) in LTE is highly vulnerable to jamming attacks, which can severely disrupt network operations by preventing UEs from decoding downlink control information.
@@ -108,7 +109,7 @@
     - PCFICH Vulnerability Analysis (evaluate impact of PCFICH jamning in simulation)
     - Proposed Mitigation Strategies (Extra-Blind PDCCH Decoding, eliminate PCFICH by fix number of OFDM symbols)
 
-## 8. Detection and Mitigation of Uplink Control Channel Jamming in LTE
+### 1.8. Detection and Mitigation of Uplink Control Channel Jamming in LTE
 
 - **Problem:**
     - PUCCH is statically allocated in the frequency spectrum, making it an easy target for protocol-aware adversaries
@@ -120,7 +121,7 @@
     - Detection Strategies (Monitoring for Excess PUCCH Energy, Tracking PUCCH Error Rates)
     - Mitigation Strategies (shifting Control Signaling to the PUSCH, robust modulation and coding scheme) and simulation of the strategy
 
-## 9. Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey
+### 1.9. Jamming Attacks and Anti-Jamming Strategies in Wireless Networks: A Comprehensive Survey
 
 - **Problem:**
     - Despite advancements in wireless communication, there is still threat of jamming attacks in wireless networks and the lack of effective anti-jamming strategies
@@ -134,7 +135,7 @@
     - Survey of Jamming Attacks (traditional and advanced mechanisms)
     - Identifying Research Gaps and Future Directions (integration of AI to jamming detection, Deployment challenges of advanced anti-jamming techniques in real-world networks, etc)
 
-## 10. Enhancing the security of LTE networks against jamming attacks
+### 1.10. Enhancing the security of LTE networks against jamming attacks
 
 - **Problem:**
     - LTE lacks built-in security measures to prevent targeted jamming attacks
@@ -150,7 +151,7 @@
         - Scrambling of Uplink Control Channel Assignments
         - etc
 
-## 11. 5G NR Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
+### 1.11. 5G NR Jamming, Spoofing, and Sniffing: Threat Assessment and Mitigation
 
 - **Problem:**
     - 5G NR is vulnerable to RF interference, jamming, spoofing, and sniffing attacks
@@ -162,7 +163,7 @@
     - Comprehensive Vulnerability Analysis of each physical channel (PBCH, etc) and signal (RS, SS) in 5G NR, identifying their vulnerabilities to jamming, spoofing, and sniffing attacks.
     - proposes specific mitigation techniques that do not require changes to specifications but can be incorporated into implementations (Timer-based and blacklisting mechanisms for PSS/SSS spoofing, limit broadcast message content to essential information, etc)
 
-## 12. A Novel Jamming Attacks Detection Approach Based on Machine Learning for Wireless Communication
+### 1.12. A Novel Jamming Attacks Detection Approach Based on Machine Learning for Wireless Communication
 
 - **Problem:**
     - Jamming detection techniques have been proposed, including fuzzy logic, game theory, channel surfing, and time series, but most of these techniques are inefficient in detecting smart jammers
@@ -175,7 +176,7 @@
     - A comparison of several machine learning models (random forest, support vector machine, neural network) for detecting jamming signals
     - Investigation of signal features that effectively identify jamming signals (bad packet ratio, packet delivery ratio, received signal strength, clear channel assessment)
 
-## 13. Modeling and Analysis of Random Access Channels With Bursty Arrivals in OFDMA Wireless Networks
+### 1.13. Modeling and Analysis of Random Access Channels With Bursty Arrivals in OFDMA Wireless Networks
 
 - **Problem:**
     - Current RACH (Random Access Channel) models assume Poisson-distributed arrivals with a constant rate, but in reality, bursty arrivals cause severe congestion, leading to high collision rates and network inefficiencies.
@@ -187,7 +188,7 @@
     - Analytical model that captures transient RACH behavior under bursty arrivals
     - Develop a computationally efficient method to model OFDMA RACH behavior in transient conditions, improving over past iterative approaches.
 
-## 14. Analytical Modeling and Performance Evaluation of Beam-Based Random Access Protocol for 5G Beamforming Networks
+### 1.14. Analytical Modeling and Performance Evaluation of Beam-Based Random Access Protocol for 5G Beamforming Networks
 
 - **Problem:**
     - The performance of beam-based random access (RA) in 5G beamforming networks is not well understood, particularly in scenarios with bursty arrivals from massive IoT devices.
@@ -200,7 +201,7 @@
     - Identifies potential RACH load unbalance issues and proposes solutions to distribute RA requests more evenly.
     - Examines how backoff window size and maximum retransmission limits influence RA success rates and access latency.
 
-## 15. Jamming-Resistant Receivers for the Massive MIMO Uplink
+### 1.15. Jamming-Resistant Receivers for the Massive MIMO Uplink
 
 - **Problem:**
     - 
@@ -210,6 +211,22 @@
     - 
 - **Contribution:**
     - 
+
+## 2. Preamble Detection References
+
+### 2.1. An Enhanced PRACH Preamble Detector for Cellular IoT Communications
+
+- **Problem:**
+    - 
+- **Importance:**
+    - 
+- **Challenge:**
+    - 
+- **Contribution:**
+    - 
+
+
+
 
 
 
