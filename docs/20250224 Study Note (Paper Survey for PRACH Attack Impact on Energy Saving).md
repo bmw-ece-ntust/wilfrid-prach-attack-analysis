@@ -305,5 +305,17 @@
     - Comprehensive Overview and Challenge Analysis of 2 step contention based random access in 5g NR
     - Propose Self-Uplink Synchronization Framework that use DNNto help UE estimate Timing advance and Enables UEs to resolve preamble collisions by accurately timing their transmissions
 
+### 3.3. Analyzing Novel Grant-Based and Grant-Free Access Schemes for Small Data Transmission
+
+- **Problem:**
+    - Optimizing random access procedures for small data transmissions in wireless networks. Traditional grant-based (4 step) access schemes suffer from high latency and signaling overhead, while grant-free (2 step) schemes face issues related to resource contention and reliability.
+- **Importance:**
+    - Efficient small data transmission is crucial for applications like IoT, where devices frequently send short bursts of data. Optimizing access schemes can reduce latency, enhance network efficiency, and improve reliability, especially in dense network environments
+- **Challenge:**
+    - Balancing the trade-off between access delay and resource utilization remains a significant challenge. Grant-based access (4 step) offers reliable transmission but introduces delay, while grant-free access (2 step) reduces delay but increases the risk of packet collisions and interference.
+- **Contribution:**
+    - provides a comparative analysis of grant-based and grant-free access schemes, considering factors such as access latency, success probability, and resource efficiency.
+    - presents mathematical models and simulations to evaluate the performance of these access schemes under various network conditions.
+    - offers insights into optimizing access mechanisms for small data transmissions in next-generation wireless networks.
 
 
