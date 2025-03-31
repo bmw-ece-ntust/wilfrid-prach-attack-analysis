@@ -34,7 +34,12 @@
     + [1.15. Jamming-Resistant Receivers for the Massive MIMO Uplink](#115-jamming-resistant-receivers-for-the-massive-mimo-uplink)
   * [2. Preamble Detection References](#2-preamble-detection-references)
     + [2.1. An Enhanced PRACH Preamble Detector for Cellular IoT Communications](#21-an-enhanced-prach-preamble-detector-for-cellular-iot-communications)
-
+    + [2.2. Enhanced PRACH Detection by Wavelet De-noising](#22-enhanced-prach-detection-by-wavelet-de-noising)
+    + [2.3. A proposed preamble detection algorithm for 5G-PRACH](#23-a-proposed-preamble-detection-algorithm-for-5g-prach)
+  * [3. 4 step versus 2 step RACH](#3-4-step-versus-2-step-rach)
+    + [3.1. On Contention-based 2-step Random Access Procedure](#31-on-contention-based-2-step-random-access-procedure)
+    + [3.2. Two-Step Random Access for 5G System: Latest Trends and Challenges](#32-two-step-random-access-for-5g-system--latest-trends-and-challenges)
+    + [3.3. Analyzing Novel Grant-Based and Grant-Free Access Schemes for Small Data Transmission](#33-analyzing-novel-grant-based-and-grant-free-access-schemes-for-small-data-transmission)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
