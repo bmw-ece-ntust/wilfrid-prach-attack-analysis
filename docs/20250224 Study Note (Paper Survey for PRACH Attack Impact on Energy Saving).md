@@ -274,7 +274,36 @@
         - Rejecting weak peaks, false alarm peaks due to timing offset, false alarm peaks due to frequency offset, weak users due to high noise
         - Estimating true propagation delay
 
+## 3. 4 step versus 2 step RACH
 
+### 3.1. On Contention-based 2-step Random Access Procedure
+
+- **Problem:**
+    - inefficiency of the traditional 4-step RACH procedure in wireless communication systems which creates unnecessary overhead, power consumption, and latency issues
+- **Importance:**
+    - For scenarios like non-terrestrial networks (NTN) where round trip delay between UE and BS (e.g., satellite) could be extremely large, reducing the number of required interactions is crucial
+    - Reducing signaling overhead, power consumption, and latency would significantly improve the efficiency of wireless communication systems, particularly for 5G NR
+- **Challenge:**
+    - Potential timing misalignment issues due to the lack of prior timing information in the first step of 2-step RACH
+    - Managing collisions when multiple UEs select the same preambles and share the same resources
+- **Contribution:**
+    - simplified 2-step RACH procedure that combines Msg1 and Msg3 into a one-shot transmission (MsgA) and Msg2 and Msg4 into a single response (MsgB), reducing the interactions between UE and BS to just one.
+    - Quantitative analysis demonstrating the advantages of 2-step RACH over 4-step RACH (reduction in signaling overhead, reduction in power consumption, reduction in latency)
+    - Proposal of an advanced Multi-window Minimum Mean Square Error Successive Interference Cancellation (MMSE-SIC) receiver to resolve UE multiplexing and large timing offset problems
+
+### 3.2. Two-Step Random Access for 5G System: Latest Trends and Challenges
+
+- **Problem:**
+    - enhancing and optimizing the 2-step RACH procedure in 5G systems, specifically addressing the preamble collision problem (undetected and detected)
+- **Importance:**
+    - it's valuable for NR Unlicensed spectrum (NR-U) where reducing connection steps helps decrease latency
+    - Efficient random access mechanisms are essential for supporting the massive number of devices in 5G scenarios
+- **Challenge:**
+    - Finding the optimal division of preambles between 2-step and 4-step RACH procedures
+    - Handling scenarios where the gNB cannot determine the Timing Advance (TA) command for each UE due to multiple identical preambles
+- **Contribution:**
+    - Comprehensive Overview and Challenge Analysis of 2 step contention based random access in 5g NR
+    - Propose Self-Uplink Synchronization Framework that use DNNto help UE estimate Timing advance and Enables UEs to resolve preamble collisions by accurately timing their transmissions
 
 
 
