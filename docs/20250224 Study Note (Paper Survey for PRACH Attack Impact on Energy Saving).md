@@ -279,6 +279,20 @@
         - Rejecting weak peaks, false alarm peaks due to timing offset, false alarm peaks due to frequency offset, weak users due to high noise
         - Estimating true propagation delay
 
+### 2.4. Proactive Approach for Preamble Detection in 5G-NR PRACH Using Supervised Machine Learning and Ensemble Model
+
+- **Problem:**
+    -  performance degradation in 5G networks during preamble detection in Physical Random Access Channel (PRACH) when multiple users simultaneously try to access the PRACH receiver with the same preamble signature, resulting in collision of request signals and dual peak occurrence.
+- **Importance:**
+    - Accurate preamble detection is essential for achieving the low latency requirements of 5G.
+- **Challenge:**
+    - Distinguishing between true and false peaks in the detection process, especially at lower SNR values.
+- **Contribution:**
+    - Proposed two machine learning-based proactive approaches for preamble detection:
+      - Implemented and compared three supervised learning algorithms (Decision Tree Classification, Naïve Bayes, and K-Nearest Neighbor) for classifying peaks as true or false.
+      - Developed a Bagged Tree Ensemble method using 30 Decision Tree learners to reduce variance and avoid overfitting.
+    - Compared the computational speed of different algorithms, with DTC predicting 470,000 observations per second, NB predicting 1,600, KNN predicting 130,000, and the Ensemble model predicting 21,000 observations per second.
+
 ## 3. 4 step versus 2 step RACH
 
 ### 3.1. On Contention-based 2-step Random Access Procedure
