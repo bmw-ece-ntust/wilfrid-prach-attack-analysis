@@ -111,9 +111,9 @@ for col in data_P_Noise:
     #if (col == 0):
         #plt.plot(frames, data_P_Noise[col], linestyle='none', color='red', label=f'$\\delta$ = {col} (Expe)', marker='o')
 
-plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label="$P_{UE}$ - 24}")
+plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label="$P_{UE}$ - 24")
 plt.axhline(P_UE - delta_values[1], color='orange', ls='dotted', label="$P_{UE}$ - 12")
-plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label="$P_{UE} - 6")
+plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label="$P_{UE}$ - 6")
 #plt.axhline(P_UE - delta_values[3], color='red', ls='dotted', label=f'P_UE - {delta_values[3]}')
 plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
