@@ -79,41 +79,41 @@ plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for Ta, P_S in math_P_S.items():
     if (Ta != 8):
-        plt.plot(j_range, P_S, label=f'Ta = {Ta}')
+        plt.plot(j_range, P_S, label=f'$T_a$ = {Ta}')
 for col in data_P_S:
     if (col == 1):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'$T_a$ = {col} (Expe)', marker='o')
     if (col == 2):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'$T_a$ = {col} (Expe)', marker='o')
     if (col == 4):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'$T_a$ = {col} (Expe)', marker='o')
 
-plt.xlabel("j (RAO Early Start)")
+plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("P_S (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different Ta Values")
+plt.ylabel("$P_S,j$ (UE Msg1 Success Probability at j)")
+plt.title("$P_S,j$ vs $j$ for Different $T_a$ Values")
 plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in math_P_noise_j1.items():
     if (Ta != 8):
-        plt.plot(j_range, P_noise_j1, label=f'Ta = {Ta}')
+        plt.plot(j_range, P_noise_j1, label=f'$T_a$ = {Ta}')
 for col in data_P_noise:
     if (col == 1):
-        plt.plot(frames, data_P_noise[col], linestyle='none', color='blue', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_noise[col], linestyle='none', color='blue', label=f'$T_a$ = {col} (Expe)', marker='o')
     if (col == 2):
-        plt.plot(frames, data_P_noise[col], linestyle='none', color='orange', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_noise[col], linestyle='none', color='orange', label=f'$T_a$ = {col} (Expe)', marker='o')
     if (col == 4):
-        plt.plot(frames, data_P_noise[col], linestyle='none', color='green', label=f'Ta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_noise[col], linestyle='none', color='green', label=f'$_Ta$ = {col} (Expe)', marker='o')
     #if (col == 8):
-        #plt.plot(frames, data_P_noise[col], linestyle='none', color='red', label=f'Ta = {col} (Expe)', marker='o')
+        #plt.plot(frames, data_P_noise[col], linestyle='none', color='red', label=f'$T_a$ = {col} (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
-plt.xlabel("j (RAO Early Start)")
+plt.axhline(($P_{UE} - \delta$), color='purple', ls='dotted', label=f'P_UE - delta')
+plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different Ta Values")
+plt.ylabel("$P_{noise,j}$ (gNB's Noise Threshold at j)")
+plt.title("$P_{noise,j}$ vs $j$ for Different $T_a$ Values")
 plt.legend()
 plt.grid()
 
