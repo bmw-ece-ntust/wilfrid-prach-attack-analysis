@@ -109,11 +109,11 @@ for col in data_P_noise:
     #if (col == 8):
         #plt.plot(frames, data_P_noise[col], linestyle='none', color='red', label=f'$T_a$ = {col} (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'$P_UE - \delta$')
+plt.axhline((P_UE - delta), color='purple', ls='dotted', label="$P_{UE} - \delta$")
 plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("$P_{noise,j}$ (gNB's Noise Threshold at j)")
-plt.title("$P_{noise,j}$ vs $j$ for Different $T_a$ Values")
+plt.ylabel("$P_{th,j}$ (gNB's Noise Threshold at j)")
+plt.title("$P_{th,j}$ vs $j$ for Different $T_a$ Values")
 plt.legend()
 plt.grid()
 
