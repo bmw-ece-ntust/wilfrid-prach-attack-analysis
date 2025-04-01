@@ -33,37 +33,51 @@ This paper investigates the impact of jamming attacks on the random access chann
 
 ## 3. Paper Agenda
 <b>I. Introduction</b>
-- Context & Motivation:
-  - Importance of 5G RACH access and its role in network reliability.
-  - Emerging threats: RACH jamming attacks.
-  - Existing solutions focus on attack implementation, but lack analytical models quantifying the attack impact.
+- Background on 4-Step and 2-Step RACH
+  - 4-step RACH process:
+    - Msg1 (preamble transmission) → Msg2 (random access response) → Msg3 (UE contention resolution) → Msg4 (contention resolution confirmation).
+    - Ensures reliable synchronization but has higher signaling overhead and latency.
+  - 2-step RACH process:
+    - MsgA (Msg1 + Msg3) → MsgB (Msg2 + Msg4).
+    - Reduces access latency and signaling overhead but increases preamble collision risks.
+  - Our focus:
+    - 5G deployments primarily use 4-step RACH, so we analyze its vulnerabilities.
+    - Specifically, we study Msg1-based jamming attacks that exploit the contention-based nature of Msg1.
 - Related Work: RACH Jamming Attacks in 5G
-  - Summarize existing RACH jamming studies (each in 2–3 sentences):
-    - What attack methodology was used?
-    - What were their findings?
-    - What is missing in their work that motivates our study?
-- Gap Analysis & Motivation for Our Work
-  - Prior studies focus on attack implementation but lack predictive mathematical models.
-  - No prior work validates theoretical models using real-world 5G testbed experiments.
-  - Our work fills this gap by providing an analytical and experimental approach.
-- Problem Statement:
-  - How does a Msg1-based RACH jamming attack affect gNB noise threshold?
-  - How can we mathematically model the probability of a UE successfully connecting under attack?
-- Contributions (List of key contributions of this paper):
-  1. Develop an OpenAirInterface-based jamming attacker that transmits Msg1 without responding to Msg2, increasing gNB noise threshold.
-  2. Derive a mathematical model to predict gNB noise accumulation and UE connection probability.
-  3. Validate the model through real-world experiments using a 5G testbed and compare theoretical vs. observed results.
-  4. Propose countermeasures such as adaptive noise thresholding for mitigation.
-- Paper Organization (Outline of remaining sections).
-
-<b>II. Related Work</b>
-- 4-Step vs. 2-Step RACH Process
-  - Provide a brief summary of the 4-step RACH (Msg1 → Msg2 → Msg3 → Msg4) and 2-step RACH.
-  - Explain how our attack specifically targets the Msg1 transmission step.
-- PRACH Detection Algorithms
-  - Overview of existing detection techniques.
-  - Discuss existing formulas for updating the noise threshold.
-  - Identify similarities and differences with our approach.
+  - Existing jamming attack studies:
+    - Brute-force jamming: Attacker transmits high-power noise to block RACH opportunities.
+    - Protocol-aware jamming: Attacker selectively sends Msg1-like signals to interfere with contention.
+  - Key findings from prior work:
+    - Jamming increases preamble collisions and reduces UE connection probability.
+    - Prior studies focus on attack implementation rather than predictive modeling.
+    - Most works lack real-world validation through testbed experiments.
+  - Our focus:
+    - We specifically study Msg1-based jamming where an adversary transmits valid Msg1 preambles to manipulate the gNB noise threshold and degrade UE access.
+- Background on Msg1 Detection and Noise Threshold Models
+  - Msg1 detection techniques at the gNB:
+    - Based on preamble correlation and threshold-based detection algorithms.
+  - Importance of noise threshold in PRACH detection:
+    - Affects false alarms and missed detections.
+    - Needs dynamic adaptation to maintain detection accuracy.
+  - Key gaps in existing research:
+    - Prior studies do not explicitly model how attackers manipulate the noise threshold.
+    - Our contribution: Develop a mathematical model to quantify the impact of Msg1 jamming on noise threshold and UE connection probability.
+-  Gap Analysis & Motivation for Our Work
+  - Identified gaps in prior work:
+    - No existing study provides a predictive mathematical model for Msg1-based RACH jamming.
+    - No prior work validates theoretical models with real-world 5G testbed experiments.
+  - How we address these gaps:
+    - We develop an analytical model to predict the effect of Msg1 jamming on noise threshold and UE access.
+    - We validate our model using OpenAirInterface-based 5G testbed experiments.
+- Problem Statement
+  - Key research questions:
+    - How does a Msg1-based RACH jamming attack affect the gNB noise threshold?
+    - How can we mathematically model the probability of a UE successfully connecting under such an attack?
+- Contributions
+  - Develop an OpenAirInterface-based jamming attacker that transmits Msg1 without responding to Msg2, increasing the gNB noise threshold.
+  - Derive a mathematical model predicting noise accumulation and UE connection probability under attack.
+  - Validate our model through real-world 5G testbed experiments, comparing theoretical vs. observed results.
+  - Propose countermeasures such as adaptive noise thresholding to mitigate Msg1-based RACH jamming.
 
 <b>III. System Model & Problem Definition</b>
 - Subsection 1: Network Model
