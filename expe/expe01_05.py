@@ -50,14 +50,14 @@ data_P_noise = {
     1: [17.1, 21.26666667, 24.8, 27.76666667, 30.46666667, 32.73333333, 34.7, 36.23333333, 37.7, 39.83333333, 40.93333333, 42, 42.96666667, 43.6, 44.5, 45.66666667],
     2: [17.86666667, 21.53333333, 21.5, 24.7, 23.93333333, 27.23333333, 26.2, 29.36666667, 27.36666667, 30.3, 28.53333333, 31.23333333, 29.36666667, 31.63333333, 30.2, 32.26666667],
     #4: [17.1, 20.4, 19.4, 18.7, 17.8, 21.2, 19.6, 19.1, 17.9, 21.2, 19.7, 18.9, 18.7, 21.2, 19.6, 18.4],
-    16: [17.1, np.nan, np.nan, 20.4, np.nan, np.nan, np.nan, 19.4, np.nan, np.nan, np.nan, 18.7, np.nan, np.nan, np.nan, 17.8],
+    16: [17.1, np.nan, np.nan, 20.4, np.nan, np.nan, 19.4, np.nan, np.nan, 18.7, np.nan, np.nan, 17.8, np.nan, np.nan, 17.9],
     8: [17.38, 18.1, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.42, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52]
 }
 data_P_S = {
     1: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0],
     2: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
     4: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-    16: [1, np.nan, np.nan, 1, np.nan, np.nan, np.nan, 1, np.nan, np.nan, np.nan, 1, np.nan, np.nan, np.nan, 1],
+    16: [1, np.nan, np.nan, 1, np.nan, np.nan, 1, np.nan, np.nan, 1, np.nan, np.nan, 1, np.nan, np.nan, 1],
     8: [17.38, 18.1, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.42, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.54, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, np.nan, 18.52]
 }
 
