@@ -90,8 +90,8 @@ for col in data_P_S:
 
 plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("$P_S,j$ (UE Msg1 Success Probability at j)")
-plt.title("$P_S,j$ vs $j$ for Different $T_a$ Values")
+plt.ylabel("$P_{S,j}$ (UE Msg1 Success Probability at j)")
+plt.title("$P_{S,j}$ vs $j$ for Different $T_a$ Values")
 plt.legend()
 plt.grid()
 
