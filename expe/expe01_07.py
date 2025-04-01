@@ -79,46 +79,46 @@ plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for delta, P_S in math_P_S.items():
     if (delta != 0):
-        plt.plot(j_range, P_S, label=f'delta = {delta}')
+        plt.plot(j_range, P_S, label=f'$\\delta$ = {delta}')
 for col in data_P_S:
     if (col == 24):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'delta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'$\\delta$ = {col} (Expe)', marker='o')
     if (col == 12):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'delta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'$\\delta$ = {col} (Expe)', marker='o')
     if (col == 6):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'delta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'$\\delta$ = {col} (Expe)', marker='o')
     #if (col == 0):
-        #plt.plot(frames, data_P_S[col], linestyle='none', color='red', label=f'delta = {col} (Expe)', marker='o')
+        #plt.plot(frames, data_P_S[col], linestyle='none', color='red', label=f'$\\delta$ = {col} (Expe)', marker='o')
         
-plt.xlabel("j (RAO Early Start)")
-plt.ylabel("P_S (Msg1 Success Probability)")
+plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
+plt.ylabel("$P_{S,j}$ (UE Msg1 Success Probability at j)")
 plt.xticks(np.arange(0, 16, 2))
-plt.title("UE Msg1 Success Probability vs j for Different delta Values")
+plt.title(("$P_{S,j}$ vs $j$ for Different $\\delta$ Values")
 plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
 for delta, P_noise_j1 in math_P_noise_j1.items():
     if (delta != 0):
-        plt.plot(j_range, P_noise_j1, label=f'delta = {delta}')
+        plt.plot(j_range, P_noise_j1, label=f'$\\delta$ = {delta}')
 for col in data_P_Noise:
     if (col == 24):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='blue', label=f'delta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='blue', label=f'$\\delta$ = {col} (Expe)', marker='o')
     if (col == 12):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='orange', label=f'delta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='orange', label=f'$\\delta$ = {col} (Expe)', marker='o')
     if (col == 6):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='green', label=f'delta = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='green', label=f'$\\delta$ = {col} (Expe)', marker='o')
     #if (col == 0):
-        #plt.plot(frames, data_P_Noise[col], linestyle='none', color='red', label=f'delta = {col} (Expe)', marker='o')
+        #plt.plot(frames, data_P_Noise[col], linestyle='none', color='red', label=f'$\\delta$ = {col} (Expe)', marker='o')
 
-plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label=f'P_UE - {delta_values[0]}')
-plt.axhline(P_UE - delta_values[1], color='orange', ls='dotted', label=f'P_UE - {delta_values[1]}')
-plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label=f'P_UE - {delta_values[2]}')
+plt.axhline(P_UE - delta_values[0], color='blue', ls='dotted', label="$P_{UE}$ - 24}")
+plt.axhline(P_UE - delta_values[1], color='orange', ls='dotted', label="$P_{UE}$ - 12")
+plt.axhline(P_UE - delta_values[2], color='green', ls='dotted', label="$P_{UE} - 6")
 #plt.axhline(P_UE - delta_values[3], color='red', ls='dotted', label=f'P_UE - {delta_values[3]}')
-plt.xlabel("j (RAO Early Start)")
+plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different delta Values")
+plt.ylabel("$P_{th,j}$ (gNB's Noise Threshold at j)")
+plt.title("$P_{th,j}$ vs $j$ for Different $\\delta$ Values")
 plt.legend()
 plt.grid()
 
