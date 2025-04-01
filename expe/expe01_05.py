@@ -78,7 +78,7 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for Ta, P_S in math_P_S.items():
-    if (Ta != 8):
+    if (Ta != 4):
         plt.plot(j_range, P_S, label=f'$T_a$ = {Ta}')
 for col in data_P_S:
     if (col == 1):
@@ -97,7 +97,7 @@ plt.grid()
 
 plt.subplot(1, 2, 2)
 for Ta, P_noise_j1 in math_P_noise_j1.items():
-    if (Ta != 8):
+    if (Ta != 4):
         plt.plot(j_range, P_noise_j1, label=f'$T_a$ = {Ta}')
 for col in data_P_noise:
     if (col == 1):
