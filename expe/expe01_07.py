@@ -93,7 +93,7 @@ for col in data_P_S:
 plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.ylabel("$P_{S,j}$ (UE Msg1 Success Probability at j)")
 plt.xticks(np.arange(0, 16, 2))
-plt.title(("$P_{S,j}$ vs $j$ for Different $\\delta$ Values")
+plt.title("$P_{S,j}$ vs $j$ for Different $\\delta$ Values")
 plt.legend()
 plt.grid()
 
