@@ -77,42 +77,42 @@ j_range, math_P_S, math_P_noise_j1 = compute_p_success(P_noise, P_attacker, P_UE
 plt.figure(figsize=(12, 6))
 plt.subplot(1, 2, 1)
 for alpha, P_S in math_P_S.items():
-    plt.plot(j_range, P_S, label=f'alpha = {alpha}')
+    plt.plot(j_range, P_S, label=f'$\alpha$ = {alpha}')
 for col in data_P_S:
     if (col == 0.24):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'alpha = {alpha} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='blue', label=f'$\alpha$ = {alpha} (Expe)', marker='o')
     if (col == 0.12):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'alpha = {alpha} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='orange', label=f'$\alpha$ = {alpha} (Expe)', marker='o')
     if (col == 0.06):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'alpha = {alpha} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='green', label=f'$\alpha$ = {alpha} (Expe)', marker='o')
     if (col == 0):
-        plt.plot(frames, data_P_S[col], linestyle='none', color='red', label=f'alpha = {alpha} (Expe)', marker='o')
+        plt.plot(frames, data_P_S[col], linestyle='none', color='red', label=f'$\alpha$ = {alpha} (Expe)', marker='o')
 
-plt.xlabel("j (RAO Early Start)")
+plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("P_S (Msg1 Success Probability)")
-plt.title("UE Msg1 Success Probability vs j for Different alpha Values")
+plt.ylabel("$P_{S,j}$ (UE Msg1 Success Probability at j)")
+plt.title("$P_{S,j}$ vs $j$ for Different $\alpha$ Values")
 plt.legend()
 plt.grid()
 
 plt.subplot(1, 2, 2)
 for alpha, P_noise_j1 in math_P_noise_j1.items():
-    plt.plot(j_range, P_noise_j1, label=f'alpha = {alpha}')
+    plt.plot(j_range, P_noise_j1, label=f'$\alpha$ = {alpha}')
 for col in data_P_Noise:
     if (col == 0.24):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='blue', label=f'alpha = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='blue', label=f'$\alpha$ = {col} (Expe)', marker='o')
     if (col == 0.12):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='orange', label=f'alpha = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='orange', label=f'$\alpha$ = {col} (Expe)', marker='o')
     if (col == 0.06):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='green', label=f'alpha = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='green', label=f'$\alpha$ = {col} (Expe)', marker='o')
     if (col == 0):
-        plt.plot(frames, data_P_Noise[col], linestyle='none', color='red', label=f'alpha = {col} (Expe)', marker='o')
+        plt.plot(frames, data_P_Noise[col], linestyle='none', color='red', label=f'$\alpha$ = {col} (Expe)', marker='o')
 
-plt.axhline((P_UE - delta), color='purple', ls='dotted', label=f'P_UE - delta')
-plt.xlabel("j (RAO Early Start)")
+plt.axhline((P_UE - delta), color='purple', ls='dotted', label="$P_{UE} - \delta$")
+plt.xlabel("$j$ (Attacker No. of RAO Early Start)")
 plt.xticks(np.arange(0, 16, 2))
-plt.ylabel("P_noise_j1 (gNB's Noise Threshold at j+1)")
-plt.title("gNB's Noise Threshold at j+1 vs j for Different alpha Values")
+plt.ylabel("$P_{th,j}$ (gNB's Noise Threshold at j)")
+plt.title("$P_{th,j}$ vs $j$ for Different $\alpha$ Values")
 plt.legend()
 plt.grid()
 
