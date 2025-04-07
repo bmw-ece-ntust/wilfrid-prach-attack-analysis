@@ -141,3 +141,42 @@ This paper investigates the impact of jamming attacks on the random access chann
   - Implement real-time detection mechanisms.
   - Extend the model to multiple attackers.
 
+## 4. Paper Pending Questions
+
+<b>Question 1: How can the gNB detect the attacker?</b>
+Detection Ideas:
+1. Preamble Collision Frequency Analysis:
+  - The attacker uses Msg1-like transmissions but never completes the 4-step handshake.
+  - gNB can monitor preambles that repeatedly result in no Msg3 and flag those as suspicious.
+  - Statistical anomaly: if a preamble has many Msg1s with no subsequent Msg3, it could be malicious.
+2. Signal Pattern Differentiation:
+  - Use RF fingerprinting to detect subtle differences in waveform characteristics (e.g., I/Q imbalance, phase noise).
+  - The attacker may use SDRs that behave slightly differently from commercial UEs.
+3. Geolocation / TDoA Analysis:
+  - If the gNB is part of a multi-cell setup, triangulate signal sources using Time Difference of Arrival (TDoA) to detect fixed-position attackers.
+  - Legitimate UEs are more mobile and scattered.
+4. Threshold Saturation Monitoring:
+  - Rapid or periodic threshold increases (e.g., a rising trend in ​theta_t across PRACH occasions) can indicate attack activity.
+  - Could be combined with a simple moving average filter to distinguish natural fluctuations from malicious injection.
+5. Ignore Msg1 + Logging:
+  - Your proposed “Ignore Msg1” method can be enhanced to log Msg1s that are discarded.
+  - Analyze logs for patterns: repeated messages from same power range or timing region can point to an attacker.
+6. Unusual Msg1 Power Patterns:
+  - Legitimate Msg1 power is based on the estimated pathloss.
+  - Attackers may have abnormal Tx power (too high or too low for the expected UE range).
+  - A power classifier can tag those transmissions.
+
+<b>Question 2: Can the attacker know the noise model used in each gNB?</b>
+Attacker Knowledge Possibilities:
+1. If the Noise Model Is Static or Public:
+  - If theta_0, α, and update formulas are standardized or known (e.g., 3GPP spec or vendor defaults), an attacker can guess or estimate them.
+  - They can simulate threshold evolution offline based on observed Msg1 success or rejection patterns.
+2. By Monitoring Rejection Behavior:
+  - An attacker can reverse-engineer the threshold by:
+    - Sending Msg1s at varying power levels.
+    - Observing whether it receives Msg2 (or silence).
+    - Bracketing the current theta_t by binary search.
+3. Machine Learning on the Air Interface:
+  - A persistent attacker can use reinforcement learning to probe different Tx powers and PRACH occasions, gradually learning the mapping between power and acceptance/rejection probability.
+4. Threshold Saturation Feedback:
+  - If the attacker sees an increasing number of Msg1s getting accepted or rejected at certain power levels over time, it can infer threshold trends and adapt its transmission behavior.
