@@ -141,7 +141,20 @@ This paper investigates the impact of jamming attacks on the random access chann
   - Implement real-time detection mechanisms.
   - Extend the model to multiple attackers.
 
-## 4. Paper Pending Questions
+## 4. Figures
+
+```mermaid
+flowchart TD
+    A["Power Correlation Extraction"]
+    B["Threshold Calculation"]
+    C["Correlation Window Extraction"]
+    D["Peak Detection"]
+    E["Timing Advanced Calculation"]
+    A --> B --> C --> D --> E
+```
+
+
+## 5. Paper Pending Questions
 
 <b>Question 1: How can the gNB detect the attacker?</b>
 Detection Ideas:
