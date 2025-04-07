@@ -150,7 +150,7 @@ flowchart TD
     C["`Correlation Window Extraction`"]
     D["`Peak Detection`"]
     E["`Timing Advanced Calculation`"]
-    A --> B --> C --> D --> E
+    A -> B -> C -> D -> E
 ```
 
 
