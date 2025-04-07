@@ -55,8 +55,8 @@ sequenceDiagram
     gNB->>UE: [3] SSB/PBCH<br/>System Information
     Note over UE: Synchronization
     Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
-    UE->>gNB: [5] PRACH<br/>Random Access Preamble (Msg1)
     Note over gNB,Attacker: Msg1 attack Complete
+    UE->>gNB: [5] PRACH<br/>Random Access Preamble (Msg1)
 ```
 ### 1.2. Actors
 
