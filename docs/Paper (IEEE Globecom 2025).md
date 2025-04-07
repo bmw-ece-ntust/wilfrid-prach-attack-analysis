@@ -144,13 +144,21 @@ This paper investigates the impact of jamming attacks on the random access chann
 ## 4. Figures
 
 ```mermaid
-flowchart TD
-    A["`Power Correlation Extraction`"]
-    B["`Threshold Calculation`"]
-    C["`Correlation Window Extraction`"]
-    D["`Peak Detection`"]
-    E["`Timing Advanced Calculation`"]
-    A -> B -> C -> D -> E
+flowchart LR
+    A["`Power
+    Correlation
+    Extraction`"]
+    B["`Threshold
+    Calculation`"]
+    C["`Correlation
+    Window
+    Extraction`"]
+    D["`Peak
+    Detection`"]
+    E["`Timing
+    Advance
+    Calculation`"]
+    A --> B --> C --> D --> E
 ```
 
 
