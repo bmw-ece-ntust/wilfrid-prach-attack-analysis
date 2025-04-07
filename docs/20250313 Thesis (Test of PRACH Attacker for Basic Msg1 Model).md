@@ -1107,6 +1107,15 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 - gNB receive UE's Msg1 because it has the highest power. Attacker's Msg1 is ignored
 ![image](https://github.com/user-attachments/assets/78024c2f-2c1a-4e45-8fb5-0b344f04f822)
 
+##### 2.4.2.3. Modify gNB to reject preamble with specific id
+
+<b>0.1. Create an if else statement in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+![image](https://github.com/user-attachments/assets/44d32781-f9a7-4dc8-b0f4-85136e325c93)
+
+<b>0.2. Recompile gNB following [2.3.1.](#231-compile-gnb)</b>
+
+
+
 ### 2.5. Results Compilation and Visualization
 
 #### 2.5.1. Parameters Description
