@@ -1123,7 +1123,8 @@ sudo ./nr-uesoftmodem -r 106 --numerology 1 --band 78 -C 3619200000 --ssb 516 -E
 
 ##### 2.4.2.5. Modify gNB to reject first k UE preambles
 
-<b>0.1. Add flag for the first preamble not equal to 1 in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+<b>0.1. Add counter for the preamble not equal to 1 in `openair1/SCHED_NR/nr_prach_procedures.c`</b>
+![image](https://github.com/user-attachments/assets/171bcad7-b3db-4b72-a022-3ad0fb524afc)
 
 <b>0.2. Recompile gNB following [2.3.1.](#231-compile-gnb)</b>
 
