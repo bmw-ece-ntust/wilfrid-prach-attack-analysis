@@ -28,7 +28,7 @@ sequenceDiagram
     gNB->>Attacker: [4] PDSCH<br/>Random Access Response (Msg2)
     gNB->>UE: [4] PDSCH<br/>Random Access Response (Msg2)
     Attacker->>gNB: [5] PUSCH<br/>RRC Connection Setup Request (Msg3)
-    Note over Attacker: Msg3 attack Complete
+    Note over gNB, Attacker: Msg3 attack Complete
     UE->>gNB: [5] PUSCH<br/>RRC Connection Setup Request (Msg3)
 ```
 ### 1.2. Actors
