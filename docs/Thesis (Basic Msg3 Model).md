@@ -134,3 +134,4 @@ plt.show()
 
 #### 2.3.3. Result
 
+![image](https://github.com/user-attachments/assets/b6957c9b-e3ef-424e-8fe6-8f89c987e51b)
