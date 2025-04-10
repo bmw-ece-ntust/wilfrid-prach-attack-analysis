@@ -2,15 +2,16 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define the given parameters
+modifier = 0.45
 P_UE = 910  # UE's Msg3 dB Power (constant)
 P_attacker_values = np.linspace(860, 1020, 100)  # Range of P_attacker from 860 to 1020 (100 points)
 
 # Define the sigmoid function P_S based on the equation
-def calculate_P_S(P_attacker, P_UE):
-    return 1 / (1 + np.exp(P_attacker - P_UE))
+def calculate_P_S(P_attacker, P_UE, modifier):
+    return 1 / (1 + np.exp(modifier * (P_attacker - P_UE)))
 
 # Calculate P_S for each value of P_attacker
-P_S_values = calculate_P_S(P_attacker_values, P_UE)
+P_S_values = calculate_P_S(P_attacker_values, P_UE, modifier)
 
 # Data points (provided)
 data_X = np.array([1016.571429, 1009.142857, 998.1428571, 987.8571429, 980.7142857, 973.5714286, 
