@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define the given parameters
-modifier = 0.47
+modifier = 0.5
 P_UE = 910  # UE's Msg3 dB Power (constant)
 P_attacker_values = np.linspace(860, 1020, 100)  # Range of P_attacker from 860 to 1020 (100 points)
 
