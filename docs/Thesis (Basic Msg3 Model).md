@@ -55,28 +55,19 @@ flowchart TD
 
 | Parameter      | Description                    | Constant Value |
 | -------------- | ------------------------------ | -------------- |
-| $M$            | Number of UE                   | 1              |
-| $N$            | Number of Preamble ID          | 64             |
-| $O$            | Number of Attacked Preamble ID | 1              |
-| $P_{noise}$    | Initial Noise dB Threshold     | (real)         |
-| $P_{attacker}$ | Attacker's Msg1 dB Power       | (real)         |
-| $P_{UE}$       | UE's Msg1 dB Power             | (real)         |
+| $P_{UE}$       | UE's Msg3 dB Power             | (integer)         |
 
 #### 2.1.2. Variable Input Parameter
 
 | Parameter | Description                                                                                         | Value Range    |
 | --------- | --------------------------------------------------------------------------------------------------- | -------------- |
-| $i$       | identifier for the ith Random Access Occasion                                                       | 0..∞ (integer) |
-| $\alpha$  | Noise update factor parameter                                                                       | 0..1 (real)    |
-| $\delta$  | Msg1 to Noise dB Threshold                                                                       | 0..∞ (real)    |
-| $j$       | Number of Random Access Occasion early start for attacker relative to UE                            | 0..∞ (integer) |
-| $T_a$     | Variability of Attack Period                                                                        | 0..∞ (integer) |
+| $P_{attacker}$     | Attacker's Msg3 dB Power                                                                        | -∞..∞ (integer) |
 
 #### 2.1.3. Output Parameter or Performance Metrics
 
 | Parameter | Description                          | Value Range |
 | --------- | ------------------------------------ | ----------- |
-| $P_S$     | UE's Msg1 Access Success Probability | 0 or 1      |
+| $P_S$     | UE's Msg3 Access Success Probability | 0..1      |
 
 ```mermaid
 flowchart LR
