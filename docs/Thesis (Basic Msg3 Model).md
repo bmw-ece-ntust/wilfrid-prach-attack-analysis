@@ -72,23 +72,12 @@ flowchart TD
 ```mermaid
 flowchart LR
     inputC["`**Constant Input:**
-    M
-    N
-    O
-    P_noise
-    P_attacker
     P_UE`"]
     inputV["`**Variable Input:**
-    α
-    δ
-    j
-    T_a`"]
-    process["`**Msg1 Model**`"]
+    P_attacker`"]
+    process["`**Msg3 Model**`"]
     output["`**Output:**
-    P_S vs. j
-    P_S vs. α
-    P_S vs. δ
-    P_S vs. T_a`"]
+    P_S vs. P_attacker`"]
     inputC --> process
     inputV --> process
     process --> output
