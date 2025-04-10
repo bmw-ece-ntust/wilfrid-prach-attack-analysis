@@ -36,20 +36,13 @@ sequenceDiagram
 ```mermaid
 flowchart TD
     A("`**Basestation:**
-    -----------
-    *N* - preamble ID
-    *P_noise* - threshold
-    *α* - noise threshold update factor
-    *delta* - Msg1 threshold`")
+    -----------`")
     B["`**UE (M=1):**
     -------
-    *P_UE* - msg1 power`"]
+    *P_UE* - msg3 power`"]
     C[["`**Attacker:**
     ---------
-    *O* - number of msg1 attacked
-    *P_attacker* - msg1 power
-    *j* - time early start
-    *T_a* - attack period`"]]
+    *P_attacker* - msg3 power`"]]
     B-->A
     C-->A
 ```
