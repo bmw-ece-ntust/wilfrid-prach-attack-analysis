@@ -85,26 +85,9 @@ flowchart LR
 
 ### 2.2. Model Equation
 
-1. Noise threshold for $RAO = 1$:
+1. UE's Msg3 Success is:
 ```math
-P_{noise,1} = P_{noise}
-```
-2. Noise threshold for $RAO = i$:
-```math
-P_{noise,i+1} =
-\begin{cases} 
-(1 - \alpha) * P_{noise,i} + \alpha * P_{attacker}, & \text{if } i > 1 \text{ and } (i-2) \bmod T_a = 0 \\ 
-(1 - \alpha) * P_{noise,i} + \alpha * P_{noise}, & \text{otherwise} 
-\end{cases}
-```
-3. Noise threshold for when attacker start early for $j$ RAO is equal to evaluating $P_{noise,i+1}$ over the range $i \in [1, j+1]$ and taking the $P_{noise,j+1}$
-4. UE's Msg1 Success with Noise threshold at the $j+1$ RAO is:
-```math
-P_{S} =
-\begin{cases} 
-1, & \text{if } P_{UE} > (P_{noise,j+1} + \delta) \text{ and } P_{attacker} \\ 
-0, & \text{otherwise} 
-\end{cases}
+P_{S} = \frac{1}{1+e^{\left(P_{attacker}-P_{UE}\right)}}
 ```
 
 ### 2.3. Model Implementation in Python Code
