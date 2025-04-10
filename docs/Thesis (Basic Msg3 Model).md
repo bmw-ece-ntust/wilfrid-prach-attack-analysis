@@ -22,14 +22,13 @@
 sequenceDiagram
     gNB->>Attacker: [1] SSB/PBCH<br/>System Information
     Note over Attacker: Synchronization
-    loop Repeat j times
-        Attacker->>gNB: [2] PRACH<br/>Random Access Preamble (Msg1)
-    end
     gNB->>UE: [3] SSB/PBCH<br/>System Information
     Note over UE: Synchronization
-    Attacker->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
-    Note over gNB,Attacker: Msg1 attack Complete
-    UE->>gNB: [5] PRACH<br/>Random Access Preamble (Msg1)
+    UE->>gNB: [4] PRACH<br/>Random Access Preamble (Msg1)
+    gNB->>Attacker: [5] PDSCH<br/>Random Access Response (Msg2)
+    Attacker->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
+    Note over Attacker: Msg3 attack Complete
+    UE->>gNB: [6] PUSCH<br/>RRC Connection Setup Request (Msg3)
 ```
 ### 1.2. Actors
 
